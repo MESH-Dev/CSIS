@@ -28,6 +28,10 @@
 			img{position: relative; vertical-align: top; top: -12px;}
 		}
 	}
+	.network-nav-item:hover{
+		opacity: 0.7;
+		cursor: pointer;
+	}
  
 }
 
@@ -186,7 +190,7 @@
 
  
 	.hover-info{ 
-		display: block;
+		display: none;
 	    position: absolute;
 	 	margin: 0;
 	 	padding: 0;
@@ -239,6 +243,26 @@
 	    opacity: 0.6;
  	}
  
+
+}
+
+.load-more{
+	margin-top: 20px;
+	.load-more-btn{
+		background-color: $yellow-primary;
+		font-family: $font-family--heavy;
+	 	font-size: em(20);
+	 	letter-spacing: em(1);
+	 	text-transform: uppercase;
+	 	text-align: center;
+		padding: 10px 0px 10px 0px;
+
+		&:hover{
+			opacity: 0.7;
+			cursor: pointer;
+		}
+	}
+
 
 }
 

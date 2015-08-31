@@ -2780,8 +2780,13 @@ header {
   vertical-align: top;
   top: -12px;
 }
+/* line 31, sass/modules/_modules.scss */
+.network-nav .network-nav-item:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 
-/* line 34, sass/modules/_modules.scss */
+/* line 38, sass/modules/_modules.scss */
 .network-filter-status {
   width: 100%;
   height: 40px;
@@ -2791,40 +2796,40 @@ header {
   font-size: 0.6875em;
   letter-spacing: 0.0625em;
 }
-/* line 43, sass/modules/_modules.scss */
+/* line 47, sass/modules/_modules.scss */
 .network-filter-status .filter-title, .network-filter-status .filter-reset {
   color: #fec935;
 }
-/* line 47, sass/modules/_modules.scss */
+/* line 51, sass/modules/_modules.scss */
 .network-filter-status .filter-reset {
   text-align: right;
   text-transform: uppercase;
 }
-/* line 50, sass/modules/_modules.scss */
+/* line 54, sass/modules/_modules.scss */
 .network-filter-status .filter-reset img {
   position: relative;
   vertical-align: top;
   top: -3px;
 }
 
-/* line 55, sass/modules/_modules.scss */
+/* line 59, sass/modules/_modules.scss */
 .network-filter-topics {
   width: 100%;
   border-top: 4px solid #616161;
   margin-bottom: 0px;
 }
-/* line 60, sass/modules/_modules.scss */
+/* line 64, sass/modules/_modules.scss */
 .network-filter-topics .topic-list {
   padding: 20px 20px 30px 20px;
   border-right: 4px solid #616161;
 }
-/* line 64, sass/modules/_modules.scss */
+/* line 68, sass/modules/_modules.scss */
 .network-filter-topics .topic-list span.filter-by {
   font-size: 0.6875em;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
-/* line 70, sass/modules/_modules.scss */
+/* line 74, sass/modules/_modules.scss */
 .network-filter-topics .topic-list li {
   display: block;
   font-size: 0.9375em;
@@ -2834,14 +2839,14 @@ header {
   padding: 8px 0px 0px 0px;
   letter-spacing: 0.0625em;
 }
-/* line 79, sass/modules/_modules.scss */
+/* line 83, sass/modules/_modules.scss */
 .network-filter-topics .topic-list li:hover {
   color: #616161;
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
 }
-/* line 89, sass/modules/_modules.scss */
+/* line 93, sass/modules/_modules.scss */
 .network-filter-topics .topic-items {
   padding: 45px 20px 10px 20px;
   -webkit-column-count: 4;
@@ -2850,13 +2855,13 @@ header {
   /* Firefox */
   column-count: 4;
 }
-/* line 98, sass/modules/_modules.scss */
+/* line 102, sass/modules/_modules.scss */
 .network-filter-topics input[type=checkbox] {
   visibility: hidden;
   display: inline;
   float: left;
 }
-/* line 103, sass/modules/_modules.scss */
+/* line 107, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox {
   width: 15px;
   height: 15px;
@@ -2867,7 +2872,7 @@ header {
   display: block;
   clear: both;
 }
-/* line 114, sass/modules/_modules.scss */
+/* line 118, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox label {
   font-size: 0.9375em;
   line-height: 1.4;
@@ -2878,7 +2883,7 @@ header {
   top: -3px;
   position: relative;
 }
-/* line 127, sass/modules/_modules.scss */
+/* line 131, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox label:after {
   opacity: 0;
   content: '';
@@ -2889,36 +2894,36 @@ header {
   top: 3px;
   left: -6px;
 }
-/* line 140, sass/modules/_modules.scss */
+/* line 144, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox label:hover::after {
   filter: alpha(opacity=70);
   opacity: 0.7;
 }
-/* line 146, sass/modules/_modules.scss */
+/* line 150, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox input[type=checkbox]:checked + label:after {
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-/* line 169, sass/modules/_modules.scss */
+/* line 173, sass/modules/_modules.scss */
 .network-grid .columns {
   line-height: 0;
 }
 
-/* line 173, sass/modules/_modules.scss */
+/* line 177, sass/modules/_modules.scss */
 .network-grid-item {
   line-height: 0;
   text-align: center;
 }
-/* line 178, sass/modules/_modules.scss */
+/* line 182, sass/modules/_modules.scss */
 .network-grid-item img {
   height: auto;
   margin: 0;
   border: 0px;
 }
-/* line 188, sass/modules/_modules.scss */
+/* line 192, sass/modules/_modules.scss */
 .network-grid-item .hover-info {
-  display: block;
+  display: none;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -2935,31 +2940,31 @@ header {
   -webkit-transform: translate(-50%, -50%);
   /* Safari and Chrome */
 }
-/* line 204, sass/modules/_modules.scss */
+/* line 208, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.name {
   display: block;
   line-height: 1.5;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 1.25em;
 }
-/* line 211, sass/modules/_modules.scss */
+/* line 215, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.title {
   display: block;
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 0.9375em;
   line-height: 1.5;
 }
-/* line 218, sass/modules/_modules.scss */
+/* line 222, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.location {
   display: block;
   font-size: 0.75em;
   line-height: 1.5;
 }
-/* line 224, sass/modules/_modules.scss */
+/* line 228, sass/modules/_modules.scss */
 .network-grid-item:hover .hover-info {
   display: block;
 }
-/* line 229, sass/modules/_modules.scss */
+/* line 233, sass/modules/_modules.scss */
 .network-grid-item:hover:before {
   content: '';
   top: 0;
@@ -2971,6 +2976,26 @@ header {
   position: absolute;
   background: #fec935;
   opacity: 0.6;
+}
+
+/* line 249, sass/modules/_modules.scss */
+.load-more {
+  margin-top: 20px;
+}
+/* line 251, sass/modules/_modules.scss */
+.load-more .load-more-btn {
+  background-color: #fec935;
+  font-family: "Avenir Next Cyr W00 Heavy";
+  font-size: 1.25em;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+/* line 260, sass/modules/_modules.scss */
+.load-more .load-more-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 /* line 1, sass/modules/_input.scss */

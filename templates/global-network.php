@@ -128,6 +128,74 @@ get_header(); ?>
             <input type="checkbox" value="None" id="TopicName3" name="check" />
             <label for="TopicName3">Label Here</label>
           </div>
+          <div class="topic-checkbox ">
+            <input type="checkbox" value="None" id="TopicName1" name="check" />
+            <label for="TopicName1">Accounting & Finance</label>
+          </div>
+          
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName2" name="check" />
+            <label for="TopicName2">Budgeting</label>
+          </div>
+          
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName3" name="check" />
+            <label for="TopicName3">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName4" name="check" />
+            <label for="TopicName4">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName5" name="check" />
+            <label for="TopicName5">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName6" name="check" />
+            <label for="TopicName6">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName7" name="check" />
+            <label for="TopicName7">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName3" name="check" />
+            <label for="TopicName3">Label Here</label>
+          </div>
+          <div class="topic-checkbox ">
+            <input type="checkbox" value="None" id="TopicName1" name="check" />
+            <label for="TopicName1">Accounting & Finance</label>
+          </div>
+          
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName2" name="check" />
+            <label for="TopicName2">Budgeting</label>
+          </div>
+          
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName3" name="check" />
+            <label for="TopicName3">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName4" name="check" />
+            <label for="TopicName4">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName5" name="check" />
+            <label for="TopicName5">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName6" name="check" />
+            <label for="TopicName6">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName7" name="check" />
+            <label for="TopicName7">Label Here</label>
+          </div>
+          <div class="topic-checkbox">
+            <input type="checkbox" value="None" id="TopicName3" name="check" />
+            <label for="TopicName3">Label Here</label>
+          </div>
 
           
         </div>
@@ -245,8 +313,47 @@ get_header(); ?>
           </a>
         </div>
 
+        <div class="three columns " >
+          <a href="#" class="network-grid-item" >
+            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+            <div class="hover-info">
+              <span class="name">First Last Name</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New York</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="three columns " >
+          <a href="#" class="network-grid-item" >
+            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+            <div class="hover-info">
+              <span class="name">First Last Name</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New York</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="three columns " >
+          <a href="#" class="network-grid-item" >
+            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+            <div class="hover-info">
+              <span class="name">First Last Name</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New York</span>
+            </div>
+          </a>
+        </div>
+
 
        
+      </section>
+
+      <section class="load-more">
+        <div class="three columns offset-by-five load-more-btn">
+          Load More
+        </div>
       </section>
 
      
