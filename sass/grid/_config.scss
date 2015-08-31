@@ -5,30 +5,30 @@
 // partial in that flavor.
 
 // background vars
-$background-color: #fff !global; // default background color
+$background-color: #fff ; // default background color
 
 // GENERAL
-$use-global-border-box: true !global; // use global border box?
-$use-rem: true !global; // use rem as default unit?
-$use-em: false !global; // use em as default unit?
-$use-percent: false !global; // use percentage as default unit?
-$use-px-fallback: true !global; // allow for pixel fall back
+$use-global-border-box: true ; // use global border box?
+$use-rem: true ; // use rem as default unit?
+$use-em: false ; // use em as default unit?
+$use-percent: false ; // use percentage as default unit?
+$use-px-fallback: true ; // allow for pixel fall back
 
 // GRID
-// $base-width: 960px !global;  // The overall width of the grid (.container)
-$is-fluid: true !global; // Change to true to enable the fluid grid
-$base-col-width: 60px !global; // The width of each columns
-$base-gutter-width: 20px !global; // The space between columns
-$base-col-count: 12 !global; // The number of columns
-$base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count) !global; // Calculated
+// $base-width: 960px ;  // The overall width of the grid (.container)
+$is-fluid: true ; // Change to true to enable the fluid grid
+$base-col-width: 60px ; // The width of each columns
+$base-gutter-width: 20px ; // The space between columns
+$base-col-count: 12 ; // The number of columns
+$base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count) ; // Calculated
 
 // BREAKPOINTS
 
-$desktop-width: 1280px !global;
-$tablet-width: 768px !global; // the tablet width media query
-$mobile-portrait-width: 300px !global; // the mobile portrait media query
-$mobile-landscape-width: 420px !global; // the mobile landscape media query
+$desktop-width: 1280px ;
+$tablet-width: 768px ; // the tablet width media query
+$mobile-portrait-width: 300px ; // the mobile portrait media query
+$mobile-landscape-width: 420px ; // the mobile landscape media query
 $mobile-fluid-width: 100%; // this value is not used with breakpoints, it is used in generating a fluid grid for mobile devices
 
 // ------ CHANGE MAY CAUSE UNDESIRED RESULTS
-$base-font-size: $base__font-size !global; // the font size in the html element so we can use ems and rems in a friendly way
+$base-font-size: $base__font-size ; // the font size in the html element so we can use ems and rems in a friendly way
