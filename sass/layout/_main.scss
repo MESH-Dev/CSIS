@@ -1,0 +1,331 @@
+main {
+  float: left;
+}
+
+// Section styles
+
+$color_names: "yellow-primary", "yellow-secondary", "yellow-tertiary", "purple-primary", "purple-secondary", "purple-tertiary", "blue-primary", "blue-secondary", "blue-tertiary", "green-primary", "green-secondary", "green-tertiary", "red-primary", "red-secondary", "red-tertiary";
+$color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-primary, $purple-secondary, $purple-tertiary, $blue-primary, $blue-secondary, $blue-tertiary, $green-primary, $green-secondary, $green-tertiary, $red-primary, $red-secondary, $red-tertiary;
+
+
+@each $name in $color_names {
+  $i: index($color_names, $name);
+  .#{$name} {
+    color: nth($color_vars, $i);
+		background-color: white;
+  }
+
+	.#{$name}-background {
+		color: white;
+		background-color: nth($color_vars, $i);
+
+    // Callout
+
+    .callout {
+      padding: 25px;
+      border-bottom: 10px solid white;
+      border-left: 10px solid white;
+
+      a {
+        color: white;
+      }
+    }
+
+    .cta-text {
+      a {
+        color: nth($color_vars, $i);
+      }
+    }
+
+    .right {
+      border: 0.2em solid nth($color_vars, $i);
+    }
+
+    .right:after {
+      border-top: 0.2em solid nth($color_vars, $i);
+      border-right: 0.2em solid nth($color_vars, $i);
+    }
+
+    // Callout (Panel), Quote
+
+    .callout-panel, .quote {
+      position: relative;
+      z-index: 10;
+
+      a {
+        color: white;
+      }
+
+      // CTA
+
+      .cta-small, .cta-big {
+        margin-top: 50px;
+      }
+    }
+
+    .callout-screen {
+      float: left;
+      background-color: rgba(nth($color_vars, $i), 0.7);
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      display: inline-block;
+
+      &:hover {
+        background-color: rgba(255,255,255, 0.7);
+      }
+    }
+
+    // HOVER
+
+    &:hover {
+      color: nth($color_vars, $i);
+  		background-color: white;
+
+      a {
+        color: nth($color_vars, $i);
+      }
+
+      .input__label {
+        color: $yellow-primary;
+      }
+
+
+      .cta-text {
+        right: 0px;
+      }
+    }
+	}
+}
+
+
+// Banner
+
+.banner {
+
+  a {
+    color: white;
+  }
+
+  .cta-small {
+
+    .right {
+      border: 0.2em solid white;
+    }
+
+    .right:after {
+      border-top: 0.2em solid white;
+      border-right: 0.2em solid white;
+    }
+  }
+
+  // Hover
+
+  &:hover {
+
+    .cta-text {
+      right: 0px;
+    }
+  }
+}
+
+.banner-text {
+  position: relative;
+  z-index: 10;
+  padding: 50px 150px 50px 50px;
+
+  .banner-title {
+    font-family: $font-family--bold;
+    font-size: em(52);
+    line-height: 1.2em;
+    margin-bottom: 25px;
+    color: white;
+  }
+
+  .banner-cta {
+    font-size: em(12);
+    text-transform: uppercase;
+    font-family: $font-family--bold;
+
+    a {
+      color: white;
+    }
+  }
+}
+
+.banner-inner {
+  height: 300px;
+}
+
+// CTA
+
+.cta-small {
+  font-size: em(12);
+  text-transform: uppercase;
+  font-family: $font-family--bold;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .cta-text {
+    position: relative;
+    right: -2000px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+    .right {
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      margin-left: 1.5em;
+      text-align: center;
+    }
+
+    .right:after {
+      content: '';
+      display: inline-block;
+      margin-top: .55em;
+      margin-left: -0.3em;
+      width: .4em;
+      height: .4em;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.cta-big {
+  margin-top: 50px;
+  font-size: em(12);
+  text-transform: uppercase;
+  font-family: $font-family--bold;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .cta-text {
+    position: relative;
+    right: -2000px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+    .right {
+      display: inline-block;
+      width: 7em;
+      height: 7em;
+      border-radius: 50%;
+      margin-left: 1.5em;
+      text-align: center;
+    }
+
+    .right:after {
+      content: '';
+      display: inline-block;
+      margin-top: 2em;
+      margin-left: -0.9em;
+      width: 2.4em;
+      height: 2.4em;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+}
+
+// Homepage
+
+.callout-news {
+  padding: 25px;
+  height: 400px;
+
+  .callout-news-headline {
+    margin-bottom: 15px;
+  }
+}
+
+.information-video {
+  border-right: 10px solid white;
+}
+
+.information-bar {
+  height: 52px;
+  background-color: #fec935;
+  padding: 12px;
+  font-family: "Avenir Next Cyr W00 Bold";
+  font-size: 20px;
+}
+
+.person {
+  width: 25%;
+  float: left;
+
+  img {
+    float: left;
+  }
+}
+
+// Sections
+
+section {
+  float: left;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.intro-text, .callout-text, .listing-text, .body-text-area, .icons-text {
+  padding: 50px;
+  float: left;
+}
+
+.email-signup-text {
+  padding: 50px;
+}
+
+.schedule-text {
+  float: left;
+  padding: 50px;
+}
+
+.quote-text {
+  padding: 50px;
+  text-align: center;
+}
+
+.image {
+  height: 400px;
+}
+
+.focus {
+  font-size: 24px;
+  color: $blue-primary;
+}
+
+.icon-box {
+  width: 33.3%;
+  float: left;
+  padding: 20px 60px;
+
+  strong {
+    font-family: $font-family--bold;
+  }
+}
+
+.schedule-box {
+  width: 50%;
+  float: left;
+  padding: 20px 60px;
+
+  .strong {
+    font-family: $font-family--bold;
+  }
+  .blue {
+    color: $blue-secondary;
+  }
+}

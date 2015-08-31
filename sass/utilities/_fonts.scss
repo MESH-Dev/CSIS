@@ -1,0 +1,12 @@
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+$font-family--light : 'Avenir Next Cyr W00 Light';
+$font-family--light-italic : 'Avenir Next Cyr W00 Light It';
+$font-family--regular : 'Avenir Next Cyr W00 Regular';
+$font-family--italic : 'Avenir Next Cyr W00 Italic';
+$font-family--bold : 'Avenir Next Cyr W00 Bold';
+$font-family--bold-italic : 'Avenir Next Cyr W00 Bold It';
+$font-family--heavy : 'Avenir Next Cyr W00 Heavy';
+$font-family--heavy-italic : 'Avenir Next Cyr W00 Heavy It';
