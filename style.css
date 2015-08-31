@@ -326,10 +326,12 @@ h3 {
 h4 {
   font-size: 24px;
   line-height: 28px;
-  font-family: "Avenir Next Cyr W00 Bold";
+  font-family: "Avenir Next Cyr W00 Regular";
+  letter-spacing: 0.04em;
+  margin-bottom: 25px;
 }
 
-/* line 51, sass/base/_base.scss */
+/* line 53, sass/base/_base.scss */
 h5 {
   font-size: 15px;
   line-height: 20px;
@@ -338,7 +340,7 @@ h5 {
   margin: 0 0 10px 0;
 }
 
-/* line 59, sass/base/_base.scss */
+/* line 61, sass/base/_base.scss */
 h6 {
   font-size: 10px;
   line-height: 22px;
@@ -348,14 +350,14 @@ h6 {
   margin: 0 0 5px 0;
 }
 
-/* line 68, sass/base/_base.scss */
+/* line 70, sass/base/_base.scss */
 a {
   color: #fec935;
   text-decoration: none;
   font-weight: 400;
 }
 
-/* line 74, sass/base/_base.scss */
+/* line 76, sass/base/_base.scss */
 p {
   margin: 0 0 1.66667em;
   font-weight: 300;
@@ -364,7 +366,7 @@ p {
   letter-spacing: 0.04em;
 }
 
-/* line 82, sass/base/_base.scss */
+/* line 84, sass/base/_base.scss */
 blockquote {
   font-size: 1.5pxem;
   font-style: italic;
@@ -374,14 +376,14 @@ blockquote {
   border-left: solid 0.33333em palette(grey, xx-light);
 }
 
-/* line 93, sass/base/_base.scss */
+/* line 95, sass/base/_base.scss */
 img {
   margin-bottom: 1.5pxem;
   max-width: 100%;
   height: auto;
 }
 
-/* line 101, sass/base/_base.scss */
+/* line 103, sass/base/_base.scss */
 ul,
 li {
   margin: 0;
@@ -389,7 +391,7 @@ li {
   list-style-type: none;
 }
 
-/* line 110, sass/base/_base.scss */
+/* line 112, sass/base/_base.scss */
 input,
 textarea {
   display: block;
@@ -399,22 +401,22 @@ textarea {
   border: 0;
 }
 
-/* line 119, sass/base/_base.scss */
+/* line 121, sass/base/_base.scss */
 input:focus,
 textarea:focus {
   transition: 1;
 }
 
-/* line 126, sass/base/_base.scss */
+/* line 128, sass/base/_base.scss */
 button {
   outline: 0;
 }
 
-/* line 132, sass/base/_base.scss */
+/* line 134, sass/base/_base.scss */
 footer {
   border-top: 1px solid palette(grey, xx-light);
 }
-/* line 134, sass/base/_base.scss */
+/* line 136, sass/base/_base.scss */
 footer p {
   font-size: 1pxem;
   margin-top: 1.375em;
@@ -579,71 +581,79 @@ main {
 }
 
 /* line 16, sass/layout/_main.scss */
-.yellow-primary .input__label--hoshi-color-1::after, .yellow-primary-background .input__label--hoshi-color-1::after {
-  border-color: #fec935;
-}
-/* line 20, sass/layout/_main.scss */
-.yellow-primary .input__label--hoshi-color-2::after, .yellow-primary-background .input__label--hoshi-color-2::after {
-  border-color: #fec935;
-}
-/* line 24, sass/layout/_main.scss */
-.yellow-primary .input__label--hoshi-color-3::after, .yellow-primary-background .input__label--hoshi-color-3::after {
-  border-color: #fec935;
-}
-/* line 28, sass/layout/_main.scss */
-.yellow-primary .input__label, .yellow-primary-background .input__label {
-  color: #fec935;
+.yellow-primary .input__label--hoshi-color-1::before, .yellow-primary .input__label--hoshi-color-2::before, .yellow-primary .input__label--hoshi-color-3::before, .yellow-primary-background .input__label--hoshi-color-1::before, .yellow-primary-background .input__label--hoshi-color-2::before, .yellow-primary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .yellow-primary {
   color: #fec935;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.yellow-primary .input__label--hoshi-color-1::after, .yellow-primary .input__label--hoshi-color-2::after, .yellow-primary .input__label--hoshi-color-3::after {
+  border-color: #fec935;
+}
+/* line 30, sass/layout/_main.scss */
+.yellow-primary .input__label--hoshi-color-1::before, .yellow-primary .input__label--hoshi-color-2::before, .yellow-primary .input__label--hoshi-color-3::before {
+  border-color: #fec935;
+}
+/* line 34, sass/layout/_main.scss */
+.yellow-primary .input__label, .yellow-primary .input__field {
+  color: #fec935;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .yellow-primary-background {
   color: white;
   background-color: #fec935;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.yellow-primary-background .input__label--hoshi-color-1::after, .yellow-primary-background .input__label--hoshi-color-2::after, .yellow-primary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.yellow-primary-background .input__label, .yellow-primary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .yellow-primary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .yellow-primary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .yellow-primary-background .cta-text a {
   color: #fec935;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .yellow-primary-background .right {
   border: 0.2em solid #fec935;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .yellow-primary-background .right:after {
   border-top: 0.2em solid #fec935;
   border-right: 0.2em solid #fec935;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .yellow-primary-background .callout-panel, .yellow-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .yellow-primary-background .callout-panel a, .yellow-primary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .yellow-primary-background .callout-panel .cta-small, .yellow-primary-background .callout-panel .cta-big, .yellow-primary-background .quote .cta-small, .yellow-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .yellow-primary-background .callout-screen {
   float: left;
   background-color: rgba(254, 201, 53, 0.7);
@@ -653,94 +663,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .yellow-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover {
   color: #fec935;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover a {
   color: #fec935;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.yellow-secondary .input__label--hoshi-color-1::after, .yellow-secondary-background .input__label--hoshi-color-1::after {
-  border-color: #ef9f25;
-}
-/* line 20, sass/layout/_main.scss */
-.yellow-secondary .input__label--hoshi-color-2::after, .yellow-secondary-background .input__label--hoshi-color-2::after {
-  border-color: #ef9f25;
-}
-/* line 24, sass/layout/_main.scss */
-.yellow-secondary .input__label--hoshi-color-3::after, .yellow-secondary-background .input__label--hoshi-color-3::after {
-  border-color: #ef9f25;
-}
-/* line 28, sass/layout/_main.scss */
-.yellow-secondary .input__label, .yellow-secondary-background .input__label {
-  color: #ef9f25;
+.yellow-secondary .input__label--hoshi-color-1::before, .yellow-secondary .input__label--hoshi-color-2::before, .yellow-secondary .input__label--hoshi-color-3::before, .yellow-secondary-background .input__label--hoshi-color-1::before, .yellow-secondary-background .input__label--hoshi-color-2::before, .yellow-secondary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .yellow-secondary {
   color: #ef9f25;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.yellow-secondary .input__label--hoshi-color-1::after, .yellow-secondary .input__label--hoshi-color-2::after, .yellow-secondary .input__label--hoshi-color-3::after {
+  border-color: #ef9f25;
+}
+/* line 30, sass/layout/_main.scss */
+.yellow-secondary .input__label--hoshi-color-1::before, .yellow-secondary .input__label--hoshi-color-2::before, .yellow-secondary .input__label--hoshi-color-3::before {
+  border-color: #ef9f25;
+}
+/* line 34, sass/layout/_main.scss */
+.yellow-secondary .input__label, .yellow-secondary .input__field {
+  color: #ef9f25;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .yellow-secondary-background {
   color: white;
   background-color: #ef9f25;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.yellow-secondary-background .input__label--hoshi-color-1::after, .yellow-secondary-background .input__label--hoshi-color-2::after, .yellow-secondary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.yellow-secondary-background .input__label, .yellow-secondary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .yellow-secondary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .yellow-secondary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .yellow-secondary-background .cta-text a {
   color: #ef9f25;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .yellow-secondary-background .right {
   border: 0.2em solid #ef9f25;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .yellow-secondary-background .right:after {
   border-top: 0.2em solid #ef9f25;
   border-right: 0.2em solid #ef9f25;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .yellow-secondary-background .callout-panel, .yellow-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .yellow-secondary-background .callout-panel a, .yellow-secondary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .yellow-secondary-background .callout-panel .cta-small, .yellow-secondary-background .callout-panel .cta-big, .yellow-secondary-background .quote .cta-small, .yellow-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .yellow-secondary-background .callout-screen {
   float: left;
   background-color: rgba(239, 159, 37, 0.7);
@@ -750,94 +768,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .yellow-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover {
   color: #ef9f25;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover a {
   color: #ef9f25;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.yellow-tertiary .input__label--hoshi-color-1::after, .yellow-tertiary-background .input__label--hoshi-color-1::after {
-  border-color: #efe431;
-}
-/* line 20, sass/layout/_main.scss */
-.yellow-tertiary .input__label--hoshi-color-2::after, .yellow-tertiary-background .input__label--hoshi-color-2::after {
-  border-color: #efe431;
-}
-/* line 24, sass/layout/_main.scss */
-.yellow-tertiary .input__label--hoshi-color-3::after, .yellow-tertiary-background .input__label--hoshi-color-3::after {
-  border-color: #efe431;
-}
-/* line 28, sass/layout/_main.scss */
-.yellow-tertiary .input__label, .yellow-tertiary-background .input__label {
-  color: #efe431;
+.yellow-tertiary .input__label--hoshi-color-1::before, .yellow-tertiary .input__label--hoshi-color-2::before, .yellow-tertiary .input__label--hoshi-color-3::before, .yellow-tertiary-background .input__label--hoshi-color-1::before, .yellow-tertiary-background .input__label--hoshi-color-2::before, .yellow-tertiary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .yellow-tertiary {
   color: #efe431;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.yellow-tertiary .input__label--hoshi-color-1::after, .yellow-tertiary .input__label--hoshi-color-2::after, .yellow-tertiary .input__label--hoshi-color-3::after {
+  border-color: #efe431;
+}
+/* line 30, sass/layout/_main.scss */
+.yellow-tertiary .input__label--hoshi-color-1::before, .yellow-tertiary .input__label--hoshi-color-2::before, .yellow-tertiary .input__label--hoshi-color-3::before {
+  border-color: #efe431;
+}
+/* line 34, sass/layout/_main.scss */
+.yellow-tertiary .input__label, .yellow-tertiary .input__field {
+  color: #efe431;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .yellow-tertiary-background {
   color: white;
   background-color: #efe431;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.yellow-tertiary-background .input__label--hoshi-color-1::after, .yellow-tertiary-background .input__label--hoshi-color-2::after, .yellow-tertiary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.yellow-tertiary-background .input__label, .yellow-tertiary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .yellow-tertiary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .yellow-tertiary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .yellow-tertiary-background .cta-text a {
   color: #efe431;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .yellow-tertiary-background .right {
   border: 0.2em solid #efe431;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .yellow-tertiary-background .right:after {
   border-top: 0.2em solid #efe431;
   border-right: 0.2em solid #efe431;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-panel, .yellow-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-panel a, .yellow-tertiary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-panel .cta-small, .yellow-tertiary-background .callout-panel .cta-big, .yellow-tertiary-background .quote .cta-small, .yellow-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(239, 228, 49, 0.7);
@@ -847,94 +873,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover {
   color: #efe431;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover a {
   color: #efe431;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.purple-primary .input__label--hoshi-color-1::after, .purple-primary-background .input__label--hoshi-color-1::after {
-  border-color: #97729e;
-}
-/* line 20, sass/layout/_main.scss */
-.purple-primary .input__label--hoshi-color-2::after, .purple-primary-background .input__label--hoshi-color-2::after {
-  border-color: #97729e;
-}
-/* line 24, sass/layout/_main.scss */
-.purple-primary .input__label--hoshi-color-3::after, .purple-primary-background .input__label--hoshi-color-3::after {
-  border-color: #97729e;
-}
-/* line 28, sass/layout/_main.scss */
-.purple-primary .input__label, .purple-primary-background .input__label {
-  color: #97729e;
+.purple-primary .input__label--hoshi-color-1::before, .purple-primary .input__label--hoshi-color-2::before, .purple-primary .input__label--hoshi-color-3::before, .purple-primary-background .input__label--hoshi-color-1::before, .purple-primary-background .input__label--hoshi-color-2::before, .purple-primary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .purple-primary {
   color: #97729e;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.purple-primary .input__label--hoshi-color-1::after, .purple-primary .input__label--hoshi-color-2::after, .purple-primary .input__label--hoshi-color-3::after {
+  border-color: #97729e;
+}
+/* line 30, sass/layout/_main.scss */
+.purple-primary .input__label--hoshi-color-1::before, .purple-primary .input__label--hoshi-color-2::before, .purple-primary .input__label--hoshi-color-3::before {
+  border-color: #97729e;
+}
+/* line 34, sass/layout/_main.scss */
+.purple-primary .input__label, .purple-primary .input__field {
+  color: #97729e;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .purple-primary-background {
   color: white;
   background-color: #97729e;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.purple-primary-background .input__label--hoshi-color-1::after, .purple-primary-background .input__label--hoshi-color-2::after, .purple-primary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.purple-primary-background .input__label, .purple-primary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .purple-primary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .purple-primary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .purple-primary-background .cta-text a {
   color: #97729e;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .purple-primary-background .right {
   border: 0.2em solid #97729e;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .purple-primary-background .right:after {
   border-top: 0.2em solid #97729e;
   border-right: 0.2em solid #97729e;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .purple-primary-background .callout-panel, .purple-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .purple-primary-background .callout-panel a, .purple-primary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .purple-primary-background .callout-panel .cta-small, .purple-primary-background .callout-panel .cta-big, .purple-primary-background .quote .cta-small, .purple-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .purple-primary-background .callout-screen {
   float: left;
   background-color: rgba(151, 114, 158, 0.7);
@@ -944,94 +978,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .purple-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .purple-primary-background.hover:hover {
   color: #97729e;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .purple-primary-background.hover:hover a {
   color: #97729e;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.purple-secondary .input__label--hoshi-color-1::after, .purple-secondary-background .input__label--hoshi-color-1::after {
-  border-color: #4f539e;
-}
-/* line 20, sass/layout/_main.scss */
-.purple-secondary .input__label--hoshi-color-2::after, .purple-secondary-background .input__label--hoshi-color-2::after {
-  border-color: #4f539e;
-}
-/* line 24, sass/layout/_main.scss */
-.purple-secondary .input__label--hoshi-color-3::after, .purple-secondary-background .input__label--hoshi-color-3::after {
-  border-color: #4f539e;
-}
-/* line 28, sass/layout/_main.scss */
-.purple-secondary .input__label, .purple-secondary-background .input__label {
-  color: #4f539e;
+.purple-secondary .input__label--hoshi-color-1::before, .purple-secondary .input__label--hoshi-color-2::before, .purple-secondary .input__label--hoshi-color-3::before, .purple-secondary-background .input__label--hoshi-color-1::before, .purple-secondary-background .input__label--hoshi-color-2::before, .purple-secondary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .purple-secondary {
   color: #4f539e;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.purple-secondary .input__label--hoshi-color-1::after, .purple-secondary .input__label--hoshi-color-2::after, .purple-secondary .input__label--hoshi-color-3::after {
+  border-color: #4f539e;
+}
+/* line 30, sass/layout/_main.scss */
+.purple-secondary .input__label--hoshi-color-1::before, .purple-secondary .input__label--hoshi-color-2::before, .purple-secondary .input__label--hoshi-color-3::before {
+  border-color: #4f539e;
+}
+/* line 34, sass/layout/_main.scss */
+.purple-secondary .input__label, .purple-secondary .input__field {
+  color: #4f539e;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .purple-secondary-background {
   color: white;
   background-color: #4f539e;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.purple-secondary-background .input__label--hoshi-color-1::after, .purple-secondary-background .input__label--hoshi-color-2::after, .purple-secondary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.purple-secondary-background .input__label, .purple-secondary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .purple-secondary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .purple-secondary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .purple-secondary-background .cta-text a {
   color: #4f539e;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .purple-secondary-background .right {
   border: 0.2em solid #4f539e;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .purple-secondary-background .right:after {
   border-top: 0.2em solid #4f539e;
   border-right: 0.2em solid #4f539e;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .purple-secondary-background .callout-panel, .purple-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .purple-secondary-background .callout-panel a, .purple-secondary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .purple-secondary-background .callout-panel .cta-small, .purple-secondary-background .callout-panel .cta-big, .purple-secondary-background .quote .cta-small, .purple-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .purple-secondary-background .callout-screen {
   float: left;
   background-color: rgba(79, 83, 158, 0.7);
@@ -1041,94 +1083,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .purple-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover {
   color: #4f539e;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover a {
   color: #4f539e;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.purple-tertiary .input__label--hoshi-color-1::after, .purple-tertiary-background .input__label--hoshi-color-1::after {
-  border-color: #712880;
-}
-/* line 20, sass/layout/_main.scss */
-.purple-tertiary .input__label--hoshi-color-2::after, .purple-tertiary-background .input__label--hoshi-color-2::after {
-  border-color: #712880;
-}
-/* line 24, sass/layout/_main.scss */
-.purple-tertiary .input__label--hoshi-color-3::after, .purple-tertiary-background .input__label--hoshi-color-3::after {
-  border-color: #712880;
-}
-/* line 28, sass/layout/_main.scss */
-.purple-tertiary .input__label, .purple-tertiary-background .input__label {
-  color: #712880;
+.purple-tertiary .input__label--hoshi-color-1::before, .purple-tertiary .input__label--hoshi-color-2::before, .purple-tertiary .input__label--hoshi-color-3::before, .purple-tertiary-background .input__label--hoshi-color-1::before, .purple-tertiary-background .input__label--hoshi-color-2::before, .purple-tertiary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .purple-tertiary {
   color: #712880;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.purple-tertiary .input__label--hoshi-color-1::after, .purple-tertiary .input__label--hoshi-color-2::after, .purple-tertiary .input__label--hoshi-color-3::after {
+  border-color: #712880;
+}
+/* line 30, sass/layout/_main.scss */
+.purple-tertiary .input__label--hoshi-color-1::before, .purple-tertiary .input__label--hoshi-color-2::before, .purple-tertiary .input__label--hoshi-color-3::before {
+  border-color: #712880;
+}
+/* line 34, sass/layout/_main.scss */
+.purple-tertiary .input__label, .purple-tertiary .input__field {
+  color: #712880;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .purple-tertiary-background {
   color: white;
   background-color: #712880;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.purple-tertiary-background .input__label--hoshi-color-1::after, .purple-tertiary-background .input__label--hoshi-color-2::after, .purple-tertiary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.purple-tertiary-background .input__label, .purple-tertiary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .purple-tertiary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .purple-tertiary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .purple-tertiary-background .cta-text a {
   color: #712880;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .purple-tertiary-background .right {
   border: 0.2em solid #712880;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .purple-tertiary-background .right:after {
   border-top: 0.2em solid #712880;
   border-right: 0.2em solid #712880;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .purple-tertiary-background .callout-panel, .purple-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .purple-tertiary-background .callout-panel a, .purple-tertiary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .purple-tertiary-background .callout-panel .cta-small, .purple-tertiary-background .callout-panel .cta-big, .purple-tertiary-background .quote .cta-small, .purple-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .purple-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(113, 40, 128, 0.7);
@@ -1138,94 +1188,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .purple-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover {
   color: #712880;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover a {
   color: #712880;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.blue-primary .input__label--hoshi-color-1::after, .blue-primary-background .input__label--hoshi-color-1::after {
-  border-color: #2791bd;
-}
-/* line 20, sass/layout/_main.scss */
-.blue-primary .input__label--hoshi-color-2::after, .blue-primary-background .input__label--hoshi-color-2::after {
-  border-color: #2791bd;
-}
-/* line 24, sass/layout/_main.scss */
-.blue-primary .input__label--hoshi-color-3::after, .blue-primary-background .input__label--hoshi-color-3::after {
-  border-color: #2791bd;
-}
-/* line 28, sass/layout/_main.scss */
-.blue-primary .input__label, .blue-primary-background .input__label {
-  color: #2791bd;
+.blue-primary .input__label--hoshi-color-1::before, .blue-primary .input__label--hoshi-color-2::before, .blue-primary .input__label--hoshi-color-3::before, .blue-primary-background .input__label--hoshi-color-1::before, .blue-primary-background .input__label--hoshi-color-2::before, .blue-primary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .blue-primary {
   color: #2791bd;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.blue-primary .input__label--hoshi-color-1::after, .blue-primary .input__label--hoshi-color-2::after, .blue-primary .input__label--hoshi-color-3::after {
+  border-color: #2791bd;
+}
+/* line 30, sass/layout/_main.scss */
+.blue-primary .input__label--hoshi-color-1::before, .blue-primary .input__label--hoshi-color-2::before, .blue-primary .input__label--hoshi-color-3::before {
+  border-color: #2791bd;
+}
+/* line 34, sass/layout/_main.scss */
+.blue-primary .input__label, .blue-primary .input__field {
+  color: #2791bd;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .blue-primary-background {
   color: white;
   background-color: #2791bd;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.blue-primary-background .input__label--hoshi-color-1::after, .blue-primary-background .input__label--hoshi-color-2::after, .blue-primary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.blue-primary-background .input__label, .blue-primary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .blue-primary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .blue-primary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .blue-primary-background .cta-text a {
   color: #2791bd;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .blue-primary-background .right {
   border: 0.2em solid #2791bd;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .blue-primary-background .right:after {
   border-top: 0.2em solid #2791bd;
   border-right: 0.2em solid #2791bd;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .blue-primary-background .callout-panel, .blue-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .blue-primary-background .callout-panel a, .blue-primary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .blue-primary-background .callout-panel .cta-small, .blue-primary-background .callout-panel .cta-big, .blue-primary-background .quote .cta-small, .blue-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .blue-primary-background .callout-screen {
   float: left;
   background-color: rgba(39, 145, 189, 0.7);
@@ -1235,94 +1293,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .blue-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .blue-primary-background.hover:hover {
   color: #2791bd;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .blue-primary-background.hover:hover a {
   color: #2791bd;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.blue-secondary .input__label--hoshi-color-1::after, .blue-secondary-background .input__label--hoshi-color-1::after {
-  border-color: #0ebde8;
-}
-/* line 20, sass/layout/_main.scss */
-.blue-secondary .input__label--hoshi-color-2::after, .blue-secondary-background .input__label--hoshi-color-2::after {
-  border-color: #0ebde8;
-}
-/* line 24, sass/layout/_main.scss */
-.blue-secondary .input__label--hoshi-color-3::after, .blue-secondary-background .input__label--hoshi-color-3::after {
-  border-color: #0ebde8;
-}
-/* line 28, sass/layout/_main.scss */
-.blue-secondary .input__label, .blue-secondary-background .input__label {
-  color: #0ebde8;
+.blue-secondary .input__label--hoshi-color-1::before, .blue-secondary .input__label--hoshi-color-2::before, .blue-secondary .input__label--hoshi-color-3::before, .blue-secondary-background .input__label--hoshi-color-1::before, .blue-secondary-background .input__label--hoshi-color-2::before, .blue-secondary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .blue-secondary {
   color: #0ebde8;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.blue-secondary .input__label--hoshi-color-1::after, .blue-secondary .input__label--hoshi-color-2::after, .blue-secondary .input__label--hoshi-color-3::after {
+  border-color: #0ebde8;
+}
+/* line 30, sass/layout/_main.scss */
+.blue-secondary .input__label--hoshi-color-1::before, .blue-secondary .input__label--hoshi-color-2::before, .blue-secondary .input__label--hoshi-color-3::before {
+  border-color: #0ebde8;
+}
+/* line 34, sass/layout/_main.scss */
+.blue-secondary .input__label, .blue-secondary .input__field {
+  color: #0ebde8;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .blue-secondary-background {
   color: white;
   background-color: #0ebde8;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.blue-secondary-background .input__label--hoshi-color-1::after, .blue-secondary-background .input__label--hoshi-color-2::after, .blue-secondary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.blue-secondary-background .input__label, .blue-secondary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .blue-secondary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .blue-secondary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .blue-secondary-background .cta-text a {
   color: #0ebde8;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .blue-secondary-background .right {
   border: 0.2em solid #0ebde8;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .blue-secondary-background .right:after {
   border-top: 0.2em solid #0ebde8;
   border-right: 0.2em solid #0ebde8;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .blue-secondary-background .callout-panel, .blue-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .blue-secondary-background .callout-panel a, .blue-secondary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .blue-secondary-background .callout-panel .cta-small, .blue-secondary-background .callout-panel .cta-big, .blue-secondary-background .quote .cta-small, .blue-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .blue-secondary-background .callout-screen {
   float: left;
   background-color: rgba(14, 189, 232, 0.7);
@@ -1332,94 +1398,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .blue-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover {
   color: #0ebde8;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover a {
   color: #0ebde8;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.blue-tertiary .input__label--hoshi-color-1::after, .blue-tertiary-background .input__label--hoshi-color-1::after {
-  border-color: #66b5c8;
-}
-/* line 20, sass/layout/_main.scss */
-.blue-tertiary .input__label--hoshi-color-2::after, .blue-tertiary-background .input__label--hoshi-color-2::after {
-  border-color: #66b5c8;
-}
-/* line 24, sass/layout/_main.scss */
-.blue-tertiary .input__label--hoshi-color-3::after, .blue-tertiary-background .input__label--hoshi-color-3::after {
-  border-color: #66b5c8;
-}
-/* line 28, sass/layout/_main.scss */
-.blue-tertiary .input__label, .blue-tertiary-background .input__label {
-  color: #66b5c8;
+.blue-tertiary .input__label--hoshi-color-1::before, .blue-tertiary .input__label--hoshi-color-2::before, .blue-tertiary .input__label--hoshi-color-3::before, .blue-tertiary-background .input__label--hoshi-color-1::before, .blue-tertiary-background .input__label--hoshi-color-2::before, .blue-tertiary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .blue-tertiary {
   color: #66b5c8;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.blue-tertiary .input__label--hoshi-color-1::after, .blue-tertiary .input__label--hoshi-color-2::after, .blue-tertiary .input__label--hoshi-color-3::after {
+  border-color: #66b5c8;
+}
+/* line 30, sass/layout/_main.scss */
+.blue-tertiary .input__label--hoshi-color-1::before, .blue-tertiary .input__label--hoshi-color-2::before, .blue-tertiary .input__label--hoshi-color-3::before {
+  border-color: #66b5c8;
+}
+/* line 34, sass/layout/_main.scss */
+.blue-tertiary .input__label, .blue-tertiary .input__field {
+  color: #66b5c8;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .blue-tertiary-background {
   color: white;
   background-color: #66b5c8;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.blue-tertiary-background .input__label--hoshi-color-1::after, .blue-tertiary-background .input__label--hoshi-color-2::after, .blue-tertiary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.blue-tertiary-background .input__label, .blue-tertiary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .blue-tertiary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .blue-tertiary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .blue-tertiary-background .cta-text a {
   color: #66b5c8;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .blue-tertiary-background .right {
   border: 0.2em solid #66b5c8;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .blue-tertiary-background .right:after {
   border-top: 0.2em solid #66b5c8;
   border-right: 0.2em solid #66b5c8;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .blue-tertiary-background .callout-panel, .blue-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .blue-tertiary-background .callout-panel a, .blue-tertiary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .blue-tertiary-background .callout-panel .cta-small, .blue-tertiary-background .callout-panel .cta-big, .blue-tertiary-background .quote .cta-small, .blue-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .blue-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(102, 181, 200, 0.7);
@@ -1429,94 +1503,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .blue-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover {
   color: #66b5c8;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover a {
   color: #66b5c8;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.green-primary .input__label--hoshi-color-1::after, .green-primary-background .input__label--hoshi-color-1::after {
-  border-color: #4fd1a1;
-}
-/* line 20, sass/layout/_main.scss */
-.green-primary .input__label--hoshi-color-2::after, .green-primary-background .input__label--hoshi-color-2::after {
-  border-color: #4fd1a1;
-}
-/* line 24, sass/layout/_main.scss */
-.green-primary .input__label--hoshi-color-3::after, .green-primary-background .input__label--hoshi-color-3::after {
-  border-color: #4fd1a1;
-}
-/* line 28, sass/layout/_main.scss */
-.green-primary .input__label, .green-primary-background .input__label {
-  color: #4fd1a1;
+.green-primary .input__label--hoshi-color-1::before, .green-primary .input__label--hoshi-color-2::before, .green-primary .input__label--hoshi-color-3::before, .green-primary-background .input__label--hoshi-color-1::before, .green-primary-background .input__label--hoshi-color-2::before, .green-primary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .green-primary {
   color: #4fd1a1;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.green-primary .input__label--hoshi-color-1::after, .green-primary .input__label--hoshi-color-2::after, .green-primary .input__label--hoshi-color-3::after {
+  border-color: #4fd1a1;
+}
+/* line 30, sass/layout/_main.scss */
+.green-primary .input__label--hoshi-color-1::before, .green-primary .input__label--hoshi-color-2::before, .green-primary .input__label--hoshi-color-3::before {
+  border-color: #4fd1a1;
+}
+/* line 34, sass/layout/_main.scss */
+.green-primary .input__label, .green-primary .input__field {
+  color: #4fd1a1;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .green-primary-background {
   color: white;
   background-color: #4fd1a1;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.green-primary-background .input__label--hoshi-color-1::after, .green-primary-background .input__label--hoshi-color-2::after, .green-primary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.green-primary-background .input__label, .green-primary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .green-primary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .green-primary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .green-primary-background .cta-text a {
   color: #4fd1a1;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .green-primary-background .right {
   border: 0.2em solid #4fd1a1;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .green-primary-background .right:after {
   border-top: 0.2em solid #4fd1a1;
   border-right: 0.2em solid #4fd1a1;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .green-primary-background .callout-panel, .green-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .green-primary-background .callout-panel a, .green-primary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .green-primary-background .callout-panel .cta-small, .green-primary-background .callout-panel .cta-big, .green-primary-background .quote .cta-small, .green-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .green-primary-background .callout-screen {
   float: left;
   background-color: rgba(79, 209, 161, 0.7);
@@ -1526,94 +1608,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .green-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .green-primary-background.hover:hover {
   color: #4fd1a1;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .green-primary-background.hover:hover a {
   color: #4fd1a1;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .green-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .green-primary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.green-secondary .input__label--hoshi-color-1::after, .green-secondary-background .input__label--hoshi-color-1::after {
-  border-color: #1f5c45;
-}
-/* line 20, sass/layout/_main.scss */
-.green-secondary .input__label--hoshi-color-2::after, .green-secondary-background .input__label--hoshi-color-2::after {
-  border-color: #1f5c45;
-}
-/* line 24, sass/layout/_main.scss */
-.green-secondary .input__label--hoshi-color-3::after, .green-secondary-background .input__label--hoshi-color-3::after {
-  border-color: #1f5c45;
-}
-/* line 28, sass/layout/_main.scss */
-.green-secondary .input__label, .green-secondary-background .input__label {
-  color: #1f5c45;
+.green-secondary .input__label--hoshi-color-1::before, .green-secondary .input__label--hoshi-color-2::before, .green-secondary .input__label--hoshi-color-3::before, .green-secondary-background .input__label--hoshi-color-1::before, .green-secondary-background .input__label--hoshi-color-2::before, .green-secondary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .green-secondary {
   color: #1f5c45;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.green-secondary .input__label--hoshi-color-1::after, .green-secondary .input__label--hoshi-color-2::after, .green-secondary .input__label--hoshi-color-3::after {
+  border-color: #1f5c45;
+}
+/* line 30, sass/layout/_main.scss */
+.green-secondary .input__label--hoshi-color-1::before, .green-secondary .input__label--hoshi-color-2::before, .green-secondary .input__label--hoshi-color-3::before {
+  border-color: #1f5c45;
+}
+/* line 34, sass/layout/_main.scss */
+.green-secondary .input__label, .green-secondary .input__field {
+  color: #1f5c45;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .green-secondary-background {
   color: white;
   background-color: #1f5c45;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.green-secondary-background .input__label--hoshi-color-1::after, .green-secondary-background .input__label--hoshi-color-2::after, .green-secondary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.green-secondary-background .input__label, .green-secondary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .green-secondary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .green-secondary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .green-secondary-background .cta-text a {
   color: #1f5c45;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .green-secondary-background .right {
   border: 0.2em solid #1f5c45;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .green-secondary-background .right:after {
   border-top: 0.2em solid #1f5c45;
   border-right: 0.2em solid #1f5c45;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .green-secondary-background .callout-panel, .green-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .green-secondary-background .callout-panel a, .green-secondary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .green-secondary-background .callout-panel .cta-small, .green-secondary-background .callout-panel .cta-big, .green-secondary-background .quote .cta-small, .green-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .green-secondary-background .callout-screen {
   float: left;
   background-color: rgba(31, 92, 69, 0.7);
@@ -1623,94 +1713,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .green-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .green-secondary-background.hover:hover {
   color: #1f5c45;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .green-secondary-background.hover:hover a {
   color: #1f5c45;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.green-tertiary .input__label--hoshi-color-1::after, .green-tertiary-background .input__label--hoshi-color-1::after {
-  border-color: #b8d242;
-}
-/* line 20, sass/layout/_main.scss */
-.green-tertiary .input__label--hoshi-color-2::after, .green-tertiary-background .input__label--hoshi-color-2::after {
-  border-color: #b8d242;
-}
-/* line 24, sass/layout/_main.scss */
-.green-tertiary .input__label--hoshi-color-3::after, .green-tertiary-background .input__label--hoshi-color-3::after {
-  border-color: #b8d242;
-}
-/* line 28, sass/layout/_main.scss */
-.green-tertiary .input__label, .green-tertiary-background .input__label {
-  color: #b8d242;
+.green-tertiary .input__label--hoshi-color-1::before, .green-tertiary .input__label--hoshi-color-2::before, .green-tertiary .input__label--hoshi-color-3::before, .green-tertiary-background .input__label--hoshi-color-1::before, .green-tertiary-background .input__label--hoshi-color-2::before, .green-tertiary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .green-tertiary {
   color: #b8d242;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.green-tertiary .input__label--hoshi-color-1::after, .green-tertiary .input__label--hoshi-color-2::after, .green-tertiary .input__label--hoshi-color-3::after {
+  border-color: #b8d242;
+}
+/* line 30, sass/layout/_main.scss */
+.green-tertiary .input__label--hoshi-color-1::before, .green-tertiary .input__label--hoshi-color-2::before, .green-tertiary .input__label--hoshi-color-3::before {
+  border-color: #b8d242;
+}
+/* line 34, sass/layout/_main.scss */
+.green-tertiary .input__label, .green-tertiary .input__field {
+  color: #b8d242;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .green-tertiary-background {
   color: white;
   background-color: #b8d242;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.green-tertiary-background .input__label--hoshi-color-1::after, .green-tertiary-background .input__label--hoshi-color-2::after, .green-tertiary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.green-tertiary-background .input__label, .green-tertiary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .green-tertiary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .green-tertiary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .green-tertiary-background .cta-text a {
   color: #b8d242;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .green-tertiary-background .right {
   border: 0.2em solid #b8d242;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .green-tertiary-background .right:after {
   border-top: 0.2em solid #b8d242;
   border-right: 0.2em solid #b8d242;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .green-tertiary-background .callout-panel, .green-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .green-tertiary-background .callout-panel a, .green-tertiary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .green-tertiary-background .callout-panel .cta-small, .green-tertiary-background .callout-panel .cta-big, .green-tertiary-background .quote .cta-small, .green-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .green-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(184, 210, 66, 0.7);
@@ -1720,94 +1818,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .green-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover {
   color: #b8d242;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover a {
   color: #b8d242;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.red-primary .input__label--hoshi-color-1::after, .red-primary-background .input__label--hoshi-color-1::after {
-  border-color: #bc4851;
-}
-/* line 20, sass/layout/_main.scss */
-.red-primary .input__label--hoshi-color-2::after, .red-primary-background .input__label--hoshi-color-2::after {
-  border-color: #bc4851;
-}
-/* line 24, sass/layout/_main.scss */
-.red-primary .input__label--hoshi-color-3::after, .red-primary-background .input__label--hoshi-color-3::after {
-  border-color: #bc4851;
-}
-/* line 28, sass/layout/_main.scss */
-.red-primary .input__label, .red-primary-background .input__label {
-  color: #bc4851;
+.red-primary .input__label--hoshi-color-1::before, .red-primary .input__label--hoshi-color-2::before, .red-primary .input__label--hoshi-color-3::before, .red-primary-background .input__label--hoshi-color-1::before, .red-primary-background .input__label--hoshi-color-2::before, .red-primary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .red-primary {
   color: #bc4851;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.red-primary .input__label--hoshi-color-1::after, .red-primary .input__label--hoshi-color-2::after, .red-primary .input__label--hoshi-color-3::after {
+  border-color: #bc4851;
+}
+/* line 30, sass/layout/_main.scss */
+.red-primary .input__label--hoshi-color-1::before, .red-primary .input__label--hoshi-color-2::before, .red-primary .input__label--hoshi-color-3::before {
+  border-color: #bc4851;
+}
+/* line 34, sass/layout/_main.scss */
+.red-primary .input__label, .red-primary .input__field {
+  color: #bc4851;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .red-primary-background {
   color: white;
   background-color: #bc4851;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.red-primary-background .input__label--hoshi-color-1::after, .red-primary-background .input__label--hoshi-color-2::after, .red-primary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.red-primary-background .input__label, .red-primary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .red-primary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .red-primary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .red-primary-background .cta-text a {
   color: #bc4851;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .red-primary-background .right {
   border: 0.2em solid #bc4851;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .red-primary-background .right:after {
   border-top: 0.2em solid #bc4851;
   border-right: 0.2em solid #bc4851;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .red-primary-background .callout-panel, .red-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .red-primary-background .callout-panel a, .red-primary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .red-primary-background .callout-panel .cta-small, .red-primary-background .callout-panel .cta-big, .red-primary-background .quote .cta-small, .red-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .red-primary-background .callout-screen {
   float: left;
   background-color: rgba(188, 72, 81, 0.7);
@@ -1817,94 +1923,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .red-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .red-primary-background.hover:hover {
   color: #bc4851;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .red-primary-background.hover:hover a {
   color: #bc4851;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .red-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .red-primary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.red-secondary .input__label--hoshi-color-1::after, .red-secondary-background .input__label--hoshi-color-1::after {
-  border-color: #ed555d;
-}
-/* line 20, sass/layout/_main.scss */
-.red-secondary .input__label--hoshi-color-2::after, .red-secondary-background .input__label--hoshi-color-2::after {
-  border-color: #ed555d;
-}
-/* line 24, sass/layout/_main.scss */
-.red-secondary .input__label--hoshi-color-3::after, .red-secondary-background .input__label--hoshi-color-3::after {
-  border-color: #ed555d;
-}
-/* line 28, sass/layout/_main.scss */
-.red-secondary .input__label, .red-secondary-background .input__label {
-  color: #ed555d;
+.red-secondary .input__label--hoshi-color-1::before, .red-secondary .input__label--hoshi-color-2::before, .red-secondary .input__label--hoshi-color-3::before, .red-secondary-background .input__label--hoshi-color-1::before, .red-secondary-background .input__label--hoshi-color-2::before, .red-secondary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .red-secondary {
   color: #ed555d;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.red-secondary .input__label--hoshi-color-1::after, .red-secondary .input__label--hoshi-color-2::after, .red-secondary .input__label--hoshi-color-3::after {
+  border-color: #ed555d;
+}
+/* line 30, sass/layout/_main.scss */
+.red-secondary .input__label--hoshi-color-1::before, .red-secondary .input__label--hoshi-color-2::before, .red-secondary .input__label--hoshi-color-3::before {
+  border-color: #ed555d;
+}
+/* line 34, sass/layout/_main.scss */
+.red-secondary .input__label, .red-secondary .input__field {
+  color: #ed555d;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .red-secondary-background {
   color: white;
   background-color: #ed555d;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.red-secondary-background .input__label--hoshi-color-1::after, .red-secondary-background .input__label--hoshi-color-2::after, .red-secondary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.red-secondary-background .input__label, .red-secondary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .red-secondary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .red-secondary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .red-secondary-background .cta-text a {
   color: #ed555d;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .red-secondary-background .right {
   border: 0.2em solid #ed555d;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .red-secondary-background .right:after {
   border-top: 0.2em solid #ed555d;
   border-right: 0.2em solid #ed555d;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .red-secondary-background .callout-panel, .red-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .red-secondary-background .callout-panel a, .red-secondary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .red-secondary-background .callout-panel .cta-small, .red-secondary-background .callout-panel .cta-big, .red-secondary-background .quote .cta-small, .red-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .red-secondary-background .callout-screen {
   float: left;
   background-color: rgba(237, 85, 93, 0.7);
@@ -1914,94 +2028,102 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .red-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .red-secondary-background.hover:hover {
   color: #ed555d;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .red-secondary-background.hover:hover a {
   color: #ed555d;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .cta-text {
   right: 0px;
 }
 
 /* line 16, sass/layout/_main.scss */
-.red-tertiary .input__label--hoshi-color-1::after, .red-tertiary-background .input__label--hoshi-color-1::after {
-  border-color: #f37f66;
-}
-/* line 20, sass/layout/_main.scss */
-.red-tertiary .input__label--hoshi-color-2::after, .red-tertiary-background .input__label--hoshi-color-2::after {
-  border-color: #f37f66;
-}
-/* line 24, sass/layout/_main.scss */
-.red-tertiary .input__label--hoshi-color-3::after, .red-tertiary-background .input__label--hoshi-color-3::after {
-  border-color: #f37f66;
-}
-/* line 28, sass/layout/_main.scss */
-.red-tertiary .input__label, .red-tertiary-background .input__label {
-  color: #f37f66;
+.red-tertiary .input__label--hoshi-color-1::before, .red-tertiary .input__label--hoshi-color-2::before, .red-tertiary .input__label--hoshi-color-3::before, .red-tertiary-background .input__label--hoshi-color-1::before, .red-tertiary-background .input__label--hoshi-color-2::before, .red-tertiary-background .input__label--hoshi-color-3::before {
+  height: calc(100% - 5px);
 }
 
-/* line 33, sass/layout/_main.scss */
+/* line 22, sass/layout/_main.scss */
 .red-tertiary {
   color: #f37f66;
   background-color: white;
 }
+/* line 26, sass/layout/_main.scss */
+.red-tertiary .input__label--hoshi-color-1::after, .red-tertiary .input__label--hoshi-color-2::after, .red-tertiary .input__label--hoshi-color-3::after {
+  border-color: #f37f66;
+}
+/* line 30, sass/layout/_main.scss */
+.red-tertiary .input__label--hoshi-color-1::before, .red-tertiary .input__label--hoshi-color-2::before, .red-tertiary .input__label--hoshi-color-3::before {
+  border-color: #f37f66;
+}
+/* line 34, sass/layout/_main.scss */
+.red-tertiary .input__label, .red-tertiary .input__field {
+  color: #f37f66;
+}
 
-/* line 38, sass/layout/_main.scss */
+/* line 39, sass/layout/_main.scss */
 .red-tertiary-background {
   color: white;
   background-color: #f37f66;
 }
-/* line 44, sass/layout/_main.scss */
+/* line 43, sass/layout/_main.scss */
+.red-tertiary-background .input__label--hoshi-color-1::after, .red-tertiary-background .input__label--hoshi-color-2::after, .red-tertiary-background .input__label--hoshi-color-3::after {
+  border-color: white;
+}
+/* line 47, sass/layout/_main.scss */
+.red-tertiary-background .input__label, .red-tertiary-background .input__field {
+  color: white;
+}
+/* line 53, sass/layout/_main.scss */
 .red-tertiary-background .callout {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
 }
-/* line 49, sass/layout/_main.scss */
+/* line 58, sass/layout/_main.scss */
 .red-tertiary-background .callout a {
   color: white;
 }
-/* line 55, sass/layout/_main.scss */
+/* line 64, sass/layout/_main.scss */
 .red-tertiary-background .cta-text a {
   color: #f37f66;
 }
-/* line 60, sass/layout/_main.scss */
+/* line 69, sass/layout/_main.scss */
 .red-tertiary-background .right {
   border: 0.2em solid #f37f66;
   display: inline-block;
 }
-/* line 65, sass/layout/_main.scss */
+/* line 74, sass/layout/_main.scss */
 .red-tertiary-background .right:after {
   border-top: 0.2em solid #f37f66;
   border-right: 0.2em solid #f37f66;
 }
-/* line 72, sass/layout/_main.scss */
+/* line 81, sass/layout/_main.scss */
 .red-tertiary-background .callout-panel, .red-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 76, sass/layout/_main.scss */
+/* line 85, sass/layout/_main.scss */
 .red-tertiary-background .callout-panel a, .red-tertiary-background .quote a {
   color: white;
 }
-/* line 82, sass/layout/_main.scss */
+/* line 91, sass/layout/_main.scss */
 .red-tertiary-background .callout-panel .cta-small, .red-tertiary-background .callout-panel .cta-big, .red-tertiary-background .quote .cta-small, .red-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 87, sass/layout/_main.scss */
+/* line 96, sass/layout/_main.scss */
 .red-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(243, 127, 102, 0.7);
@@ -2011,53 +2133,53 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 97, sass/layout/_main.scss */
+/* line 106, sass/layout/_main.scss */
 .red-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 108, sass/layout/_main.scss */
+/* line 117, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover {
   color: #f37f66;
   background-color: white;
 }
-/* line 112, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover a {
   color: #f37f66;
 }
-/* line 116, sass/layout/_main.scss */
+/* line 125, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 121, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .cta-text {
   right: 0px;
 }
 
-/* line 135, sass/layout/_main.scss */
+/* line 144, sass/layout/_main.scss */
 .banner a {
   color: white;
 }
-/* line 141, sass/layout/_main.scss */
+/* line 150, sass/layout/_main.scss */
 .banner .cta-small .right {
   border: 0.2em solid white;
 }
-/* line 145, sass/layout/_main.scss */
+/* line 154, sass/layout/_main.scss */
 .banner .cta-small .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 155, sass/layout/_main.scss */
+/* line 164, sass/layout/_main.scss */
 .banner:hover .cta-text {
   right: 0px;
 }
 
-/* line 161, sass/layout/_main.scss */
+/* line 170, sass/layout/_main.scss */
 .banner-text {
   position: relative;
   z-index: 10;
   padding: 50px 150px 50px 50px;
 }
-/* line 166, sass/layout/_main.scss */
+/* line 175, sass/layout/_main.scss */
 .banner-text .banner-title {
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 3.25em;
@@ -2065,23 +2187,23 @@ main {
   margin-bottom: 25px;
   color: white;
 }
-/* line 174, sass/layout/_main.scss */
+/* line 183, sass/layout/_main.scss */
 .banner-text .banner-cta {
   font-size: 0.75em;
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 179, sass/layout/_main.scss */
+/* line 188, sass/layout/_main.scss */
 .banner-text .banner-cta a {
   color: white;
 }
 
-/* line 185, sass/layout/_main.scss */
+/* line 194, sass/layout/_main.scss */
 .banner-inner {
   height: 300px;
 }
 
-/* line 191, sass/layout/_main.scss */
+/* line 200, sass/layout/_main.scss */
 .cta-small {
   font-size: 0.75em;
   text-transform: uppercase;
@@ -2090,7 +2212,7 @@ main {
   position: relative;
   overflow: hidden;
 }
-/* line 199, sass/layout/_main.scss */
+/* line 208, sass/layout/_main.scss */
 .cta-small .cta-text {
   position: relative;
   right: -2000px;
@@ -2098,7 +2220,7 @@ main {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 206, sass/layout/_main.scss */
+/* line 215, sass/layout/_main.scss */
 .cta-small .cta-text .right {
   display: inline-block;
   width: 2em;
@@ -2107,7 +2229,7 @@ main {
   margin-left: 1.5em;
   text-align: center;
 }
-/* line 215, sass/layout/_main.scss */
+/* line 224, sass/layout/_main.scss */
 .cta-small .cta-text .right:after {
   content: '';
   display: inline-block;
@@ -2120,7 +2242,7 @@ main {
   transform: rotate(45deg);
 }
 
-/* line 229, sass/layout/_main.scss */
+/* line 238, sass/layout/_main.scss */
 .cta-big {
   margin-top: 50px;
   font-size: 0.75em;
@@ -2130,7 +2252,7 @@ main {
   position: relative;
   overflow: hidden;
 }
-/* line 238, sass/layout/_main.scss */
+/* line 247, sass/layout/_main.scss */
 .cta-big .cta-text {
   position: relative;
   right: -2000px;
@@ -2138,7 +2260,7 @@ main {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 245, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
 .cta-big .cta-text .right {
   display: inline-block;
   width: 7em;
@@ -2147,7 +2269,7 @@ main {
   margin-left: 1.5em;
   text-align: center;
 }
-/* line 254, sass/layout/_main.scss */
+/* line 263, sass/layout/_main.scss */
 .cta-big .cta-text .right:after {
   content: '';
   display: inline-block;
@@ -2160,22 +2282,22 @@ main {
   transform: rotate(45deg);
 }
 
-/* line 271, sass/layout/_main.scss */
+/* line 280, sass/layout/_main.scss */
 .callout-news {
   padding: 25px;
   height: 400px;
 }
-/* line 275, sass/layout/_main.scss */
+/* line 284, sass/layout/_main.scss */
 .callout-news .callout-news-headline {
   margin-bottom: 15px;
 }
 
-/* line 280, sass/layout/_main.scss */
+/* line 289, sass/layout/_main.scss */
 .information-video {
   border-right: 10px solid white;
 }
 
-/* line 284, sass/layout/_main.scss */
+/* line 293, sass/layout/_main.scss */
 .information-bar {
   height: 52px;
   background-color: #fec935;
@@ -2184,17 +2306,17 @@ main {
   font-size: 20px;
 }
 
-/* line 292, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .person {
   width: 25%;
   float: left;
 }
-/* line 296, sass/layout/_main.scss */
+/* line 305, sass/layout/_main.scss */
 .person img {
   float: left;
 }
 
-/* line 303, sass/layout/_main.scss */
+/* line 312, sass/layout/_main.scss */
 section {
   float: left;
   position: relative;
@@ -2202,81 +2324,76 @@ section {
   margin-bottom: 10px;
 }
 
-/* line 310, sass/layout/_main.scss */
+/* line 319, sass/layout/_main.scss */
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
 }
 
-/* line 315, sass/layout/_main.scss */
+/* line 324, sass/layout/_main.scss */
 .email-signup-text {
   padding: 50px;
 }
 
-/* line 319, sass/layout/_main.scss */
+/* line 328, sass/layout/_main.scss */
 .schedule-text {
   float: left;
   padding: 50px;
 }
 
-/* line 324, sass/layout/_main.scss */
+/* line 333, sass/layout/_main.scss */
 .quote-text {
   padding: 50px;
   text-align: center;
 }
 
-/* line 329, sass/layout/_main.scss */
+/* line 338, sass/layout/_main.scss */
 .image {
   height: 400px;
 }
 
-/* line 333, sass/layout/_main.scss */
-.focus {
-  font-size: 24px;
-}
-
-/* line 337, sass/layout/_main.scss */
+/* line 343, sass/layout/_main.scss */
 .icon-box {
   width: 33.3%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 342, sass/layout/_main.scss */
+/* line 348, sass/layout/_main.scss */
 .icon-box strong {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 347, sass/layout/_main.scss */
+/* line 353, sass/layout/_main.scss */
 .schedule-box {
   width: 50%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 352, sass/layout/_main.scss */
+/* line 358, sass/layout/_main.scss */
 .schedule-box .strong {
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 355, sass/layout/_main.scss */
+/* line 361, sass/layout/_main.scss */
 .schedule-box .blue {
   color: #0ebde8;
 }
 
-/* line 360, sass/layout/_main.scss */
+/* line 366, sass/layout/_main.scss */
 .buttons h3, .form h3 {
   margin-bottom: 0;
 }
 
-/* line 364, sass/layout/_main.scss */
+/* line 370, sass/layout/_main.scss */
 .buttons p, .form p {
   margin-bottom: 15px;
 }
 
-/* line 368, sass/layout/_main.scss */
+/* line 374, sass/layout/_main.scss */
 .regular-font {
   font-family: "Avenir Next Cyr W00 Regular";
 }
 
-/* line 372, sass/layout/_main.scss */
+/* line 378, sass/layout/_main.scss */
 .buttons-cta {
   display: inline;
   padding: 25px 80px 25px 25px;
@@ -2287,7 +2404,7 @@ section {
   float: left;
 }
 
-/* line 382, sass/layout/_main.scss */
+/* line 388, sass/layout/_main.scss */
 .submit-buttons {
   display: inline;
   padding: 10px 60px 10px 10px;
@@ -2297,6 +2414,27 @@ section {
   position: relative;
   float: left;
   margin-top: 30px;
+}
+
+/* line 399, sass/layout/_main.scss */
+.content-half {
+  padding-right: 20px;
+  margin-top: 15px;
+}
+/* line 403, sass/layout/_main.scss */
+.content-half h5 {
+  font-family: "Avenir Next Cyr W00 Bold";
+  margin-bottom: 0;
+}
+
+/* line 409, sass/layout/_main.scss */
+.content-text {
+  padding: 50px;
+  float: left;
+}
+/* line 413, sass/layout/_main.scss */
+.content-text p {
+  color: black;
 }
 
 /* line 1, sass/layout/_header.scss */

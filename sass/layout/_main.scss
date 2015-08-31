@@ -13,31 +13,40 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
   .#{$name}, .#{$name}-background {
 
-    .input__label--hoshi-color-1::after {
-    	border-color: nth($color_vars, $i);
+    .input__label--hoshi-color-1::before, .input__label--hoshi-color-2::before, .input__label--hoshi-color-3::before {
+    	height: calc(100% - 5px);
     }
 
-    .input__label--hoshi-color-2::after {
-    	border-color: nth($color_vars, $i);
-    }
-
-    .input__label--hoshi-color-3::after {
-    	border-color: nth($color_vars, $i);
-    }
-
-    .input__label {
-      color: nth($color_vars, $i);
-    }
   }
 
   .#{$name} {
     color: nth($color_vars, $i);
 		background-color: white;
+
+    .input__label--hoshi-color-1::after, .input__label--hoshi-color-2::after, .input__label--hoshi-color-3::after {
+    	border-color: nth($color_vars, $i);
+    }
+
+    .input__label--hoshi-color-1::before, .input__label--hoshi-color-2::before, .input__label--hoshi-color-3::before {
+    	border-color: nth($color_vars, $i);
+    }
+
+    .input__label, .input__field {
+      color: nth($color_vars, $i);
+    }
   }
 
 	.#{$name}-background {
 		color: white;
 		background-color: nth($color_vars, $i);
+
+    .input__label--hoshi-color-1::after, .input__label--hoshi-color-2::after, .input__label--hoshi-color-3::after {
+    	border-color: white;
+    }
+
+    .input__label, .input__field {
+      color: white;
+    }
 
     // Callout
 
@@ -330,9 +339,6 @@ section {
   height: 400px;
 }
 
-.focus {
-  font-size: 24px;
-}
 
 .icon-box {
   width: 33.3%;
@@ -388,4 +394,23 @@ section {
   position: relative;
   float: left;
   margin-top: 30px;
+}
+
+.content-half {
+  padding-right: 20px;
+  margin-top: 20px;
+
+  h5 {
+    font-family: $font-family--bold;
+    margin-bottom: 0;
+  }
+}
+
+.content-text {
+  padding: 50px;
+  float: left;
+
+  p {
+    color: black;
+  }
 }

@@ -118,7 +118,7 @@ get_header(); ?>
 
             ?>
 
-            <div class="three columns <?php echo $color; ?>-background">
+            <div class="three columns <?php echo $color; ?>-background hover">
               <div class="callout <?php if ($i % 3 == 0) { echo "omega"; } ?>">
                 <h3><a href="<?php echo get_sub_field('homepage_callout_link'); ?>"><?php echo get_sub_field('homepage_callout_title'); ?></a></h3>
                 <?php echo get_sub_field('homepage_callout_body_text'); ?>
