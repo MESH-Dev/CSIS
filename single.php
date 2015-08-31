@@ -1,23 +1,37 @@
 <?php get_header(); ?>
 
-<div id="content">
-	
+<main id="main" class="site-main" role="main">
+
+	<div class="container">
+
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		
-		<div class="post">
-			<h1><?php the_title(); ?></h1>
-			<p class="postinfo">By <?php the_author(); ?> | Categories: <?php the_category(', '); ?> | <?php comments_popup_link(); ?></p>
-			
-			<?php the_content(); ?>
+
+		<div class="nine columns offset-by-three">
+
+			<div class="content-text">
+				<h2><?php the_title(); ?></h2>
+				<h6><span class="postdate"><?php the_date(); ?></span> <span class="postauthor"><?php the_author(); ?></span></h6>
+
+				<div class="thumbnail">
+					<?php
+					// Must be inside a loop.
+
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					}
+
+					?>
+				</div>
+
+				<?php the_content(); ?>
+			</div>
+
 		</div>
-		
-		<?php comments_template( '', true ); ?>
-		
+
 	<?php endwhile; ?>
 
-</div><!-- End of Content -->
+	</div>
 
+</main><!-- End of Content -->
 
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

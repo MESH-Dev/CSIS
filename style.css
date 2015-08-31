@@ -347,7 +347,7 @@ h6 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
 }
 
 /* line 70, sass/base/_base.scss */
@@ -2419,7 +2419,7 @@ section {
 /* line 399, sass/layout/_main.scss */
 .content-half {
   padding-right: 20px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 /* line 403, sass/layout/_main.scss */
 .content-half h5 {
@@ -2435,6 +2435,30 @@ section {
 /* line 413, sass/layout/_main.scss */
 .content-text p {
   color: black;
+}
+
+/* line 418, sass/layout/_main.scss */
+#content {
+  margin-top: 30px;
+  float: left;
+}
+
+/* line 423, sass/layout/_main.scss */
+.thumbnail {
+  float: left;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* line 430, sass/layout/_main.scss */
+.single-post main {
+  border-top: 5px solid #fec935;
+}
+
+/* line 434, sass/layout/_main.scss */
+.page-template-product main, .page-template-panel main {
+  border-top: 5px solid #2791bd;
 }
 
 /* line 1, sass/layout/_header.scss */
