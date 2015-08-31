@@ -253,8 +253,31 @@
 	top: 400px;
 	left: 50px;
 	width: 200px;
-	padding: 20px;
 	z-index: 100;
+
+	.list {
+		padding: 20px;
+	}
+
+	.info {
+		border-bottom: 2px solid #cfcfcf;
+		border-top: 2px solid #cfcfcf;
+		padding: 10px;
+		text-align: center;
+		a {
+			font-family: $font-family--italic;
+			font-size: 10px;
+		}
+	}
+
+	.apply {
+		padding: 10px;
+		text-align: center;
+
+		a {
+			text-transform: uppercase;
+		}
+	}
 
 	a {
 		color: $grey;

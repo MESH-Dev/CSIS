@@ -18,6 +18,6 @@ jQuery(document).ready(function($){
 
   });
 
-  $('.side-menu').css('top', $('.intro').position().top + $('.side-menu').height());
+  $('.side-menu').css('top', $('.intro').position().top);
 
 });

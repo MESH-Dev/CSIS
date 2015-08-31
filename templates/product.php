@@ -10,6 +10,9 @@ get_header(); ?>
 
       <?php
 
+      $info = false;
+      $apply = false;
+
       if (get_field('banner') == 'image') {
         $image = get_field('banner_image');
 
@@ -76,6 +79,15 @@ get_header(); ?>
             while ( have_rows('sections') ) : the_row();
 
               $color = get_field('color');
+
+              if ($n % 2 != 0) {
+                $opp = $color;
+                $color = $color . "-background";
+              } else {
+                $color = $color;
+                $opp = $color . "-background";
+              }
+
               $columns = "nine offset-by-three";
               $callout_columns = "seven offset-by-three";
 
@@ -123,16 +135,13 @@ get_header(); ?>
 
               ?>
 
-              <section class="body-text" id="<?php echo $n; ?>">
+              <section class="body-text <?php echo $color; ?>" id="<?php echo $n; ?>">
 
-                <div class="body-text-area">
-                  <div class="row">
-                    <div class="nine columns offset-by-three">
-                      <?php echo get_sub_field('body_text'); ?>
-                    </div>
+                <div class="nine columns offset-by-three">
+                  <div class="body-text-area">
+                    <?php echo get_sub_field('body_text'); ?>
                   </div>
                 </div>
-
 
               </section>
 
@@ -164,7 +173,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="<?php echo $color; ?>-background" >
+              <section class="<?php echo $color; ?>" >
 
                 <div class="quote">
                   <div class="twelve columns">
@@ -204,90 +213,46 @@ get_header(); ?>
                 </div>
               </section>
 
+
               <?php
 
-              elseif ( get_sub_field('section_type') == '2-column' ) :
+              elseif ( get_sub_field('section_type') == 'listing' ) :
 
               ?>
 
-              <section class="listing" id="<?php echo $n; ?>">
+              <section class="listing <?php echo $color; ?>" id="<?php echo $n; ?>">
 
+                <div class="nine columns offset-by-three">
+
+                  <div class="icons-text">
 
                   <?php
 
-      							if( have_rows('2-column_callout') ): ?>
+      							if( have_rows('listing') ): ?>
 
       								<?php
 
-      								while( have_rows('2-column_callout') ): the_row();
-
-                        $color = get_sub_field('color');
+      								while( have_rows('listing') ): the_row();
 
       									?>
 
-      									<div class="six columns <?php echo $color; ?>-background callout-container">
-                          <div class="callout-title"><?php echo get_sub_field('2-column_title'); ?></div>
-                          <div class="callout-description"><?php echo get_sub_field('2-column_body_text'); ?></div>
-                          <div class="callout-cta">
-                            <?php if (get_sub_field('2-column_link')) { ?><a href="<?php echo get_sub_field('2-column_link'); ?>"><?php } ?>
-
-                              <?php echo get_sub_field('2-column_link_text'); ?>
-
-                              <div class="callout-arrow">
-                                <span class="right"></span>
-                              </div>
-
-                            <?php if (get_sub_field('2-column_link')) { ?></a><?php } ?>
+                          <div class="icon-box">
+                            <p style="text-align: center;">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
+                            </p>
+                            <p>
+                              <strong>Skill Gain One</strong>
+                            </p>
+                            <p>
+                              This is sample text or typography for this space right here.
+                            </p>
                           </div>
-                        </div>
 
       								<?php endwhile; ?>
 
   					       <?php endif; //if( get_sub_field('items') ): ?>
 
-
-              </section>
-
-              <?php
-
-              elseif ( get_sub_field('section_type') == '3-column' ) :
-
-              ?>
-
-              <section class="listing" id="<?php echo $n; ?>">
-
-                  <?php
-
-      							if( have_rows('3-column_callout') ): ?>
-
-      								<?php
-
-      								while( have_rows('3-column_callout') ): the_row();
-
-                        $color = get_sub_field('color');
-
-      									?>
-
-      									<div class="four columns <?php echo $color; ?>-background callout-container">
-
-                          <div class="callout-title"><?php echo get_sub_field('3-column_title'); ?></div>
-                          <div class="callout-description"><?php echo get_sub_field('3-column_body_text'); ?></div>
-                          <div class="callout-cta">
-                            <?php if (get_sub_field('3-column_link')) { ?><a href="<?php echo get_sub_field('3-column_link'); ?>"><?php } ?>
-
-                              <?php echo get_sub_field('3-column_link_text'); ?>
-
-                              <div class="callout-arrow">
-                                <span class="right"></span>
-                              </div>
-
-                            <?php if (get_sub_field('3-column_link')) { ?></a><?php } ?>
-                          </div>
-                        </div>
-
-      								<?php endwhile; ?>
-
-  					       <?php endif; //if( get_sub_field('items') ): ?>
+                 </div>
 
               </section>
 
@@ -295,35 +260,94 @@ get_header(); ?>
 
               elseif ( get_sub_field('section_type') == 'buttons' ) :
 
+                $apply = true;
+
               ?>
 
-              <section class="buttons <?php echo $color; ?>" id="<?php echo $n; ?>">
-                <div class="row">
-                  <div class="<?php echo $columns; ?> columns">
-                    <div class="buttons-title"><?php echo get_sub_field('the_title'); ?></div>
-                    <div class="buttons-description"><?php echo get_sub_field('body_text'); ?></div>
+              <section class="buttons <?php echo $color; ?>" id="apply">
+
+                <div class="<?php echo $columns; ?> columns">
+
+                  <div class="buttons-text">
+                    <h3 class="<?php echo $color; ?>"><?php echo get_sub_field('section_title'); ?></h3>
+                    <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                     <a href="<?php echo get_sub_field('link_1') ?>">
-                      <div class="buttons-cta <?php echo $color; ?>-background">
+                      <div class="buttons-cta <?php echo $opp; ?>">
                         <?php echo get_sub_field('link_text_1') ?>
-                        <div class="callout-arrow">
-                          <span class="right"></span>
-                        </div>
+
                       </div>
 
                     </a>
 
                     <a href="<?php echo get_sub_field('link_2') ?>">
-                      <div class="buttons-cta <?php echo $color; ?>-background">
+                      <div class="buttons-cta <?php echo $opp; ?>">
                         <?php echo get_sub_field('link_text_2') ?>
-                        <div class="callout-arrow">
-                          <span class="right"></span>
-                        </div>
+
                       </div>
                     </a>
 
                   </div>
+
                 </div>
+
+              </section>
+
+              <?php
+
+              elseif ( get_sub_field('section_type') == 'form' ) :
+
+              ?>
+
+              <section class="form <?php echo $color; ?>" id="info">
+
+
+                  <div class="row">
+                    <div class="nine offset-by-three columns">
+
+                      <div class="form-text">
+
+                        <h3><?php echo get_sub_field('section_title'); ?></h3>
+                        <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
+
+                        <br/>
+
+                        <div class="input-box">
+                          <span class="input input--hoshi">
+                  					<input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
+                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                  						<span class="input__label-content input__label-content--hoshi">First Name</span>
+                  					</label>
+                  				</span>
+                        </div>
+
+                        <div class="input-box">
+                          <span class="input input--hoshi">
+                  					<input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
+                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                  						<span class="input__label-content input__label-content--hoshi">Last Name</span>
+                  					</label>
+                  				</span>
+                        </div>
+
+                        <div class="input-box">
+                          <span class="input input--hoshi">
+                  					<input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
+                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                  						<span class="input__label-content input__label-content--hoshi">Email</span>
+                  					</label>
+                  				</span>
+                        </div>
+
+                        <div class="submit-buttons <?php echo $opp; ?>">
+                          Submit
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
               </section>
 
               <?php
@@ -336,7 +360,9 @@ get_header(); ?>
 
               endif;
 
-              array_push($side_menu, get_sub_field('menu_title'));
+              if ( get_sub_field('section_type') != 'buttons' and get_sub_field('section_type') != 'form' ) {
+                array_push($side_menu, get_sub_field('menu_title'));
+              }
 
               $n++;
 
@@ -348,153 +374,11 @@ get_header(); ?>
 
         endif; ?>
 
-        <section class="blue-primary-background" id="5">
-          <div class="nine columns offset-by-three">
-            <div class="icons-text">
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>Skill Gain One</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>Skill Gain One</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>Skill Gain One</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>Skill Gain One</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>Skill Gain One</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>Skill Gain One</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="blue-primary" id="6">
-          <div class="nine columns offset-by-three">
-            <div class="icons-text">
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>First Last Name</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>First Last Name</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>First Last Name</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>First Last Name</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>First Last Name</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-              <div class="icon-box">
-                <p style="text-align: center;">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
-                </p>
-                <p>
-                  <strong>First Last Name</strong>
-                </p>
-                <p>
-                  This is sample text or typography for this space right here.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="blue-primary-background" id="7">
+
+
+        <section class="blue-primary" id="7">
           <div class="nine columns offset-by-three">
             <div class="schedule-text">
               <div class="schedule-box">
@@ -547,32 +431,40 @@ get_header(); ?>
         if ($menu == true) { ?>
 
           <div class="side-menu">
-            <ul>
-              <?php
+            <div class="list">
+              <ul>
+                <?php
 
-                $i = 0;
+                  $i = 0;
 
-                foreach($side_menu as $value) {
-                  ?>
+                  foreach($side_menu as $value) {
+                    ?>
 
-                  <li><a href="#<?php echo $i; ?>"><?php echo $value; ?></a></li>
+                    <li><a href="#<?php echo $i; ?>"><?php echo $value; ?></a></li>
 
-                  <?php
+                    <?php
 
-                  $i++;
-                }
+                    $i++;
+                  }
 
-              ?>
-              <li>
-                <a href="#5">Skills</a>
-              </li>
-              <li>
-                <a href="#6">Names</a>
-              </li>
-              <li>
-                <a href="#7">Schedules</a>
-              </li>
-            </ul>
+                ?>
+                <li>
+                  <a href="#5">Skills</a>
+                </li>
+                <li>
+                  <a href="#6">Names</a>
+                </li>
+                <li>
+                  <a href="#7">Schedules</a>
+                </li>
+              </ul>
+            </div>
+            <div class="info">
+              <a href="#info">Sign up for info</a>
+            </div>
+            <div class="apply">
+              <a href="#apply">Apply Now</a>
+            </div>
           </div>
 
         <?php

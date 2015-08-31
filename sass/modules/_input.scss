@@ -75,7 +75,8 @@
 	padding: 0.85em 0.15em;
 	width: 100%;
 	background: transparent;
-	color: #595F6E;
+	color: white;
+	font-family: $font-family--regular;
 }
 
 .input__label--hoshi {
@@ -113,17 +114,7 @@
 	transition: transform 0.3s;
 }
 
-.input__label--hoshi-color-1::after {
-	border-color: $yellow-primary;
-}
 
-.input__label--hoshi-color-2::after {
-	border-color: $yellow-primary;
-}
-
-.input__label--hoshi-color-3::after {
-	border-color: $yellow-primary;
-}
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
 .input--filled .input__label--hoshi::after {
