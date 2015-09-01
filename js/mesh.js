@@ -18,6 +18,14 @@ jQuery(document).ready(function($){
 
   });
 
-  $('.side-menu').css('top', $('.intro').position().top);
+  //$('.side-menu').css('top', $('.intro').position().top);
+
+  $('.network-nav-item').click(function(event) {
+     var item = $(this).attr('id');
+     $('.network-filter-status').slideDown();
+     $('.network-filter').hide(); //Hide all dropdowns
+     $('.'+item).slideDown('400'); //Show this dropdowns
+
+  });
 
 });
