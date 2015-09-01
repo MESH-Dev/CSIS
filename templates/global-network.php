@@ -2,8 +2,8 @@
 * Template Name: Global Network
 */
 get_header(); ?>
- 
-   
+
+
 <main id="main" class="site-main" role="main">
 
   <div class="container">
@@ -15,15 +15,8 @@ get_header(); ?>
 
         // vars
         $url = $image['url'];
-        $title = $image['title'];
-        $alt = $image['alt'];
-        $caption = $image['caption'];
-
-        // thumbnail
         $size = 'large';
         $thumb = $image['sizes'][ $size ];
-        $width = $image['sizes'][ $size . '-width' ];
-        $height = $image['sizes'][ $size . '-height' ];
 
         ?>
 
@@ -35,6 +28,27 @@ get_header(); ?>
         </section>
 
         <?php
+      }
+
+      $row = 1;
+      $csv = get_template_directory_uri() . '/data/data.csv';
+
+      if (($handle = fopen($csv, "r")) !== FALSE) {
+        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+          $num = count($data);
+
+          if ($row != 1) {
+
+            for ($c=0; $c < $num; $c++) {
+                echo $data[$c];
+            }
+
+            echo "<br/>";
+          }
+
+          $row++;
+        }
+        fclose($handle);
       }
 
       elseif (get_field('banner') == 'video') {
@@ -61,13 +75,13 @@ get_header(); ?>
 
       <section class="network-nav">
         <div class="four columns yellow-primary-background network-nav-item" id="network-filter-topics">
-          Filter By Topics  
+          Filter By Topics
         </div>
         <div class="four columns yellow-primary-background network-nav-item" id="network-search">
           Search the Network
         </div>
         <div class="four columns yellow-primary-background network-nav-item" id="network-map" >
-          Browse the Map <img src="<?php echo get_bloginfo("template_url" ); ?>/img/map-mini.png" alt=""> 
+          Browse the Map <img src="<?php echo get_bloginfo("template_url" ); ?>/img/map-mini.png" alt="">
         </div>
       </section>
 
@@ -78,7 +92,7 @@ get_header(); ?>
         </div>
         <div class="three columns filter-reset">
           <a href="">RESET FILTER <img src="<?php echo get_bloginfo("template_url" ); ?>/img/refresh.png" alt=""></a>
-        </div> 
+        </div>
       </section>
 
       <section class="network-filter-topics network-filter">
@@ -93,17 +107,17 @@ get_header(); ?>
           </ul>
         </div>
         <div class="ten columns topic-items">
-          
+
           <div class="topic-checkbox ">
             <input type="checkbox" value="None" id="TopicName1" name="check" />
             <label for="TopicName1">Accounting & Finance</label>
           </div>
-          
+
           <div class="topic-checkbox">
             <input type="checkbox" value="None" id="TopicName2" name="check" />
             <label for="TopicName2">Budgeting</label>
           </div>
-          
+
           <div class="topic-checkbox">
             <input type="checkbox" value="None" id="TopicName3" name="check" />
             <label for="TopicName3">Label Here</label>
@@ -132,12 +146,12 @@ get_header(); ?>
             <input type="checkbox" value="None" id="TopicName1" name="check" />
             <label for="TopicName1">Accounting & Finance</label>
           </div>
-          
+
           <div class="topic-checkbox">
             <input type="checkbox" value="None" id="TopicName2" name="check" />
             <label for="TopicName2">Budgeting</label>
           </div>
-          
+
           <div class="topic-checkbox">
             <input type="checkbox" value="None" id="TopicName3" name="check" />
             <label for="TopicName3">Label Here</label>
@@ -166,12 +180,12 @@ get_header(); ?>
             <input type="checkbox" value="None" id="TopicName1" name="check" />
             <label for="TopicName1">Accounting & Finance</label>
           </div>
-          
+
           <div class="topic-checkbox">
             <input type="checkbox" value="None" id="TopicName2" name="check" />
             <label for="TopicName2">Budgeting</label>
           </div>
-          
+
           <div class="topic-checkbox">
             <input type="checkbox" value="None" id="TopicName3" name="check" />
             <label for="TopicName3">Label Here</label>
@@ -197,19 +211,28 @@ get_header(); ?>
             <label for="TopicName3">Label Here</label>
           </div>
 
-          
+
         </div>
 
 
       </section>
 
 
-      <section class="network-search  network-filter">
-        <div class="two columns filter-title">
-           <h3>Search our Global Network:</h3>
+      <section class="network-search network-filter yellow-primary">
+        <div class="two columns">
+          <div class="filter-title">
+              <h4>Search our Global Network:</h4>
+          </div>
         </div>
         <div class="ten columns">
-          <div class="tempsearch"></div>
+          <div class="search">
+            <span class="input input--hoshi">
+              <input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
+              <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                <span class="input__label-content input__label-content--hoshi">Search</span>
+              </label>
+            </span>
+          </div>
         </div>
       </section>
 
@@ -217,14 +240,18 @@ get_header(); ?>
         <div class="two columns filter-title">
            <h3>Browse our Global Network:</h3>
         </div>
-        <div class="ten columns map-embed">
-          <img src="<?php echo get_bloginfo('template_url' ); ?>/img/map.png" alt="">
+        <div class="ten columns">
+          <div class="map-embed">
+            <div id="map-container">
+              <div id="map"></div>
+            </div>
+          </div>
         </div>
       </section>
 
 
 
- 
+
 
       <section class="network-grid">
         <div class="three columns " >
@@ -312,7 +339,7 @@ get_header(); ?>
         </div>
 
 
-       
+
       </section>
 
       <section class="load-more">
@@ -321,7 +348,7 @@ get_header(); ?>
         </div>
       </section>
 
-     
+
 
   </div>
 
