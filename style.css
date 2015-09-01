@@ -3501,7 +3501,7 @@ header {
 }
 
 /* line 316, sass/modules/_menus.scss */
-.menu li:hover {
+.utilities-nav li:hover, .banner-navigation li:hover {
   opacity: 0.7;
 }
 
