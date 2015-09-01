@@ -19,12 +19,13 @@ jQuery(document).ready(function($){
   });
 
 
-  $('.side-menu').css('top', $('.intro').position().top - 60);
-
   $(document).scroll(function () {
     var y = $(this).scrollTop();
 
     if ( $('.side-menu').length ) {
+
+        $('.side-menu').css('top', $('.intro').position().top - 60);
+
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');
         $('.side-menu').css('top', 50);
