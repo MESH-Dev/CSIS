@@ -18,6 +18,19 @@ jQuery(document).ready(function($){
 
   });
 
-  $('.side-menu').css('top', $('.intro').position().top);
+  $('.side-menu').css('top', $('.intro').position().top - 60);
+
+  $(document).scroll(function () {
+    var y = $(this).scrollTop();
+
+
+    if (y > 300) {
+      $('.side-menu').css('position', 'fixed');
+      $('.side-menu').css('top', 50);
+    } else {
+      $('.side-menu').css('position', 'absolute');
+      $('.side-menu').css('top', $('.intro').position().top - 60);
+    }
+  });
 
 });

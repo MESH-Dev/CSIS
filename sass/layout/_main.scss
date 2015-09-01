@@ -34,6 +34,31 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     .input__label, .input__field {
       color: nth($color_vars, $i);
     }
+
+    .cta-text {
+      a {
+        color: nth($color_vars, $i);
+      }
+    }
+    .right {
+      border: 0.2em solid nth($color_vars, $i);
+      display: inline-block;
+    }
+
+    .right:after {
+      border-top: 0.2em solid nth($color_vars, $i);
+      border-right: 0.2em solid nth($color_vars, $i);
+    }
+
+    &.submit-buttons, &.buttons-cta {
+      .right {
+        border: 0.2em solid nth($color_vars, $i);
+      }
+      .right::after {
+        border-top: 0.2em solid nth($color_vars, $i);
+        border-right: 0.2em solid nth($color_vars, $i);
+      }
+    }
   }
 
 	.#{$name}-background {
@@ -45,6 +70,10 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     }
 
     .input__label, .input__field {
+      color: white;
+    }
+
+    .cta-text {
       color: white;
     }
 
@@ -62,18 +91,18 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     .cta-text {
       a {
-        color: nth($color_vars, $i);
+        color: white;
       }
     }
 
     .right {
-      border: 0.2em solid nth($color_vars, $i);
+      border: 0.2em solid white;
       display: inline-block;
     }
 
     .right:after {
-      border-top: 0.2em solid nth($color_vars, $i);
-      border-right: 0.2em solid nth($color_vars, $i);
+      border-top: 0.2em solid white;
+      border-right: 0.2em solid white;
     }
 
     // Callout (Panel), Quote
@@ -110,6 +139,16 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     }
 
+    &.submit-buttons, &.buttons-cta {
+      .right {
+        border: 0.2em solid white;
+      }
+      .right::after {
+        border-top: 0.2em solid white;
+        border-right: 0.2em solid white;
+      }
+    }
+
 
     // HOVER
 
@@ -128,7 +167,19 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
 
         .cta-text {
-          right: 0px;
+          a {
+            color: nth($color_vars, $i);
+          }
+        }
+
+        .right {
+          border: 0.2em solid nth($color_vars, $i);
+          display: inline-block;
+        }
+
+        .right:after {
+          border-top: 0.2em solid nth($color_vars, $i);
+          border-right: 0.2em solid nth($color_vars, $i);
         }
       }
     }
@@ -207,7 +258,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
   .cta-text {
     position: relative;
-    right: -2000px;
+    right: 0px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -224,7 +275,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     .right:after {
       content: '';
       display: inline-block;
-      margin-top: .55em;
+      margin-top: .2em;
       margin-left: -0.3em;
       width: .4em;
       height: .4em;
@@ -246,7 +297,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
   .cta-text {
     position: relative;
-    right: -2000px;
+    right: 0px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -283,6 +334,15 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
   .callout-news-headline {
     margin-bottom: 15px;
+
+    h5 {
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      margin-bottom: 25px;
+      font-family: $font-family--regular;
+    }
   }
 }
 
@@ -345,7 +405,7 @@ section {
   float: left;
   padding: 20px 120px 20px 0;
 
-  strong {
+  h5 {
     font-family: $font-family--bold;
   }
 }
@@ -377,23 +437,68 @@ section {
 
 .buttons-cta {
   display: inline;
-  padding: 25px 80px 25px 25px;
+  padding: 25px 35px 25px 25px;
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
   margin-right: 20px;
   position: relative;
   float: left;
+
+  .right {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin-left: 1.5em;
+    text-align: center;
+    border: 0.2em solid $blue-primary;
+  }
+
+  .right:after {
+    content: '';
+    display: inline-block;
+    margin-top: .2em;
+    margin-left: -0.3em;
+    width: .4em;
+    height: .4em;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top: 0.2em solid $blue-primary;
+    border-right: 0.2em solid $blue-primary;
+  }
 }
 
 .submit-buttons {
   display: inline;
-  padding: 10px 60px 10px 10px;
+  padding: 10px 20px 10px 10px;
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
   margin-right: 20px;
   position: relative;
   float: left;
   margin-top: 30px;
+
+  .right {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin-left: 1.5em;
+    text-align: center;
+  }
+
+  .right:after {
+    content: '';
+    display: inline-block;
+    margin-top: .2em;
+    margin-left: -0.3em;
+    width: .4em;
+    height: .4em;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 }
 
 .content-half {

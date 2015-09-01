@@ -66,6 +66,9 @@
 			color: $yellow-primary;
 			font-family: Georgia, Times, 'Times New Roman', serif;
 			font-style: italic;
+			position: relative;
+			top: 0px;
+			left: 4px;
 		}
 	}
 	a {
@@ -248,9 +251,8 @@
 }
 
 .side-menu {
-	position: fixed;
+	position: absolute;
 	background: rgba(254,201,53,0.8);
-	top: 400px;
 	left: 50px;
 	width: 200px;
 	z-index: 100;
@@ -309,4 +311,8 @@
 			padding: 0 10px;
 		}
 	}
+}
+
+.menu li:hover {
+	opacity: 0.7;
 }

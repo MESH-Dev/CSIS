@@ -299,9 +299,7 @@ if( have_rows('sections') ):
             <a href="<?php echo get_sub_field('link_1') ?>">
               <div class="buttons-cta <?php echo $color; ?>-background">
                 <?php echo get_sub_field('link_text_1') ?>
-                <div class="callout-arrow">
-                  <span class="right"></span>
-                </div>
+                <span class="right"></span>
               </div>
 
             </a>
@@ -309,9 +307,7 @@ if( have_rows('sections') ):
             <a href="<?php echo get_sub_field('link_2') ?>">
               <div class="buttons-cta <?php echo $color; ?>-background">
                 <?php echo get_sub_field('link_text_2') ?>
-                <div class="callout-arrow">
-                  <span class="right"></span>
-                </div>
+                <span class="right"></span>
               </div>
             </a>
 

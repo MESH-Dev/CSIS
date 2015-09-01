@@ -119,7 +119,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="intro">
+              <section class="intro" id="<?php echo $n; ?>">
                 <div class="row">
                   <div class="nine offset-by-three columns">
                     <div class="intro-text">
@@ -140,6 +140,15 @@ get_header(); ?>
                 <div class="nine columns offset-by-three">
                   <div class="body-text-area">
                     <?php echo get_sub_field('body_text'); ?>
+
+                    <br/>
+
+                    <div class="six columns content-half">
+                      <?php echo get_sub_field('column_1_text'); ?>
+                    </div>
+                    <div class="six columns content-half">
+                      <?php echo get_sub_field('column_2_text'); ?>
+                    </div>
                   </div>
                 </div>
 
@@ -173,7 +182,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="<?php echo $color; ?>" >
+              <section class="<?php echo $color; ?>" id="<?php echo $n; ?>">
 
                 <div class="quote">
                   <div class="twelve columns">
@@ -234,17 +243,31 @@ get_header(); ?>
 
       								while( have_rows('listing') ): the_row();
 
+                        $image = get_sub_field('listing_image');
+
+                        // vars
+                        $url = $image['url'];
+                        $title = $image['title'];
+                        $alt = $image['alt'];
+                        $caption = $image['caption'];
+
+                        // thumbnail
+                        $size = 'large';
+                        $thumb = $image['sizes'][ $size ];
+                        $width = $image['sizes'][ $size . '-width' ];
+                        $height = $image['sizes'][ $size . '-height' ];
+
       									?>
 
                           <div class="icon-box">
                             <p style="text-align: center;">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/icon.png" />
+                              <img src="<?php echo $thumb; ?>" />
                             </p>
                             <p>
-                              <strong>Skill Gain One</strong>
+                              <h5><?php echo get_sub_field('listing_title'); ?></h5>
                             </p>
                             <p>
-                              This is sample text or typography for this space right here.
+                              <?php echo get_sub_field('listing_body_text'); ?>
                             </p>
                           </div>
 
@@ -275,14 +298,16 @@ get_header(); ?>
                     <a href="<?php echo get_sub_field('link_1') ?>">
                       <div class="buttons-cta <?php echo $opp; ?>">
                         <?php echo get_sub_field('link_text_1') ?>
-
+                        <span class="right"></span>
                       </div>
 
                     </a>
 
                     <a href="<?php echo get_sub_field('link_2') ?>">
                       <div class="buttons-cta <?php echo $opp; ?>">
-                        <?php echo get_sub_field('link_text_2') ?>
+
+                          <?php echo get_sub_field('link_text_2') ?>
+                          <span class="right"></span>
 
                       </div>
                     </a>
@@ -341,6 +366,7 @@ get_header(); ?>
 
                         <div class="submit-buttons <?php echo $opp; ?>">
                           Submit
+                          <span class="right"></span>
                         </div>
 
                       </div>
@@ -381,46 +407,7 @@ get_header(); ?>
         <section class="blue-primary" id="7">
           <div class="nine columns offset-by-three">
             <div class="schedule-text">
-              <div class="schedule-box">
-                <span class="strong">Schedule Information</span><br/>
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
 
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-              </div>
-              <div class="schedule-box">
-                <span class="strong">Schedule Information</span><br/>
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-
-                <span class="blue">Day One</span><br/>
-                <span>This is sample text or typography for this space right here.</span><br/>
-              </div>
             </div>
           </div>
         </section>
@@ -448,15 +435,6 @@ get_header(); ?>
                   }
 
                 ?>
-                <li>
-                  <a href="#5">Skills</a>
-                </li>
-                <li>
-                  <a href="#6">Names</a>
-                </li>
-                <li>
-                  <a href="#7">Schedules</a>
-                </li>
               </ul>
             </div>
             <div class="info">
