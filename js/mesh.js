@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 
   });
 
-  //$('.side-menu').css('top', $('.intro').position().top);
+  $('.side-menu').css('top', $('.intro').position().top);
 
   $('.network-nav-item').click(function(event) {
      var item = $(this).attr('id');
