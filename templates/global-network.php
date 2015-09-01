@@ -27,7 +27,7 @@ get_header(); ?>
 
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; width:100%; <?php } ?>">
             <div class="banner-screen"></div>
             <div class="banner-text">
               <div class="banner-title"><?php the_title(); ?></div>
@@ -60,18 +60,18 @@ get_header(); ?>
       ?>
 
       <section class="network-nav">
-        <div class="four columns yellow-primary-background network-nav-item">
+        <div class="four columns yellow-primary-background network-nav-item" id="network-filter-topics">
           Filter By Topics  
         </div>
-        <div class="four columns yellow-primary-background network-nav-item">
+        <div class="four columns yellow-primary-background network-nav-item" id="network-search">
           Search the Network
         </div>
-        <div class="four columns yellow-primary-background network-nav-item">
+        <div class="four columns yellow-primary-background network-nav-item" id="network-map" >
           Browse the Map <img src="<?php echo get_bloginfo("template_url" ); ?>/img/map-mini.png" alt=""> 
         </div>
       </section>
 
-      <section class="network-filter-status">
+      <section class="network-filter-status  ">
         <div class="nine columns filter-list">
           <span class="filter-title">Currently Filtered By: </span>
           Expertise, Marketing, Services
@@ -81,7 +81,7 @@ get_header(); ?>
         </div> 
       </section>
 
-      <section class="network-filter-topics">
+      <section class="network-filter-topics network-filter">
         <div class="two columns topic-list">
           <span class="filter-by">Filter By: </span>
           <ul>
@@ -204,146 +204,111 @@ get_header(); ?>
       </section>
 
 
-      <section class="network-search">
-        
+      <section class="network-search  network-filter">
+        <div class="two columns filter-title">
+           <h3>Search our Global Network:</h3>
+        </div>
+        <div class="ten columns">
+          <div class="tempsearch"></div>
+        </div>
+      </section>
+
+      <section class="network-map  network-filter">
+        <div class="two columns filter-title">
+           <h3>Browse our Global Network:</h3>
+        </div>
+        <div class="ten columns map-embed">
+          <img src="<?php echo get_bloginfo('template_url' ); ?>/img/map.png" alt="">
+        </div>
       </section>
 
 
 
-
-
+ 
 
       <section class="network-grid">
         <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
             <div class="hover-info">
               <span class="name">First Last Name</span>
               <span class="title">Title and Org Here</span>
               <span class="location">New York</span>
             </div>
-          </a>
+          </div>
+        </div>
+
+
+        <div class="three columns " >
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
+            <div class="hover-info">
+              <span class="name">First Last Name</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New York</span>
+            </div>
+          </div>
         </div>
 
         <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
             <div class="hover-info">
               <span class="name">First Last Name</span>
               <span class="title">Title and Org Here</span>
               <span class="location">New York</span>
             </div>
-          </a>
+          </div>
+        </div>
+
+
+        <div class="three columns " >
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
+            <div class="hover-info">
+              <span class="name">First Last Name</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New York</span>
+            </div>
+          </div>
         </div>
 
         <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
             <div class="hover-info">
               <span class="name">First Last Name</span>
               <span class="title">Title and Org Here</span>
               <span class="location">New York</span>
             </div>
-          </a>
+          </div>
+        </div>
+
+
+        <div class="three columns " >
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
+            <div class="hover-info">
+              <span class="name">First Last Name</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New York</span>
+            </div>
+          </div>
         </div>
 
         <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
             <div class="hover-info">
               <span class="name">First Last Name</span>
               <span class="title">Title and Org Here</span>
               <span class="location">New York</span>
             </div>
-          </a>
+          </div>
         </div>
 
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
-        </div>
 
         <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
             <div class="hover-info">
               <span class="name">First Last Name</span>
               <span class="title">Title and Org Here</span>
               <span class="location">New York</span>
             </div>
-          </a>
-        </div>
-
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="three columns " >
-          <a href="#" class="network-grid-item" >
-            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/portrait.jpg" alt="">
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </a>
+          </div>
         </div>
 
 
