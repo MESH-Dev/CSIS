@@ -18,7 +18,10 @@ jQuery(document).ready(function($){
 
   });
 
-  $('.side-menu').css('top', $('.intro').position().top);
+  if ( $('.side-menu').length )
+  {
+    $('.side-menu').css('top', $('.intro').position().top);
+  }
 
   $('.network-nav-item').click(function(event) {
      var item = $(this).attr('id');
