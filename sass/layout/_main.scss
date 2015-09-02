@@ -43,13 +43,13 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       }
     }
     .right {
-      border: 0.2em solid nth($color_vars, $i);
+      border: 0.1em solid nth($color_vars, $i);
       display: inline-block;
     }
 
     .right:after {
-      border-top: 0.2em solid nth($color_vars, $i);
-      border-right: 0.2em solid nth($color_vars, $i);
+      border-top: 0.1em solid nth($color_vars, $i);
+      border-right: 0.1em solid nth($color_vars, $i);
     }
 
     &.submit-buttons, &.buttons-cta {
@@ -93,18 +93,18 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     .cta-text {
       a {
-        color: white;
+        color: nth($color_vars, $i);
       }
     }
 
     .right {
-      border: 0.2em solid white;
+      border: 0.1em solid nth($color_vars, $i);
       display: inline-block;
     }
 
     .right:after {
-      border-top: 0.2em solid white;
-      border-right: 0.2em solid white;
+      border-top: 0.1em solid nth($color_vars, $i);
+      border-right: 0.1em solid nth($color_vars, $i);
     }
 
     // Callout (Panel), Quote
@@ -143,11 +143,11 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     &.submit-buttons, &.buttons-cta {
       .right {
-        border: 0.2em solid white;
+        border: 0.1em solid white;
       }
       .right::after {
-        border-top: 0.2em solid white;
-        border-right: 0.2em solid white;
+        border-top: 0.1em solid white;
+        border-right: 0.1em solid white;
       }
     }
 
@@ -175,7 +175,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
         }
 
         .right {
-          border: 0.2em solid nth($color_vars, $i);
+          border: 0.1em solid nth($color_vars, $i);
           display: inline-block;
         }
 
@@ -201,12 +201,12 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   .cta-small {
 
     .right {
-      border: 0.2em solid white;
+      border: 0.1em solid white;
     }
 
     .right:after {
-      border-top: 0.2em solid white;
-      border-right: 0.2em solid white;
+      border-top: 0.1em solid white;
+      border-right: 0.1em solid white;
     }
   }
 
@@ -267,11 +267,12 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     .right {
       display: inline-block;
-      width: 2em;
-      height: 2em;
+      width: 1.5em;
+      height: 1.5em;
       border-radius: 50%;
       margin-left: 1.5em;
       text-align: center;
+      line-height: 1.1em;
     }
 
     .right:after {
@@ -453,7 +454,7 @@ section {
     border-radius: 50%;
     margin-left: 1.5em;
     text-align: center;
-    border: 0.2em solid $blue-primary;
+    border: 0.1em solid $blue-primary;
   }
 
   .right:after {
@@ -466,8 +467,8 @@ section {
     -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    border-top: 0.2em solid $blue-primary;
-    border-right: 0.2em solid $blue-primary;
+    border-top: 0.1em solid $blue-primary;
+    border-right: 0.1em solid $blue-primary;
   }
 }
 

@@ -96,7 +96,10 @@ get_header(); ?>
             <h5>Headline One Goes Here Up to Three Lines</h5>
             <h6>Jan 13, 2015</h6>
           </div>
-
+          <div class="callout-news-headline">
+            <h5>Headline One Goes Here Up to Three Lines</h5>
+            <h6>Jan 13, 2015</h6>
+          </div>
 
         </div>
 
