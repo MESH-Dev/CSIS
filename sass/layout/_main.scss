@@ -85,7 +85,6 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       padding: 25px;
       border-bottom: 10px solid white;
       border-left: 10px solid white;
-      height: 280px;
 
       a {
         color: white;
@@ -382,10 +381,6 @@ section {
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
-}
-
-.listing-text {
-  height: 425px;
 }
 
 .email-signup-text {

@@ -7,6 +7,7 @@ function loadup_scripts() {
 	wp_enqueue_script( 'map-data', get_template_directory_uri().'/data/data.json' );
 	wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'classie-js', get_template_directory_uri().'/js/classie.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'match-js', get_template_directory_uri().'/js/jquery.matchHeight-min.js', array('jquery'), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 

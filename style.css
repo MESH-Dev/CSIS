@@ -649,40 +649,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .yellow-primary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .yellow-primary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .yellow-primary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .yellow-primary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .yellow-primary-background .callout-panel, .yellow-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .yellow-primary-background .callout-panel a, .yellow-primary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .yellow-primary-background .callout-panel .cta-small, .yellow-primary-background .callout-panel .cta-big, .yellow-primary-background .quote .cta-small, .yellow-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .yellow-primary-background .callout-screen {
   float: left;
   background-color: rgba(254, 201, 53, 0.7);
@@ -692,42 +691,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .yellow-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .yellow-primary-background.submit-buttons .right, .yellow-primary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .yellow-primary-background.submit-buttons .right::after, .yellow-primary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover {
   color: #fec935;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover a {
   color: #fec935;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .cta-text a {
   color: #fec935;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .right {
   border: 0.2em solid #fec935;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .right:after {
   border-top: 0.2em solid #fec935;
   border-right: 0.2em solid #fec935;
@@ -801,40 +800,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .yellow-secondary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .yellow-secondary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .yellow-secondary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .yellow-secondary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .yellow-secondary-background .callout-panel, .yellow-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .yellow-secondary-background .callout-panel a, .yellow-secondary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .yellow-secondary-background .callout-panel .cta-small, .yellow-secondary-background .callout-panel .cta-big, .yellow-secondary-background .quote .cta-small, .yellow-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .yellow-secondary-background .callout-screen {
   float: left;
   background-color: rgba(239, 159, 37, 0.7);
@@ -844,42 +842,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .yellow-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .yellow-secondary-background.submit-buttons .right, .yellow-secondary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .yellow-secondary-background.submit-buttons .right::after, .yellow-secondary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover {
   color: #ef9f25;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover a {
   color: #ef9f25;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .cta-text a {
   color: #ef9f25;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .right {
   border: 0.2em solid #ef9f25;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .right:after {
   border-top: 0.2em solid #ef9f25;
   border-right: 0.2em solid #ef9f25;
@@ -953,40 +951,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .yellow-tertiary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .yellow-tertiary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .yellow-tertiary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .yellow-tertiary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-panel, .yellow-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-panel a, .yellow-tertiary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-panel .cta-small, .yellow-tertiary-background .callout-panel .cta-big, .yellow-tertiary-background .quote .cta-small, .yellow-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(239, 228, 49, 0.7);
@@ -996,42 +993,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .yellow-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .yellow-tertiary-background.submit-buttons .right, .yellow-tertiary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .yellow-tertiary-background.submit-buttons .right::after, .yellow-tertiary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover {
   color: #efe431;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover a {
   color: #efe431;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .cta-text a {
   color: #efe431;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .right {
   border: 0.2em solid #efe431;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .right:after {
   border-top: 0.2em solid #efe431;
   border-right: 0.2em solid #efe431;
@@ -1105,40 +1102,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .purple-primary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .purple-primary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .purple-primary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .purple-primary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .purple-primary-background .callout-panel, .purple-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .purple-primary-background .callout-panel a, .purple-primary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .purple-primary-background .callout-panel .cta-small, .purple-primary-background .callout-panel .cta-big, .purple-primary-background .quote .cta-small, .purple-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .purple-primary-background .callout-screen {
   float: left;
   background-color: rgba(151, 114, 158, 0.7);
@@ -1148,42 +1144,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .purple-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .purple-primary-background.submit-buttons .right, .purple-primary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .purple-primary-background.submit-buttons .right::after, .purple-primary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .purple-primary-background.hover:hover {
   color: #97729e;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .purple-primary-background.hover:hover a {
   color: #97729e;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .cta-text a {
   color: #97729e;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .right {
   border: 0.2em solid #97729e;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .right:after {
   border-top: 0.2em solid #97729e;
   border-right: 0.2em solid #97729e;
@@ -1257,40 +1253,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .purple-secondary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .purple-secondary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .purple-secondary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .purple-secondary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .purple-secondary-background .callout-panel, .purple-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .purple-secondary-background .callout-panel a, .purple-secondary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .purple-secondary-background .callout-panel .cta-small, .purple-secondary-background .callout-panel .cta-big, .purple-secondary-background .quote .cta-small, .purple-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .purple-secondary-background .callout-screen {
   float: left;
   background-color: rgba(79, 83, 158, 0.7);
@@ -1300,42 +1295,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .purple-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .purple-secondary-background.submit-buttons .right, .purple-secondary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .purple-secondary-background.submit-buttons .right::after, .purple-secondary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover {
   color: #4f539e;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover a {
   color: #4f539e;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .cta-text a {
   color: #4f539e;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .right {
   border: 0.2em solid #4f539e;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .right:after {
   border-top: 0.2em solid #4f539e;
   border-right: 0.2em solid #4f539e;
@@ -1409,40 +1404,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .purple-tertiary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .purple-tertiary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .purple-tertiary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .purple-tertiary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .purple-tertiary-background .callout-panel, .purple-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .purple-tertiary-background .callout-panel a, .purple-tertiary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .purple-tertiary-background .callout-panel .cta-small, .purple-tertiary-background .callout-panel .cta-big, .purple-tertiary-background .quote .cta-small, .purple-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .purple-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(113, 40, 128, 0.7);
@@ -1452,42 +1446,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .purple-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .purple-tertiary-background.submit-buttons .right, .purple-tertiary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .purple-tertiary-background.submit-buttons .right::after, .purple-tertiary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover {
   color: #712880;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover a {
   color: #712880;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .cta-text a {
   color: #712880;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .right {
   border: 0.2em solid #712880;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .right:after {
   border-top: 0.2em solid #712880;
   border-right: 0.2em solid #712880;
@@ -1561,40 +1555,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .blue-primary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .blue-primary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .blue-primary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .blue-primary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .blue-primary-background .callout-panel, .blue-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .blue-primary-background .callout-panel a, .blue-primary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .blue-primary-background .callout-panel .cta-small, .blue-primary-background .callout-panel .cta-big, .blue-primary-background .quote .cta-small, .blue-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .blue-primary-background .callout-screen {
   float: left;
   background-color: rgba(39, 145, 189, 0.7);
@@ -1604,42 +1597,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .blue-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .blue-primary-background.submit-buttons .right, .blue-primary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .blue-primary-background.submit-buttons .right::after, .blue-primary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .blue-primary-background.hover:hover {
   color: #2791bd;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .blue-primary-background.hover:hover a {
   color: #2791bd;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .cta-text a {
   color: #2791bd;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .right {
   border: 0.2em solid #2791bd;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .right:after {
   border-top: 0.2em solid #2791bd;
   border-right: 0.2em solid #2791bd;
@@ -1713,40 +1706,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .blue-secondary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .blue-secondary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .blue-secondary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .blue-secondary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .blue-secondary-background .callout-panel, .blue-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .blue-secondary-background .callout-panel a, .blue-secondary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .blue-secondary-background .callout-panel .cta-small, .blue-secondary-background .callout-panel .cta-big, .blue-secondary-background .quote .cta-small, .blue-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .blue-secondary-background .callout-screen {
   float: left;
   background-color: rgba(14, 189, 232, 0.7);
@@ -1756,42 +1748,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .blue-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .blue-secondary-background.submit-buttons .right, .blue-secondary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .blue-secondary-background.submit-buttons .right::after, .blue-secondary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover {
   color: #0ebde8;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover a {
   color: #0ebde8;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .cta-text a {
   color: #0ebde8;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .right {
   border: 0.2em solid #0ebde8;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .right:after {
   border-top: 0.2em solid #0ebde8;
   border-right: 0.2em solid #0ebde8;
@@ -1865,40 +1857,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .blue-tertiary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .blue-tertiary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .blue-tertiary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .blue-tertiary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .blue-tertiary-background .callout-panel, .blue-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .blue-tertiary-background .callout-panel a, .blue-tertiary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .blue-tertiary-background .callout-panel .cta-small, .blue-tertiary-background .callout-panel .cta-big, .blue-tertiary-background .quote .cta-small, .blue-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .blue-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(102, 181, 200, 0.7);
@@ -1908,42 +1899,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .blue-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .blue-tertiary-background.submit-buttons .right, .blue-tertiary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .blue-tertiary-background.submit-buttons .right::after, .blue-tertiary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover {
   color: #66b5c8;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover a {
   color: #66b5c8;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .cta-text a {
   color: #66b5c8;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .right {
   border: 0.2em solid #66b5c8;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .right:after {
   border-top: 0.2em solid #66b5c8;
   border-right: 0.2em solid #66b5c8;
@@ -2017,40 +2008,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .green-primary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .green-primary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .green-primary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .green-primary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .green-primary-background .callout-panel, .green-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .green-primary-background .callout-panel a, .green-primary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .green-primary-background .callout-panel .cta-small, .green-primary-background .callout-panel .cta-big, .green-primary-background .quote .cta-small, .green-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .green-primary-background .callout-screen {
   float: left;
   background-color: rgba(79, 209, 161, 0.7);
@@ -2060,42 +2050,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .green-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .green-primary-background.submit-buttons .right, .green-primary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .green-primary-background.submit-buttons .right::after, .green-primary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .green-primary-background.hover:hover {
   color: #4fd1a1;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .green-primary-background.hover:hover a {
   color: #4fd1a1;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .green-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .green-primary-background.hover:hover .cta-text a {
   color: #4fd1a1;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .green-primary-background.hover:hover .right {
   border: 0.2em solid #4fd1a1;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .green-primary-background.hover:hover .right:after {
   border-top: 0.2em solid #4fd1a1;
   border-right: 0.2em solid #4fd1a1;
@@ -2169,40 +2159,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .green-secondary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .green-secondary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .green-secondary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .green-secondary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .green-secondary-background .callout-panel, .green-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .green-secondary-background .callout-panel a, .green-secondary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .green-secondary-background .callout-panel .cta-small, .green-secondary-background .callout-panel .cta-big, .green-secondary-background .quote .cta-small, .green-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .green-secondary-background .callout-screen {
   float: left;
   background-color: rgba(31, 92, 69, 0.7);
@@ -2212,42 +2201,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .green-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .green-secondary-background.submit-buttons .right, .green-secondary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .green-secondary-background.submit-buttons .right::after, .green-secondary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .green-secondary-background.hover:hover {
   color: #1f5c45;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .green-secondary-background.hover:hover a {
   color: #1f5c45;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .cta-text a {
   color: #1f5c45;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .right {
   border: 0.2em solid #1f5c45;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .right:after {
   border-top: 0.2em solid #1f5c45;
   border-right: 0.2em solid #1f5c45;
@@ -2321,40 +2310,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .green-tertiary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .green-tertiary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .green-tertiary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .green-tertiary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .green-tertiary-background .callout-panel, .green-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .green-tertiary-background .callout-panel a, .green-tertiary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .green-tertiary-background .callout-panel .cta-small, .green-tertiary-background .callout-panel .cta-big, .green-tertiary-background .quote .cta-small, .green-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .green-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(184, 210, 66, 0.7);
@@ -2364,42 +2352,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .green-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .green-tertiary-background.submit-buttons .right, .green-tertiary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .green-tertiary-background.submit-buttons .right::after, .green-tertiary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover {
   color: #b8d242;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover a {
   color: #b8d242;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .cta-text a {
   color: #b8d242;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .right {
   border: 0.2em solid #b8d242;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .right:after {
   border-top: 0.2em solid #b8d242;
   border-right: 0.2em solid #b8d242;
@@ -2473,40 +2461,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .red-primary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .red-primary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .red-primary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .red-primary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .red-primary-background .callout-panel, .red-primary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .red-primary-background .callout-panel a, .red-primary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .red-primary-background .callout-panel .cta-small, .red-primary-background .callout-panel .cta-big, .red-primary-background .quote .cta-small, .red-primary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .red-primary-background .callout-screen {
   float: left;
   background-color: rgba(188, 72, 81, 0.7);
@@ -2516,42 +2503,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .red-primary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .red-primary-background.submit-buttons .right, .red-primary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .red-primary-background.submit-buttons .right::after, .red-primary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .red-primary-background.hover:hover {
   color: #bc4851;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .red-primary-background.hover:hover a {
   color: #bc4851;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .red-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .red-primary-background.hover:hover .cta-text a {
   color: #bc4851;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .red-primary-background.hover:hover .right {
   border: 0.2em solid #bc4851;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .red-primary-background.hover:hover .right:after {
   border-top: 0.2em solid #bc4851;
   border-right: 0.2em solid #bc4851;
@@ -2625,40 +2612,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .red-secondary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .red-secondary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .red-secondary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .red-secondary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .red-secondary-background .callout-panel, .red-secondary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .red-secondary-background .callout-panel a, .red-secondary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .red-secondary-background .callout-panel .cta-small, .red-secondary-background .callout-panel .cta-big, .red-secondary-background .quote .cta-small, .red-secondary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .red-secondary-background .callout-screen {
   float: left;
   background-color: rgba(237, 85, 93, 0.7);
@@ -2668,42 +2654,42 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .red-secondary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .red-secondary-background.submit-buttons .right, .red-secondary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .red-secondary-background.submit-buttons .right::after, .red-secondary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .red-secondary-background.hover:hover {
   color: #ed555d;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .red-secondary-background.hover:hover a {
   color: #ed555d;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .cta-text a {
   color: #ed555d;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .right {
   border: 0.2em solid #ed555d;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .right:after {
   border-top: 0.2em solid #ed555d;
   border-right: 0.2em solid #ed555d;
@@ -2777,40 +2763,39 @@ main {
   padding: 25px;
   border-bottom: 10px solid white;
   border-left: 10px solid white;
-  height: 280px;
 }
-/* line 90, sass/layout/_main.scss */
+/* line 89, sass/layout/_main.scss */
 .red-tertiary-background .callout a {
   color: white;
 }
-/* line 96, sass/layout/_main.scss */
+/* line 95, sass/layout/_main.scss */
 .red-tertiary-background .cta-text a {
   color: white;
 }
-/* line 101, sass/layout/_main.scss */
+/* line 100, sass/layout/_main.scss */
 .red-tertiary-background .right {
   border: 0.2em solid white;
   display: inline-block;
 }
-/* line 106, sass/layout/_main.scss */
+/* line 105, sass/layout/_main.scss */
 .red-tertiary-background .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 113, sass/layout/_main.scss */
+/* line 112, sass/layout/_main.scss */
 .red-tertiary-background .callout-panel, .red-tertiary-background .quote {
   position: relative;
   z-index: 10;
 }
-/* line 117, sass/layout/_main.scss */
+/* line 116, sass/layout/_main.scss */
 .red-tertiary-background .callout-panel a, .red-tertiary-background .quote a {
   color: white;
 }
-/* line 123, sass/layout/_main.scss */
+/* line 122, sass/layout/_main.scss */
 .red-tertiary-background .callout-panel .cta-small, .red-tertiary-background .callout-panel .cta-big, .red-tertiary-background .quote .cta-small, .red-tertiary-background .quote .cta-big {
   margin-top: 50px;
 }
-/* line 128, sass/layout/_main.scss */
+/* line 127, sass/layout/_main.scss */
 .red-tertiary-background .callout-screen {
   float: left;
   background-color: rgba(243, 127, 102, 0.7);
@@ -2820,72 +2805,72 @@ main {
   z-index: 5;
   display: inline-block;
 }
-/* line 138, sass/layout/_main.scss */
+/* line 137, sass/layout/_main.scss */
 .red-tertiary-background .callout-screen.hover:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 146, sass/layout/_main.scss */
+/* line 145, sass/layout/_main.scss */
 .red-tertiary-background.submit-buttons .right, .red-tertiary-background.buttons-cta .right {
   border: 0.2em solid white;
 }
-/* line 149, sass/layout/_main.scss */
+/* line 148, sass/layout/_main.scss */
 .red-tertiary-background.submit-buttons .right::after, .red-tertiary-background.buttons-cta .right::after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 159, sass/layout/_main.scss */
+/* line 158, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover {
   color: #f37f66;
   background-color: white;
 }
-/* line 163, sass/layout/_main.scss */
+/* line 162, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover a {
   color: #f37f66;
 }
-/* line 167, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 173, sass/layout/_main.scss */
+/* line 172, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .cta-text a {
   color: #f37f66;
 }
-/* line 178, sass/layout/_main.scss */
+/* line 177, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .right {
   border: 0.2em solid #f37f66;
   display: inline-block;
 }
-/* line 183, sass/layout/_main.scss */
+/* line 182, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .right:after {
   border-top: 0.2em solid #f37f66;
   border-right: 0.2em solid #f37f66;
 }
 
-/* line 198, sass/layout/_main.scss */
+/* line 197, sass/layout/_main.scss */
 .banner a {
   color: white;
 }
-/* line 204, sass/layout/_main.scss */
+/* line 203, sass/layout/_main.scss */
 .banner .cta-small .right {
   border: 0.2em solid white;
 }
-/* line 208, sass/layout/_main.scss */
+/* line 207, sass/layout/_main.scss */
 .banner .cta-small .right:after {
   border-top: 0.2em solid white;
   border-right: 0.2em solid white;
 }
-/* line 218, sass/layout/_main.scss */
+/* line 217, sass/layout/_main.scss */
 .banner:hover .cta-text {
   right: 0px;
 }
 
-/* line 224, sass/layout/_main.scss */
+/* line 223, sass/layout/_main.scss */
 .banner-text {
   position: relative;
   z-index: 10;
   padding: 50px 150px 50px 50px;
 }
-/* line 229, sass/layout/_main.scss */
+/* line 228, sass/layout/_main.scss */
 .banner-text .banner-title {
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 3.25em;
@@ -2893,23 +2878,23 @@ main {
   margin-bottom: 25px;
   color: white;
 }
-/* line 237, sass/layout/_main.scss */
+/* line 236, sass/layout/_main.scss */
 .banner-text .banner-cta {
   font-size: 0.75em;
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 242, sass/layout/_main.scss */
+/* line 241, sass/layout/_main.scss */
 .banner-text .banner-cta a {
   color: white;
 }
 
-/* line 248, sass/layout/_main.scss */
+/* line 247, sass/layout/_main.scss */
 .banner-inner {
   height: 300px;
 }
 
-/* line 254, sass/layout/_main.scss */
+/* line 253, sass/layout/_main.scss */
 .cta-small {
   font-size: 0.75em;
   text-transform: uppercase;
@@ -2918,7 +2903,7 @@ main {
   position: relative;
   overflow: hidden;
 }
-/* line 262, sass/layout/_main.scss */
+/* line 261, sass/layout/_main.scss */
 .cta-small .cta-text {
   position: relative;
   right: 0px;
@@ -2926,7 +2911,7 @@ main {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 269, sass/layout/_main.scss */
+/* line 268, sass/layout/_main.scss */
 .cta-small .cta-text .right {
   display: inline-block;
   width: 2em;
@@ -2935,7 +2920,7 @@ main {
   margin-left: 1.5em;
   text-align: center;
 }
-/* line 278, sass/layout/_main.scss */
+/* line 277, sass/layout/_main.scss */
 .cta-small .cta-text .right:after {
   content: '';
   display: inline-block;
@@ -2948,7 +2933,7 @@ main {
   transform: rotate(45deg);
 }
 
-/* line 292, sass/layout/_main.scss */
+/* line 291, sass/layout/_main.scss */
 .cta-big {
   margin-top: 50px;
   font-size: 0.75em;
@@ -2958,7 +2943,7 @@ main {
   position: relative;
   overflow: hidden;
 }
-/* line 301, sass/layout/_main.scss */
+/* line 300, sass/layout/_main.scss */
 .cta-big .cta-text {
   position: relative;
   right: 0px;
@@ -2966,7 +2951,7 @@ main {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 308, sass/layout/_main.scss */
+/* line 307, sass/layout/_main.scss */
 .cta-big .cta-text .right {
   display: inline-block;
   width: 7em;
@@ -2975,7 +2960,7 @@ main {
   margin-left: 1.5em;
   text-align: center;
 }
-/* line 317, sass/layout/_main.scss */
+/* line 316, sass/layout/_main.scss */
 .cta-big .cta-text .right:after {
   content: '';
   display: inline-block;
@@ -2988,31 +2973,31 @@ main {
   transform: rotate(45deg);
 }
 
-/* line 334, sass/layout/_main.scss */
+/* line 333, sass/layout/_main.scss */
 .callout-news {
   padding: 25px;
   height: 400px;
 }
-/* line 338, sass/layout/_main.scss */
+/* line 337, sass/layout/_main.scss */
 .callout-news .callout-news-headline {
   margin-bottom: 15px;
 }
-/* line 341, sass/layout/_main.scss */
+/* line 340, sass/layout/_main.scss */
 .callout-news .callout-news-headline h5 {
   margin-bottom: 10px;
 }
-/* line 345, sass/layout/_main.scss */
+/* line 344, sass/layout/_main.scss */
 .callout-news .callout-news-headline h6 {
   margin-bottom: 25px;
   font-family: "Avenir Next Cyr W00 Regular";
 }
 
-/* line 352, sass/layout/_main.scss */
+/* line 351, sass/layout/_main.scss */
 .information-video {
   border-right: 10px solid white;
 }
 
-/* line 356, sass/layout/_main.scss */
+/* line 355, sass/layout/_main.scss */
 .information-bar {
   height: 52px;
   background-color: #fec935;
@@ -3021,17 +3006,17 @@ main {
   font-size: 20px;
 }
 
-/* line 364, sass/layout/_main.scss */
+/* line 363, sass/layout/_main.scss */
 .person {
   width: 25%;
   float: left;
 }
-/* line 368, sass/layout/_main.scss */
+/* line 367, sass/layout/_main.scss */
 .person img {
   float: left;
 }
 
-/* line 375, sass/layout/_main.scss */
+/* line 374, sass/layout/_main.scss */
 section {
   float: left;
   position: relative;
@@ -3039,81 +3024,76 @@ section {
   margin-bottom: 10px;
 }
 
-/* line 382, sass/layout/_main.scss */
+/* line 381, sass/layout/_main.scss */
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
 }
 
-/* line 387, sass/layout/_main.scss */
-.listing-text {
-  height: 425px;
-}
-
-/* line 391, sass/layout/_main.scss */
+/* line 386, sass/layout/_main.scss */
 .email-signup-text {
   padding: 50px;
 }
 
-/* line 395, sass/layout/_main.scss */
+/* line 390, sass/layout/_main.scss */
 .schedule-text {
   float: left;
   padding: 50px;
 }
 
-/* line 400, sass/layout/_main.scss */
+/* line 395, sass/layout/_main.scss */
 .quote-text {
   padding: 50px;
   text-align: center;
 }
 
-/* line 405, sass/layout/_main.scss */
+/* line 400, sass/layout/_main.scss */
 .image {
   height: 400px;
 }
 
-/* line 410, sass/layout/_main.scss */
+/* line 405, sass/layout/_main.scss */
 .icon-box {
   width: 33.3%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 415, sass/layout/_main.scss */
+/* line 410, sass/layout/_main.scss */
 .icon-box h5 {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 420, sass/layout/_main.scss */
+/* line 415, sass/layout/_main.scss */
 .schedule-box {
   width: 50%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 425, sass/layout/_main.scss */
+/* line 420, sass/layout/_main.scss */
 .schedule-box .strong {
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 428, sass/layout/_main.scss */
+/* line 423, sass/layout/_main.scss */
 .schedule-box .blue {
   color: #0ebde8;
 }
 
-/* line 433, sass/layout/_main.scss */
+/* line 428, sass/layout/_main.scss */
 .buttons h3, .form h3 {
   margin-bottom: 0;
 }
 
-/* line 437, sass/layout/_main.scss */
+/* line 432, sass/layout/_main.scss */
 .buttons p, .form p {
   margin-bottom: 15px;
 }
 
-/* line 441, sass/layout/_main.scss */
+/* line 436, sass/layout/_main.scss */
 .regular-font {
   font-family: "Avenir Next Cyr W00 Regular";
 }
 
-/* line 445, sass/layout/_main.scss */
+/* line 440, sass/layout/_main.scss */
 .buttons-cta {
   display: inline;
   padding: 25px 35px 25px 25px;
@@ -3123,7 +3103,7 @@ section {
   position: relative;
   float: left;
 }
-/* line 454, sass/layout/_main.scss */
+/* line 449, sass/layout/_main.scss */
 .buttons-cta .right {
   display: inline-block;
   width: 2em;
@@ -3133,7 +3113,7 @@ section {
   text-align: center;
   border: 0.2em solid #2791bd;
 }
-/* line 464, sass/layout/_main.scss */
+/* line 459, sass/layout/_main.scss */
 .buttons-cta .right:after {
   content: '';
   display: inline-block;
@@ -3148,7 +3128,7 @@ section {
   border-right: 0.2em solid #2791bd;
 }
 
-/* line 479, sass/layout/_main.scss */
+/* line 474, sass/layout/_main.scss */
 .submit-buttons {
   display: inline;
   padding: 10px 20px 10px 10px;
@@ -3159,7 +3139,7 @@ section {
   float: left;
   margin-top: 30px;
 }
-/* line 489, sass/layout/_main.scss */
+/* line 484, sass/layout/_main.scss */
 .submit-buttons .right {
   display: inline-block;
   width: 2em;
@@ -3168,7 +3148,7 @@ section {
   margin-left: 1.5em;
   text-align: center;
 }
-/* line 498, sass/layout/_main.scss */
+/* line 493, sass/layout/_main.scss */
 .submit-buttons .right:after {
   content: '';
   display: inline-block;
@@ -3181,34 +3161,34 @@ section {
   transform: rotate(45deg);
 }
 
-/* line 511, sass/layout/_main.scss */
+/* line 506, sass/layout/_main.scss */
 .content-half {
   padding-right: 20px;
   margin-top: 20px;
 }
-/* line 515, sass/layout/_main.scss */
+/* line 510, sass/layout/_main.scss */
 .content-half h5 {
   font-family: "Avenir Next Cyr W00 Bold";
   margin-bottom: 0;
 }
 
-/* line 521, sass/layout/_main.scss */
+/* line 516, sass/layout/_main.scss */
 .content-text {
   padding: 50px;
   float: left;
 }
-/* line 525, sass/layout/_main.scss */
+/* line 520, sass/layout/_main.scss */
 .content-text p {
   color: black;
 }
 
-/* line 530, sass/layout/_main.scss */
+/* line 525, sass/layout/_main.scss */
 #content {
   margin-top: 30px;
   float: left;
 }
 
-/* line 535, sass/layout/_main.scss */
+/* line 530, sass/layout/_main.scss */
 .thumbnail {
   float: left;
   width: 100%;
@@ -3216,12 +3196,12 @@ section {
   margin-bottom: 15px;
 }
 
-/* line 542, sass/layout/_main.scss */
+/* line 537, sass/layout/_main.scss */
 .single-post main {
   border-top: 5px solid #fec935;
 }
 
-/* line 546, sass/layout/_main.scss */
+/* line 541, sass/layout/_main.scss */
 .page-template-product main, .page-template-panel main {
   border-top: 5px solid #2791bd;
 }
