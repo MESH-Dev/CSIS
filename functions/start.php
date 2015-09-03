@@ -56,5 +56,11 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
 remove_action( 'wp_head', 'wp_generator'); // remove WP version from header
 remove_action( 'wp_head','wp_shortlink_wp_head');
 
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+       global $post;
+	return '<br/><a class="moretag" href="'. get_permalink($post->ID) . '"> Read more...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

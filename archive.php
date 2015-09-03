@@ -3,40 +3,58 @@
 <main id="content">
 
 	<div class="container">
-		<div class="row">
+			<div class="three columns">
+
+				<?php include_once(locate_template('partials/sidebar.php')); ?>
+
+			</div>
 			<div class="nine columns">
+				<div class="blog-content">
+					<?php $i = 0; ?>
+					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<?php if ( have_posts() ) : ?>
-					<h1>
-						<?php if ( is_day() ) : ?>
-							<?php printf( __( 'Daily Archives: <span>%s</span>' ), get_the_date() ); ?>
-						<?php elseif ( is_month() ) : ?>
-							<?php printf( __( 'Monthly Archives: <span>%s</span>' ), get_the_date('F Y') ); ?>
-						<?php elseif ( is_year() ) : ?>
-							<?php printf( __( 'Yearly Archives: <span>%s</span>' ), get_the_date('Y') ); ?>
-						<?php else : ?>
-							<?php _e( 'Blog Archives' ); ?>
-						<?php endif; ?>
-					</h1>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="six columns">
 
-						<div class="post">
-							<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-							<p class="postinfo">By <?php the_author(); ?> | Categories: <?php the_category(', '); ?> | <?php comments_popup_link(); ?></p>
-							<?php the_content('Read more &#8658'); ?>
+							<div class="blog-post blog-post-small">
+								<div class="blog-post-categories">
+									<?php
+									$post_categories = wp_get_post_categories( get_the_id() );
+									$cats = array();
+
+									foreach($post_categories as $c){
+										$cat = get_category( $c );
+										$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+										echo $cat->name;
+									}
+
+									?>
+								</div>
+
+								<div class="thumbnail">
+									<?php
+									// Must be inside a loop.
+
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail();
+									}
+
+									?>
+								</div>
+
+								<h5><?php the_title(); ?></h5>
+								<h6><span class="postdate"><?php the_date(); ?></span> <span class="postauthor"><?php the_author(); ?></span></h6>
+
+								<?php the_excerpt(); ?>
+							</div>
+
 						</div>
 
 					<?php endwhile; ?>
-
-				<?php endif; ?>
-
+				</div>
 			</div>
-			<div class="three columns">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
 	</div>
+
 
 </main><!-- End of Content -->
 

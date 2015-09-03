@@ -69,5 +69,14 @@ jQuery(document).ready(function($){
 
   $('.callout').matchHeight();
   $('.listing-text').matchHeight();
+  $('.blog-post-small').matchHeight();
+
+  $('.blog-sidebar-title').click(function() {
+
+    $(this).find('i').toggleClass('fa-caret-right');
+    $(this).find('i').toggleClass('fa-caret-down');
+    $(this).next().slideToggle();
+
+  });
 
 });

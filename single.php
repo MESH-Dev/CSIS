@@ -4,9 +4,13 @@
 
 	<div class="container">
 
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<div class="three columns">
+		<?php include_once(locate_template('partials/sidebar.php')); ?>
+	</div>
 
-		<div class="nine columns offset-by-three">
+	<div class="nine columns">
+
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 			<div class="content-text">
 				<h2><?php the_title(); ?></h2>
@@ -26,9 +30,9 @@
 				<?php the_content(); ?>
 			</div>
 
-		</div>
+		<?php endwhile; ?>
 
-	<?php endwhile; ?>
+	</div>
 
 	</div>
 
