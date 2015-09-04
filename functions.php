@@ -121,6 +121,68 @@ function getSingleProfile($profiles,$id){
 }
 
 
+function getFilterLists($profiles, $listname){
+
+	//get all values/titles make funciton to retrieve ImpactAreas[], Expertise, etc
+      $impactArr =  array();
+      $expertiseArr =  array();
+      $geoArr =  array();
+      $affilArr = array();
+
+      foreach(array_keys($profiles[0]) as $paramName){
+
+ 
+        //get sub string util [ 
+
+        if (strpos($paramName, '[') !== FALSE)
+        {
+
+          $name = explode("[", $paramName , 2);
+          $first = $name[0];
+ 
+
+          if($first!='')
+          {
+              //get value between [ ]
+              preg_match('~\[(.*?)\]~', $paramName, $value);
+              $value =  $value[0]; 
+              $value = substr($value,1,-1);
+   
+              //Push value to appropriate array
+              if($first == 'Impact Areas '){
+                array_push($impactArr,$value);
+              }
+              elseif($first == 'Expertise '){
+                array_push($expertiseArr,$value);
+              }
+              elseif($first == 'Geographic Interest '){
+                array_push($geoArr,$value);
+              }
+              elseif($first == 'Primary Affiliation with the Center '){
+                array_push($affilArr,$value);
+              }
+              else{
+
+              }
+   
+          }
+        }
+      }
+      if($listname == 'Impact') 
+      	return $impactArr;
+      elseif($listname == 'Affiliation') 
+      	return $affilArr;
+      elseif($listname == 'Expertise') 
+      	return $expertiseArr;
+      elseif($listname == 'Geographic') 
+      	return $geoArr;
+      else
+      	return 0;
+         
+
+}
+
+
 
 
 ?>

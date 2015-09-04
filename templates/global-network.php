@@ -14,7 +14,15 @@ get_header(); ?>
       $profiles = getProfileArray();
       //renderProfileGrid($profiles);
       $profile = getSingleProfile($profiles,0);
-      echo $profile['Name | Last'];
+      //echo $profile['Name | Last'];
+      //$filterarray = getFilterLists($profiles, 'Impact | Affiliation | Expertise | Geographic');
+
+
+
+
+
+
+
 
 
 
