@@ -47,6 +47,36 @@ jQuery(document).ready(function($){
      $('.'+item).slideDown('400'); //Show this dropdowns
 
   });
+ 
+
+  //Live Search Global Network
+   $("input#network-search").keyup(function(){
+        console.log('ok');
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+ 
+        // Loop through grid items
+        $(".network-grid .network-grid-item").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+ 
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).fadeIn();
+               //count++;
+            }
+        });
+ 
+        // Update the count
+        //var numberItems = count;
+        //$("#filter-count").text("Number of Comments = "+count);
+    });
+
+
+
 
   // var center = new google.maps.LatLng(37.4419, -122.1419);
   // var options = {

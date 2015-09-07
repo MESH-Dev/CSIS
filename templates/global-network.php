@@ -10,12 +10,13 @@ get_header(); ?>
 
       <?php
 
-      //generateJSON();
+      generateJSON();
       $profiles = getProfileArray();
       //renderProfileGrid($profiles);
       $profile = getSingleProfile($profiles,0);
       //echo $profile['Name | Last'];
       //$filterarray = getFilterLists($profiles, 'Impact | Affiliation | Expertise | Geographic');
+
 
 
 
@@ -106,110 +107,21 @@ get_header(); ?>
         </div>
         <div class="ten columns topic-items">
 
-          <div class="topic-checkbox ">
-            <input type="checkbox" value="None" id="TopicName1" name="check" />
-            <label for="TopicName1">Accounting & Finance</label>
-          </div>
+          <?php 
+          //Get Impact Filters and print out checkboxes
+          $impactFilters = getFilterLists($profiles, 'Impact');
+            foreach($impactFilters as $filter){
+              $filter_id = str_replace(" ", "-", $filter);
+          ?>
+              <div class="topic-checkbox ">
+                <input type="checkbox" value="<?php echo $filter; ?>" id="<?php echo $filter_id; ?>" name="impact" />
+                <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+              </div>
+            
+            <?php } ?>
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName2" name="check" />
-            <label for="TopicName2">Budgeting</label>
-          </div>
-
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName4" name="check" />
-            <label for="TopicName4">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName5" name="check" />
-            <label for="TopicName5">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName6" name="check" />
-            <label for="TopicName6">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName7" name="check" />
-            <label for="TopicName7">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox ">
-            <input type="checkbox" value="None" id="TopicName1" name="check" />
-            <label for="TopicName1">Accounting & Finance</label>
-          </div>
-
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName2" name="check" />
-            <label for="TopicName2">Budgeting</label>
-          </div>
-
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName4" name="check" />
-            <label for="TopicName4">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName5" name="check" />
-            <label for="TopicName5">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName6" name="check" />
-            <label for="TopicName6">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName7" name="check" />
-            <label for="TopicName7">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox ">
-            <input type="checkbox" value="None" id="TopicName1" name="check" />
-            <label for="TopicName1">Accounting & Finance</label>
-          </div>
-
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName2" name="check" />
-            <label for="TopicName2">Budgeting</label>
-          </div>
-
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName4" name="check" />
-            <label for="TopicName4">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName5" name="check" />
-            <label for="TopicName5">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName6" name="check" />
-            <label for="TopicName6">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName7" name="check" />
-            <label for="TopicName7">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-
-
+           
+ 
         </div>
 
 
@@ -225,8 +137,8 @@ get_header(); ?>
         <div class="ten columns">
           <div class="search">
             <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+              <input class="input__field input__field--hoshi" type="text" id="network-search" spellcheck="false" />
+              <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="network-search">
                 <span class="input__label-content input__label-content--hoshi">Search</span>
               </label>
             </span>
@@ -257,6 +169,27 @@ get_header(); ?>
             <div class="hover-info">
               <span class="name">First Last Name</span>
               <span class="title">Title and Org Here</span>
+              <span class="location">Pittsburgh</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="three columns " >
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
+            <div class="hover-info">
+              <span class="name">Josh Dodd</span>
+              <span class="title">Title and Org Here</span>
+              <span class="location">New Jersey</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="three columns " >
+          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
+            <div class="hover-info">
+              <span class="name">Test Name</span>
+              <span class="title">Title and Org Here</span>
               <span class="location">New York</span>
             </div>
           </div>
@@ -267,29 +200,8 @@ get_header(); ?>
           <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
             <div class="hover-info">
               <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
+              <span class="title">President</span>
+              <span class="location">Atlanta</span>
             </div>
           </div>
         </div>

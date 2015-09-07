@@ -175,7 +175,7 @@
 }
 
 .network-search{
-	display:none;
+	
 	border-top: 4px solid $grey;
 
 
@@ -207,11 +207,11 @@
 }
 
 .filter-title{
-	padding: 40px;
+	padding: 40px; 
 }
 
 .network-map{
-
+	display:none;
 	border-top: 4px solid $grey;
 	&:after{ //FOR TRIANGLE
 		bottom: 100%;
