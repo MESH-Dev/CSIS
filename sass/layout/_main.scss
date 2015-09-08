@@ -544,9 +544,13 @@ section {
 .blog-sidebar {
   padding: 50px 30px;
   background-color: #3a3a3a;
+  float: left;
+  height: 100%;
+  width: 100%;
 }
 
 .blog-content {
+  float: left;
   padding: 50px;
 }
 
@@ -560,10 +564,15 @@ section {
   padding-left: 5px;
   padding-right: 5px;
   cursor: pointer;
+  float: left;
 
   i {
     float: right;
   }
+}
+
+.blog-sidebar-title-text {
+  float: left;
 }
 
 .blog-categories {
@@ -582,12 +591,18 @@ section {
       a {
         color: $yellow-primary;
         font-size: 15px;
+        padding: 5px;
+      }
+
+      &.active a {
+        background: $yellow-primary;
+        color: #3a3a3a;
       }
 
       &:hover {
-        background: $yellow-primary;
 
         a {
+          background: $yellow-primary;
           color: #3a3a3a;
         }
       }
@@ -602,6 +617,18 @@ section {
 
   h2 {
     margin-bottom: 15px;
+
+    a {
+      color: #616161;
+    }
+  }
+
+  h5 {
+    font-family: $font-family--heavy;
+
+    a {
+      color: #616161;
+    }
   }
 }
 
@@ -613,4 +640,28 @@ section {
   margin-bottom: 20px;
   color: $yellow-primary;
   font-family: $font-family--bold;
+}
+
+.active-category {
+  display: block;
+}
+
+.active-sidebar-title {
+  border-bottom: 3px solid $yellow-primary;
+}
+
+.moretag {
+  color: $yellow-primary;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: $font-family--bold;
+}
+
+.social-icons {
+  color: #a9a9a9;
+
+  i {
+    font-size: 25px;
+    margin-right: 20px;
+  }
 }

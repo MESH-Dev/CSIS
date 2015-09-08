@@ -71,6 +71,10 @@ a {
 	color: $yellow-primary;
 	text-decoration: none;
 	font-weight: $font-weight--medium;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 p {

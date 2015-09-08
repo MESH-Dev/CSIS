@@ -3,12 +3,12 @@
 <main id="content">
 
 	<div class="container">
-			<div class="three columns">
+			<div class="three columns blog-section">
 
 				<?php include_once(locate_template('partials/sidebar.php')); ?>
 
 			</div>
-			<div class="nine columns">
+			<div class="nine columns blog-section">
 				<div class="blog-content">
 					<?php $i = 0; ?>
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -32,8 +32,8 @@
 										?>
 									</div>
 
-									<h2><?php the_title(); ?></h2>
-									<h6><span class="postdate"><?php the_date(); ?></span> <span class="postauthor"><?php the_author(); ?></span></h6>
+									<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
+									<h6><span class="postdate"><?php the_time('F j, Y'); ?></span> | <span class="postauthor"><?php the_author(); ?></span></h6>
 									<div class="thumbnail">
 										<?php
 										// Must be inside a loop.
@@ -46,6 +46,12 @@
 									</div>
 
 									<?php the_excerpt(); ?>
+
+									<div class="social-icons">
+										<i class="fa fa-twitter"></i>
+										<i class="fa fa-facebook"></i>
+										<i class="fa fa-vimeo"></i>
+									</div>
 								</div>
 
 							</div>
@@ -80,10 +86,16 @@
 										?>
 									</div>
 
-									<h5><?php the_title(); ?></h5>
-									<h6><span class="postdate"><?php the_date(); ?></span> <span class="postauthor"><?php the_author(); ?></span></h6>
+									<h5><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h5>
+									<h6><span class="postdate"><?php the_time('F j, Y'); ?></span> | <span class="postauthor"><?php the_author(); ?></span></h6>
 
 									<?php the_excerpt(); ?>
+
+									<div class="social-icons">
+										<i class="fa fa-twitter"></i>
+										<i class="fa fa-facebook"></i>
+										<i class="fa fa-vimeo"></i>
+									</div>
 								</div>
 
 							</div>

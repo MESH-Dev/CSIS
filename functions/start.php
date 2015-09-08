@@ -59,7 +59,7 @@ remove_action( 'wp_head','wp_shortlink_wp_head');
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
        global $post;
-	return '<br/><a class="moretag" href="'. get_permalink($post->ID) . '"> Read more...</a>';
+	return '<br/><a class="moretag" href="'. get_permalink($post->ID) . '"> Read more <i class="fa fa-angle-double-right"></i></a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

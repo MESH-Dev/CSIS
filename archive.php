@@ -43,9 +43,15 @@
 								</div>
 
 								<h5><?php the_title(); ?></h5>
-								<h6><span class="postdate"><?php the_date(); ?></span> <span class="postauthor"><?php the_author(); ?></span></h6>
+								<h6><span class="postdate"><?php the_time('F j, Y'); ?></span> | <span class="postauthor"><?php the_author(); ?></span></h6>
 
 								<?php the_excerpt(); ?>
+
+								<div class="social-icons">
+									<i class="fa fa-twitter"></i>
+									<i class="fa fa-facebook"></i>
+									<i class="fa fa-vimeo"></i>
+								</div>
 							</div>
 
 						</div>
