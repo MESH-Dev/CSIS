@@ -14,40 +14,12 @@ function my_custom_login_logo() {
 		    </style>';
 }
 
-
-function getCSVdata(){
-	$row = 1;
-
-      $csv = get_bloginfo('template_directory') . '/data/user-profiles.csv';
-     
-
-      if (($handle = fopen($csv, "r")) !== FALSE) {
-        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-          $num = count($data);
-
-          if ($row == 1) {
-          	print_r($data);
-          }
-
-          if ($row != 1) {
-
-            for ($c=0; $c < $num; $c++) {
-                //echo $data[$c];
-            }
-
-            echo "<br/>";
-          }
-
-          $row++;
-        }
-        fclose($handle);
-      }
-}
+ 
 
 function generateJSON(){
 	//header('Content-type: application/json');
 	// Set your CSV feed
-	$feed = get_bloginfo('template_directory') . '/data/user-profiles.csv';
+	$feed = get_bloginfo('template_directory') . '/data/test.csv';
 	// Arrays we'll use later
 	$keys = array();
 	$newArray = array();
@@ -105,11 +77,47 @@ function getProfileArray(){
 	return $profiles;
 }
 
+
+
+
 function renderProfileGrid($profiles){
 
+  $count = 0;
+ 
  	foreach ($profiles as $profile) {
- 		echo $profile['Owner'] . '<br>'; 
+
+      //Get Filter Data
+      $impact = getSingleProfileFilterData($profiles, $count,'Impact');
+      $expertise = getSingleProfileFilterData($profiles, $count,'Expertise');
+      $geographic = getSingleProfileFilterData($profiles, $count,'Geographic');
+      $affil = getSingleProfileFilterData($profiles, $count,'Affiliation');
+      $year = getSingleProfileFilterData($profiles, $count,'Year');
+      $filters = array_merge($impact, $expertise, $geographic, $affil, $year);
+      
+      $filter_string = '';
+      foreach ($filters as $filter) {
+        $filter = str_replace(" ", "-", $filter);
+        $filter = str_replace("&", "", $filter);
+        $filter_string .= $filter . ' ';
+      }
+
+
+     $output  = '<div class="mix three columns '.$filter_string.'" >';
+     $output .=    '<div class="network-grid-item " style="background-image: url(http:'.$profile['Profile Picture'] .' ); " >';
+     $output .=       '<div class="hover-info">';
+     $output .=          '<span class="name">'. $profile['Name | First'] .' '.$profile['Name | Last'] .'</span>';
+     $output .=          '<span class="title">'. $profile['Title'] .', '. $profile['Current Organization / School'] .'</span>';
+     $output .=          '<span class="location">'. $profile['City'] .', '. $profile['State (USA only)'] .'</span>';
+     $output .=        '</div>';
+     $output .=    '</div>';
+     $output .= '</div>';
+
+     echo $output;
+     $count++;
+
  	}
+
+  return 0;
 
  	
 }
@@ -120,34 +128,33 @@ function getSingleProfile($profiles,$id){
 
 }
 
+function getSingleProfileFilterData($profiles, $id, $listname){
 
-function getFilterLists($profiles, $listname){
-
-	//get all values/titles make funciton to retrieve ImpactAreas[], Expertise, etc
+  //get all values/titles make funciton to retrieve ImpactAreas[], Expertise, etc
       $impactArr =  array();
       $expertiseArr =  array();
       $geoArr =  array();
       $affilArr = array();
+      $yearArr = array();
 
-      foreach(array_keys($profiles[0]) as $paramName){
-
+      foreach ($profiles[$id] as $key => $data) {
  
         //get sub string util [ 
-
-        if (strpos($paramName, '[') !== FALSE)
+        if (strpos($key, '[') !== FALSE)
         {
-
-          $name = explode("[", $paramName , 2);
+          $name = explode("[", $key , 2);
           $first = $name[0];
- 
 
           if($first!='')
           {
+
+            if($data == '1')
+            {
               //get value between [ ]
-              preg_match('~\[(.*?)\]~', $paramName, $value);
+              preg_match('~\[(.*?)\]~', $key, $value);
               $value =  $value[0]; 
               $value = substr($value,1,-1);
-   
+ 
               //Push value to appropriate array
               if($first == 'Impact Areas '){
                 array_push($impactArr,$value);
@@ -161,9 +168,85 @@ function getFilterLists($profiles, $listname){
               elseif($first == 'Primary Affiliation with the Center '){
                 array_push($affilArr,$value);
               }
+              elseif($first == 'Year '){
+                array_push($yearArr,$value);
+              }
               else{
 
               }
+            }
+          }
+        }
+      }
+      if($listname == 'Impact') 
+        return $impactArr;
+      elseif($listname == 'Affiliation') 
+        return $affilArr;
+      elseif($listname == 'Expertise') 
+        return $expertiseArr;
+      elseif($listname == 'Geographic') 
+        return $geoArr;
+      elseif($listname == 'Year') 
+        return $yearArr;
+      else
+        return 0;
+     
+}
+
+
+
+
+function getFilterLists($profiles, $listname){
+
+	//get all values/titles make funciton to retrieve ImpactAreas[], Expertise, etc
+      $impactArr =  array();
+      $expertiseArr =  array();
+      $geoArr =  array();
+      $affilArr = array();
+      $yearArr = array();
+
+      foreach(array_keys($profiles[0]) as $paramName){
+ 
+        //get sub string util [ 
+
+        if (strpos($paramName, '[') !== FALSE)
+        {
+
+
+          $name = explode("[", $paramName , 2);
+          $first = $name[0];
+ 
+
+          if($first!='')
+          {
+              //get value between [ ]
+              preg_match('~\[(.*?)\]~', $paramName, $value);
+              $value =  $value[0]; 
+              $value = substr($value,1,-1);
+
+              if(strpos($value,"Other,") !== 0)
+              { 
+   
+                //Push value to appropriate array
+                if($first == 'Impact Areas '){
+                  array_push($impactArr,$value);
+                }
+                elseif($first == 'Expertise '){
+                  array_push($expertiseArr,$value);
+                }
+                elseif($first == 'Geographic Interest '){
+                  array_push($geoArr,$value);
+                }
+                elseif($first == 'Primary Affiliation with the Center '){
+                  array_push($affilArr,$value);
+                }
+                elseif($first == 'Year '){
+                  array_push($yearArr,$value);
+                }
+                else{
+
+                }
+              }  
    
           }
         }

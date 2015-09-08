@@ -38,6 +38,13 @@ jQuery(document).ready(function($){
   });
 
 
+$('.topic-list li').click(function(event) {
+    var section = $(this).attr('data-id');
+    $('form#Filters fieldset').hide();
+    $('form#Filters fieldset[name=' + section+']').show();
+
+});
+
 
   $('.network-nav-item').click(function(event) {
 
@@ -47,14 +54,11 @@ jQuery(document).ready(function($){
      $('.'+item).slideDown('400'); //Show this dropdowns
 
   });
- 
 
-  //Live Search Global Network
+    //Live Search Global Network
    $("input#network-search").keyup(function(){
-        console.log('ok');
- 
         // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val(), count = 0;
+        var filter = $(this).val();
  
         // Loop through grid items
         $(".network-grid .network-grid-item").each(function(){
@@ -66,14 +70,14 @@ jQuery(document).ready(function($){
             // Show the list item if the phrase matches and increase the count by 1
             } else {
                 $(this).fadeIn();
-               //count++;
+   
             }
         });
  
-        // Update the count
-        //var numberItems = count;
-        //$("#filter-count").text("Number of Comments = "+count);
     });
+
+
+
 
 
 
