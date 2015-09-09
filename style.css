@@ -3644,48 +3644,53 @@ section {
   height: 400px;
 }
 
-/* line 464, sass/layout/_main.scss */
+/* line 463, sass/layout/_main.scss */
+.image-with-text {
+  height: 600px;
+}
+
+/* line 468, sass/layout/_main.scss */
 .icon-box {
   width: 33.3%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 469, sass/layout/_main.scss */
+/* line 473, sass/layout/_main.scss */
 .icon-box h5 {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 474, sass/layout/_main.scss */
+/* line 478, sass/layout/_main.scss */
 .schedule-box {
   width: 50%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 479, sass/layout/_main.scss */
+/* line 483, sass/layout/_main.scss */
 .schedule-box .strong {
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 482, sass/layout/_main.scss */
+/* line 486, sass/layout/_main.scss */
 .schedule-box .blue {
   color: #0ebde8;
 }
 
-/* line 487, sass/layout/_main.scss */
+/* line 491, sass/layout/_main.scss */
 .buttons h3, .form h3 {
   margin-bottom: 0;
 }
 
-/* line 491, sass/layout/_main.scss */
+/* line 495, sass/layout/_main.scss */
 .buttons p, .form p {
   margin-bottom: 15px;
 }
 
-/* line 495, sass/layout/_main.scss */
+/* line 499, sass/layout/_main.scss */
 .regular-font {
   font-family: "Avenir Next Cyr W00 Regular";
 }
 
-/* line 499, sass/layout/_main.scss */
+/* line 503, sass/layout/_main.scss */
 .buttons-cta {
   display: inline;
   padding: 25px 35px 25px 25px;
@@ -3695,7 +3700,7 @@ section {
   position: relative;
   float: left;
 }
-/* line 508, sass/layout/_main.scss */
+/* line 512, sass/layout/_main.scss */
 .buttons-cta .right {
   display: inline-block;
   width: 1.5em;
@@ -3706,7 +3711,7 @@ section {
   border: 0.1em solid #2791bd;
   line-height: 1.1em;
 }
-/* line 519, sass/layout/_main.scss */
+/* line 523, sass/layout/_main.scss */
 .buttons-cta .right:after {
   content: '';
   display: inline-block;
@@ -3720,24 +3725,24 @@ section {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
 }
-/* line 533, sass/layout/_main.scss */
+/* line 537, sass/layout/_main.scss */
 .buttons-cta:hover {
   background: white;
   color: #2791bd;
   border: 3px solid #2791bd;
   padding: 22px 32px 22px 22px;
 }
-/* line 539, sass/layout/_main.scss */
+/* line 543, sass/layout/_main.scss */
 .buttons-cta:hover .right {
   border: 0.1em solid #2791bd;
 }
-/* line 542, sass/layout/_main.scss */
+/* line 546, sass/layout/_main.scss */
 .buttons-cta:hover .right::after {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
 }
 
-/* line 551, sass/layout/_main.scss */
+/* line 555, sass/layout/_main.scss */
 .submit-buttons {
   display: inline;
   padding: 10px 20px 10px 10px;
@@ -3748,7 +3753,7 @@ section {
   float: left;
   margin-top: 30px;
 }
-/* line 561, sass/layout/_main.scss */
+/* line 565, sass/layout/_main.scss */
 .submit-buttons .right {
   display: inline-block;
   width: 1.5em;
@@ -3758,7 +3763,7 @@ section {
   text-align: center;
   line-height: 1.1em;
 }
-/* line 571, sass/layout/_main.scss */
+/* line 575, sass/layout/_main.scss */
 .submit-buttons .right:after {
   content: '';
   display: inline-block;
@@ -3771,33 +3776,44 @@ section {
   transform: rotate(45deg);
 }
 
-/* line 585, sass/layout/_main.scss */
+/* line 589, sass/layout/_main.scss */
 .content-half {
   padding-right: 20px;
   margin-top: 20px;
 }
-/* line 589, sass/layout/_main.scss */
+/* line 593, sass/layout/_main.scss */
 .content-half h5 {
   font-family: "Avenir Next Cyr W00 Bold";
   margin-bottom: 0;
 }
 
-/* line 595, sass/layout/_main.scss */
+/* line 599, sass/layout/_main.scss */
 .content-text {
   padding: 50px;
   float: left;
 }
-/* line 599, sass/layout/_main.scss */
+/* line 603, sass/layout/_main.scss */
 .content-text p {
   color: black;
 }
+/* line 607, sass/layout/_main.scss */
+.content-text h4 {
+  font-family: "Avenir Next Cyr W00 Bold";
+}
 
-/* line 604, sass/layout/_main.scss */
+/* line 613, sass/layout/_main.scss */
+.side-text p {
+  margin-bottom: 3px;
+  font-size: 10px;
+  color: #494949;
+}
+
+/* line 620, sass/layout/_main.scss */
 #content {
   float: left;
 }
 
-/* line 609, sass/layout/_main.scss */
+/* line 625, sass/layout/_main.scss */
 .thumbnail {
   float: left;
   width: 100%;
@@ -3805,17 +3821,17 @@ section {
   margin-bottom: 15px;
 }
 
-/* line 616, sass/layout/_main.scss */
+/* line 632, sass/layout/_main.scss */
 .single-post main, .blog main {
   border-top: 5px solid #fec935;
 }
 
-/* line 620, sass/layout/_main.scss */
+/* line 636, sass/layout/_main.scss */
 .page-template-product main, .page-template-panel main {
   border-top: 5px solid #2791bd;
 }
 
-/* line 624, sass/layout/_main.scss */
+/* line 640, sass/layout/_main.scss */
 .blog-sidebar {
   padding: 50px 30px;
   background-color: #3a3a3a;
@@ -3824,14 +3840,14 @@ section {
   width: 100%;
 }
 
-/* line 632, sass/layout/_main.scss */
+/* line 648, sass/layout/_main.scss */
 .blog-content {
   float: left;
   padding: 50px;
   width: 100%;
 }
 
-/* line 638, sass/layout/_main.scss */
+/* line 654, sass/layout/_main.scss */
 .blog-sidebar-title {
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -3844,99 +3860,99 @@ section {
   cursor: pointer;
   float: left;
 }
-/* line 650, sass/layout/_main.scss */
+/* line 666, sass/layout/_main.scss */
 .blog-sidebar-title i {
   float: right;
 }
 
-/* line 655, sass/layout/_main.scss */
+/* line 671, sass/layout/_main.scss */
 .blog-sidebar-title-text {
   float: left;
 }
 
-/* line 659, sass/layout/_main.scss */
+/* line 675, sass/layout/_main.scss */
 .blog-categories {
   display: none;
 }
-/* line 662, sass/layout/_main.scss */
+/* line 678, sass/layout/_main.scss */
 .blog-categories ul {
   margin-bottom: 40px;
   float: left;
   width: 100%;
 }
-/* line 667, sass/layout/_main.scss */
+/* line 683, sass/layout/_main.scss */
 .blog-categories ul li {
   padding: 5px;
   float: left;
   width: 100%;
 }
-/* line 672, sass/layout/_main.scss */
+/* line 688, sass/layout/_main.scss */
 .blog-categories ul li a {
   color: #fec935;
   font-size: 15px;
   padding: 5px;
 }
-/* line 678, sass/layout/_main.scss */
+/* line 694, sass/layout/_main.scss */
 .blog-categories ul li.active a {
   background: #fec935;
   color: #3a3a3a;
 }
-/* line 685, sass/layout/_main.scss */
+/* line 701, sass/layout/_main.scss */
 .blog-categories ul li:hover a {
   background: #fec935;
   color: #3a3a3a;
 }
 
-/* line 694, sass/layout/_main.scss */
+/* line 710, sass/layout/_main.scss */
 .blog-post {
   border-top: 5px solid #fec935;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 699, sass/layout/_main.scss */
+/* line 715, sass/layout/_main.scss */
 .blog-post h2 {
   margin-bottom: 15px;
 }
-/* line 702, sass/layout/_main.scss */
+/* line 718, sass/layout/_main.scss */
 .blog-post h2 a {
   color: #3a3a3a;
 }
-/* line 707, sass/layout/_main.scss */
+/* line 723, sass/layout/_main.scss */
 .blog-post h5 {
   font-family: "Avenir Next Cyr W00 Heavy";
 }
-/* line 710, sass/layout/_main.scss */
+/* line 726, sass/layout/_main.scss */
 .blog-post h5 a {
   color: #3a3a3a;
 }
-/* line 715, sass/layout/_main.scss */
+/* line 731, sass/layout/_main.scss */
 .blog-post h6 {
   color: #3a3a3a;
 }
 
-/* line 720, sass/layout/_main.scss */
+/* line 736, sass/layout/_main.scss */
 .blog-post-small {
   padding-right: 20px;
 }
 
-/* line 724, sass/layout/_main.scss */
+/* line 740, sass/layout/_main.scss */
 .blog-post-categories {
   margin-bottom: 10px;
   color: #fec935;
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 730, sass/layout/_main.scss */
+/* line 746, sass/layout/_main.scss */
 .active-category {
   display: block;
 }
 
-/* line 734, sass/layout/_main.scss */
+/* line 750, sass/layout/_main.scss */
 .active-sidebar-title {
   border-bottom: 3px solid #fec935;
 }
 
-/* line 738, sass/layout/_main.scss */
+/* line 754, sass/layout/_main.scss */
 .moretag {
   color: #fec935;
   text-transform: uppercase;
@@ -3944,19 +3960,39 @@ section {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 745, sass/layout/_main.scss */
+/* line 761, sass/layout/_main.scss */
 .social-icons {
   color: #a9a9a9;
 }
-/* line 748, sass/layout/_main.scss */
+/* line 764, sass/layout/_main.scss */
 .social-icons i {
   font-size: 25px;
   margin-right: 20px;
 }
 
-/* line 754, sass/layout/_main.scss */
+/* line 770, sass/layout/_main.scss */
 .news {
   margin-bottom: 0px;
+}
+
+/* line 774, sass/layout/_main.scss */
+.image-holder {
+  height: 100%;
+  display: table !important;
+}
+
+/* line 779, sass/layout/_main.scss */
+.image-text {
+  padding: 100px 50px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+/* line 785, sass/layout/_main.scss */
+.image-text h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Avenir Next Cyr W00 Bold";
 }
 
 /* line 1, sass/layout/_header.scss */

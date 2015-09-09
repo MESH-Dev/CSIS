@@ -104,6 +104,48 @@ if( have_rows('sections') ):
 
       <?php
 
+      elseif (get_sub_field('section_type') == 'text') :
+
+      ?>
+
+      <section class="text">
+        <div class="three columns">
+          <div class="content-text side-text">
+            <?php echo get_sub_field('side_text'); ?>
+          </div>
+        </div>
+        <div class="six columns">
+          <div class="content-text">
+            <?php echo get_sub_field('body_text'); ?>
+
+            <br/>
+
+            <div class="six columns content-half">
+              <?php echo get_field('column_1_text'); ?>
+            </div>
+            <div class="six columns content-half">
+              <?php echo get_field('column_2_text'); ?>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <?php
+
+      elseif (get_sub_field('section_type') == 'image-with-text') :
+
+      ?>
+
+      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" >
+        <div class="four columns image-holder">
+          <div class="image-text">
+            <?php echo get_sub_field('body_text'); ?>
+          </div>
+        </div>
+      </section>
+
+      <?php
+
       elseif ( get_sub_field('section_type') == 'image' ) :
 
       ?>

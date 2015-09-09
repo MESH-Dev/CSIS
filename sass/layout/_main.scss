@@ -460,6 +460,10 @@ section {
   height: 400px;
 }
 
+.image-with-text {
+  height: 600px;
+}
+
 
 .icon-box {
   width: 33.3%;
@@ -598,6 +602,18 @@ section {
 
   p {
     color: black;
+  }
+
+  h4 {
+    font-family: $font-family--bold;
+  }
+}
+
+.side-text {
+  p {
+    margin-bottom: 3px;
+    font-size: 10px;
+    color: #494949;
   }
 }
 
@@ -753,4 +769,22 @@ section {
 
 .news {
   margin-bottom: 0px;
+}
+
+.image-holder {
+  height: 100%;
+  display: table !important;
+}
+
+.image-text {
+  padding: 100px 50px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+
+  h4 {
+    color: white;
+    margin-bottom: 10px;
+    font-family: $font-family--bold;
+  }
 }

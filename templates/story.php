@@ -59,7 +59,6 @@ get_header(); ?>
 
       }
 
-
       // Sections
 
       include_once(locate_template('partials/sections.php'));
