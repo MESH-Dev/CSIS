@@ -38,43 +38,10 @@ jQuery(document).ready(function($){
   });
 
 
-$('.topic-list li').click(function(event) {
-    var section = $(this).attr('data-id');
-    $('form#Filters fieldset').hide();
-    $('form#Filters fieldset[name=' + section+']').show();
-
-});
 
 
-  $('.network-nav-item').click(function(event) {
 
-     var item = $(this).attr('id');
-     $('.network-filter-status').slideDown();
-     $('.network-filter').hide(); //Hide all dropdowns
-     $('.'+item).slideDown('400'); //Show this dropdowns
 
-  });
-
-    //Live Search Global Network
-   $("input#network-search").keyup(function(){
-        // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val();
- 
-        // Loop through grid items
-        $(".network-grid .network-grid-item").each(function(){
- 
-            // If the list item does not contain the text phrase fade it out
-            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).fadeOut();
- 
-            // Show the list item if the phrase matches and increase the count by 1
-            } else {
-                $(this).fadeIn();
-   
-            }
-        });
- 
-    });
 
 
 

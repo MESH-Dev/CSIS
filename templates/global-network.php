@@ -76,7 +76,7 @@ get_header(); ?>
         <div class="four columns yellow-primary-background network-nav-item" id="network-filter-topics">
           Filter By Topics
         </div>
-        <div class="four columns yellow-primary-background network-nav-item" id="network-search">
+        <div class="four columns yellow-primary-background network-nav-item reset" id="network-search">
           Search the Network
         </div>
         <div class="four columns yellow-primary-background network-nav-item" id="network-map" >
@@ -87,10 +87,10 @@ get_header(); ?>
       <section class="network-filter-status  ">
         <div class="nine columns filter-list">
           <span class="filter-title">Currently Filtered By: </span>
-          Expertise, Marketing, Services
+          <span class="filtered-list">All</span>
         </div>
         <div class="three columns filter-reset">
-          <a id="reset" href="">RESET FILTER <img src="<?php echo get_bloginfo("template_url" ); ?>/img/refresh.png" alt=""></a>
+          <a id="reset" class="reset" href="">RESET FILTER <img src="<?php echo get_bloginfo("template_url" ); ?>/img/refresh.png" alt=""></a>
         </div>
       </section>
 
@@ -117,7 +117,7 @@ get_header(); ?>
                   $filter_id = str_replace("&", "", $filter_id);
                 ?>
                   <div class="topic-checkbox checkbox ">
-                    <input type="checkbox" value=".<?php echo $filter_id; ?>" id="<?php echo $filter_id; ?>"  />
+                    <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>"  />
                     <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                   </div>
                 
@@ -135,7 +135,7 @@ get_header(); ?>
                 $filter_id = str_replace("&", "", $filter_id);
               ?>
                 <div class="topic-checkbox checkbox ">
-                  <input type="checkbox" value="<?php echo $filter_id; ?>" id="<?php echo $filter_id; ?>"   />
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"   />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
               
@@ -153,7 +153,7 @@ get_header(); ?>
                 $filter_id = str_replace("&", "", $filter_id);
               ?>
                 <div class="topic-checkbox checkbox ">
-                  <input type="checkbox" value="<?php echo $filter_id; ?>" id="<?php echo $filter_id; ?>"   />
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"   />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
               
@@ -171,7 +171,7 @@ get_header(); ?>
                 $filter_id = str_replace("&", "", $filter_id);
               ?>
                 <div class="topic-checkbox checkbox ">
-                  <input type="checkbox" value="<?php echo $filter_id; ?>" id="<?php echo $filter_id; ?>"  />
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"  />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
               
@@ -187,9 +187,10 @@ get_header(); ?>
               foreach($impactFilters as $filter){
                 $filter_id = str_replace(" ", "-", $filter);
                 $filter_id = str_replace("&", "", $filter_id);
+                $filter_id = str_replace("/", "", $filter_id);
               ?>
                 <div class="topic-checkbox checkbox ">
-                  <input type="checkbox" value="<?php echo $filter_id; ?>" id="<?php echo $filter_id; ?>" />
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>" />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
               
@@ -244,11 +245,12 @@ get_header(); ?>
          <?php renderProfileGrid($profiles); ?>
       </section>
 
-      <section class="load-more">
+      <!--<section class="load-more">
         <div class="three columns offset-by-five load-more-btn">
           Load More
         </div>
       </section>
+    -->
 
 
 

@@ -269,6 +269,11 @@
 
 .network-grid
 {
+	.mix{
+		width: 25%;
+		float: left;
+		display: none;
+	}
 	.fail-message:before{
 	  content: '';
 	  display: inline-block;
@@ -287,10 +292,7 @@
 	  opacity: 1;
 	  pointer-events: auto;
 	}
-
-	.mix{
-		display: none;
-	}
+ 
 }
 
 .network-grid-item{

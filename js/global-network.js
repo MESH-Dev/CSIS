@@ -1,20 +1,73 @@
 
   //-------GLOBAL NETWORK JS-----------//
+var $ =jQuery.noConflict();
 
+$('.network-nav-item').click(function(event) {
+
+  var item = $(this).attr('id');
+
+  if(item == 'network-filter-topics'){
+    $('.network-filter-status').slideDown();
+  }
+  else{
+    $('.network-filter-status').hide();
+  }
  
+  $('.network-filter').hide(); //Hide all dropdowns
+  $('.'+item).slideDown('400'); //Show this dropdowns
+
+});
+
+  //Live Search Global Network
+ $("input#network-search").keyup(function(){
+      // Retrieve the input field text and reset the count to zero
+      var filter = $(this).val();
+
+      // Loop through grid items
+      $(".network-grid .network-grid-item").each(function(){
+
+          // If the list item does not contain the text phrase fade it out
+          if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+              $(this).fadeOut();
+
+          // Show the list item if the phrase matches and increase the count by 1
+          } else {
+              $(this).fadeIn();
  
+          }
+      });
 
+  });
 
+$('.topic-list li').click(function(event) {
+    var section = $(this).attr('data-id');
+    $('form#Filters fieldset').hide();
+    $('form#Filters fieldset[name=' + section+']').show();
 
-
-
-
+});
+ 
 // ------------------------------------------------------
 // ------------------ Filters----------------------------
 // ------------------------------------------------------
 
 
-var $ =jQuery.noConflict();
+
+
+function GetActiveString(){
+  var active = [];
+  $('.checkbox input:checked').each(function() {
+      active.push($(this).attr('data-filter'));
+  });
+  console.log(active);
+
+  var filtered = active.join(", ");
+  if(filtered !== '')
+    $('.filtered-list').html(filtered);
+  else{
+    $('.filtered-list').html('All');
+  }
+
+}
 
 // To keep our code clean and modular, all custom functionality will be contained inside a single object literal called "checkboxFilter".
 var checkboxFilter = {
@@ -33,7 +86,7 @@ var checkboxFilter = {
     var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "checkboxFilter" object so that we can share methods and properties between all parts of the object.
     
     self.$filters = $('#Filters');
-    self.$reset = $('#reset');
+    self.$reset = $('.reset');
     self.$container = $('#network-grid');
     
     self.$filters.find('fieldset').each(function(){
@@ -162,7 +215,10 @@ jQuery(document).ready(function($){
     animation: {
       easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
       duration: 600
+    },
+    callbacks: {
+      onMixEnd: GetActiveString
     }
-    
-  });    
+
+  }); 
 });
