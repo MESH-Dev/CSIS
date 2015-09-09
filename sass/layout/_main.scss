@@ -544,7 +544,7 @@ section {
       border-right: 0.1em solid $blue-primary;
     }
 
-    
+
   }
 }
 
@@ -700,7 +700,7 @@ section {
     margin-bottom: 15px;
 
     a {
-      color: #616161;
+      color: #3a3a3a;
     }
   }
 
@@ -708,8 +708,12 @@ section {
     font-family: $font-family--heavy;
 
     a {
-      color: #616161;
+      color: #3a3a3a;
     }
+  }
+
+  h6 {
+    color: #3a3a3a;
   }
 }
 
@@ -718,7 +722,7 @@ section {
 }
 
 .blog-post-categories {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: $yellow-primary;
   font-family: $font-family--bold;
 }

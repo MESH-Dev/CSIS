@@ -25,19 +25,19 @@
     </ul>
   </div>
   <div class="blog-sidebar-title">
-    Authors
-    <i class="fa fa-caret-right"></i>
+    <div class="blog-sidebar-title-text <?php if (is_author()) { echo 'active-sidebar-title'; } ?>">Authors</div>
+    <i class="fa <?php if (is_author()) { echo 'fa-caret-down'; } else { echo 'fa-caret-right'; } ?>"></i>
   </div>
-  <div class="blog-categories">
+  <div class="blog-categories <?php if (is_author()) { echo 'active-category'; } ?>">
     <ul>
       <?php wp_list_authors( $args ); ?>
     </ul>
   </div>
   <div class="blog-sidebar-title">
-    Dates
-    <i class="fa fa-caret-right"></i>
+    <div class="blog-sidebar-title-text <?php if (is_date()) { echo 'active-sidebar-title'; } ?>">Dates</div>
+    <i class="fa <?php if (is_date()) { echo 'fa-caret-down'; } else { echo 'fa-caret-right'; } ?>"></i>
   </div>
-  <div class="blog-categories">
+  <div class="blog-categories <?php if (is_date()) { echo 'active-category'; } ?>">
 
   </div>
 </div>

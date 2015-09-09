@@ -160,7 +160,7 @@ jQuery(document).ready(function($){
     $(this).find('i').toggleClass('fa-caret-right');
     $(this).find('i').toggleClass('fa-caret-down');
     $(this).next().slideToggle();
-    $('.blog-sidebar-title-text').toggleClass('active-sidebar-title');
+    $(this).find('blog-sidebar-title-text').toggleClass('active-sidebar-title');
   });
 
 });

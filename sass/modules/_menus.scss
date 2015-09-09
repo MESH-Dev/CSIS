@@ -329,6 +329,10 @@
 			float: left;
 			position: relative;
 			padding: 0 10px;
+
+			&.current-menu-item a {
+				color: black;
+			}
 		}
 	}
 }

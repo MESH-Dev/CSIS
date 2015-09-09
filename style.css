@@ -3899,7 +3899,7 @@ section {
 }
 /* line 702, sass/layout/_main.scss */
 .blog-post h2 a {
-  color: #616161;
+  color: #3a3a3a;
 }
 /* line 707, sass/layout/_main.scss */
 .blog-post h5 {
@@ -3907,32 +3907,36 @@ section {
 }
 /* line 710, sass/layout/_main.scss */
 .blog-post h5 a {
-  color: #616161;
+  color: #3a3a3a;
+}
+/* line 715, sass/layout/_main.scss */
+.blog-post h6 {
+  color: #3a3a3a;
 }
 
-/* line 716, sass/layout/_main.scss */
+/* line 720, sass/layout/_main.scss */
 .blog-post-small {
   padding-right: 20px;
 }
 
-/* line 720, sass/layout/_main.scss */
+/* line 724, sass/layout/_main.scss */
 .blog-post-categories {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #fec935;
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 726, sass/layout/_main.scss */
+/* line 730, sass/layout/_main.scss */
 .active-category {
   display: block;
 }
 
-/* line 730, sass/layout/_main.scss */
+/* line 734, sass/layout/_main.scss */
 .active-sidebar-title {
   border-bottom: 3px solid #fec935;
 }
 
-/* line 734, sass/layout/_main.scss */
+/* line 738, sass/layout/_main.scss */
 .moretag {
   color: #fec935;
   text-transform: uppercase;
@@ -3940,17 +3944,17 @@ section {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 741, sass/layout/_main.scss */
+/* line 745, sass/layout/_main.scss */
 .social-icons {
   color: #a9a9a9;
 }
-/* line 744, sass/layout/_main.scss */
+/* line 748, sass/layout/_main.scss */
 .social-icons i {
   font-size: 25px;
   margin-right: 20px;
 }
 
-/* line 750, sass/layout/_main.scss */
+/* line 754, sass/layout/_main.scss */
 .news {
   margin-bottom: 0px;
 }
@@ -4264,13 +4268,17 @@ header {
   position: relative;
   padding: 0 10px;
 }
+/* line 333, sass/modules/_menus.scss */
+.utilities-nav ul li.current-menu-item a {
+  color: black;
+}
 
-/* line 336, sass/modules/_menus.scss */
+/* line 340, sass/modules/_menus.scss */
 .utilities-nav li:hover, .banner-navigation li:hover {
   opacity: 0.7;
 }
 
-/* line 340, sass/modules/_menus.scss */
+/* line 344, sass/modules/_menus.scss */
 .utilities-nav a:hover {
   color: black;
   opacity: 1;
