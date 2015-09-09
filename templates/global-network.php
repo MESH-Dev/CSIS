@@ -12,6 +12,7 @@ get_header(); ?>
 
       //generateJSON();
       $profiles = getProfileArray();
+      //writeLatLong($profiles);
       //renderProfileGrid($profiles);
       //$profile = getSingleProfile($profiles,0);
       //echo $profile['Name | Last'];

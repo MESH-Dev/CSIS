@@ -58,7 +58,7 @@ function GetActiveString(){
   $('.checkbox input:checked').each(function() {
       active.push($(this).attr('data-filter'));
   });
-  console.log(active);
+ 
 
   var filtered = active.join(", ");
   if(filtered !== '')

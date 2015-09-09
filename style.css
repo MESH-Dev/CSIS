@@ -3937,7 +3937,6 @@ header {
 
 /* line 227, sass/modules/_modules.scss */
 .network-map {
-  display: none;
   border-top: 4px solid #616161;
 }
 /* line 230, sass/modules/_modules.scss */
@@ -3956,13 +3955,33 @@ header {
   margin-left: -30px;
   top: 0px;
 }
+/* line 247, sass/modules/_modules.scss */
+.network-map #map-container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 100%;
+}
+/* line 257, sass/modules/_modules.scss */
+.network-map #map {
+  width: 100%;
+  height: 500px;
+}
+/* line 262, sass/modules/_modules.scss */
+.network-map .map-embed {
+  padding: 50px;
+}
 
-/* line 251, sass/modules/_modules.scss */
+/* line 272, sass/modules/_modules.scss */
 .network-grid .columns {
   line-height: 0;
 }
 
-/* line 255, sass/modules/_modules.scss */
+/* line 276, sass/modules/_modules.scss */
 .fail-message {
   position: absolute;
   top: 0;
@@ -3977,33 +3996,33 @@ header {
   transition: 150ms;
 }
 
-/* line 272, sass/modules/_modules.scss */
+/* line 293, sass/modules/_modules.scss */
 .network-grid .mix {
   width: 25%;
   float: left;
   display: none;
 }
-/* line 277, sass/modules/_modules.scss */
+/* line 298, sass/modules/_modules.scss */
 .network-grid .fail-message:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 284, sass/modules/_modules.scss */
+/* line 305, sass/modules/_modules.scss */
 .network-grid .fail-message span {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   font-weight: 700;
 }
-/* line 291, sass/modules/_modules.scss */
+/* line 312, sass/modules/_modules.scss */
 .network-grid.fail .fail-message {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 298, sass/modules/_modules.scss */
+/* line 319, sass/modules/_modules.scss */
 .network-grid-item {
   line-height: 0;
   width: 100%;
@@ -4019,20 +4038,20 @@ header {
   filter: gray;
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
 }
-/* line 316, sass/modules/_modules.scss */
+/* line 337, sass/modules/_modules.scss */
 .network-grid-item img {
   height: auto;
   margin: 0;
   border: 0px;
 }
-/* line 321, sass/modules/_modules.scss */
+/* line 342, sass/modules/_modules.scss */
 .network-grid-item:hover {
   background-color: #fec935;
   background-blend-mode: multiply;
   filter: none;
   -webkit-filter: grayscale(0);
 }
-/* line 329, sass/modules/_modules.scss */
+/* line 350, sass/modules/_modules.scss */
 .network-grid-item .hover-info {
   display: none;
   position: absolute;
@@ -4051,36 +4070,36 @@ header {
   -webkit-transform: translate(-50%, -50%);
   /* Safari and Chrome */
 }
-/* line 345, sass/modules/_modules.scss */
+/* line 366, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.name {
   display: block;
   line-height: 1.5;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 1.25em;
 }
-/* line 352, sass/modules/_modules.scss */
+/* line 373, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.title {
   display: block;
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 0.9375em;
   line-height: 1.5;
 }
-/* line 359, sass/modules/_modules.scss */
+/* line 380, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.location {
   display: block;
   font-size: 0.75em;
   line-height: 1.5;
 }
-/* line 365, sass/modules/_modules.scss */
+/* line 386, sass/modules/_modules.scss */
 .network-grid-item:hover .hover-info {
   display: block;
 }
 
-/* line 378, sass/modules/_modules.scss */
+/* line 399, sass/modules/_modules.scss */
 .load-more {
   margin-top: 20px;
 }
-/* line 380, sass/modules/_modules.scss */
+/* line 401, sass/modules/_modules.scss */
 .load-more .load-more-btn {
   background-color: #fec935;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -4090,44 +4109,21 @@ header {
   text-align: center;
   padding: 10px 0px 10px 0px;
 }
-/* line 389, sass/modules/_modules.scss */
+/* line 410, sass/modules/_modules.scss */
 .load-more .load-more-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
-/* line 400, sass/modules/_modules.scss */
+/* line 421, sass/modules/_modules.scss */
 .search {
   display: block;
   margin: 50px;
 }
-/* line 404, sass/modules/_modules.scss */
+/* line 425, sass/modules/_modules.scss */
 .search .input {
   max-width: 100%;
   width: 100%;
-}
-
-/* line 412, sass/modules/_modules.scss */
-#map-container {
-  padding: 6px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ccc #ccc #999 #ccc;
-  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-  width: 100%;
-}
-
-/* line 422, sass/modules/_modules.scss */
-#map {
-  width: 100%;
-  height: 400px;
-}
-
-/* line 427, sass/modules/_modules.scss */
-.map-embed {
-  padding: 50px;
 }
 
 /* line 1, sass/modules/_input.scss */
