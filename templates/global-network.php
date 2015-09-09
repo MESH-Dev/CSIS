@@ -40,10 +40,10 @@ get_header(); ?>
           if ($row != 1) {
 
             for ($c=0; $c < $num; $c++) {
-                echo $data[$c];
+                // echo $data[$c];
             }
 
-            echo "<br/>";
+            // echo "<br/>";
           }
 
           $row++;

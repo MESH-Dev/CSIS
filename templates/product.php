@@ -437,9 +437,6 @@ get_header(); ?>
                 ?>
               </ul>
             </div>
-            <div class="info">
-              <a href="#info">Sign up for info</a>
-            </div>
             <div class="apply">
               <a href="#apply">Apply Now</a>
             </div>

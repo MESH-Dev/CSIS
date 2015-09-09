@@ -54,11 +54,26 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     &.submit-buttons, &.buttons-cta {
       .right {
-        border: 0.2em solid nth($color_vars, $i);
+        border: 0.1em solid nth($color_vars, $i);
       }
       .right::after {
-        border-top: 0.2em solid nth($color_vars, $i);
-        border-right: 0.2em solid nth($color_vars, $i);
+        border-top: 0.1em solid nth($color_vars, $i);
+        border-right: 0.1em solid nth($color_vars, $i);
+      }
+
+      &:hover {
+        background: nth($color_vars, $i);
+        color: white;
+        border: 3px solid white;
+        padding: 7px 17px 7px 7px;
+
+        .right {
+          border: 0.1em solid white;
+        }
+        .right::after {
+          border-top: 0.1em solid white;
+          border-right: 0.1em solid white;
+        }
       }
     }
   }
@@ -107,6 +122,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       border-right: 0.1em solid nth($color_vars, $i);
     }
 
+
     // Callout (Panel), Quote
 
     .callout-panel, .quote {
@@ -119,6 +135,22 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
       .cta-small, .cta-big {
         margin-top: 50px;
+      }
+
+      .cta-big {
+        .right {
+          border: 0.2em solid white;
+          display: inline-block;
+        }
+
+        .right:after {
+          border-top: 0.2em solid white;
+          border-right: 0.2em solid white;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -149,10 +181,18 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       }
     }
 
+    .cta-small {
+
+      height: 25px;
+      .cta-text {
+        display: none;
+      }
+    }
 
     // HOVER
 
     &.hover {
+
       &:hover {
         color: nth($color_vars, $i);
         background-color: white;
@@ -165,6 +205,11 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
           color: $yellow-primary;
         }
 
+        .cta-small {
+          .cta-text {
+            display: block;
+          }
+        }
 
         .cta-text {
           a {
@@ -178,8 +223,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
         }
 
         .right:after {
-          border-top: 0.2em solid nth($color_vars, $i);
-          border-right: 0.2em solid nth($color_vars, $i);
+          border-top: 0.1em solid nth($color_vars, $i);
+          border-right: 0.1em solid nth($color_vars, $i);
         }
       }
     }
@@ -347,8 +392,21 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   }
 }
 
+.information-holder {
+  float: left;
+  width: 100%;
+}
+
 .information-video {
-  border-right: 10px solid white;
+  background: black;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.information-network {
+  border-left: 10px solid white;
+  float: left;
 }
 
 .information-bar {
@@ -357,6 +415,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   padding: 12px;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 20px;
+  float: left;
+  width: 100%;
 }
 
 .person {
@@ -447,12 +507,13 @@ section {
 
   .right {
     display: inline-block;
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     margin-left: 1.5em;
     text-align: center;
     border: 0.1em solid $blue-primary;
+    line-height: 1.1em;
   }
 
   .right:after {
@@ -468,6 +529,23 @@ section {
     border-top: 0.1em solid $blue-primary;
     border-right: 0.1em solid $blue-primary;
   }
+
+  &:hover {
+    background: white;
+    color: $blue-primary;
+    border: 3px solid $blue-primary;
+    padding: 22px 32px 22px 22px;
+
+    .right {
+      border: 0.1em solid $blue-primary;
+    }
+    .right::after {
+      border-top: 0.1em solid $blue-primary;
+      border-right: 0.1em solid $blue-primary;
+    }
+
+    
+  }
 }
 
 .submit-buttons {
@@ -482,11 +560,12 @@ section {
 
   .right {
     display: inline-block;
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     margin-left: 1.5em;
     text-align: center;
+    line-height: 1.1em;
   }
 
   .right:after {
@@ -500,6 +579,7 @@ section {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
 }
 
 .content-half {
@@ -552,6 +632,7 @@ section {
 .blog-content {
   float: left;
   padding: 50px;
+  width: 100%;
 }
 
 .blog-sidebar-title {
@@ -664,4 +745,8 @@ section {
     font-size: 25px;
     margin-right: 20px;
   }
+}
+
+.news {
+  margin-bottom: 0px;
 }

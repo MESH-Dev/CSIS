@@ -147,20 +147,27 @@ get_header(); ?>
 
     <section class="information">
 
-      <div class="six columns information-video">
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/<?php echo get_field('homepage_video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      </div>
-      <div class="six columns information-network">
-        <div class="information-bar">
-          Global Network
-        </div>
-
-        <?php for($x = 0; $x < 8; $x++) { ?>
-          <div class="person">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/portrait.jpg" />
+      <div class="six columns">
+        <div class="information-holder">
+          <div class="information-video">
+            <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/<?php echo get_field('homepage_video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
           </div>
-        <?php } ?>
+        </div>
+      </div>
+      <div class="six columns">
+        <div class="information-holder">
+          <div class="information-network">
+            <div class="information-bar">
+              Global Network
+            </div>
 
+            <?php for($x = 0; $x < 8; $x++) { ?>
+              <div class="person">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/portrait.jpg" />
+              </div>
+            <?php } ?>
+          </div>
+        </div>
       </div>
 
     </section>

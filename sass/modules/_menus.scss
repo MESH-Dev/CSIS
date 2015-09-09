@@ -5,7 +5,7 @@
 	display: block;
 	float: left;
 	width: 100%;
-	padding: 30px 10px;
+	padding: 30px 15px;
 
 	ul {
 		display: block;
@@ -181,22 +181,22 @@
 		}
 
 		&:nth-child(1) {
-			&:hover {
+			&:hover, &.current-menu-item {
 				border-bottom: 3px solid $red-primary;
 			}
 		}
 		&:nth-child(2) {
-			&:hover {
+			&:hover, &.current-menu-item {
 				border-bottom: 3px solid $blue-primary;
 			}
 		}
 		&:nth-child(3) {
-			&:hover {
+			&:hover, &.current-menu-item {
 				border-bottom: 3px solid $green-primary;
 			}
 		}
 		&:nth-child(4) {
-			&:hover {
+			&:hover, &.current-menu-item {
 				border-bottom: 3px solid $yellow-primary;
 			}
 		}
@@ -252,13 +252,14 @@
 
 .side-menu {
 	position: absolute;
-	background: rgba(254,201,53,0.8);
 	left: 50px;
 	width: 200px;
 	z-index: 100;
+	top: 250px;
 
 	.list {
 		padding: 20px;
+		background: $yellow-primary;
 	}
 
 	.info {
@@ -272,12 +273,25 @@
 		}
 	}
 
+
+
 	.apply {
 		padding: 10px;
 		text-align: center;
+		background: #616161;
+		margin-top: 10px;
 
 		a {
 			text-transform: uppercase;
+			color: $yellow-primary;
+		}
+
+		&:hover {
+			background: $yellow-primary;
+
+			a {
+				color: #616161;
+			}
 		}
 	}
 
@@ -286,7 +300,13 @@
 		font-family: $font-family--bold;
 		font-size: 15px;
 		line-height: 30px;
+
 	}
+
+	.scrolled-item a {
+		border-bottom: 3px solid #616161;
+	}
+
 }
 
 .utilities-nav {

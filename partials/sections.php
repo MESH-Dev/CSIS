@@ -52,9 +52,9 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="<?php echo get_sub_field('color'); ?>-background hover" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+      <section class="<?php echo get_sub_field('color'); ?>-background" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
 
-        <div class="callout-screen hover">
+        <div class="callout-screen">
 
           <div class="callout-panel">
 

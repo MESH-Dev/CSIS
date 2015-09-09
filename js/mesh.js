@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
 
     if ( $('.side-menu').length ) {
 
-        $('.side-menu').css('top', $('.intro').position().top - 60);
+      $('.side-menu').css('top', $('.intro').position().top - 60);
 
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');
@@ -33,6 +33,86 @@ jQuery(document).ready(function($){
         $('.side-menu').css('position', 'absolute');
         $('.side-menu').css('top', $('.intro').position().top - 60);
       }
+
+
+      if (y < $('#0').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 0) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+
+      }
+      else if (y > $('#0').position().top && y < $('#1').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 0) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#1').position().top && y < $('#2').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 1) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#2').position().top && y < $('#3').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 2) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#3').position().top && y < $('#4').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 3) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#4').position().top && y < $('#5').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 4) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#5').position().top && y < $('#6').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 5) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#6').position().top && y < $('#7').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 6) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else {
+        console.log($('#0').position().top);
+      }
+
+
     }
 
   });
@@ -71,6 +151,9 @@ jQuery(document).ready(function($){
   $('.listing-text').matchHeight();
   $('.blog-post-small').matchHeight();
   $('.blog-section').matchHeight();
+  $('.information-holder').matchHeight();
+
+  $('.banner').parallax("20%", -0.5);
 
   $('.blog-sidebar-title').click(function() {
 
@@ -79,6 +162,5 @@ jQuery(document).ready(function($){
     $(this).next().slideToggle();
     $('.blog-sidebar-title-text').toggleClass('active-sidebar-title');
   });
-
 
 });
