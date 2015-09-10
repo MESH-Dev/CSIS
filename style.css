@@ -3995,6 +3995,11 @@ section {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
+/* line 792, sass/layout/_main.scss */
+.media {
+  height: 400px;
+}
+
 /* line 1, sass/layout/_header.scss */
 header {
   padding: 10px 30px;
@@ -4223,7 +4228,7 @@ header {
   background-color: #3a3a3a;
   background-image: url("img/overlay.png");
   background-repeat: no-repeat;
-  background-position-x: 20px;
+  background-position-x: 100%;
   background-position-y: 30px;
 }
 

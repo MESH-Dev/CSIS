@@ -285,6 +285,70 @@ if( have_rows('sections') ):
 
       <?php
 
+      elseif ( get_sub_field('section_type') == '2-column-media' ) :
+
+      ?>
+
+      <section class="media">
+
+          <?php
+
+            if( have_rows('2-column_media') ): ?>
+
+              <?php
+
+              while( have_rows('2-column_media') ): the_row();
+
+                if (get_sub_field('2-column_media_type') == '2-column_image') {
+
+                  if (get_sub_field('2-column_image')) {
+
+                    $image = get_sub_field('2-column_image');
+
+                    // thumbnail
+                    $size = 'large';
+                    $thumb = $image['sizes'][ $size ];
+
+                  } else {
+                    $thumb = '';
+                  }
+
+                  ?>
+
+                  <div class="six columns" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; <?php } ?>">
+                  </div>
+
+                  <?php
+
+                }
+                elseif (get_sub_field('2-column_media_type') == '2-column_video') {
+
+                  ?>
+
+                  <div class="six columns" >
+
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/<?php echo get_sub_field('2-column_video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+                  </div>
+
+                  <?php
+
+                }
+                else {
+
+                }
+
+              ?>
+
+              <?php endwhile; ?>
+
+           <?php endif; //if( get_sub_field('items') ): ?>
+
+
+      </section>
+
+      <?php
+
       elseif ( get_sub_field('section_type') == '3-column' ) :
 
       ?>
