@@ -109,7 +109,7 @@ jQuery(document).ready(function($){
         })
       }
       else {
-        console.log($('#0').position().top);
+
       }
 
 
@@ -117,6 +117,12 @@ jQuery(document).ready(function($){
 
   });
 
+  $(window).resize(function() {
+    var height = $( window ).width() / 2;
+    
+    $('.media').css('height', height);
+    $('.media .video-holder').css('height', height);
+  })
 
 
   $('.network-nav-item').click(function(event) {
@@ -145,6 +151,8 @@ jQuery(document).ready(function($){
   //   markers.push(marker);
   // }
   // var markerCluster = new MarkerClusterer(map, markers);
+
+
 
 
   $('.callout').matchHeight();
