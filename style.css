@@ -4005,6 +4005,18 @@ section {
   width: 100% !important;
 }
 
+/* line 800, sass/layout/_main.scss */
+.video-holder {
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+}
+
+/* line 806, sass/layout/_main.scss */
+.wp-video {
+  margin-top: -375px;
+}
+
 /* line 1, sass/layout/_header.scss */
 header {
   padding: 10px 30px;

@@ -796,3 +796,13 @@ section {
 .mejs-container {
   width: 100% !important;
 }
+
+.video-holder {
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+}
+
+.wp-video {
+  margin-top: -375px;
+}
