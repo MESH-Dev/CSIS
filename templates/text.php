@@ -92,6 +92,8 @@ get_header(); ?>
               $thumb = $side_image['sizes'][ $size ];
               $width = $side_image['sizes'][ $size . '-width' ];
               $height = $side_image['sizes'][ $size . '-height' ];
+            } else {
+              $thumb = '';
             }
 
           ?>

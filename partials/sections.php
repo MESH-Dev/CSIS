@@ -52,9 +52,9 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="<?php echo get_sub_field('color'); ?>-background hover" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+      <section class="<?php echo get_sub_field('color'); ?>-background" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
 
-        <div class="callout-screen hover">
+        <div class="callout-screen">
 
           <div class="callout-panel">
 
@@ -98,6 +98,48 @@ if( have_rows('sections') ):
             <div class="body-text-area">
               <?php echo get_sub_field('body_text'); ?>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <?php
+
+      elseif (get_sub_field('section_type') == 'text') :
+
+      ?>
+
+      <section class="text">
+        <div class="three columns">
+          <div class="content-text side-text">
+            <?php echo get_sub_field('side_text'); ?>
+          </div>
+        </div>
+        <div class="six columns">
+          <div class="content-text">
+            <?php echo get_sub_field('body_text'); ?>
+
+            <br/>
+
+            <div class="six columns content-half">
+              <?php echo get_field('column_1_text'); ?>
+            </div>
+            <div class="six columns content-half">
+              <?php echo get_field('column_2_text'); ?>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <?php
+
+      elseif (get_sub_field('section_type') == 'image-with-text') :
+
+      ?>
+
+      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" >
+        <div class="four columns image-holder">
+          <div class="image-text">
+            <?php echo get_sub_field('body_text'); ?>
           </div>
         </div>
       </section>
@@ -233,6 +275,78 @@ if( have_rows('sections') ):
                   </div>
 
                 </div>
+
+              <?php endwhile; ?>
+
+           <?php endif; //if( get_sub_field('items') ): ?>
+
+
+      </section>
+
+      <?php
+
+      elseif ( get_sub_field('section_type') == '2-column-media' ) :
+
+      ?>
+
+      <section class="media">
+
+          <?php
+
+            if( have_rows('2-column_media') ): ?>
+
+              <?php
+
+              while( have_rows('2-column_media') ): the_row();
+
+                if (get_sub_field('2-column_media_type') == '2-column_image') {
+
+                  if (get_sub_field('2-column_image')) {
+
+                    $image = get_sub_field('2-column_image');
+
+                    // thumbnail
+                    $size = 'large';
+                    $thumb = $image['sizes'][ $size ];
+
+                  } else {
+                    $thumb = '';
+                  }
+
+                  ?>
+
+                  <div class="six columns" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; <?php } ?>">
+                  </div>
+
+                  <?php
+
+                }
+                elseif (get_sub_field('2-column_media_type') == '2-column_video') {
+
+                  ?>
+
+                  <div class="six columns">
+
+                    <div class="video-holder">
+                      <?php
+
+                      $video = get_sub_field('2-column_video');
+                      echo $video;
+
+                      ?>
+                    </div>
+
+
+                  </div>
+
+                  <?php
+
+                }
+                else {
+
+                }
+
+              ?>
 
               <?php endwhile; ?>
 

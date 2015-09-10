@@ -10,15 +10,18 @@ function loadup_scripts() {
     wp_enqueue_script( 'network-js', get_template_directory_uri().'/js/global-network.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'classie-js', get_template_directory_uri().'/js/classie.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'match-js', get_template_directory_uri().'/js/jquery.matchHeight-min.js', array('jquery'), '1.0.0', true );
-    wp_enqueue_script( 'mix-it-up', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js',array('jquery'), false, true);
+
+  wp_enqueue_script( 'mix-it-up', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js',array('jquery'), false, true);
 
 
-    wp_register_script( 'profile-data',get_template_directory_uri().'/data/user-profiles.json' );
-    wp_enqueue_script( 'profile-data' );
-    $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
-    //after wp_enqueue_script
-    wp_localize_script( 'profile-data', 'profile_json', $translation_array );
-    }
+  wp_register_script( 'profile-data',get_template_directory_uri().'/data/user-profiles.json' );
+  wp_enqueue_script( 'profile-data' );
+  $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
+  //after wp_enqueue_script
+  wp_localize_script( 'profile-data', 'profile_json', $translation_array );
+
+	wp_enqueue_script( 'parallax-js', get_template_directory_uri().'/js/jquery.parallax-1.1.3.js', array('jquery'), '1.0.0', true );
+}
 
 add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 
@@ -33,6 +36,9 @@ add_image_size('small', 120, '', true); // Small Thumbnail
 add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
 
+@ini_set( 'upload_max_size' , '500M' );
+@ini_set( 'post_max_size', '500M');
+@ini_set( 'max_execution_time', '300' );
 
 //Register WP Menus
 register_nav_menus(
@@ -67,5 +73,11 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
 remove_action( 'wp_head', 'wp_generator'); // remove WP version from header
 remove_action( 'wp_head','wp_shortlink_wp_head');
 
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+       global $post;
+	return '<br/><a class="moretag" href="'. get_permalink($post->ID) . '"> Read more <i class="fa fa-angle-double-right"></i></a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

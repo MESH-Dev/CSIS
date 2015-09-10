@@ -49,7 +49,6 @@ get_header(); ?>
         <?php
       }
 
-      
 
       elseif (get_field('banner') == 'video') {
 
@@ -98,7 +97,7 @@ get_header(); ?>
       <section class="network-filter-topics network-filter">
         <div class="two columns topic-list">
           <span class="filter-by">Filter By: </span>
-          
+
             <li data-id="impact">Impact Areas</li>
             <li data-id="expertise">Expertise</li>
             <li data-id="geographic">Geographic Interest</li>
@@ -109,8 +108,8 @@ get_header(); ?>
         <div class="ten columns topic-items">
           <form class="controls" id="Filters">
             <fieldset name="impact">
-              
-                <?php 
+
+                <?php
                 //Get Impact Filters and print out checkboxes
                 $impactFilters = getFilterLists($profiles, 'Impact');
                 foreach($impactFilters as $filter){
@@ -121,14 +120,14 @@ get_header(); ?>
                     <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>"  />
                     <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                   </div>
-                
+
                 <?php } ?>
-       
+
             </fieldset>
 
             <fieldset name="expertise">
-      
-              <?php 
+
+              <?php
               //Get Expertise Filters and print out checkboxes
               $impactFilters = getFilterLists($profiles, 'Expertise');
               foreach($impactFilters as $filter){
@@ -139,14 +138,14 @@ get_header(); ?>
                   <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"   />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
-              
+
               <?php } ?>
- 
-            </fieldset> 
-            
-            <fieldset name="geographic"> 
-         
-              <?php 
+
+            </fieldset>
+
+            <fieldset name="geographic">
+
+              <?php
               //Get Geo Filters and print out checkboxes
               $impactFilters = getFilterLists($profiles, 'Geographic');
               foreach($impactFilters as $filter){
@@ -157,14 +156,14 @@ get_header(); ?>
                   <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"   />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
-              
-              <?php } ?>
-       
-            </fieldset>  
 
-            <fieldset name="affiliation"> 
-  
-              <?php 
+              <?php } ?>
+
+            </fieldset>
+
+            <fieldset name="affiliation">
+
+              <?php
               //Get Affil Filters and print out checkboxes
               $impactFilters = getFilterLists($profiles, 'Affiliation');
               foreach($impactFilters as $filter){
@@ -175,14 +174,14 @@ get_header(); ?>
                   <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"  />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
-              
-              <?php } ?>
-   
-            </fieldset> 
 
-            <fieldset name="year"> 
+              <?php } ?>
+
+            </fieldset>
+
+            <fieldset name="year">
              <div >
-              <?php 
+              <?php
               //Get year Filters and print out checkboxes
               $impactFilters = getFilterLists($profiles, 'Year');
               foreach($impactFilters as $filter){
@@ -194,10 +193,10 @@ get_header(); ?>
                   <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>" />
                   <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
                 </div>
-              
+
               <?php } ?>
-             </div>  
-            </fieldset> 
+             </div>
+            </fieldset>
 
           </div>
         </form>
@@ -253,7 +252,7 @@ get_header(); ?>
       </section>
     -->
 
-      
+
 
 
 
@@ -262,7 +261,7 @@ get_header(); ?>
   <div class="profile-container">
         <div class="container profile-content">
 
-           
+
           <div id="loader" class="twelve columns">
             <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
           </div>

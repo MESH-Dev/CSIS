@@ -68,9 +68,13 @@ h6 {
 }
 
 a {
-	color: $yellow-primary;
+	color: black;
 	text-decoration: none;
 	font-weight: $font-weight--medium;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 p {
