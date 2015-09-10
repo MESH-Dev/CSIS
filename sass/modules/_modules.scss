@@ -222,10 +222,14 @@
 
 .filter-title{
 	padding: 40px; 
+	h4{
+		font-family: $font-family--heavy;
+		color: $yellow-primary;
+	}
 }
 
 .network-map{
-	//display:none;
+	display:none;
 	border-top: 4px solid $grey;
 	&:after{ //FOR TRIANGLE
 		bottom: 100%;
@@ -294,6 +298,7 @@
 		width: 25%;
 		float: left;
 		display: none;
+
 	}
 	.fail-message:before{
 	  content: '';
@@ -344,6 +349,7 @@
  		background-blend-mode: multiply;
  		filter: none;
  		-webkit-filter: grayscale(0);
+ 		cursor: pointer;
  	}
 
 
@@ -396,6 +402,8 @@
 
 
 
+
+
 .load-more{
 	margin-top: 20px;
 	.load-more-btn{
@@ -420,11 +428,47 @@
 
 .search {
 	display: block;
-	margin: 50px;
+	margin: 60px 50px 50px 50px;
 
 	.input {
 		max-width: 100%;
 		width: 100%;
+	}
+}
+
+
+.profile-container{
+	display: none;
+	position: absolute; 
+	background-color: white;
+	width: 100%;
+	padding: 50px 0 100px 0;
+	z-index: 20;
+	top: 200px;
+
+	h3{
+		text-transform: uppercase;
+		font-family: $font-family--bold;
+		font-size: em(24);
+		line-height: em(28);
+		color: $yellow-primary;
+	}
+	.close-profile a{
+		font-size: 30px;
+		font-family: $font-family--heavy;
+		position: absolute;
+		top: 20px;
+		right: 4%;
+		color: $grey;
+		&:hover{
+			@include opacity(0.7);
+		}
+	}
+
+	#loader{
+		padding: 100px 0px 500px 0px;
+		margin: 0 auto;
+		text-align: center;
 	}
 }
 

@@ -69,17 +69,21 @@ function initialize() {
       var contentString = i + ' ' + data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '<br><br>' + address;
       var lat =   data[i]["Lat"];
       var lng =   data[i]["Lng"];
-      var latlng = new google.maps.LatLng(lat, lng);
-      var marker = new google.maps.Marker({position: latlng, map: map, html: contentString});
-      google.maps.event.addListener(marker, "click", function () {
-         infowindow.setContent(this.html);
-          infowindow.open(map, this);
-      });
-      markers.push(marker);
+
+      if(lat !='' && lng !=''){
+        var latlng = new google.maps.LatLng(lat, lng);
+        var marker = new google.maps.Marker({position: latlng, map: map, html: contentString});
+        google.maps.event.addListener(marker, "click", function () {
+           infowindow.setContent(this.html);
+            infowindow.open(map, this);
+        });
+        markers.push(marker);
+      }
 
     }
 
   });
+ 
 
  
 
@@ -88,6 +92,54 @@ function initialize() {
  
 
 }
+
+
+  //Profile Popup
+  $('.close-profile a').click(function(e) {
+    e.preventDefault();
+    $('.profile-container').fadeOut('slow');
+  });
+
+  $('.network-grid-item').click(function(e) {
+    var itemOffset = $(this).offset().top;
+    $('.profile-container').css('top',itemOffset+'px');
+    var profile_id = $(this).parent().attr('data-id');
+    $('.profile-container').fadeIn('slow');
+    loadProfile(profile_id);
+    
+    
+  });
+
+  function loadProfile(profile_id) {
+      var is_loading = false;
+      if (is_loading == false) {
+        is_loading = true;
+        
+        $('#loader').show();
+
+        var data = {
+            action: 'getSingleProfile',
+            profile_id: profile_id
+        };
+
+        jQuery.post(ajaxurl, data, function(response) {
+            // append: add the new statments to the existing data
+            if(response != 0){
+              $('.profile-content').empty();
+              $('.profile-content').append(response);
+              is_loading = false;
+              
+            }
+            else{
+              $('#loader').hide();
+              is_loading = false;
+             
+            }
+        });
+      }
+  }
+
+ 
   
  
  

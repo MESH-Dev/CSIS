@@ -14,6 +14,18 @@ function my_custom_login_logo() {
 		    </style>';
 }
 
+//Add ajax functionality to pages, all not just in admin
+add_action('wp_head','pluginname_ajaxurl');
+function pluginname_ajaxurl() {
+?>
+<script type="text/javascript">
+var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+</script>
+<?php
+}
+add_action('wp_ajax_getSingleProfile', 'getSingleProfile');  
+add_action('wp_ajax_nopriv_getSingleProfile', 'getSingleProfile');  //_nopriv_ allows access for both signed in users, and not
+
  
 
 function generateJSON(){
@@ -167,7 +179,7 @@ function renderProfileGrid($profiles){
       }
 
 
-     $output  = '<div class="mix three columns '.$filter_string.'" >';
+     $output  = '<div class="mix three columns '.$filter_string.'" data-id="'.$count.'" >';
      $output .=    '<div class="network-grid-item " style="background-image: url(http:'.$profile['Profile Picture'] .' ); " >';
      $output .=       '<div class="hover-info">';
      $output .=          '<span class="name">'. $profile['Name | First'] .' '.$profile['Name | Last'] .'</span>';
@@ -187,9 +199,24 @@ function renderProfileGrid($profiles){
  	
 }
 
-function getSingleProfile($profiles,$id){
-	//Loop here to generate single array 
- 	return $profiles[$id]; 
+function getSingleProfile(){
+
+  $id = $_POST['profile_id'];
+
+  $profiles = getProfileArray();
+  $profile = $profiles[$id];
+
+  
+  $output = '';
+ 	$output .= '<div class="three columns offset-by-one"><img src="'.$profile['Profile Picture']. '" /></div>';
+  $output .= '<div class="six columns" >';
+  $output .=    '<h3>First Last</h3>';
+  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
+  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
+  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
+  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
+  $output .= '</div>'; 
+  echo $output;
 
 }
 

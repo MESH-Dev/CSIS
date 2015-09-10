@@ -226,7 +226,7 @@ get_header(); ?>
 
       <section class="network-map  network-filter">
         <div class="two columns filter-title">
-           <h3>Browse our Global Network:</h3>
+           <h4>Browse our Global Network:</h4>
         </div>
         <div class="ten columns">
           <div class="map-embed">
@@ -253,8 +253,23 @@ get_header(); ?>
       </section>
     -->
 
+      
 
 
+
+  </div>
+
+  <div class="profile-container">
+        <div class="container profile-content">
+
+           
+          <div id="loader" class="twelve columns">
+            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
+          </div>
+        </div>
+        <div class="close-profile">
+          <a href="#">X</a>
+        </div>
   </div>
 
 </main><!-- #main -->

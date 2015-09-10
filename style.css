@@ -19,6 +19,8 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 @import url("http://fonts.googleapis.com/css?family=Lora:100,300,400,700,900");
+/* COMPASS IMPORTS
+================================================= */
 /* line 8, sass/base/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -3934,12 +3936,18 @@ header {
 .filter-title {
   padding: 40px;
 }
+/* line 225, sass/modules/_modules.scss */
+.filter-title h4 {
+  font-family: "Avenir Next Cyr W00 Heavy";
+  color: #fec935;
+}
 
-/* line 227, sass/modules/_modules.scss */
+/* line 231, sass/modules/_modules.scss */
 .network-map {
+  display: none;
   border-top: 4px solid #616161;
 }
-/* line 230, sass/modules/_modules.scss */
+/* line 234, sass/modules/_modules.scss */
 .network-map:after {
   bottom: 100%;
   left: 83.33333%;
@@ -3955,7 +3963,7 @@ header {
   margin-left: -30px;
   top: 0px;
 }
-/* line 247, sass/modules/_modules.scss */
+/* line 251, sass/modules/_modules.scss */
 .network-map #map-container {
   padding: 6px;
   border-width: 1px;
@@ -3966,22 +3974,22 @@ header {
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
   width: 100%;
 }
-/* line 257, sass/modules/_modules.scss */
+/* line 261, sass/modules/_modules.scss */
 .network-map #map {
   width: 100%;
   height: 500px;
 }
-/* line 262, sass/modules/_modules.scss */
+/* line 266, sass/modules/_modules.scss */
 .network-map .map-embed {
   padding: 50px;
 }
 
-/* line 272, sass/modules/_modules.scss */
+/* line 276, sass/modules/_modules.scss */
 .network-grid .columns {
   line-height: 0;
 }
 
-/* line 276, sass/modules/_modules.scss */
+/* line 280, sass/modules/_modules.scss */
 .fail-message {
   position: absolute;
   top: 0;
@@ -3996,33 +4004,33 @@ header {
   transition: 150ms;
 }
 
-/* line 293, sass/modules/_modules.scss */
+/* line 297, sass/modules/_modules.scss */
 .network-grid .mix {
   width: 25%;
   float: left;
   display: none;
 }
-/* line 298, sass/modules/_modules.scss */
+/* line 303, sass/modules/_modules.scss */
 .network-grid .fail-message:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 305, sass/modules/_modules.scss */
+/* line 310, sass/modules/_modules.scss */
 .network-grid .fail-message span {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   font-weight: 700;
 }
-/* line 312, sass/modules/_modules.scss */
+/* line 317, sass/modules/_modules.scss */
 .network-grid.fail .fail-message {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 319, sass/modules/_modules.scss */
+/* line 324, sass/modules/_modules.scss */
 .network-grid-item {
   line-height: 0;
   width: 100%;
@@ -4038,20 +4046,21 @@ header {
   filter: gray;
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
 }
-/* line 337, sass/modules/_modules.scss */
+/* line 342, sass/modules/_modules.scss */
 .network-grid-item img {
   height: auto;
   margin: 0;
   border: 0px;
 }
-/* line 342, sass/modules/_modules.scss */
+/* line 347, sass/modules/_modules.scss */
 .network-grid-item:hover {
   background-color: #fec935;
   background-blend-mode: multiply;
   filter: none;
   -webkit-filter: grayscale(0);
+  cursor: pointer;
 }
-/* line 350, sass/modules/_modules.scss */
+/* line 356, sass/modules/_modules.scss */
 .network-grid-item .hover-info {
   display: none;
   position: absolute;
@@ -4070,36 +4079,36 @@ header {
   -webkit-transform: translate(-50%, -50%);
   /* Safari and Chrome */
 }
-/* line 366, sass/modules/_modules.scss */
+/* line 372, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.name {
   display: block;
   line-height: 1.5;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 1.25em;
 }
-/* line 373, sass/modules/_modules.scss */
+/* line 379, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.title {
   display: block;
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 0.9375em;
   line-height: 1.5;
 }
-/* line 380, sass/modules/_modules.scss */
+/* line 386, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.location {
   display: block;
   font-size: 0.75em;
   line-height: 1.5;
 }
-/* line 386, sass/modules/_modules.scss */
+/* line 392, sass/modules/_modules.scss */
 .network-grid-item:hover .hover-info {
   display: block;
 }
 
-/* line 399, sass/modules/_modules.scss */
+/* line 407, sass/modules/_modules.scss */
 .load-more {
   margin-top: 20px;
 }
-/* line 401, sass/modules/_modules.scss */
+/* line 409, sass/modules/_modules.scss */
 .load-more .load-more-btn {
   background-color: #fec935;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -4109,21 +4118,60 @@ header {
   text-align: center;
   padding: 10px 0px 10px 0px;
 }
-/* line 410, sass/modules/_modules.scss */
+/* line 418, sass/modules/_modules.scss */
 .load-more .load-more-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
-/* line 421, sass/modules/_modules.scss */
+/* line 429, sass/modules/_modules.scss */
 .search {
   display: block;
-  margin: 50px;
+  margin: 60px 50px 50px 50px;
 }
-/* line 425, sass/modules/_modules.scss */
+/* line 433, sass/modules/_modules.scss */
 .search .input {
   max-width: 100%;
   width: 100%;
+}
+
+/* line 440, sass/modules/_modules.scss */
+.profile-container {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  padding: 50px 0 100px 0;
+  z-index: 20;
+  top: 200px;
+}
+/* line 449, sass/modules/_modules.scss */
+.profile-container h3 {
+  text-transform: uppercase;
+  font-family: "Avenir Next Cyr W00 Bold";
+  font-size: 1.5em;
+  line-height: 1.75em;
+  color: #fec935;
+}
+/* line 456, sass/modules/_modules.scss */
+.profile-container .close-profile a {
+  font-size: 30px;
+  font-family: "Avenir Next Cyr W00 Heavy";
+  position: absolute;
+  top: 20px;
+  right: 4%;
+  color: #616161;
+}
+/* line 463, sass/modules/_modules.scss */
+.profile-container .close-profile a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 468, sass/modules/_modules.scss */
+.profile-container #loader {
+  padding: 100px 0px 500px 0px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* line 1, sass/modules/_input.scss */
