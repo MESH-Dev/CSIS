@@ -10,6 +10,25 @@ get_header(); ?>
 
       <?php
 
+      //generateJSON();
+      $profiles = getProfileArray();
+      //writeLatLong($profiles);
+      //renderProfileGrid($profiles);
+      //$profile = getSingleProfile($profiles,0);
+      //echo $profile['Name | Last'];
+      //$filterarray = getFilterLists($profiles, 'Impact | Affiliation | Expertise | Geographic | Year');
+
+
+
+
+
+
+
+
+
+
+
+
       if (get_field('banner') == 'image') {
         $image = get_field('banner_image');
 
@@ -30,26 +49,6 @@ get_header(); ?>
         <?php
       }
 
-      $row = 1;
-      $csv = get_template_directory_uri() . '/data/data.csv';
-
-      if (($handle = fopen($csv, "r")) !== FALSE) {
-        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-          $num = count($data);
-
-          if ($row != 1) {
-
-            for ($c=0; $c < $num; $c++) {
-                // echo $data[$c];
-            }
-
-            // echo "<br/>";
-          }
-
-          $row++;
-        }
-        fclose($handle);
-      }
 
       elseif (get_field('banner') == 'video') {
 
@@ -77,7 +76,7 @@ get_header(); ?>
         <div class="four columns yellow-primary-background network-nav-item" id="network-filter-topics">
           Filter By Topics
         </div>
-        <div class="four columns yellow-primary-background network-nav-item" id="network-search">
+        <div class="four columns yellow-primary-background network-nav-item reset" id="network-search">
           Search the Network
         </div>
         <div class="four columns yellow-primary-background network-nav-item" id="network-map" >
@@ -88,131 +87,119 @@ get_header(); ?>
       <section class="network-filter-status  ">
         <div class="nine columns filter-list">
           <span class="filter-title">Currently Filtered By: </span>
-          Expertise, Marketing, Services
+          <span class="filtered-list">All</span>
         </div>
         <div class="three columns filter-reset">
-          <a href="">RESET FILTER <img src="<?php echo get_bloginfo("template_url" ); ?>/img/refresh.png" alt=""></a>
+          <a id="reset" class="reset" href="">RESET FILTER <img src="<?php echo get_bloginfo("template_url" ); ?>/img/refresh.png" alt=""></a>
         </div>
       </section>
 
       <section class="network-filter-topics network-filter">
         <div class="two columns topic-list">
           <span class="filter-by">Filter By: </span>
-          <ul>
-            <li>Impact Areas</li>
-            <li>Expertise</li>
-            <li>Geographic Interest</li>
-            <li>Affiliation</li>
-            <li>Year</li>
+
+            <li data-id="impact">Impact Areas</li>
+            <li data-id="expertise">Expertise</li>
+            <li data-id="geographic">Geographic Interest</li>
+            <li data-id="affiliation">Affiliation</li>
+            <li data-id="year">Year</li>
           </ul>
         </div>
         <div class="ten columns topic-items">
+          <form class="controls" id="Filters">
+            <fieldset name="impact">
 
-          <div class="topic-checkbox ">
-            <input type="checkbox" value="None" id="TopicName1" name="check" />
-            <label for="TopicName1">Accounting & Finance</label>
-          </div>
+                <?php
+                //Get Impact Filters and print out checkboxes
+                $impactFilters = getFilterLists($profiles, 'Impact');
+                foreach($impactFilters as $filter){
+                  $filter_id = str_replace(" ", "-", $filter);
+                  $filter_id = str_replace("&", "", $filter_id);
+                ?>
+                  <div class="topic-checkbox checkbox ">
+                    <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>"  />
+                    <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+                  </div>
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName2" name="check" />
-            <label for="TopicName2">Budgeting</label>
-          </div>
+                <?php } ?>
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName4" name="check" />
-            <label for="TopicName4">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName5" name="check" />
-            <label for="TopicName5">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName6" name="check" />
-            <label for="TopicName6">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName7" name="check" />
-            <label for="TopicName7">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox ">
-            <input type="checkbox" value="None" id="TopicName1" name="check" />
-            <label for="TopicName1">Accounting & Finance</label>
-          </div>
+            </fieldset>
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName2" name="check" />
-            <label for="TopicName2">Budgeting</label>
-          </div>
+            <fieldset name="expertise">
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName4" name="check" />
-            <label for="TopicName4">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName5" name="check" />
-            <label for="TopicName5">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName6" name="check" />
-            <label for="TopicName6">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName7" name="check" />
-            <label for="TopicName7">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox ">
-            <input type="checkbox" value="None" id="TopicName1" name="check" />
-            <label for="TopicName1">Accounting & Finance</label>
-          </div>
+              <?php
+              //Get Expertise Filters and print out checkboxes
+              $impactFilters = getFilterLists($profiles, 'Expertise');
+              foreach($impactFilters as $filter){
+                $filter_id = str_replace(" ", "-", $filter);
+                $filter_id = str_replace("&", "", $filter_id);
+              ?>
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"   />
+                  <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+                </div>
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName2" name="check" />
-            <label for="TopicName2">Budgeting</label>
-          </div>
+              <?php } ?>
 
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName4" name="check" />
-            <label for="TopicName4">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName5" name="check" />
-            <label for="TopicName5">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName6" name="check" />
-            <label for="TopicName6">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName7" name="check" />
-            <label for="TopicName7">Label Here</label>
-          </div>
-          <div class="topic-checkbox">
-            <input type="checkbox" value="None" id="TopicName3" name="check" />
-            <label for="TopicName3">Label Here</label>
-          </div>
+            </fieldset>
 
+            <fieldset name="geographic">
 
-        </div>
+              <?php
+              //Get Geo Filters and print out checkboxes
+              $impactFilters = getFilterLists($profiles, 'Geographic');
+              foreach($impactFilters as $filter){
+                $filter_id = str_replace(" ", "-", $filter);
+                $filter_id = str_replace("&", "", $filter_id);
+              ?>
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"   />
+                  <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+                </div>
+
+              <?php } ?>
+
+            </fieldset>
+
+            <fieldset name="affiliation">
+
+              <?php
+              //Get Affil Filters and print out checkboxes
+              $impactFilters = getFilterLists($profiles, 'Affiliation');
+              foreach($impactFilters as $filter){
+                $filter_id = str_replace(" ", "-", $filter);
+                $filter_id = str_replace("&", "", $filter_id);
+              ?>
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>"  id="<?php echo $filter_id; ?>"  />
+                  <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+                </div>
+
+              <?php } ?>
+
+            </fieldset>
+
+            <fieldset name="year">
+             <div >
+              <?php
+              //Get year Filters and print out checkboxes
+              $impactFilters = getFilterLists($profiles, 'Year');
+              foreach($impactFilters as $filter){
+                $filter_id = str_replace(" ", "-", $filter);
+                $filter_id = str_replace("&", "", $filter_id);
+                $filter_id = str_replace("/", "", $filter_id);
+              ?>
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>" />
+                  <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+                </div>
+
+              <?php } ?>
+             </div>
+            </fieldset>
+
+          </div>
+        </form>
 
 
       </section>
@@ -227,8 +214,8 @@ get_header(); ?>
         <div class="ten columns">
           <div class="search">
             <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+              <input class="input__field input__field--hoshi" type="text" id="network-search" spellcheck="false" />
+              <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="network-search">
                 <span class="input__label-content input__label-content--hoshi">Search</span>
               </label>
             </span>
@@ -238,7 +225,7 @@ get_header(); ?>
 
       <section class="network-map  network-filter">
         <div class="two columns filter-title">
-           <h3>Browse our Global Network:</h3>
+           <h4>Browse our Global Network:</h4>
         </div>
         <div class="ten columns">
           <div class="map-embed">
@@ -253,103 +240,35 @@ get_header(); ?>
 
 
 
-      <section class="network-grid">
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="three columns " >
-          <div class="network-grid-item" style="background-image: url('<?php echo get_bloginfo('template_url' ); ?>/img/portrait.jpg' ); " >
-            <div class="hover-info">
-              <span class="name">First Last Name</span>
-              <span class="title">Title and Org Here</span>
-              <span class="location">New York</span>
-            </div>
-          </div>
-        </div>
-
-
-
+      <section id="network-grid" class="network-grid">
+        <div class="fail-message" ><span>No items were found matching the selected filters</span></div>
+         <?php renderProfileGrid($profiles); ?>
       </section>
 
-      <section class="load-more">
+      <!--<section class="load-more">
         <div class="three columns offset-by-five load-more-btn">
           Load More
         </div>
       </section>
+    -->
 
 
 
+
+
+  </div>
+
+  <div class="profile-container">
+        <div class="container profile-content">
+
+
+          <div id="loader" class="twelve columns">
+            <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
+          </div>
+        </div>
+        <div class="close-profile">
+          <a href="#">X</a>
+        </div>
   </div>
 
 </main><!-- #main -->

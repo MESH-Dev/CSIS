@@ -64,6 +64,18 @@
 	border-top: 4px solid $grey;
 	margin-bottom: 0px;
 
+	fieldset {
+	  border: none;
+	  margin: 0;
+	  padding: 0;
+	  display: none;
+	}
+
+	fieldset[name=impact]{
+	    	display: block;
+	}
+ 
+
 	&:after{ //FOR TRIANGLE
 		bottom: 100%;
 		left: 16.566667%;
@@ -115,6 +127,8 @@
 		-webkit-column-count: 4; /* Chrome, Safari, Opera */
 	    -moz-column-count: 4; /* Firefox */
 	    column-count: 4;
+
+	  
 
 	}
 
@@ -175,7 +189,7 @@
 }
 
 .network-search{
-	display:none;
+	display: none;
 	border-top: 4px solid $grey;
 
 
@@ -207,11 +221,15 @@
 }
 
 .filter-title{
-	padding: 40px;
+	padding: 40px; 
+	h4{
+		font-family: $font-family--heavy;
+		color: $yellow-primary;
+	}
 }
 
 .network-map{
-
+	display:none;
 	border-top: 4px solid $grey;
 	&:after{ //FOR TRIANGLE
 		bottom: 100%;
@@ -229,6 +247,27 @@
 		top: 0px;
 	}
 
+	// Map
+	#map-container {
+	  padding: 6px;
+	  border-width: 1px;
+	  border-style: solid;
+	  border-color: #ccc #ccc #999 #ccc;
+	  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+	  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+	  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+	  width: 100%;
+	}
+	#map {
+	  width: 100%;
+	  height: 500px;
+	}
+
+	.map-embed{
+		padding: 50px;
+
+	}
+
 
 
 }
@@ -238,15 +277,65 @@
 	line-height: 0
 }
 
+.fail-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  transition: 150ms;
+}
+
+.network-grid
+{
+	.mix{
+		width: 25%;
+		float: left;
+		display: none;
+
+	}
+	.fail-message:before{
+	  content: '';
+	  display: inline-block;
+	  vertical-align: middle;
+	  height: 100%;
+	}
+
+	 .fail-message span{
+	  display: inline-block;
+	  vertical-align: middle;
+	  font-size: 20px;
+	  font-weight: 700;
+	}
+
+	&.fail .fail-message{
+	  opacity: 1;
+	  pointer-events: auto;
+	}
+ 
+}
+
 .network-grid-item{
  	line-height: 0;
  	width: 100%;
- 	background-size: contain;
+ 	background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 0;
  	text-align: center;
  	padding-top: 100%;
+ 	-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+
 
 
 
@@ -258,6 +347,9 @@
     &:hover{
     	background-color: $yellow-primary;
  		background-blend-mode: multiply;
+ 		filter: none;
+ 		-webkit-filter: grayscale(0);
+ 		cursor: pointer;
  	}
 
 
@@ -310,6 +402,8 @@
 
 
 
+
+
 .load-more{
 	margin-top: 20px;
 	.load-more-btn{
@@ -334,7 +428,7 @@
 
 .search {
 	display: block;
-	margin: 50px;
+	margin: 60px 50px 50px 50px;
 
 	.input {
 		max-width: 100%;
@@ -342,24 +436,42 @@
 	}
 }
 
-// Map
 
-#map-container {
-  padding: 6px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ccc #ccc #999 #ccc;
-  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-  width: 100%;
-}
-#map {
-  width: 100%;
-  height: 400px;
+.profile-container{
+	display: none;
+	position: absolute; 
+	background-color: white;
+	width: 100%;
+	padding: 50px 0 100px 0;
+	z-index: 20;
+	top: 200px;
+
+	h3{
+		text-transform: uppercase;
+		font-family: $font-family--bold;
+		font-size: em(24);
+		line-height: em(28);
+		color: $yellow-primary;
+	}
+	.close-profile a{
+		font-size: 30px;
+		font-family: $font-family--heavy;
+		position: absolute;
+		top: 20px;
+		right: 4%;
+		color: $grey;
+		&:hover{
+			@include opacity(0.7);
+		}
+	}
+
+	#loader{
+		padding: 100px 0px 500px 0px;
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 
-.map-embed{
-	padding: 50px;
 
-}
+
+
