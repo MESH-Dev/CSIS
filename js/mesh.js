@@ -118,6 +118,10 @@ jQuery(document).ready(function($){
   });
 
 
+  var height = $( window ).width() / 2;
+
+  $('.media').css('height', height);
+  $('.media .video-holder').css('height', height);
 
 
   $(window).resize(function() {
@@ -131,56 +135,7 @@ jQuery(document).ready(function($){
 
 
 
-  //GOOGLE MAP
- // initialize();
-function initialize() {
 
-  var center = new google.maps.LatLng(10, 0);
-  var options = {
-    'zoom': 2,
-    'center': center,
-    'mapTypeId': google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("map"), options);
-
-  var markers = [];
-  var profiles = {};
-
-  var infowindow = new google.maps.InfoWindow({
-    content: "..loading"
-  });
-
-
-  var templateUrl = profile_json.templateUrl;
-  $.getJSON(templateUrl+'/data/user-profiles.json', function(data){
-    for (var i = 0; i < data.length; i++) {
-      var address = data[i]['City'] + ' ' + data[i]["State (USA only)"] + ' ' + data[i]["Country"];
-      var contentString = i + ' ' + data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '<br><br>' + address;
-      var lat =   data[i]["Lat"];
-      var lng =   data[i]["Lng"];
-
-      if(lat !='' && lng !=''){
-        var latlng = new google.maps.LatLng(lat, lng);
-        var marker = new google.maps.Marker({position: latlng, map: map, html: contentString});
-        google.maps.event.addListener(marker, "click", function () {
-           infowindow.setContent(this.html);
-            infowindow.open(map, this);
-        });
-        markers.push(marker);
-      }
-
-    }
-
-  });
-
-
-
-
-
-  var markerCluster = new MarkerClusterer(map, markers);
-
-
-}
 
 
   //Profile Popup

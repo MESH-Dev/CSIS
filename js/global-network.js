@@ -12,7 +12,7 @@ $('.network-nav-item').click(function(event) {
   else{
     $('.network-filter-status').hide();
   }
- 
+
   $('.network-filter').hide(); //Hide all dropdowns
   $('.'+item).slideDown('400'); //Show this dropdowns
 
@@ -33,7 +33,7 @@ $('.network-nav-item').click(function(event) {
           // Show the list item if the phrase matches and increase the count by 1
           } else {
               $(this).fadeIn();
- 
+
           }
       });
 
@@ -45,7 +45,7 @@ $('.topic-list li').click(function(event) {
     $('form#Filters fieldset[name=' + section+']').show();
 
 });
- 
+
 // ------------------------------------------------------
 // ------------------ Filters----------------------------
 // ------------------------------------------------------
@@ -58,7 +58,7 @@ function GetActiveString(){
   $('.checkbox input:checked').each(function() {
       active.push($(this).attr('data-filter'));
   });
- 
+
 
   var filtered = active.join(", ");
   if(filtered !== '')
@@ -71,24 +71,24 @@ function GetActiveString(){
 
 // To keep our code clean and modular, all custom functionality will be contained inside a single object literal called "checkboxFilter".
 var checkboxFilter = {
-  
+
   // Declare any variables we will need as properties of the object
-  
+
   $filters: null,
   $reset: null,
   groups: [],
   outputArray: [],
   outputString: '',
-  
+
   // The "init" method will run on document ready and cache any jQuery objects we will need.
-  
+
   init: function(){
     var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "checkboxFilter" object so that we can share methods and properties between all parts of the object.
-    
+
     self.$filters = $('#Filters');
     self.$reset = $('.reset');
     self.$container = $('#network-grid');
-    
+
     self.$filters.find('fieldset').each(function(){
       self.groups.push({
         $inputs: $(this).find('input'),
@@ -96,53 +96,53 @@ var checkboxFilter = {
 		    tracker: false
       });
     });
-    
+
     self.bindHandlers();
   },
-  
-  // The "bindHandlers" method will listen for whenever a form value changes. 
-  
+
+  // The "bindHandlers" method will listen for whenever a form value changes.
+
   bindHandlers: function(){
     var self = this;
-    
+
     self.$filters.on('change', function(){
       self.parseFilters();
     });
-    
+
     self.$reset.on('click', function(e){
       e.preventDefault();
       self.$filters[0].reset();
       self.parseFilters();
     });
   },
-  
+
   // The parseFilters method checks which filters are active in each group:
-  
+
   parseFilters: function(){
     var self = this;
- 
+
     // loop through each filter group and add active filters to arrays
-    
+
     for(var i = 0, group; group = self.groups[i]; i++){
       group.active = []; // reset arrays
-      group.$inputs.each(function(){ 
+      group.$inputs.each(function(){
         $(this).is(':checked') && group.active.push(this.value);
       });
 	    group.active.length && (group.tracker = 0);
     }
-    
+
     self.concatenate();
   },
-  
+
   // The "concatenate" method will crawl through each group, concatenating filters as desired:
-  
+
   concatenate: function(){
     var self = this,
 		  cache = '',
 		  crawled = false,
 		  checkTrackers = function(){
         var done = 0;
-        
+
         for(var i = 0, group; group = self.groups[i]; i++){
           (group.tracker === false) && done++;
         }
@@ -165,7 +165,7 @@ var checkboxFilter = {
           var group = self.groups[i];
 
           if(group.active[group.tracker + 1]){
-            group.tracker++; 
+            group.tracker++;
             break;
           } else if(i > 0){
             group.tracker && (group.tracker = 0);
@@ -174,7 +174,7 @@ var checkboxFilter = {
           }
         }
       };
-    
+
     self.outputArray = []; // reset output array
 
 	  do{
@@ -183,31 +183,31 @@ var checkboxFilter = {
 	  while(!crawled && checkTrackers());
 
     self.outputString = self.outputArray.join();
-    
+
     // If the output string is empty, show all rather than none:
-    
-    !self.outputString.length && (self.outputString = 'all'); 
-    
-    //console.log(self.outputString); 
-    
+
+    !self.outputString.length && (self.outputString = 'all');
+
+    //console.log(self.outputString);
+
     // ^ we can check the console here to take a look at the filter string that is produced
-    
+
     // Send the output string to MixItUp via the 'filter' method:
-    
+
 	  if(self.$container.mixItUp('isLoaded')){
     	self.$container.mixItUp('filter', self.outputString);
 	  }
   }
 };
-  
-jQuery(document).ready(function($){ 
-      
+
+jQuery(document).ready(function($){
+
   // Initialize checkboxFilter code
-      
+
   checkboxFilter.init();
-      
+
   // Instantiate MixItUp
-      
+
   $('#network-grid').mixItUp({
     controls: {
       enable: false // we won't be needing these
@@ -220,5 +220,64 @@ jQuery(document).ready(function($){
       onMixEnd: GetActiveString
     }
 
-  }); 
+  });
+
+
+  //GOOGLE MAP
+
+
+
+ initialize();
+
+
 });
+
+
+function initialize() {
+
+  var center = new google.maps.LatLng(10, 0);
+  var options = {
+    'zoom': 2,
+    'center': center,
+    'mapTypeId': google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map"), options);
+
+  var markers = [];
+  var profiles = {};
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "..loading"
+  });
+
+
+  var templateUrl = profile_json.templateUrl;
+  $.getJSON(templateUrl+'/data/user-profiles.json', function(data){
+    for (var i = 0; i < data.length; i++) {
+      var address = data[i]['City'] + ' ' + data[i]["State (USA only)"] + ' ' + data[i]["Country"];
+      var contentString = i + ' ' + data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '<br><br>' + address;
+      var lat =   data[i]["Lat"];
+      var lng =   data[i]["Lng"];
+
+      if(lat !='' && lng !=''){
+        var latlng = new google.maps.LatLng(lat, lng);
+        var marker = new google.maps.Marker({position: latlng, map: map, html: contentString});
+        google.maps.event.addListener(marker, "click", function () {
+           infowindow.setContent(this.html);
+            infowindow.open(map, this);
+        });
+        markers.push(marker);
+      }
+
+    }
+
+  });
+
+
+
+
+
+  var markerCluster = new MarkerClusterer(map, markers);
+
+
+}

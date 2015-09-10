@@ -3,11 +3,17 @@
 //enqueue scripts and styles *use production assets. Dev assets are located in assets/css and assets/js
 function loadup_scripts() {
 	wp_enqueue_script( 'font-js', 'http://fast.fonts.net/jsapi/37400450-5dd6-4716-b372-1b25c6c35c3f.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'maps-js', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0.0', true );
-    wp_enqueue_script( 'markers-js', get_template_directory_uri().'/js/markerclusterer.js','',false, true );
+
 	//wp_enqueue_script( 'map-data', get_template_directory_uri().'/data/data.json' );
 	wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
+
+	if ( is_page_template( 'global-network.php' ) ) {
+		wp_enqueue_script( 'maps-js', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0.0', true );
+		wp_enqueue_script( 'markers-js', get_template_directory_uri().'/js/markerclusterer.js','',false, true );
     wp_enqueue_script( 'network-js', get_template_directory_uri().'/js/global-network.js', array('jquery'), '1.0.0', true );
+  }
+
+
 	wp_enqueue_script( 'classie-js', get_template_directory_uri().'/js/classie.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'match-js', get_template_directory_uri().'/js/jquery.matchHeight-min.js', array('jquery'), '1.0.0', true );
 
