@@ -117,9 +117,15 @@ jQuery(document).ready(function($){
 
   });
 
+  var height = $( window ).width() / 2;
+
+  $('.media').css('height', height);
+  $('.media .video-holder').css('height', height);
+
+
   $(window).resize(function() {
     var height = $( window ).width() / 2;
-    
+
     $('.media').css('height', height);
     $('.media .video-holder').css('height', height);
   })
