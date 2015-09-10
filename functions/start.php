@@ -23,6 +23,9 @@ add_image_size('small', 120, '', true); // Small Thumbnail
 add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
 
+@ini_set( 'upload_max_size' , '500M' );
+@ini_set( 'post_max_size', '500M');
+@ini_set( 'max_execution_time', '300' );
 
 //Register WP Menus
 register_nav_menus(
