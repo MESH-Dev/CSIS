@@ -4000,6 +4000,11 @@ section {
   height: 400px;
 }
 
+/* line 796, sass/layout/_main.scss */
+.mejs-container {
+  width: 100% !important;
+}
+
 /* line 1, sass/layout/_header.scss */
 header {
   padding: 10px 30px;
