@@ -118,10 +118,6 @@ jQuery(document).ready(function($){
   });
 
 
-  var height = $( window ).width() / 2;
-
-  $('.media').css('height', height);
-  $('.media .video-holder').css('height', height);
 
 
   $(window).resize(function() {
@@ -136,7 +132,7 @@ jQuery(document).ready(function($){
 
 
   //GOOGLE MAP
- initialize();
+ // initialize();
 function initialize() {
 
   var center = new google.maps.LatLng(10, 0);
