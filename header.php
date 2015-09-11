@@ -47,8 +47,12 @@
 	<?php wp_head(); ?>
 
 </head>
-
-<body <?php body_class(); ?>>
+<?php
+	$parent = array_reverse(get_post_ancestors($post->ID));
+	$first_parent = get_post($parent[0]);
+	$parent_class = "parent-page-" . $first_parent->post_name;
+?>
+<body <?php body_class($parent_class); ?>  >
 
 	<div id="page" class='hfeed site <?php if( is_page_template('templates/homepage-fullscreen.php') && is_front_page() ) { echo "content-fullscreen"; } ?>'>
 

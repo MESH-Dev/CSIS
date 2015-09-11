@@ -60,7 +60,7 @@ if( have_rows('sections') ):
 
             <div class="ten columns">
               <div class="callout-text">
-                <h2><?php echo get_sub_field('section_title'); ?></h2>
+                <h2><a href="<?php echo get_field('banner_link'); ?>"><?php echo get_sub_field('section_title'); ?></a></h2>
                 <p><?php echo get_sub_field('body_text'); ?></p>
               </div>
             </div>
@@ -172,7 +172,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="<?php echo get_sub_field('color'); ?>-background hover" >
+      <section class="<?php echo get_sub_field('color'); ?>-background" >
 
         <div class="quote">
           <div class="twelve columns">

@@ -260,7 +260,7 @@ function initialize() {
   $.getJSON(templateUrl+'/data/user-profiles.json', function(data){
     for (var i = 0; i < data.length; i++) {
       var address = data[i]['City'] + ' ' + data[i]["State (USA only)"] + ' ' + data[i]["Country"];
-      var contentString = i + ' ' + data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '<br><br>' + address;
+      var contentString = ''+ data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '<br><br>' + address;
       var lat =   data[i]["Lat"];
       var lng =   data[i]["Lng"];
 
