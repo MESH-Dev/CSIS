@@ -4506,6 +4506,11 @@ section {
   padding: 60px;
 }
 /* line 863, sass/layout/_main.scss */
+.text-holder h3 {
+  text-transform: uppercase;
+  color: #393939;
+}
+/* line 867, sass/layout/_main.scss */
 .text-holder p {
   color: #9e9e9e;
 }
