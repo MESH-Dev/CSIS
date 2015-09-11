@@ -4500,6 +4500,16 @@ section {
   margin-top: -40%;
 }
 
+/* line 860, sass/layout/_main.scss */
+.text-holder {
+  background-color: #dcdcdc;
+  padding: 60px;
+}
+/* line 863, sass/layout/_main.scss */
+.text-holder p {
+  color: #9e9e9e;
+}
+
 /* line 1, sass/layout/_header.scss */
 header {
   padding: 10px 30px;

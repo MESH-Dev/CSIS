@@ -342,9 +342,21 @@ if( have_rows('sections') ):
                   <?php
 
                 }
-                else {
+                else { ?>
+                  <div class="six columns">
 
-                }
+                    <div class="text-holder">
+                      <?php
+
+                      $media_text = get_sub_field('2-column_text');
+                      echo $media_text;
+
+                      ?>
+                    </div>
+
+
+                  </div>
+              <?php    }
 
               ?>
 
