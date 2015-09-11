@@ -122,6 +122,7 @@ jQuery(document).ready(function($){
 
   $('.media').css('height', height);
   $('.media .video-holder').css('height', height);
+  $('.media .text-holder').css('height', height);
 
 
   $(window).resize(function() {
@@ -129,6 +130,7 @@ jQuery(document).ready(function($){
 
     $('.media').css('height', height);
     $('.media .video-holder').css('height', height);
+    $('.media .text-holder').css('height', height);
   });
 
 
@@ -215,7 +217,7 @@ jQuery(document).ready(function($){
   $('.blog-post-small').matchHeight();
   $('.blog-section').matchHeight();
   $('.information-holder').matchHeight();
-  $('.text-holder').matchHeight();
+ 
 
   $('.banner').parallax("20%", -0.5);
 
