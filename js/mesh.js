@@ -149,6 +149,7 @@ jQuery(document).ready(function($){
     $('.profile-container').css('top',itemOffset+'px');
     var profile_id = $(this).parent().attr('data-id');
     $('.profile-container').fadeIn('slow');
+    $('.profile-content').css('opacity',0);
     loadProfile(profile_id);
 
 
@@ -170,8 +171,12 @@ jQuery(document).ready(function($){
             // append: add the new statments to the existing data
             if(response != 0){
               $('.profile-content').empty();
+              console.log(response);
+
               $('.profile-content').append(response);
+              $('.profile-content').css('opacity',1);
               is_loading = false;
+              
 
             }
             else{

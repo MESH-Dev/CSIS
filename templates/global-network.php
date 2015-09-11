@@ -180,22 +180,28 @@ get_header(); ?>
             </fieldset>
 
             <fieldset name="year">
-             <div >
-              <?php
-              //Get year Filters and print out checkboxes
-              $impactFilters = getFilterLists($profiles, 'Year');
-              foreach($impactFilters as $filter){
-                $filter_id = str_replace(" ", "-", $filter);
-                $filter_id = str_replace("&", "", $filter_id);
-                $filter_id = str_replace("/", "", $filter_id);
-              ?>
+ 
                 <div class="topic-checkbox checkbox ">
-                  <input type="checkbox" value=".<?php echo $filter_id; ?>" data-filter="<?php echo $filter;?>" id="<?php echo $filter_id; ?>" />
-                  <label for="<?php echo $filter_id; ?>"><?php echo $filter; ?></label>
+                  <input type="checkbox" value=".2012" data-filter="2012" id=".2012" />
+                  <label for=".2012">2012</label>
                 </div>
 
-              <?php } ?>
-             </div>
+                
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".2013" data-filter="2013" id=".2013" />
+                  <label for=".2013">2013</label>
+                </div>
+
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".2014" data-filter="2014" id=".2014" />
+                  <label for=".2014">2014</label>
+                </div>
+
+                <div class="topic-checkbox checkbox ">
+                  <input type="checkbox" value=".2015" data-filter="2015" id=".2015" />
+                  <label for=".2015">2015</label>
+                </div>
+ 
             </fieldset>
 
           </div>

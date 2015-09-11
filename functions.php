@@ -162,13 +162,13 @@ function renderProfileGrid($profiles){
   $count = 0;
  
  	foreach ($profiles as $profile) {
-
+      $year = array();
       //Get Filter Data
       $impact = getSingleProfileFilterData($profiles, $count,'Impact');
       $expertise = getSingleProfileFilterData($profiles, $count,'Expertise');
       $geographic = getSingleProfileFilterData($profiles, $count,'Geographic');
       $affil = getSingleProfileFilterData($profiles, $count,'Affiliation');
-      $year = getSingleProfileFilterData($profiles, $count,'Year');
+      $year[0] = $profile['What year did you participate in your first CSIS program?'];
       $filters = array_merge($impact, $expertise, $geographic, $affil, $year);
       
       $filter_string = '';
@@ -208,15 +208,66 @@ function getSingleProfile(){
 
   
   $output = '';
- 	$output .= '<div class="three columns offset-by-one"><img src="'.$profile['Profile Picture']. '" /></div>';
-  $output .= '<div class="six columns" >';
-  $output .=    '<h3>First Last</h3>';
-  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
-  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
-  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
-  $output .=    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque saepe pariatur officia enim doloribus cupiditate nostrum sunt, quam eligendi unde perferendis aliquid asperiores, ut sequi similique sit veniam eveniet.</p>';
-  $output .= '</div>'; 
+ 	$output .= '<div class="three columns offset-by-two"><img src="'.$profile['Profile Picture']. '" /></div>';
+  $output .= '<div class="five columns" ><div class="profile-info">';
+
+  $output .=    '<h3>'.$profile['Name | First']. ' ' . $profile['Name | Last']. '</h3>';
+  if($profile['Title'] != ''){
+    $output .=    '<span class="title">'. $profile['Title'];
+  }
+  if($profile['Current Organization / School'] != ''){
+    $output .=    ', '. $profile['Current Organization / School'] .'</span>';
+  }
+  $output .=    '<span class="location">'. $profile['City'] .', '. $profile['State (USA only)'] .'</span>';
+
+  $bio = htmlentities($profile['Short Bio']);
+  $output .=    '<p>'. $bio. '</p>';
+
+  if($profile['Action Statement | I am '] != ''){
+    $output .=    '<span class="green-primary">I am: </span>' . $profile['Action Statement | I am '] . '<br/>';
+    $output .=    '<span class="green-primary">to: </span>' . $profile['Action Statement | to'] . '<br/>';
+    $output .=    '<span class="green-primary">in order to: </span>' . $profile['Action Statement | in order to'] . '<br/><br/>';
+  }
+
+  if($profile['Ask me about:'] != ''){
+
+    $output .=    '<span class="green-primary">Ask me about: </span>' . $profile['Ask me about:'] . '<br/><br/>';
+  }
+
+  if($profile['I am looking for:'] != ''){
+    $output .=    '<span class="green-primary">I am looking for: </span>' . $profile['I am looking for:'] . '<br/><br/>';
+  }
+
+  if($profile['If you have a link to a pitch video, please copy it here:'] != ''){
+    $url = $profile['If you have a link to a pitch video, please copy it here:'];
+    parse_str( parse_url( $url, PHP_URL_QUERY ), $vars );
+    $video_id =  $vars['v'];  
+
+    $output .=    '<p><iframe width="640" height="360" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe></p>';
+  }
+
+  $output .=  '<div class="footer-social ">';
+  $output .=  '<ul>';
+  
+  if($profile['Social Media Links | Facebook'] != ''){
+    $output .=    '<li><a href="'.$profile['Social Media Links | Facebook']  .' target="_blank"><i class="fa fa-facebook"></i></a></li>';
+  }
+  if($profile['Social Media Links | Twitter'] != ''){
+    $output .=    '<li><a href="'.$profile['Social Media Links | Twitter']  .' target="_blank"><i class="fa fa-twitter"></i></a></li>';
+  }
+  if($profile['Social Media Links | Instagram'] != ''){
+    $output .=    '<li><a href="'.$profile['Social Media Links | Instagram']  .' target="_blank"><i class="fa fa-instagram"></i></a></li>';
+  }
+  if($profile['Social Media Links | LinkedIn'] != ''){
+    $output .=    '<li><a href="'.$profile['Social Media Links | LinkedIn']  .' target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+  }
+  $output .=  '</ul></div>';
+        
+
+  $output .= '</div></div>'; 
   echo $output;
+
+  die();
 
 }
 
@@ -227,7 +278,7 @@ function getSingleProfileFilterData($profiles, $id, $listname){
       $expertiseArr =  array();
       $geoArr =  array();
       $affilArr = array();
-      $yearArr = array();
+      
 
       foreach ($profiles[$id] as $key => $data) {
  
@@ -278,8 +329,6 @@ function getSingleProfileFilterData($profiles, $id, $listname){
         return $expertiseArr;
       elseif($listname == 'Geographic') 
         return $geoArr;
-      elseif($listname == 'Year') 
-        return $yearArr;
       else
         return 0;
      
@@ -295,7 +344,7 @@ function getFilterLists($profiles, $listname){
       $expertiseArr =  array();
       $geoArr =  array();
       $affilArr = array();
-      $yearArr = array();
+ 
 
       foreach(array_keys($profiles[0]) as $paramName){
  
@@ -332,9 +381,7 @@ function getFilterLists($profiles, $listname){
                 elseif($first == 'Primary Affiliation with the Center '){
                   array_push($affilArr,$value);
                 }
-                elseif($first == 'Year '){
-                  array_push($yearArr,$value);
-                }
+ 
                 else{
 
                 }

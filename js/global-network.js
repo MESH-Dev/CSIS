@@ -13,8 +13,13 @@ $('.network-nav-item').click(function(event) {
     $('.network-filter-status').hide();
   }
 
+  
+
   $('.network-filter').hide(); //Hide all dropdowns
   $('.'+item).slideDown('400'); //Show this dropdowns
+  if(item == 'network-map'){
+    initialize();
+  }
 
 });
 
@@ -227,7 +232,7 @@ jQuery(document).ready(function($){
 
 
 
- initialize();
+ 
 
 
 });
@@ -235,9 +240,9 @@ jQuery(document).ready(function($){
 
 function initialize() {
 
-  var center = new google.maps.LatLng(10, 0);
+  var center = new google.maps.LatLng(40.00, -75.2);
   var options = {
-    'zoom': 2,
+    'zoom': 3,
     'center': center,
     'mapTypeId': google.maps.MapTypeId.ROADMAP
   };
