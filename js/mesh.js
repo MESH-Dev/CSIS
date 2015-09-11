@@ -215,6 +215,7 @@ jQuery(document).ready(function($){
   $('.blog-post-small').matchHeight();
   $('.blog-section').matchHeight();
   $('.information-holder').matchHeight();
+  $('.text-holder').matchHeight();
 
   $('.banner').parallax("20%", -0.5);
 
