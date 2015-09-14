@@ -706,7 +706,7 @@ main {
   border: 0.1em solid #fec935;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .yellow-primary .right:after {
@@ -800,7 +800,7 @@ main {
   border: 0.1em solid #fec935;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .yellow-primary-background .right:after {
@@ -950,7 +950,7 @@ main {
   border: 0.1em solid #ef9f25;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .yellow-secondary .right:after {
@@ -1044,7 +1044,7 @@ main {
   border: 0.1em solid #ef9f25;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .yellow-secondary-background .right:after {
@@ -1194,7 +1194,7 @@ main {
   border: 0.1em solid #efe431;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .yellow-tertiary .right:after {
@@ -1288,7 +1288,7 @@ main {
   border: 0.1em solid #efe431;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .yellow-tertiary-background .right:after {
@@ -1438,7 +1438,7 @@ main {
   border: 0.1em solid #97729e;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .purple-primary .right:after {
@@ -1532,7 +1532,7 @@ main {
   border: 0.1em solid #97729e;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .purple-primary-background .right:after {
@@ -1682,7 +1682,7 @@ main {
   border: 0.1em solid #4f539e;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .purple-secondary .right:after {
@@ -1776,7 +1776,7 @@ main {
   border: 0.1em solid #4f539e;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .purple-secondary-background .right:after {
@@ -1926,7 +1926,7 @@ main {
   border: 0.1em solid #712880;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .purple-tertiary .right:after {
@@ -2020,7 +2020,7 @@ main {
   border: 0.1em solid #712880;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .purple-tertiary-background .right:after {
@@ -2170,7 +2170,7 @@ main {
   border: 0.1em solid #2791bd;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .blue-primary .right:after {
@@ -2264,7 +2264,7 @@ main {
   border: 0.1em solid #2791bd;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .blue-primary-background .right:after {
@@ -2414,7 +2414,7 @@ main {
   border: 0.1em solid #0ebde8;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .blue-secondary .right:after {
@@ -2508,7 +2508,7 @@ main {
   border: 0.1em solid #0ebde8;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .blue-secondary-background .right:after {
@@ -2658,7 +2658,7 @@ main {
   border: 0.1em solid #66b5c8;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .blue-tertiary .right:after {
@@ -2752,7 +2752,7 @@ main {
   border: 0.1em solid #66b5c8;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .blue-tertiary-background .right:after {
@@ -2902,7 +2902,7 @@ main {
   border: 0.1em solid #4fd1a1;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .green-primary .right:after {
@@ -2996,7 +2996,7 @@ main {
   border: 0.1em solid #4fd1a1;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .green-primary-background .right:after {
@@ -3146,7 +3146,7 @@ main {
   border: 0.1em solid #1f5c45;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .green-secondary .right:after {
@@ -3240,7 +3240,7 @@ main {
   border: 0.1em solid #1f5c45;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .green-secondary-background .right:after {
@@ -3390,7 +3390,7 @@ main {
   border: 0.1em solid #b8d242;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .green-tertiary .right:after {
@@ -3484,7 +3484,7 @@ main {
   border: 0.1em solid #b8d242;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .green-tertiary-background .right:after {
@@ -3634,7 +3634,7 @@ main {
   border: 0.1em solid #bc4851;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .red-primary .right:after {
@@ -3728,7 +3728,7 @@ main {
   border: 0.1em solid #bc4851;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .red-primary-background .right:after {
@@ -3878,7 +3878,7 @@ main {
   border: 0.1em solid #ed555d;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .red-secondary .right:after {
@@ -3972,7 +3972,7 @@ main {
   border: 0.1em solid #ed555d;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .red-secondary-background .right:after {
@@ -4122,7 +4122,7 @@ main {
   border: 0.1em solid #f37f66;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 52, sass/layout/_main.scss */
 .red-tertiary .right:after {
@@ -4216,7 +4216,7 @@ main {
   border: 0.1em solid #f37f66;
   display: inline-block;
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 /* line 150, sass/layout/_main.scss */
 .red-tertiary-background .right:after {
