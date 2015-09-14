@@ -25,7 +25,8 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 }
 add_action('wp_ajax_getSingleProfile', 'getSingleProfile');  
 add_action('wp_ajax_nopriv_getSingleProfile', 'getSingleProfile');  //_nopriv_ allows access for both signed in users, and not
-
+add_action('wp_ajax_saveGeneralEmail', 'saveGeneralEmail');  
+add_action('wp_ajax_nopriv_saveGeneralEmail', 'saveGeneralEmail'); 
  
 
 function generateJSON(){
@@ -436,6 +437,20 @@ function getFilterLists($profiles, $listname){
          
 
 }
+
+function saveGeneralEmail(){
+
+  $email = $_POST['email'];
+
+  $output = "Thank you " . $email ."!";
+  echo $output;
+
+  die();
+
+
+}
+
+
 
 
 

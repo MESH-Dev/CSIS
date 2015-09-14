@@ -203,6 +203,59 @@ jQuery(document).ready(function($){
   }
 
 
+  $('form#general-email').submit(function(e) {
+    e.preventDefault();
+ 
+    var email = $( "input#email" ).val();
+    if (email !== "" ) {
+       
+      console.log(email);
+      AddGeneralEmail(email);
+    }
+    else{
+      alert("Please Enter a Valid Email!");
+    }
+ 
+    
+
+
+  });
+
+  function AddGeneralEmail(email) {
+      var is_loading = false;
+      if (is_loading == false) {
+        is_loading = true;
+       $('form#general-email').fadeOut('slow');
+        $('#loader').show();
+
+        var data = {
+            action: 'saveGeneralEmail',
+            email: email
+        };
+
+        jQuery.post(ajaxurl, data, function(response) {
+            // append: add the new statments to the existing data
+            if(response != 0){
+            
+              console.log(response);
+
+              $('.email-response').append(response);
+              $('.email-response').css('opacity',1);
+              is_loading = false;
+              
+
+            }
+            else{
+              $('#loader').hide();
+              is_loading = false;
+
+            }
+        });
+      }
+  }
+
+
+
 
 
 
