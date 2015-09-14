@@ -218,7 +218,7 @@ jQuery(document).ready(function($){
   $('.information-holder').matchHeight();
 
 
-  $('.banner').parallax("20%", 0.1);
+  $('.banner').parallax("center", 0.1);
 
   $('.blog-sidebar-title').click(function() {
 
