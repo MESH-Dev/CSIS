@@ -342,6 +342,29 @@ if( have_rows('sections') ):
                   <?php
 
                 }
+                elseif (get_sub_field('2-column_media_type') == '2-column_youtube') {
+
+                  ?>
+
+                  <div class="six columns">
+
+                    <div class="video-container">
+                      <?php
+
+                      $video = get_sub_field('2-column_video');
+                      echo $video;
+
+                      ?>
+                      <iframe width="640" height="360" src="<?php echo $video;?>" frameborder="0" allowfullscreen></iframe>
+
+                    </div>
+
+
+                  </div>
+
+                  <?php
+
+                }
                 else { ?>
                   <div class="six columns">
 
