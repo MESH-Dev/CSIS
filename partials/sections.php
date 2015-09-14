@@ -351,7 +351,7 @@ if( have_rows('sections') ):
                     <div class="video-container">
                       <?php
 
-                      $video = get_sub_field('2-column_video');
+                      $video = get_sub_field('2-column_youtube');
                       echo $video;
 
                       ?>
