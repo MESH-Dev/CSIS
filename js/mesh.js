@@ -129,6 +129,10 @@ jQuery(document).ready(function($){
 
   $(window).resize(function() {
     var height = $( window ).width() / 2;
+    var yt_height = $('.media .video-container').height();
+    if(yt_height != ''){
+      $('.media .text-holder').css('height', yt_height);
+    }
 
     $('.media').css('height', height);
     $('.media .video-holder').css('height', height);
