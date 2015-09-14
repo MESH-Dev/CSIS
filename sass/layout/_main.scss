@@ -400,7 +400,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   font-family: $font-family--bold;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: initial;
 
   .cta-text {
     position: relative;

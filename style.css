@@ -4431,7 +4431,7 @@ main {
   font-family: "Avenir Next Cyr W00 Bold";
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: initial;
 }
 /* line 405, sass/layout/_main.scss */
 .cta-big .cta-text {
