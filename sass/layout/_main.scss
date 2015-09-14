@@ -352,7 +352,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 .banner-text {
   position: relative;
   z-index: 10;
-  padding: 50px 150px 50px 50px;
+  padding: 50px 50px 50px 50px;
 
   .banner-title {
     font-family: $font-family--bold;
@@ -370,6 +370,15 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     a {
       color: white;
     }
+  }
+}
+
+.parent-page-story-page .banner-inner {
+  height: 500px;
+
+  .banner-text {
+    text-align: center;
+    margin-top: 260px;
   }
 }
 
@@ -933,4 +942,40 @@ section {
   p{
     color: #9e9e9e;
   }
+}
+
+.triangle-bar {
+  width: 100%;
+  float: left;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.triangle-block {
+  width: calc(50% - 60px);
+  float: left;
+  display: inline;
+  height: 40px;
+  background-color: white;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 0 60px;
+  border-color: transparent transparent transparent #ffffff;
+  float: left;
+  display: inline;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 60px;
+  border-color: transparent transparent #ffffff transparent;
+  float: left;
+  display: inline;
 }

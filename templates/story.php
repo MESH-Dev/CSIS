@@ -35,6 +35,21 @@ get_header(); ?>
               <div class="banner-title"><?php the_title(); ?></div>
             </div>
 
+            <div class="triangle-bar">
+              <div class="triangle-block">
+
+              </div>
+              <div class="triangle-left">
+
+              </div>
+              <div class="triangle-right">
+
+              </div>
+              <div class="triangle-block">
+
+              </div>
+            </div>
+
         </section>
 
         <?php
