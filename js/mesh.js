@@ -139,55 +139,7 @@ jQuery(document).ready(function($){
   });
 
 
-  //Profile Popup
-  $('.close-profile a').click(function(e) {
-    e.preventDefault();
-    $('.profile-container').fadeOut('slow');
-  });
 
-  $('.network-grid-item').click(function(e) {
-    var itemOffset = $(this).offset().top;
-    $('.profile-container').css('top',itemOffset+'px');
-    var profile_id = $(this).parent().attr('data-id');
-    $('.profile-container').fadeIn('slow');
-    $('.profile-content').css('opacity',0);
-    loadProfile(profile_id);
-
-
-  });
-
-  function loadProfile(profile_id) {
-      var is_loading = false;
-      if (is_loading == false) {
-        is_loading = true;
-
-        $('#loader').show();
-
-        var data = {
-            action: 'getSingleProfile',
-            profile_id: profile_id
-        };
-
-        jQuery.post(ajaxurl, data, function(response) {
-            // append: add the new statments to the existing data
-            if(response != 0){
-              $('.profile-content').empty();
-              console.log(response);
-
-              $('.profile-content').append(response);
-              $('.profile-content').css('opacity',1);
-              is_loading = false;
-
-
-            }
-            else{
-              $('#loader').hide();
-              is_loading = false;
-
-            }
-        });
-      }
-  }
 
 
   $('form#general-email').submit(function(e) {
