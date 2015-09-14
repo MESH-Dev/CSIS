@@ -84,22 +84,23 @@ get_header(); ?>
 
           <h3>News</h3>
 
+
+          <?php
+
+          $args = array( 'posts_per_page' => 4, 'offset'=> 1 );
+
+          $myposts = get_posts( $args );
+          foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
           <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
+            <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+            <h6><?php the_time('F j, Y'); ?></h6>
           </div>
-          <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
-          </div>
-          <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
-          </div>
-          <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
-          </div>
+          <?php endforeach;
+          wp_reset_postdata();?>
+
+
+
+
 
         </div>
 
