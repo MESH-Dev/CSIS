@@ -45,6 +45,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     .right {
       border: 0.1em solid nth($color_vars, $i);
       display: inline-block;
+      position: relative;
+      top: -3px;
     }
 
     .right:after {
@@ -141,6 +143,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     .right {
       border: 0.1em solid nth($color_vars, $i);
       display: inline-block;
+      position: relative;
+      top: -3px;
     }
 
     .right:after {
