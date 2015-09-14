@@ -125,7 +125,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       opacity: 0;
       transition: opacity .25s ease-in-out;
        -moz-transition: opacity .25s ease-in-out;
-       -webkit-transition: opacity .25s ease-in-out; 
+       -webkit-transition: opacity .25s ease-in-out;
     }
 
     // Callout
@@ -246,6 +246,24 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       .right::after {
         border-top: 0.1em solid white;
         border-right: 0.1em solid white;
+      }
+    }
+
+    &.submit-buttons {
+
+      &:hover {
+        background: white;
+        color: nth($color_vars, $i);
+        border: 3px solid nth($color_vars, $i);
+        padding: 7px 17px 7px 7px;
+
+        .right {
+          border: 0.1em solid nth($color_vars, $i);
+        }
+        .right::after {
+          border-top: 0.1em solid nth($color_vars, $i);
+          border-right: 0.1em solid nth($color_vars, $i);
+        }
       }
     }
 

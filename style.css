@@ -1166,41 +1166,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.yellow-primary-background.submit-buttons:hover {
+  background: white;
+  color: #fec935;
+  border: 3px solid #fec935;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.yellow-primary-background.submit-buttons:hover .right {
+  border: 0.1em solid #fec935;
+}
+/* line 263, sass/layout/_main.scss */
+.yellow-primary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #fec935;
+  border-right: 0.1em solid #fec935;
+}
+/* line 270, sass/layout/_main.scss */
 .yellow-primary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .yellow-primary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover {
   color: #fec935;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover a {
   color: #fec935;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .cta-text a {
   color: #fec935;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .right {
   border: 0.1em solid #fec935;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .yellow-primary-background.hover:hover .right:after {
   border-top: 0.1em solid #fec935;
   border-right: 0.1em solid #fec935;
@@ -1417,41 +1433,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.yellow-secondary-background.submit-buttons:hover {
+  background: white;
+  color: #ef9f25;
+  border: 3px solid #ef9f25;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.yellow-secondary-background.submit-buttons:hover .right {
+  border: 0.1em solid #ef9f25;
+}
+/* line 263, sass/layout/_main.scss */
+.yellow-secondary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #ef9f25;
+  border-right: 0.1em solid #ef9f25;
+}
+/* line 270, sass/layout/_main.scss */
 .yellow-secondary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .yellow-secondary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover {
   color: #ef9f25;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover a {
   color: #ef9f25;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .cta-text a {
   color: #ef9f25;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .right {
   border: 0.1em solid #ef9f25;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .yellow-secondary-background.hover:hover .right:after {
   border-top: 0.1em solid #ef9f25;
   border-right: 0.1em solid #ef9f25;
@@ -1668,41 +1700,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.yellow-tertiary-background.submit-buttons:hover {
+  background: white;
+  color: #efe431;
+  border: 3px solid #efe431;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.yellow-tertiary-background.submit-buttons:hover .right {
+  border: 0.1em solid #efe431;
+}
+/* line 263, sass/layout/_main.scss */
+.yellow-tertiary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #efe431;
+  border-right: 0.1em solid #efe431;
+}
+/* line 270, sass/layout/_main.scss */
 .yellow-tertiary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .yellow-tertiary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover {
   color: #efe431;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover a {
   color: #efe431;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .cta-text a {
   color: #efe431;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .right {
   border: 0.1em solid #efe431;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .yellow-tertiary-background.hover:hover .right:after {
   border-top: 0.1em solid #efe431;
   border-right: 0.1em solid #efe431;
@@ -1919,41 +1967,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.purple-primary-background.submit-buttons:hover {
+  background: white;
+  color: #97729e;
+  border: 3px solid #97729e;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.purple-primary-background.submit-buttons:hover .right {
+  border: 0.1em solid #97729e;
+}
+/* line 263, sass/layout/_main.scss */
+.purple-primary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #97729e;
+  border-right: 0.1em solid #97729e;
+}
+/* line 270, sass/layout/_main.scss */
 .purple-primary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .purple-primary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .purple-primary-background.hover:hover {
   color: #97729e;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .purple-primary-background.hover:hover a {
   color: #97729e;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .cta-text a {
   color: #97729e;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .right {
   border: 0.1em solid #97729e;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .purple-primary-background.hover:hover .right:after {
   border-top: 0.1em solid #97729e;
   border-right: 0.1em solid #97729e;
@@ -2170,41 +2234,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.purple-secondary-background.submit-buttons:hover {
+  background: white;
+  color: #4f539e;
+  border: 3px solid #4f539e;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.purple-secondary-background.submit-buttons:hover .right {
+  border: 0.1em solid #4f539e;
+}
+/* line 263, sass/layout/_main.scss */
+.purple-secondary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #4f539e;
+  border-right: 0.1em solid #4f539e;
+}
+/* line 270, sass/layout/_main.scss */
 .purple-secondary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .purple-secondary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover {
   color: #4f539e;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover a {
   color: #4f539e;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .cta-text a {
   color: #4f539e;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .right {
   border: 0.1em solid #4f539e;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .purple-secondary-background.hover:hover .right:after {
   border-top: 0.1em solid #4f539e;
   border-right: 0.1em solid #4f539e;
@@ -2421,41 +2501,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.purple-tertiary-background.submit-buttons:hover {
+  background: white;
+  color: #712880;
+  border: 3px solid #712880;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.purple-tertiary-background.submit-buttons:hover .right {
+  border: 0.1em solid #712880;
+}
+/* line 263, sass/layout/_main.scss */
+.purple-tertiary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #712880;
+  border-right: 0.1em solid #712880;
+}
+/* line 270, sass/layout/_main.scss */
 .purple-tertiary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .purple-tertiary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover {
   color: #712880;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover a {
   color: #712880;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .cta-text a {
   color: #712880;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .right {
   border: 0.1em solid #712880;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .purple-tertiary-background.hover:hover .right:after {
   border-top: 0.1em solid #712880;
   border-right: 0.1em solid #712880;
@@ -2672,41 +2768,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.blue-primary-background.submit-buttons:hover {
+  background: white;
+  color: #2791bd;
+  border: 3px solid #2791bd;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.blue-primary-background.submit-buttons:hover .right {
+  border: 0.1em solid #2791bd;
+}
+/* line 263, sass/layout/_main.scss */
+.blue-primary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #2791bd;
+  border-right: 0.1em solid #2791bd;
+}
+/* line 270, sass/layout/_main.scss */
 .blue-primary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .blue-primary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .blue-primary-background.hover:hover {
   color: #2791bd;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .blue-primary-background.hover:hover a {
   color: #2791bd;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .cta-text a {
   color: #2791bd;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .right {
   border: 0.1em solid #2791bd;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .blue-primary-background.hover:hover .right:after {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
@@ -2923,41 +3035,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.blue-secondary-background.submit-buttons:hover {
+  background: white;
+  color: #0ebde8;
+  border: 3px solid #0ebde8;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.blue-secondary-background.submit-buttons:hover .right {
+  border: 0.1em solid #0ebde8;
+}
+/* line 263, sass/layout/_main.scss */
+.blue-secondary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #0ebde8;
+  border-right: 0.1em solid #0ebde8;
+}
+/* line 270, sass/layout/_main.scss */
 .blue-secondary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .blue-secondary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover {
   color: #0ebde8;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover a {
   color: #0ebde8;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .cta-text a {
   color: #0ebde8;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .right {
   border: 0.1em solid #0ebde8;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .blue-secondary-background.hover:hover .right:after {
   border-top: 0.1em solid #0ebde8;
   border-right: 0.1em solid #0ebde8;
@@ -3174,41 +3302,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.blue-tertiary-background.submit-buttons:hover {
+  background: white;
+  color: #66b5c8;
+  border: 3px solid #66b5c8;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.blue-tertiary-background.submit-buttons:hover .right {
+  border: 0.1em solid #66b5c8;
+}
+/* line 263, sass/layout/_main.scss */
+.blue-tertiary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #66b5c8;
+  border-right: 0.1em solid #66b5c8;
+}
+/* line 270, sass/layout/_main.scss */
 .blue-tertiary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .blue-tertiary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover {
   color: #66b5c8;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover a {
   color: #66b5c8;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .cta-text a {
   color: #66b5c8;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .right {
   border: 0.1em solid #66b5c8;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .blue-tertiary-background.hover:hover .right:after {
   border-top: 0.1em solid #66b5c8;
   border-right: 0.1em solid #66b5c8;
@@ -3425,41 +3569,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.green-primary-background.submit-buttons:hover {
+  background: white;
+  color: #4fd1a1;
+  border: 3px solid #4fd1a1;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.green-primary-background.submit-buttons:hover .right {
+  border: 0.1em solid #4fd1a1;
+}
+/* line 263, sass/layout/_main.scss */
+.green-primary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #4fd1a1;
+  border-right: 0.1em solid #4fd1a1;
+}
+/* line 270, sass/layout/_main.scss */
 .green-primary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .green-primary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .green-primary-background.hover:hover {
   color: #4fd1a1;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .green-primary-background.hover:hover a {
   color: #4fd1a1;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .green-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .green-primary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .green-primary-background.hover:hover .cta-text a {
   color: #4fd1a1;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .green-primary-background.hover:hover .right {
   border: 0.1em solid #4fd1a1;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .green-primary-background.hover:hover .right:after {
   border-top: 0.1em solid #4fd1a1;
   border-right: 0.1em solid #4fd1a1;
@@ -3676,41 +3836,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.green-secondary-background.submit-buttons:hover {
+  background: white;
+  color: #1f5c45;
+  border: 3px solid #1f5c45;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.green-secondary-background.submit-buttons:hover .right {
+  border: 0.1em solid #1f5c45;
+}
+/* line 263, sass/layout/_main.scss */
+.green-secondary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #1f5c45;
+  border-right: 0.1em solid #1f5c45;
+}
+/* line 270, sass/layout/_main.scss */
 .green-secondary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .green-secondary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .green-secondary-background.hover:hover {
   color: #1f5c45;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .green-secondary-background.hover:hover a {
   color: #1f5c45;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .cta-text a {
   color: #1f5c45;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .right {
   border: 0.1em solid #1f5c45;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .green-secondary-background.hover:hover .right:after {
   border-top: 0.1em solid #1f5c45;
   border-right: 0.1em solid #1f5c45;
@@ -3927,41 +4103,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.green-tertiary-background.submit-buttons:hover {
+  background: white;
+  color: #b8d242;
+  border: 3px solid #b8d242;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.green-tertiary-background.submit-buttons:hover .right {
+  border: 0.1em solid #b8d242;
+}
+/* line 263, sass/layout/_main.scss */
+.green-tertiary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #b8d242;
+  border-right: 0.1em solid #b8d242;
+}
+/* line 270, sass/layout/_main.scss */
 .green-tertiary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .green-tertiary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover {
   color: #b8d242;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover a {
   color: #b8d242;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .cta-text a {
   color: #b8d242;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .right {
   border: 0.1em solid #b8d242;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .green-tertiary-background.hover:hover .right:after {
   border-top: 0.1em solid #b8d242;
   border-right: 0.1em solid #b8d242;
@@ -4178,41 +4370,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.red-primary-background.submit-buttons:hover {
+  background: white;
+  color: #bc4851;
+  border: 3px solid #bc4851;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.red-primary-background.submit-buttons:hover .right {
+  border: 0.1em solid #bc4851;
+}
+/* line 263, sass/layout/_main.scss */
+.red-primary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #bc4851;
+  border-right: 0.1em solid #bc4851;
+}
+/* line 270, sass/layout/_main.scss */
 .red-primary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .red-primary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .red-primary-background.hover:hover {
   color: #bc4851;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .red-primary-background.hover:hover a {
   color: #bc4851;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .red-primary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .red-primary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .red-primary-background.hover:hover .cta-text a {
   color: #bc4851;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .red-primary-background.hover:hover .right {
   border: 0.1em solid #bc4851;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .red-primary-background.hover:hover .right:after {
   border-top: 0.1em solid #bc4851;
   border-right: 0.1em solid #bc4851;
@@ -4429,41 +4637,57 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.red-secondary-background.submit-buttons:hover {
+  background: white;
+  color: #ed555d;
+  border: 3px solid #ed555d;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.red-secondary-background.submit-buttons:hover .right {
+  border: 0.1em solid #ed555d;
+}
+/* line 263, sass/layout/_main.scss */
+.red-secondary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #ed555d;
+  border-right: 0.1em solid #ed555d;
+}
+/* line 270, sass/layout/_main.scss */
 .red-secondary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .red-secondary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .red-secondary-background.hover:hover {
   color: #ed555d;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .red-secondary-background.hover:hover a {
   color: #ed555d;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .cta-text a {
   color: #ed555d;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .right {
   border: 0.1em solid #ed555d;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .red-secondary-background.hover:hover .right:after {
   border-top: 0.1em solid #ed555d;
   border-right: 0.1em solid #ed555d;
@@ -4680,71 +4904,87 @@ main {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 252, sass/layout/_main.scss */
+/* line 254, sass/layout/_main.scss */
+.red-tertiary-background.submit-buttons:hover {
+  background: white;
+  color: #f37f66;
+  border: 3px solid #f37f66;
+  padding: 7px 17px 7px 7px;
+}
+/* line 260, sass/layout/_main.scss */
+.red-tertiary-background.submit-buttons:hover .right {
+  border: 0.1em solid #f37f66;
+}
+/* line 263, sass/layout/_main.scss */
+.red-tertiary-background.submit-buttons:hover .right::after {
+  border-top: 0.1em solid #f37f66;
+  border-right: 0.1em solid #f37f66;
+}
+/* line 270, sass/layout/_main.scss */
 .red-tertiary-background .cta-small {
   height: 25px;
 }
-/* line 255, sass/layout/_main.scss */
+/* line 273, sass/layout/_main.scss */
 .red-tertiary-background .cta-small .cta-text {
   display: none;
 }
-/* line 264, sass/layout/_main.scss */
+/* line 282, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover {
   color: #f37f66;
   background-color: white;
 }
-/* line 268, sass/layout/_main.scss */
+/* line 286, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover a {
   color: #f37f66;
 }
-/* line 272, sass/layout/_main.scss */
+/* line 290, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .input__label {
   color: #fec935;
 }
-/* line 277, sass/layout/_main.scss */
+/* line 295, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .cta-small .cta-text {
   display: block;
 }
-/* line 283, sass/layout/_main.scss */
+/* line 301, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .cta-text a {
   color: #f37f66;
 }
-/* line 288, sass/layout/_main.scss */
+/* line 306, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .right {
   border: 0.1em solid #f37f66;
   display: inline-block;
 }
-/* line 293, sass/layout/_main.scss */
+/* line 311, sass/layout/_main.scss */
 .red-tertiary-background.hover:hover .right:after {
   border-top: 0.1em solid #f37f66;
   border-right: 0.1em solid #f37f66;
 }
 
-/* line 308, sass/layout/_main.scss */
+/* line 326, sass/layout/_main.scss */
 .banner a {
   color: white;
 }
-/* line 314, sass/layout/_main.scss */
+/* line 332, sass/layout/_main.scss */
 .banner .cta-small .right {
   border: 0.1em solid white;
 }
-/* line 318, sass/layout/_main.scss */
+/* line 336, sass/layout/_main.scss */
 .banner .cta-small .right:after {
   border-top: 0.1em solid white;
   border-right: 0.1em solid white;
 }
-/* line 328, sass/layout/_main.scss */
+/* line 346, sass/layout/_main.scss */
 .banner:hover .cta-text {
   right: 0px;
 }
 
-/* line 334, sass/layout/_main.scss */
+/* line 352, sass/layout/_main.scss */
 .banner-text {
   position: relative;
   z-index: 10;
   padding: 50px 150px 50px 50px;
 }
-/* line 339, sass/layout/_main.scss */
+/* line 357, sass/layout/_main.scss */
 .banner-text .banner-title {
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 3.25em;
@@ -4752,29 +4992,29 @@ main {
   margin-bottom: 25px;
   color: white;
 }
-/* line 347, sass/layout/_main.scss */
+/* line 365, sass/layout/_main.scss */
 .banner-text .banner-cta {
   font-size: 0.75em;
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 352, sass/layout/_main.scss */
+/* line 370, sass/layout/_main.scss */
 .banner-text .banner-cta a {
   color: white;
 }
 
-/* line 358, sass/layout/_main.scss */
+/* line 376, sass/layout/_main.scss */
 .banner-inner {
   height: 300px;
 }
 @media screen and (min-width: 1200px) {
-  /* line 358, sass/layout/_main.scss */
+  /* line 376, sass/layout/_main.scss */
   .banner-inner {
     height: 400px;
   }
 }
 
-/* line 368, sass/layout/_main.scss */
+/* line 386, sass/layout/_main.scss */
 .cta-small {
   font-size: 0.75em;
   text-transform: uppercase;
@@ -4783,7 +5023,7 @@ main {
   position: relative;
   overflow: initial;
 }
-/* line 376, sass/layout/_main.scss */
+/* line 394, sass/layout/_main.scss */
 .cta-small .cta-text {
   position: relative;
   right: 0px;
@@ -4791,7 +5031,7 @@ main {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 383, sass/layout/_main.scss */
+/* line 401, sass/layout/_main.scss */
 .cta-small .cta-text .right {
   display: inline-block;
   width: 1.5em;
@@ -4801,7 +5041,7 @@ main {
   text-align: center;
   line-height: 1.1em;
 }
-/* line 393, sass/layout/_main.scss */
+/* line 411, sass/layout/_main.scss */
 .cta-small .cta-text .right:after {
   content: '';
   display: inline-block;
@@ -4814,7 +5054,7 @@ main {
   transform: rotate(45deg);
 }
 
-/* line 407, sass/layout/_main.scss */
+/* line 425, sass/layout/_main.scss */
 .cta-big {
   margin-top: 50px;
   font-size: 0.75em;
@@ -4824,7 +5064,7 @@ main {
   position: relative;
   overflow: initial;
 }
-/* line 416, sass/layout/_main.scss */
+/* line 434, sass/layout/_main.scss */
 .cta-big .cta-text {
   position: relative;
   right: 0px;
@@ -4832,7 +5072,7 @@ main {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 423, sass/layout/_main.scss */
+/* line 441, sass/layout/_main.scss */
 .cta-big .cta-text .right {
   display: inline-block;
   width: 7em;
@@ -4841,7 +5081,7 @@ main {
   margin-left: 1.5em;
   text-align: center;
 }
-/* line 432, sass/layout/_main.scss */
+/* line 450, sass/layout/_main.scss */
 .cta-big .cta-text .right:after {
   content: '';
   display: inline-block;
@@ -4854,37 +5094,37 @@ main {
   transform: rotate(45deg);
 }
 
-/* line 449, sass/layout/_main.scss */
+/* line 467, sass/layout/_main.scss */
 .callout-news {
   padding: 25px;
   height: 400px;
 }
-/* line 453, sass/layout/_main.scss */
+/* line 471, sass/layout/_main.scss */
 .callout-news .callout-news-headline {
   margin-bottom: 15px;
 }
-/* line 456, sass/layout/_main.scss */
+/* line 474, sass/layout/_main.scss */
 .callout-news .callout-news-headline h5 {
   font-family: "Avenir Next Cyr W00 Heavy";
 }
-/* line 458, sass/layout/_main.scss */
+/* line 476, sass/layout/_main.scss */
 .callout-news .callout-news-headline h5 a {
   color: #3a3a3a;
 }
-/* line 463, sass/layout/_main.scss */
+/* line 481, sass/layout/_main.scss */
 .callout-news .callout-news-headline h6 {
   margin-bottom: 25px;
   font-family: "Avenir Next Cyr W00 Bold";
   color: #3a3a3a;
 }
 
-/* line 471, sass/layout/_main.scss */
+/* line 489, sass/layout/_main.scss */
 .information-holder {
   float: left;
   width: 100%;
 }
 
-/* line 476, sass/layout/_main.scss */
+/* line 494, sass/layout/_main.scss */
 .information-video {
   background: black;
   float: left;
@@ -4892,14 +5132,14 @@ main {
   height: 100%;
 }
 
-/* line 483, sass/layout/_main.scss */
+/* line 501, sass/layout/_main.scss */
 .information-network {
   border-left: 10px solid white;
   float: left;
   width: 100%;
 }
 
-/* line 489, sass/layout/_main.scss */
+/* line 507, sass/layout/_main.scss */
 .information-bar {
   height: 52px;
   background-color: #fec935;
@@ -4910,17 +5150,17 @@ main {
   width: 100%;
 }
 
-/* line 499, sass/layout/_main.scss */
+/* line 517, sass/layout/_main.scss */
 .person {
   width: 25%;
   float: left;
 }
-/* line 503, sass/layout/_main.scss */
+/* line 521, sass/layout/_main.scss */
 .person img {
   float: left;
 }
 
-/* line 510, sass/layout/_main.scss */
+/* line 528, sass/layout/_main.scss */
 section {
   float: left;
   position: relative;
@@ -4928,81 +5168,81 @@ section {
   margin-bottom: 10px;
 }
 
-/* line 517, sass/layout/_main.scss */
+/* line 535, sass/layout/_main.scss */
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
 }
 
-/* line 522, sass/layout/_main.scss */
+/* line 540, sass/layout/_main.scss */
 .email-signup-text {
   padding: 50px;
 }
 
-/* line 526, sass/layout/_main.scss */
+/* line 544, sass/layout/_main.scss */
 .schedule-text {
   float: left;
   padding: 50px;
 }
 
-/* line 531, sass/layout/_main.scss */
+/* line 549, sass/layout/_main.scss */
 .quote-text {
   padding: 50px;
   text-align: center;
 }
 
-/* line 536, sass/layout/_main.scss */
+/* line 554, sass/layout/_main.scss */
 .image {
   height: 300px;
 }
 
-/* line 540, sass/layout/_main.scss */
+/* line 558, sass/layout/_main.scss */
 .image-with-text {
   height: 600px;
 }
 
-/* line 545, sass/layout/_main.scss */
+/* line 563, sass/layout/_main.scss */
 .icon-box {
   width: 33.3%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 550, sass/layout/_main.scss */
+/* line 568, sass/layout/_main.scss */
 .icon-box h5 {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 555, sass/layout/_main.scss */
+/* line 573, sass/layout/_main.scss */
 .schedule-box {
   width: 50%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 560, sass/layout/_main.scss */
+/* line 578, sass/layout/_main.scss */
 .schedule-box .strong {
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 563, sass/layout/_main.scss */
+/* line 581, sass/layout/_main.scss */
 .schedule-box .blue {
   color: #0ebde8;
 }
 
-/* line 568, sass/layout/_main.scss */
+/* line 586, sass/layout/_main.scss */
 .buttons h3, .form h3 {
   margin-bottom: 0;
 }
 
-/* line 572, sass/layout/_main.scss */
+/* line 590, sass/layout/_main.scss */
 .buttons p, .form p {
   margin-bottom: 15px;
 }
 
-/* line 576, sass/layout/_main.scss */
+/* line 594, sass/layout/_main.scss */
 .regular-font {
   font-family: "Avenir Next Cyr W00 Regular";
 }
 
-/* line 580, sass/layout/_main.scss */
+/* line 598, sass/layout/_main.scss */
 .buttons-cta {
   display: inline;
   padding: 25px 35px 25px 25px;
@@ -5012,7 +5252,7 @@ section {
   position: relative;
   float: left;
 }
-/* line 589, sass/layout/_main.scss */
+/* line 607, sass/layout/_main.scss */
 .buttons-cta .right {
   display: inline-block;
   width: 1.5em;
@@ -5023,7 +5263,7 @@ section {
   border: 0.1em solid #2791bd;
   line-height: 1.1em;
 }
-/* line 600, sass/layout/_main.scss */
+/* line 618, sass/layout/_main.scss */
 .buttons-cta .right:after {
   content: '';
   display: inline-block;
@@ -5037,24 +5277,24 @@ section {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
 }
-/* line 614, sass/layout/_main.scss */
+/* line 632, sass/layout/_main.scss */
 .buttons-cta:hover {
   background: white;
   color: #2791bd;
   border: 3px solid #2791bd;
   padding: 22px 32px 22px 22px;
 }
-/* line 620, sass/layout/_main.scss */
+/* line 638, sass/layout/_main.scss */
 .buttons-cta:hover .right {
   border: 0.1em solid #2791bd;
 }
-/* line 623, sass/layout/_main.scss */
+/* line 641, sass/layout/_main.scss */
 .buttons-cta:hover .right::after {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
 }
 
-/* line 632, sass/layout/_main.scss */
+/* line 650, sass/layout/_main.scss */
 .submit-buttons {
   display: inline;
   padding: 10px 20px 10px 10px;
@@ -5065,7 +5305,7 @@ section {
   float: left;
   margin-top: 30px;
 }
-/* line 642, sass/layout/_main.scss */
+/* line 660, sass/layout/_main.scss */
 .submit-buttons .right {
   display: inline-block;
   width: 1.5em;
@@ -5075,7 +5315,7 @@ section {
   text-align: center;
   line-height: 1.1em;
 }
-/* line 652, sass/layout/_main.scss */
+/* line 670, sass/layout/_main.scss */
 .submit-buttons .right:after {
   content: '';
   display: inline-block;
@@ -5088,44 +5328,44 @@ section {
   transform: rotate(45deg);
 }
 
-/* line 666, sass/layout/_main.scss */
+/* line 684, sass/layout/_main.scss */
 .content-half {
   padding-right: 20px;
   margin-top: 20px;
 }
-/* line 670, sass/layout/_main.scss */
+/* line 688, sass/layout/_main.scss */
 .content-half h5 {
   font-family: "Avenir Next Cyr W00 Bold";
   margin-bottom: 0;
 }
 
-/* line 676, sass/layout/_main.scss */
+/* line 694, sass/layout/_main.scss */
 .content-text {
   padding: 50px;
   float: left;
 }
-/* line 680, sass/layout/_main.scss */
+/* line 698, sass/layout/_main.scss */
 .content-text p {
   color: black;
 }
-/* line 684, sass/layout/_main.scss */
+/* line 702, sass/layout/_main.scss */
 .content-text h4 {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 690, sass/layout/_main.scss */
+/* line 708, sass/layout/_main.scss */
 .side-text p {
   margin-bottom: 3px;
   font-size: 10px;
   color: #494949;
 }
 
-/* line 697, sass/layout/_main.scss */
+/* line 715, sass/layout/_main.scss */
 #content {
   float: left;
 }
 
-/* line 702, sass/layout/_main.scss */
+/* line 720, sass/layout/_main.scss */
 .thumbnail {
   float: left;
   width: 100%;
@@ -5133,32 +5373,32 @@ section {
   margin-bottom: 15px;
 }
 
-/* line 709, sass/layout/_main.scss */
+/* line 727, sass/layout/_main.scss */
 .single-post main, .blog main, .page-template-global-network main, main {
   border-top: 5px solid #fec935;
 }
 
-/* line 713, sass/layout/_main.scss */
+/* line 731, sass/layout/_main.scss */
 .page-template-product main, .page-template-panel main {
   border-top: 5px solid #2791bd;
 }
 
-/* line 717, sass/layout/_main.scss */
+/* line 735, sass/layout/_main.scss */
 .parent-page-online-learning main {
   border-top: 5px solid #2791bd;
 }
 
-/* line 721, sass/layout/_main.scss */
+/* line 739, sass/layout/_main.scss */
 .parent-page-residential main {
   border-top: 5px solid #4fd1a1;
 }
 
-/* line 725, sass/layout/_main.scss */
+/* line 743, sass/layout/_main.scss */
 .parent-page-research-ideas main {
   border-top: 5px solid #712880;
 }
 
-/* line 735, sass/layout/_main.scss */
+/* line 753, sass/layout/_main.scss */
 .blog-sidebar {
   padding: 50px 30px;
   background-color: #3a3a3a;
@@ -5167,14 +5407,14 @@ section {
   width: 100%;
 }
 
-/* line 743, sass/layout/_main.scss */
+/* line 761, sass/layout/_main.scss */
 .blog-content {
   float: left;
   padding: 50px;
   width: 100%;
 }
 
-/* line 749, sass/layout/_main.scss */
+/* line 767, sass/layout/_main.scss */
 .blog-sidebar-title {
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -5187,99 +5427,99 @@ section {
   cursor: pointer;
   float: left;
 }
-/* line 761, sass/layout/_main.scss */
+/* line 779, sass/layout/_main.scss */
 .blog-sidebar-title i {
   float: right;
 }
 
-/* line 766, sass/layout/_main.scss */
+/* line 784, sass/layout/_main.scss */
 .blog-sidebar-title-text {
   float: left;
 }
 
-/* line 770, sass/layout/_main.scss */
+/* line 788, sass/layout/_main.scss */
 .blog-categories {
   display: none;
 }
-/* line 773, sass/layout/_main.scss */
+/* line 791, sass/layout/_main.scss */
 .blog-categories ul {
   margin-bottom: 40px;
   float: left;
   width: 100%;
 }
-/* line 778, sass/layout/_main.scss */
+/* line 796, sass/layout/_main.scss */
 .blog-categories ul li {
   padding: 5px;
   float: left;
   width: 100%;
 }
-/* line 783, sass/layout/_main.scss */
+/* line 801, sass/layout/_main.scss */
 .blog-categories ul li a {
   color: #fec935;
   font-size: 15px;
   padding: 5px;
 }
-/* line 789, sass/layout/_main.scss */
+/* line 807, sass/layout/_main.scss */
 .blog-categories ul li.active a {
   background: #fec935;
   color: #3a3a3a;
 }
-/* line 796, sass/layout/_main.scss */
+/* line 814, sass/layout/_main.scss */
 .blog-categories ul li:hover a {
   background: #fec935;
   color: #3a3a3a;
 }
 
-/* line 805, sass/layout/_main.scss */
+/* line 823, sass/layout/_main.scss */
 .blog-post {
   border-top: 5px solid #fec935;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 810, sass/layout/_main.scss */
+/* line 828, sass/layout/_main.scss */
 .blog-post h2 {
   margin-bottom: 15px;
 }
-/* line 813, sass/layout/_main.scss */
+/* line 831, sass/layout/_main.scss */
 .blog-post h2 a {
   color: #3a3a3a;
 }
-/* line 818, sass/layout/_main.scss */
+/* line 836, sass/layout/_main.scss */
 .blog-post h5 {
   font-family: "Avenir Next Cyr W00 Heavy";
 }
-/* line 821, sass/layout/_main.scss */
+/* line 839, sass/layout/_main.scss */
 .blog-post h5 a {
   color: #3a3a3a;
 }
-/* line 826, sass/layout/_main.scss */
+/* line 844, sass/layout/_main.scss */
 .blog-post h6 {
   color: #3a3a3a;
 }
 
-/* line 831, sass/layout/_main.scss */
+/* line 849, sass/layout/_main.scss */
 .blog-post-small {
   padding-right: 20px;
 }
 
-/* line 835, sass/layout/_main.scss */
+/* line 853, sass/layout/_main.scss */
 .blog-post-categories {
   margin-bottom: 10px;
   color: #fec935;
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 841, sass/layout/_main.scss */
+/* line 859, sass/layout/_main.scss */
 .active-category {
   display: block;
 }
 
-/* line 845, sass/layout/_main.scss */
+/* line 863, sass/layout/_main.scss */
 .active-sidebar-title {
   border-bottom: 3px solid #fec935;
 }
 
-/* line 849, sass/layout/_main.scss */
+/* line 867, sass/layout/_main.scss */
 .moretag {
   color: #fec935;
   text-transform: uppercase;
@@ -5287,69 +5527,69 @@ section {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 856, sass/layout/_main.scss */
+/* line 874, sass/layout/_main.scss */
 .social-icons {
   color: #a9a9a9;
 }
-/* line 859, sass/layout/_main.scss */
+/* line 877, sass/layout/_main.scss */
 .social-icons i {
   font-size: 25px;
   margin-right: 20px;
 }
 
-/* line 865, sass/layout/_main.scss */
+/* line 883, sass/layout/_main.scss */
 .news {
   margin-bottom: 0px;
 }
 
-/* line 869, sass/layout/_main.scss */
+/* line 887, sass/layout/_main.scss */
 .image-holder {
   height: 100%;
   display: table !important;
 }
 
-/* line 874, sass/layout/_main.scss */
+/* line 892, sass/layout/_main.scss */
 .image-text {
   padding: 100px 50px;
   display: table-cell;
   vertical-align: middle;
   height: 100%;
 }
-/* line 880, sass/layout/_main.scss */
+/* line 898, sass/layout/_main.scss */
 .image-text h4 {
   color: white;
   margin-bottom: 10px;
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 888, sass/layout/_main.scss */
+/* line 906, sass/layout/_main.scss */
 .mejs-container {
   width: 100% !important;
 }
 
-/* line 892, sass/layout/_main.scss */
+/* line 910, sass/layout/_main.scss */
 .video-holder {
   overflow: hidden;
   height: 400px;
   position: relative;
 }
 
-/* line 898, sass/layout/_main.scss */
+/* line 916, sass/layout/_main.scss */
 .wp-video {
   margin-top: -40%;
 }
 
-/* line 902, sass/layout/_main.scss */
+/* line 920, sass/layout/_main.scss */
 .text-holder {
   background-color: #dcdcdc;
   padding: 60px;
   height: 100%;
 }
-/* line 907, sass/layout/_main.scss */
+/* line 925, sass/layout/_main.scss */
 .text-holder h3 {
   color: #393939;
 }
-/* line 911, sass/layout/_main.scss */
+/* line 929, sass/layout/_main.scss */
 .text-holder p {
   color: #9e9e9e;
 }
