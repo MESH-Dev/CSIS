@@ -349,7 +349,11 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 }
 
 .banner-inner {
-  height: 400px;
+  height: 300px;
+
+  @include mq($desktop-width, 'min-width') {
+    height: 400px;
+  }
 }
 
 // CTA
@@ -522,7 +526,7 @@ section {
 }
 
 .image {
-  height: 400px;
+  height: 300px;
 }
 
 .image-with-text {
