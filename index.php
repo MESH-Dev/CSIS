@@ -31,7 +31,7 @@
 											}
 
 											?>
-										
+
 									</div>
 
 									<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -49,10 +49,17 @@
 
 									<?php the_excerpt(); ?>
 
+									<?php
+
+										$link = get_permalink();
+										$link = str_replace(":", "%3A", $link);
+
+									?>
+
 									<div class="social-icons">
-										<i class="fa fa-twitter"></i>
-										<i class="fa fa-facebook"></i>
-										<i class="fa fa-vimeo"></i>
+										<a href="https://twitter.com/home?status=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-twitter"></i></a>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-vimeo"></i></a>
 									</div>
 								</div>
 
@@ -94,9 +101,9 @@
 									<?php the_excerpt(); ?>
 
 									<div class="social-icons">
-										<i class="fa fa-twitter"></i>
-										<i class="fa fa-facebook"></i>
-										<i class="fa fa-vimeo"></i>
+										<a href="https://twitter.com/home?status=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-twitter"></i></a>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-vimeo"></i></a>
 									</div>
 								</div>
 
