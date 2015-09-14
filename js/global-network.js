@@ -58,6 +58,10 @@ $('.topic-list li').click(function(event) {
 
 });
 
+
+
+
+
 // ------------------------------------------------------
 // ------------------ Filters----------------------------
 // ------------------------------------------------------
@@ -234,15 +238,27 @@ jQuery(document).ready(function($){
 
   });
 
-
-  //GOOGLE MAP
-
+  //URL FILTERS
+   var filter = getParameterByName('filter');
+ 
+   if(filter !==''){
+    $("input[value='" + filter + "']").prop('checked', true);
+    $('#network-grid').mixItUp('filter', filter, GetActiveString);
+    $(".network-filter-status").slideDown();
+  }
 
 
  
 
 
 });
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 
 function initialize() {

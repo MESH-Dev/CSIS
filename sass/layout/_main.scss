@@ -121,6 +121,13 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       color: white;
     }
 
+    .email-response{
+      opacity: 0;
+      transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out; 
+    }
+
     // Callout
 
     .callout {
@@ -476,6 +483,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 .information-network {
   border-left: 10px solid white;
   float: left;
+   width: 100%;
 }
 
 .information-bar {
@@ -710,7 +718,7 @@ section {
   border-top: 5px solid $blue-primary;
 }
 
-.parent-page-residential-experiences main{
+.parent-page-residential main{
   border-top: 5px solid $green-primary;
 }
 

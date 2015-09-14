@@ -20,7 +20,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title><?php bloginfo('name'); ?></title>
+	<title><?php bloginfo('name'); wp_title('|',true);?> </title>
 
 	<!-- Meta / og: tags -->
 	<meta name="description" content="">

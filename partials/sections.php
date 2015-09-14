@@ -487,12 +487,20 @@ if( have_rows('sections') ):
 
             </div>
             <div class="four columns">
-              <span class="input input--hoshi">
-                <input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
-                <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                  <span class="input__label-content input__label-content--hoshi">Email</span>
-                </label>
-              </span>
+              <form id="general-email" >
+                <span class="input input--hoshi">
+                  <input class="input__field input__field--hoshi" type="email" id="email" spellcheck="false" />
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
+                    <span class="input__label-content input__label-content--hoshi">Email</span>
+                  </label>
+                </span>
+              </form>
+              <div id="loader" class="hidden">
+                <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
+              </div>
+              <div class="email-response">
+                
+              </div>
             </div>
           </div>
         </div>
