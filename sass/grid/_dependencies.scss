@@ -117,7 +117,7 @@
 
 // _mobileOffset ( number $colCount )
 @mixin _mobileOffset($colCount) {
-	@include _group($colCount - 1, "offset-by-") { padding-left: 0; }
+	@include _group($colCount - 1, "offset-by-") { margin-left: 0; }
 }
 
 // _group ( number $stop, string $selector, [ string $pos: "before" ] )

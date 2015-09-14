@@ -45,11 +45,10 @@
 			<h6>Center for Social Impact Strategy</h6>
 			<span>University of Pennsylvania School of Social Policy and Practice | 3815 Walnut St Philadelphia, PA 19104 | csis@sp2.upenn.edu</span>
 		</div>
-		<div class="three columns">
-			<div class="footer-attribution">
-				<h6>Site by <a href="http://meshfresh.com/" target="_blank">MESH</a></h6>
-			</div>
-		</div>
+	</div>
+
+	<div class="footer-attribution">
+		<span>Site by <a href="http://meshfresh.com/" target="_blank">MESH</a></span>
 	</div>
 
 </div>

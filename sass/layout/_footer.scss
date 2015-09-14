@@ -118,6 +118,7 @@ footer {
   text-align: center;
   background: #4d4d4d;
   color: #a2a2a2;
+  position: relative;
 
   span {
     font-size: 10px;
@@ -129,4 +130,14 @@ footer {
   left: 50%;
   top: -40px;
   margin-left: -30px;
+}
+
+.footer-attribution {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+
+  a {
+    color: #a2a2a2;
+  }
 }
