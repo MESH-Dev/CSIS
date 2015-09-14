@@ -197,7 +197,7 @@ get_header(); ?>
               <section class="<?php echo $color; ?>" id="<?php echo $n; ?>">
 
                 <div class="quote">
-                  <div class="twelve columns">
+                  <div class="nine columns offset-by-three">
                     <div class="quote-text">
 
                       <h3><?php echo get_sub_field('body_text'); ?></h3>
