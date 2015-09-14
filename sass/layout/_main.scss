@@ -443,12 +443,16 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     margin-bottom: 15px;
 
     h5 {
-      margin-bottom: 10px;
+      font-family: $font-family--heavy;
+      a {
+        color: #3a3a3a;
+      }
     }
 
     h6 {
       margin-bottom: 25px;
-      font-family: $font-family--regular;
+      font-family: $font-family--bold;
+      color: #3a3a3a;
     }
   }
 }
