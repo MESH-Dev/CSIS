@@ -27,6 +27,8 @@ add_action('wp_ajax_getSingleProfile', 'getSingleProfile');
 add_action('wp_ajax_nopriv_getSingleProfile', 'getSingleProfile');  //_nopriv_ allows access for both signed in users, and not
 add_action('wp_ajax_saveGeneralEmail', 'saveGeneralEmail');  
 add_action('wp_ajax_nopriv_saveGeneralEmail', 'saveGeneralEmail'); 
+add_action('wp_ajax_saveProductEmail', 'saveProductEmail');  
+add_action('wp_ajax_nopriv_saveProductEmail', 'saveProductEmail'); 
  
 
 function generateJSON(){
@@ -441,8 +443,36 @@ function getFilterLists($profiles, $listname){
 function saveGeneralEmail(){
 
   $email = $_POST['email'];
+  $to = 'joshdodd@meshfresh.com';
+  $subject = 'New Email List Signup';
+  $body = $email . ' has signed up to the <strong>General Email List</strong>. Please add the email address to the appropriate list.';
+  $headers = array('Content-Type: text/html; charset=UTF-8');
 
-  $output = "Thank you " . $email ."!";
+  wp_mail( $to, $subject, $body, $headers );
+
+  $output = "Thank you for signing up. You have been added to our mailing list!";
+  echo $output;
+
+  die();
+
+
+}
+
+function saveProductEmail(){
+
+  $email = $_POST['email'];
+  $first = $_POST['firstname'];
+  $last = $_POST['lastname'];
+  $product = $_POST['pagename'];
+ 
+  $to = 'joshdodd@meshfresh.com';
+  $subject = 'New Product Email List Signup';
+  $body = $first . ' ' . $last . ', ' . $email . ', has signed up to the '. $product.' list for more information. Please add the email address to the appropriate list.';
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+
+  wp_mail( $to, $subject, $body, $headers );
+
+  $output = "Thank you for signing up. You have been added to our mailing list!";
   echo $output;
 
   die();

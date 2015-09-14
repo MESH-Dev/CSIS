@@ -216,9 +216,6 @@ jQuery(document).ready(function($){
       alert("Please Enter a Valid Email!");
     }
  
-    
-
-
   });
 
   function AddGeneralEmail(email) {
@@ -231,6 +228,75 @@ jQuery(document).ready(function($){
         var data = {
             action: 'saveGeneralEmail',
             email: email
+        };
+
+        jQuery.post(ajaxurl, data, function(response) {
+            // append: add the new statments to the existing data
+            if(response != 0){
+            
+              console.log(response);
+
+              $('.email-response').append(response);
+              $('.email-response').css('opacity',1);
+              is_loading = false;
+              
+
+            }
+            else{
+              $('#loader').hide();
+              is_loading = false;
+
+            }
+        });
+      }
+  }
+
+  $('.form-text .submit-buttons').click(function(e) {
+    e.preventDefault();
+ 
+    var email = $( "input#email" ).val();
+    var firstname = $( "input#first-name" ).val();
+    var lastname = $( "input#last-name" ).val();
+    if (email !== "" && firstname!=="" && lastname!=="" ) {
+      AddProductEmail(email,firstname,lastname);
+    }
+    else{
+      alert("Please Enter All Fields");
+    }
+ 
+  });
+
+  $('form#productEmail').submit(function(e) {
+    e.preventDefault();
+ 
+    var email = $( "input#email" ).val();
+    var firstname = $( "input#first-name" ).val();
+    var lastname = $( "input#last-name" ).val();
+    if (email !== "" && firstname!=="" && lastname!=="" ) {
+      AddProductEmail(email,firstname,lastname);
+    }
+    else{
+      alert("Please Enter All Fields");
+    }
+ 
+  });
+
+  function AddProductEmail(email,firstname,lastname) {
+      var is_loading = false;
+      if (is_loading == false) {
+        is_loading = true;
+        $('form#productEmail').fadeOut('slow');
+        $('#loader').show();
+        var pagename = document.title;
+
+
+        var data = {
+            action: 'saveProductEmail',
+            email: email,
+            firstname: firstname,
+            lastname: lastname,
+            pagename: pagename
+
         };
 
         jQuery.post(ajaxurl, data, function(response) {

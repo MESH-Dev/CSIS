@@ -336,38 +336,45 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
+                        <form action="" id="productEmail">
+                          <div class="input-box">
+                            <span class="input input--hoshi">
+                    					<input class="input__field input__field--hoshi" type="text" id="first-name" spellcheck="false" />
+                    					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="first-name">
+                    						<span class="input__label-content input__label-content--hoshi">First Name</span>
+                    					</label>
+                    				</span>
+                          </div>
 
-                        <div class="input-box">
-                          <span class="input input--hoshi">
-                  					<input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
-                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                  						<span class="input__label-content input__label-content--hoshi">First Name</span>
-                  					</label>
-                  				</span>
-                        </div>
+                          <div class="input-box">
+                            <span class="input input--hoshi">
+                    					<input class="input__field input__field--hoshi" type="text" id="last-name" spellcheck="false" />
+                    					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="last-name">
+                    						<span class="input__label-content input__label-content--hoshi">Last Name</span>
+                    					</label>
+                    				</span>
+                          </div>
 
-                        <div class="input-box">
-                          <span class="input input--hoshi">
-                  					<input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
-                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                  						<span class="input__label-content input__label-content--hoshi">Last Name</span>
-                  					</label>
-                  				</span>
-                        </div>
+                          <div class="input-box">
+                            <span class="input input--hoshi">
+                    					<input class="input__field input__field--hoshi" type="email" id="email" spellcheck="false" />
+                    					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
+                    						<span class="input__label-content input__label-content--hoshi">Email</span>
+                    					</label>
+                    				</span>
+                          </div>
+                          
+                          
+                           <div class="submit-buttons <?php echo $opp; ?>">
+                            Submit
+                            <span class="right"></span>
+                          </div>
 
-                        <div class="input-box">
-                          <span class="input input--hoshi">
-                  					<input class="input__field input__field--hoshi" type="text" id="input-4" spellcheck="false" />
-                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                  						<span class="input__label-content input__label-content--hoshi">Email</span>
-                  					</label>
-                  				</span>
-                        </div>
-
-                        <div class="submit-buttons <?php echo $opp; ?>">
-                          Submit
-                          <span class="right"></span>
-                        </div>
+                        </form> 
+                        <div id="loader" class="hidden">
+                          <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
+                        </div> 
+                        <div class="email-response"></div>
 
                       </div>
 
