@@ -120,8 +120,10 @@ jQuery(document).ready(function($){
 
   var height = $( window ).width() / 2;
 
+
   $('.media').css('height', height);
   $('.media .video-holder').css('height', height);
+
   $('.media .text-holder').css('height', height);
 
 
@@ -132,6 +134,12 @@ jQuery(document).ready(function($){
     $('.media .video-holder').css('height', height);
     $('.media .text-holder').css('height', height);
   });
+
+
+  var yt_height = $('.media .video-container').height();
+  if(yt_height != ''){
+    $('.media .text-holder').css('height', yt_height);
+  }
 
 
 
