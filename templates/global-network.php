@@ -29,7 +29,7 @@ get_header(); ?>
 
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; width:100%; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>);  background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; <?php } ?>">
             <div class="banner-screen"></div>
             <div class="banner-text">
               <div class="banner-title"><?php the_title(); ?></div>

@@ -20,16 +20,16 @@
 				<div class="footer-social">
 					<ul>
 						<li>
-							<a href=""><i class="fa fa-twitter"></i></a>
+							<a href="https://twitter.com/penn_csis" target="_blank"><i class="fa fa-twitter"></i></a>
 						</li>
 						<li>
-							<a href=""><i class="fa fa-facebook"></i></a>
+							<a href="https://www.facebook.com/socialimpactstrategy/" target="_blank"><i class="fa fa-facebook"></i></a>
 						</li>
 						<li>
-							<a href=""><i class="fa fa-instagram"></i></a>
+							<a href="https://instagram.com/penn_csis/" target="_blank"><i class="fa fa-instagram"></i></a>
 						</li>
 						<li>
-							<a href=""><i class="fa fa-youtube"></i></a>
+							<a href="https://www.youtube.com/channel/UCv1r5pVKofVIYPK4RMNU-fQ" target="_blank"><i class="fa fa-youtube"></i></a>
 						</li>
 					</ul>
 				</div>

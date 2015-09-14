@@ -111,7 +111,7 @@ function writeLatLong($profiles){
       $count++;
     
   }
-  print_r($profiles);
+  //print_r($profiles);
   file_put_contents('wp-content/themes/csis/data/user-profiles.json', json_encode($profiles));
 }
 
@@ -186,13 +186,18 @@ function renderProfileGrid($profiles){
         $filter_string .= $filter . ' ';
       }
 
+      $state = '';
+      if($profile['State (USA only)']!=''){
+        $state = ', '. $profile['State (USA only)'];
+      }
+
 
      $output  = '<div class="mix three columns '.$filter_string.'" data-id="'.$count.'" >';
      $output .=    '<div class="network-grid-item " style="background-image: url('.$profile['Profile Picture'] .' ); " >';
      $output .=       '<div class="hover-info">';
      $output .=          '<span class="name">'. $profile['Name | First'] .' '.$profile['Name | Last'] .'</span>';
      $output .=          '<span class="title">'. $profile['Title'] .', '. $profile['Current Organization / School'] .'</span>';
-     $output .=          '<span class="location">'. $profile['City'] .', '. $profile['State (USA only)'] .'</span>';
+     $output .=          '<span class="location">'. $profile['City'] . $state .'</span>';
      $output .=        '</div>';
      $output .=    '</div>';
      $output .= '</div>';
@@ -259,8 +264,8 @@ function getSingleProfile(){
   $bio = htmlentities($profile['Short Bio']);
   $output .=    '<p>'. $bio. '</p>';
 
-  if($profile['Action Statement | I am '] != ''){
-    $output .=    '<span class="green-primary">I am: </span>' . $profile['Action Statement | I am '] . '<br/>';
+  if($profile['Action Statement | I am'] != ''){
+    $output .=    '<span class="green-primary">I am: </span>' . $profile['Action Statement | I am'] . '<br/>';
     $output .=    '<span class="green-primary">to: </span>' . $profile['Action Statement | to'] . '<br/>';
     $output .=    '<span class="green-primary">in order to: </span>' . $profile['Action Statement | in order to'] . '<br/><br/>';
   }
@@ -289,7 +294,7 @@ function getSingleProfile(){
     $output .=    '<li><a href="'.$profile['Social Media Links | Facebook']  .'" target="_blank"><i class="fa fa-facebook"></i></a></li>';
   }
   if($profile['Social Media Links | Twitter'] != ''){
-    $output .=    '<li><a href="'.$profile['Social Media Links | Twitter']  .'" target="_blank"><i class="fa fa-twitter"></i></a></li>';
+    $output .=    '<li><a href="http://twitter.com/'.$profile['Social Media Links | Twitter']  .'" target="_blank"><i class="fa fa-twitter"></i></a></li>';
   }
   if($profile['Social Media Links | Instagram'] != ''){
     $output .=    '<li><a href="'.$profile['Social Media Links | Instagram']  .'" target="_blank"><i class="fa fa-instagram"></i></a></li>';
