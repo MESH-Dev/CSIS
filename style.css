@@ -4972,6 +4972,7 @@ header {
 /* line 7, sass/layout/_header.scss */
 .logo {
   float: left;
+  width: 100%;
 }
 
 /* BASE GRID
