@@ -207,7 +207,7 @@ get_header(); ?>
           </div>
         </form>
 
-
+        <div class="close-filter"><a href="">X</a></div>
       </section>
 
 
@@ -227,6 +227,7 @@ get_header(); ?>
             </span>
           </div>
         </div>
+        <div class="close-filter"><a href="">X</a></div>
       </section>
 
       <section class="network-map  network-filter">
@@ -240,6 +241,7 @@ get_header(); ?>
             </div>
           </div>
         </div>
+        <div class="close-filter"><a href="">X</a></div>
       </section>
 
 

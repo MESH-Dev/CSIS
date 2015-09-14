@@ -23,6 +23,13 @@ $('.network-nav-item').click(function(event) {
 
 });
 
+$('.close-filter').click(function(e) {
+  e.preventDefault();
+   $('.network-filter').hide(); //Hide all dropdowns
+  
+});
+
+
   //Live Search Global Network
  $("input#network-search").keyup(function(){
       // Retrieve the input field text and reset the count to zero
