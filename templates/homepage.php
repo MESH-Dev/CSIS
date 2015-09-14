@@ -25,7 +25,7 @@ get_header(); ?>
 
   <div class="container">
 
-    <section class="banner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+    <section class="banner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center;<?php } ?>">
 
       <div class="banner-screen"></div>
 
@@ -84,22 +84,20 @@ get_header(); ?>
 
           <h3>News</h3>
 
+
+          <?php
+
+          $args = array( 'posts_per_page' => 4, 'offset'=> 1 );
+
+          $myposts = get_posts( $args );
+          foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
           <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
+            <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+            <h6><?php the_time('F j, Y'); ?></h6>
           </div>
-          <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
-          </div>
-          <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
-          </div>
-          <div class="callout-news-headline">
-            <h5>Headline One Goes Here Up to Three Lines</h5>
-            <h6>Jan 13, 2015</h6>
-          </div>
+          <?php endforeach;
+          wp_reset_postdata();?>
+
 
         </div>
 
@@ -150,7 +148,20 @@ get_header(); ?>
       <div class="six columns">
         <div class="information-holder">
           <div class="information-video">
-            <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/<?php echo get_field('homepage_video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+            <?php
+
+              if (get_field('video_type') == 'vimeo') {
+                $video = "https://player.vimeo.com/video/" . get_field('homepage_video');
+              } elseif (get_field('video_type') == 'youtube') {
+                $video = "https://www.youtube.com/embed/" . get_field('homepage_video');
+              } else {
+                $video == '';
+              }
+
+            ?>
+
+            <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
           </div>
         </div>
       </div>

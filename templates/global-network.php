@@ -29,7 +29,7 @@ get_header(); ?>
 
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; width:100%; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; width:100%; <?php } ?>">
             <div class="banner-screen"></div>
             <div class="banner-text">
               <div class="banner-title"><?php the_title(); ?></div>
@@ -170,13 +170,13 @@ get_header(); ?>
             </fieldset>
 
             <fieldset name="year">
- 
+
                 <div class="topic-checkbox checkbox ">
                   <input type="checkbox" value=".2012" data-filter="2012" id=".2012" />
                   <label for=".2012">2012</label>
                 </div>
 
-                
+
                 <div class="topic-checkbox checkbox ">
                   <input type="checkbox" value=".2013" data-filter="2013" id=".2013" />
                   <label for=".2013">2013</label>
@@ -191,7 +191,7 @@ get_header(); ?>
                   <input type="checkbox" value=".2015" data-filter="2015" id=".2015" />
                   <label for=".2015">2015</label>
                 </div>
- 
+
             </fieldset>
 
           </div>

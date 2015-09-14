@@ -182,7 +182,7 @@
 
 		&:nth-child(1) {
 			&:hover, &.current-menu-item {
-				border-bottom: 3px solid $red-primary;
+				border-bottom: 3px solid $purple-tertiary;
 			}
 		}
 		&:nth-child(2) {
@@ -337,7 +337,7 @@
 			position: relative;
 			padding: 0 10px;
 
-			&.current-menu-item a {
+			&.current_page_parent a {
 				color: black;
 			}
 		}

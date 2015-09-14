@@ -45,6 +45,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     .right {
       border: 0.1em solid nth($color_vars, $i);
       display: inline-block;
+      position: relative;
+      top: -1px;
     }
 
     .right:after {
@@ -52,7 +54,32 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       border-right: 0.1em solid nth($color_vars, $i);
     }
 
-    &.submit-buttons, &.buttons-cta {
+    &.buttons-cta {
+      .right {
+        border: 0.1em solid nth($color_vars, $i);
+      }
+      .right::after {
+        border-top: 0.1em solid nth($color_vars, $i);
+        border-right: 0.1em solid nth($color_vars, $i);
+      }
+
+      &:hover {
+        background: nth($color_vars, $i);
+        color: white;
+        border: 3px solid white;
+        padding: 22px 32px 22px 22px;
+
+        .right {
+          border: 0.1em solid white;
+        }
+        .right::after {
+          border-top: 0.1em solid white;
+          border-right: 0.1em solid white;
+        }
+      }
+    }
+
+    &.submit-buttons {
       .right {
         border: 0.1em solid nth($color_vars, $i);
       }
@@ -123,6 +150,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     .right {
       border: 0.1em solid nth($color_vars, $i);
       display: inline-block;
+      position: relative;
+      top: -1px;
     }
 
     .right:after {
@@ -168,8 +197,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     .quote{
 
-      .cta-text{ 
- 
+      .cta-text{
+
         a{
           color: white;
           .right{
@@ -179,14 +208,14 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
               border-top: 0.1em solid white;
               border-right: 0.1em solid white;
             }
-        
+
           &:hover{@include opacity(0.7)}
 
-           
+
         }
       }
       .cta-small {
- 
+
         .cta-text {
           display: block;
         }
@@ -328,6 +357,10 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
 .banner-inner {
   height: 300px;
+
+  @include mq($desktop-width, 'min-width') {
+    height: 400px;
+  }
 }
 
 // CTA
@@ -338,7 +371,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   font-family: $font-family--bold;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: initial;
 
   .cta-text {
     position: relative;
@@ -378,7 +411,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   font-family: $font-family--bold;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: initial;
 
   .cta-text {
     position: relative;
@@ -421,12 +454,16 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
     margin-bottom: 15px;
 
     h5 {
-      margin-bottom: 10px;
+      font-family: $font-family--heavy;
+      a {
+        color: #3a3a3a;
+      }
     }
 
     h6 {
       margin-bottom: 25px;
-      font-family: $font-family--regular;
+      font-family: $font-family--bold;
+      color: #3a3a3a;
     }
   }
 }
@@ -497,7 +534,7 @@ section {
 }
 
 .image {
-  height: 400px;
+  height: 300px;
 }
 
 .image-with-text {
@@ -579,7 +616,7 @@ section {
     color: $blue-primary;
     border: 3px solid $blue-primary;
     padding: 22px 32px 22px 22px;
-    
+
     .right {
       border: 0.1em solid $blue-primary;
     }
@@ -686,7 +723,7 @@ section {
 }
 
 .parent-page-research-ideas main{
-  border-top: 5px solid $red-primary;
+  border-top: 5px solid $purple-tertiary;
 }
 
 
@@ -847,9 +884,6 @@ section {
   }
 }
 
-.media {
-  height: 400px;
-}
 
 .mejs-container {
   width: 100% !important;
@@ -868,27 +902,13 @@ section {
 .text-holder{
   background-color: #dcdcdc;
   padding: 60px;
+  height: 100%;
+
   h3{
-   
+
     color: #393939;
   }
   p{
     color: #9e9e9e;
   }
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
- 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }

@@ -52,7 +52,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="<?php echo get_sub_field('color'); ?>-background" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+      <section class="<?php echo get_sub_field('color'); ?>-background" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>">
 
         <div class="callout-screen">
 
@@ -60,7 +60,7 @@ if( have_rows('sections') ):
 
             <div class="ten columns">
               <div class="callout-text">
-                <h2><a href="<?php echo get_field('banner_link'); ?>"><?php echo get_sub_field('section_title'); ?></a></h2>
+                <h2><a href="<?php echo get_sub_field('link_1'); ?>"><?php echo get_sub_field('section_title'); ?></a></h2>
                 <p><?php echo get_sub_field('body_text'); ?></p>
               </div>
             </div>
@@ -68,13 +68,7 @@ if( have_rows('sections') ):
               <?php if (get_sub_field('link_1')) { ?><a href="<?php echo get_sub_field('link_1'); ?>"><?php } ?>
                 <div class="cta-big">
                   <div class="cta-text">
-                    <?php if (get_field('banner_link')) { ?><a href="<?php echo get_field('banner_link'); ?>"><?php } ?>
-
-                      <?php echo get_field('banner_link_text'); ?>
-
-                      <span class="right"></span>
-
-                    <?php if (get_field('banner_link')) { ?></a><?php } ?>
+                    <span class="right"></span>
                   </div>
                 </div>
               <?php if (get_sub_field('link_1')) { ?></a><?php } ?>
@@ -136,7 +130,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" >
+      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" >
         <div class="four columns image-holder">
           <div class="image-text">
             <?php echo get_sub_field('body_text'); ?>
@@ -150,7 +144,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" >
+      <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" >
       </section>
 
 
@@ -160,9 +154,21 @@ if( have_rows('sections') ):
 
       ?>
 
+      <?php
+
+        if (get_field('video_type') == 'vimeo') {
+          $video = "https://player.vimeo.com/video/" . get_sub_field('video');
+        } elseif (get_field('video_type') == 'youtube') {
+          $video = "https://www.youtube.com/embed/" . get_sub_field('video');
+        } else {
+          $video == '';
+        }
+
+      ?>
+
       <section class="video" >
 
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/<?php echo get_sub_field('video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/<?php echo get_sub_field('video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 
       </section>
 
@@ -251,7 +257,7 @@ if( have_rows('sections') ):
 
                 ?>
 
-                <div class="six columns <?php echo get_sub_field('color'); ?>-background hover" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+                <div class="six columns <?php echo get_sub_field('color'); ?>-background hover" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>">
 
                   <div class="callout-screen hover">
 
@@ -315,7 +321,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; <?php } ?>">
+                  <div class="six columns media-item media-image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; background-repeat: no-repeat; <?php } ?>">
                   </div>
 
                   <?php
@@ -325,7 +331,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns">
+                  <div class="six columns media-item media-video">
 
                     <div class="video-holder">
                       <?php
@@ -346,16 +352,17 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns">
+                  <div class="six columns media-item">
 
                     <div class="video-container">
+
                       <?php
 
                       $video = get_sub_field('2-column_youtube');
-                      echo $video;
 
                       ?>
-                      <iframe width="640" height="360" src="<?php echo $video;?>" frameborder="0" allowfullscreen></iframe>
+
+                      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 
                     </div>
 
@@ -366,7 +373,7 @@ if( have_rows('sections') ):
 
                 }
                 else { ?>
-                  <div class="six columns">
+                  <div class="six columns media-item">
 
                     <div class="text-holder">
                       <?php
