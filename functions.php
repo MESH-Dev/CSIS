@@ -188,7 +188,7 @@ function renderProfileGrid($profiles){
 
 
      $output  = '<div class="mix three columns '.$filter_string.'" data-id="'.$count.'" >';
-     $output .=    '<div class="network-grid-item " style="background-image: url(http:'.$profile['Profile Picture'] .' ); " >';
+     $output .=    '<div class="network-grid-item " style="background-image: url('.$profile['Profile Picture'] .' ); " >';
      $output .=       '<div class="hover-info">';
      $output .=          '<span class="name">'. $profile['Name | First'] .' '.$profile['Name | Last'] .'</span>';
      $output .=          '<span class="title">'. $profile['Title'] .', '. $profile['Current Organization / School'] .'</span>';
@@ -216,7 +216,7 @@ function renderHomeProfileGrid(){
   for($count = 0; $count < 8; $count++) {
      $id = $rand_items[$count];
      $output  = '<div class="three columns " data-id="'.$id.'" >';
-     $output .=    '<a class="no-opacity" href="'.get_bloginfo('url').'/global-network"><div class="network-grid-item " style="background-image: url(http:'.$profiles[$id]['Profile Picture'] .' ); " >';
+     $output .=    '<a class="no-opacity" href="'.get_bloginfo('url').'/global-network"><div class="network-grid-item " style="background-image: url('.$profiles[$id]['Profile Picture'] .' ); " >';
     // $output .=       '<div class="hover-info">';
     // $output .=          '<span class="name">'. $profiles[$id]['Name | First'] .' '.$profiles[$id]['Name | Last'] .'</span>';
     // $output .=          '<span class="title">'. $profiles[$id]['Title'] .', '. $profiles[$id]['Current Organization / School'] .'</span>';
@@ -286,16 +286,16 @@ function getSingleProfile(){
   $output .=  '<ul>';
   
   if($profile['Social Media Links | Facebook'] != ''){
-    $output .=    '<li><a href="'.$profile['Social Media Links | Facebook']  .' target="_blank"><i class="fa fa-facebook"></i></a></li>';
+    $output .=    '<li><a href="'.$profile['Social Media Links | Facebook']  .'" target="_blank"><i class="fa fa-facebook"></i></a></li>';
   }
   if($profile['Social Media Links | Twitter'] != ''){
-    $output .=    '<li><a href="'.$profile['Social Media Links | Twitter']  .' target="_blank"><i class="fa fa-twitter"></i></a></li>';
+    $output .=    '<li><a href="'.$profile['Social Media Links | Twitter']  .'" target="_blank"><i class="fa fa-twitter"></i></a></li>';
   }
   if($profile['Social Media Links | Instagram'] != ''){
-    $output .=    '<li><a href="'.$profile['Social Media Links | Instagram']  .' target="_blank"><i class="fa fa-instagram"></i></a></li>';
+    $output .=    '<li><a href="'.$profile['Social Media Links | Instagram']  .'" target="_blank"><i class="fa fa-instagram"></i></a></li>';
   }
   if($profile['Social Media Links | LinkedIn'] != ''){
-    $output .=    '<li><a href="'.$profile['Social Media Links | LinkedIn']  .' target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+    $output .=    '<li><a href="'.$profile['Social Media Links | LinkedIn']  .'" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
   }
   $output .=  '</ul></div>';
         
