@@ -17,17 +17,7 @@ get_header(); ?>
       //$profile = getSingleProfile($profiles,0);
       //echo $profile['Name | Last'];
       //$filterarray = getFilterLists($profiles, 'Impact | Affiliation | Expertise | Geographic | Year');
-
-
-
-
-
-
-
-
-
-
-
+ 
 
       if (get_field('banner') == 'image') {
         $image = get_field('banner_image');

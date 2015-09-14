@@ -161,11 +161,8 @@ get_header(); ?>
               Global Network
             </div>
 
-            <?php for($x = 0; $x < 8; $x++) { ?>
-              <div class="person">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/portrait.jpg" />
-              </div>
-            <?php } ?>
+            <?php renderHomeProfileGrid(); ?>
+            
           </div>
         </div>
       </div>

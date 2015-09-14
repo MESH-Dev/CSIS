@@ -31,7 +31,7 @@ add_action('wp_ajax_nopriv_getSingleProfile', 'getSingleProfile');  //_nopriv_ a
 function generateJSON(){
 	//header('Content-type: application/json');
 	// Set your CSV feed
-	$feed = get_bloginfo('template_directory') . '/data/test.csv';
+	$feed = get_bloginfo('template_directory') . '/data/user-profiles-test.csv';
 	// Arrays we'll use later
 	$keys = array();
 	$newArray = array();
@@ -49,11 +49,14 @@ function generateJSON(){
 	  } 
 	  return $arr; 
 	} 
+
 	// Do it
 	$data = csvToArray($feed, ',');
+  
+
 	// Set number of elements (minus 1 because we shift off the first row)
 	$count = count($data) - 1;
-	  
+ 
 	//Use first row for names  
 	$labels = array_shift($data);  
 	foreach ($labels as $label) {
@@ -64,12 +67,14 @@ function generateJSON(){
 	for ($i = 0; $i < $count; $i++) {
 	  $data[$i][] = $i;
 	}
-	  
+
+
 	// Bring it all together
 	for ($j = 0; $j < $count; $j++) {
 	  $d = array_combine($keys, $data[$j]);
 	  $newArray[$j] = $d;
 	}
+
 
 	$jsonfile = get_bloginfo('template_directory') . '/data/user-profiles.json';
 
@@ -197,6 +202,34 @@ function renderProfileGrid($profiles){
   return 0;
 
  	
+}
+
+function renderHomeProfileGrid(){
+  $profiles = getProfileArray();
+  $count = 0;
+
+  $rand_items = array_rand($profiles, 8);
+  //print_r($rand_items);
+  for($count = 0; $count < 8; $count++) {
+     $id = $rand_items[$count];
+     $output  = '<div class="three columns " data-id="'.$id.'" >';
+     $output .=    '<a class="no-opacity" href="'.get_bloginfo('url').'/global-network"><div class="network-grid-item " style="background-image: url(http:'.$profiles[$id]['Profile Picture'] .' ); " >';
+    // $output .=       '<div class="hover-info">';
+    // $output .=          '<span class="name">'. $profiles[$id]['Name | First'] .' '.$profiles[$id]['Name | Last'] .'</span>';
+    // $output .=          '<span class="title">'. $profiles[$id]['Title'] .', '. $profiles[$id]['Current Organization / School'] .'</span>';
+    // $output .=          '<span class="location">'. $profiles[$id]['City'] .', '. $profiles[$id]['State (USA only)'] .'</span>';
+    // $output .=        '</div>';
+     $output .=    '</div></a>';
+     $output .= '</div>';
+
+     echo $output;
+   
+
+  }
+
+  return 0;
+
+  
 }
 
 function getSingleProfile(){
