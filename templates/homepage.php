@@ -25,7 +25,7 @@ get_header(); ?>
 
   <div class="container">
 
-    <section class="banner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+    <section class="banner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>">
 
       <div class="banner-screen"></div>
 

@@ -30,7 +30,7 @@ get_header(); ?>
 
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>">
 
             <div class="banner-screen"></div>
 
@@ -172,7 +172,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" id="<?php echo $n; ?>">
+              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" id="<?php echo $n; ?>">
               </section>
 
 

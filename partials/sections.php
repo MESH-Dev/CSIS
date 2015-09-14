@@ -52,7 +52,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="<?php echo get_sub_field('color'); ?>-background" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+      <section class="<?php echo get_sub_field('color'); ?>-background" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>">
 
         <div class="callout-screen">
 
@@ -130,7 +130,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" >
+      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" >
         <div class="four columns image-holder">
           <div class="image-text">
             <?php echo get_sub_field('body_text'); ?>
@@ -144,7 +144,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>" >
+      <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" >
       </section>
 
 
@@ -257,7 +257,7 @@ if( have_rows('sections') ):
 
                 ?>
 
-                <div class="six columns <?php echo get_sub_field('color'); ?>-background hover" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; <?php } ?>">
+                <div class="six columns <?php echo get_sub_field('color'); ?>-background hover" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>">
 
                   <div class="callout-screen hover">
 
@@ -321,7 +321,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns media-item media-image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; <?php } ?>">
+                  <div class="six columns media-item media-image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; background-repeat: no-repeat; <?php } ?>">
                   </div>
 
                   <?php
