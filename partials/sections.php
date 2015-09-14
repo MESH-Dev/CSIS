@@ -60,7 +60,7 @@ if( have_rows('sections') ):
 
             <div class="ten columns">
               <div class="callout-text">
-                <h2><a href="<?php echo get_field('banner_link'); ?>"><?php echo get_sub_field('section_title'); ?></a></h2>
+                <h2><a href="<?php echo get_field('link_1'); ?>"><?php echo get_sub_field('section_title'); ?></a></h2>
                 <p><?php echo get_sub_field('body_text'); ?></p>
               </div>
             </div>
@@ -68,13 +68,9 @@ if( have_rows('sections') ):
               <?php if (get_sub_field('link_1')) { ?><a href="<?php echo get_sub_field('link_1'); ?>"><?php } ?>
                 <div class="cta-big">
                   <div class="cta-text">
-                    <?php if (get_field('banner_link')) { ?><a href="<?php echo get_field('banner_link'); ?>"><?php } ?>
-
-                      <?php echo get_field('banner_link_text'); ?>
 
                       <span class="right"></span>
 
-                    <?php if (get_field('banner_link')) { ?></a><?php } ?>
                   </div>
                 </div>
               <?php if (get_sub_field('link_1')) { ?></a><?php } ?>
