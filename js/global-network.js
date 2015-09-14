@@ -59,6 +59,59 @@ $('.topic-list li').click(function(event) {
 });
 
 
+  //Profile Popup
+  $('.close-profile a').click(function(e) {
+    e.preventDefault();
+    $('.profile-container').fadeOut('slow');
+  });
+
+  $('.network-grid-item').click(function(e) {
+    var itemOffset = $(this).offset().top;
+    $('.profile-container').css('top',itemOffset+'px');
+    var profile_id = $(this).parent().attr('data-id');
+    $('.profile-container').fadeIn('slow');
+    $('.profile-content').css('opacity',0);
+    loadProfile(profile_id);
+  });
+
+
+
+
+
+  function loadProfile(profile_id) {
+      var is_loading = false;
+      if (is_loading == false) {
+        is_loading = true;
+
+        $('#loader').show();
+
+        var data = {
+            action: 'getSingleProfile',
+            profile_id: profile_id
+        };
+
+        jQuery.post(ajaxurl, data, function(response) {
+            // append: add the new statments to the existing data
+            if(response != 0){
+              $('.profile-content').empty();
+              console.log(response);
+
+              $('.profile-content').append(response);
+              $('.profile-content').css('opacity',1);
+              is_loading = false;
+
+
+            }
+            else{
+              $('#loader').hide();
+              is_loading = false;
+
+            }
+        });
+      }
+  }
+
+
 
 
 
@@ -240,16 +293,31 @@ jQuery(document).ready(function($){
 
   //URL FILTERS
    var filter = getParameterByName('filter');
+
+   
  
-   if(filter !==''){
+  if(filter !==''){
     $("input[value='" + filter + "']").prop('checked', true);
     $('#network-grid').mixItUp('filter', filter, GetActiveString);
     $(".network-filter-status").slideDown();
   }
 
+  // //Show profile from url
+  // var profile_id = getParameterByName('profile');
+  // if(profile_id !==''){
+  //   var itemOffset = $('#22').offset().top;
+  //   console.log(itemOffset);
+  //   $('.profile-container').css('top',itemOffset+'px');
+  //   $('.profile-container').fadeIn('slow');
+  //   $('.profile-content').css('opacity',0);
+  //   loadProfile(profile_id);
 
+  //   $('html, body').animate({
+  //       scrollTop: itemOffset
+  //   }, 1000);
+
+  // }
  
-
 
 });
 
@@ -283,7 +351,7 @@ function initialize() {
   $.getJSON(templateUrl+'/data/user-profiles.json', function(data){
     for (var i = 0; i < data.length; i++) {
       var address = data[i]['City'] + ' ' + data[i]["State (USA only)"] + ' ' + data[i]["Country"];
-      var contentString = ''+ data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '<br><br>' + address;
+      var contentString = '<img src="'+data[i]["Profile Picture"] +'" style="width: 15%; display: inline; float: left;"><div style="display: inline; float: left;"><a href="#" class="map-link" data-id='+ i + '>'+ data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '</a><br>' + address+"</div>";
       var lat =   data[i]["Lat"];
       var lng =   data[i]["Lng"];
 
@@ -292,7 +360,7 @@ function initialize() {
         var marker = new google.maps.Marker({position: latlng, map: map, html: contentString});
         google.maps.event.addListener(marker, "click", function () {
            infowindow.setContent(this.html);
-            infowindow.open(map, this);
+           infowindow.open(map, this);
         });
         markers.push(marker);
       }
@@ -301,11 +369,29 @@ function initialize() {
 
   });
 
+  var $selector = 'a.map-link'; //class for your infobox buttons list
+    $(document).on('click', $selector, function(e){
+     e.preventDefault();
+     //var itemOffset = $(this).offset().top;
+    var profile_id = $(this).attr('data-id');
+    var itemOffset = $('.mix[data-id='+profile_id+']').offset().top;
+
+    $('.profile-container').css('top',itemOffset+'px');
+    $('.profile-container').fadeIn('slow');
+    $('.profile-content').css('opacity',0);
+    loadProfile(profile_id);
+    $('html, body').animate({
+       scrollTop: itemOffset
+     }, 1000);
+  });
+
+ 
 
 
 
 
-  var markerCluster = new MarkerClusterer(map, markers);
+
+  //var markerCluster = new MarkerClusterer(map, markers);
 
 
 }
