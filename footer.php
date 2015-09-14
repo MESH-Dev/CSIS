@@ -2,9 +2,11 @@
 
 <footer>
 
-	<div class="shield">
-		<img src="<?php echo get_template_directory_uri(); ?>/img/shield.png" />
-	</div>
+	<a href="http://www.upenn.edu/" target="_blank">
+		<div class="shield">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/shield.png" />
+		</div>
+	</a>
 
 	<div class="container">
 		<div class="row">
@@ -38,8 +40,18 @@
 </footer>
 
 <div class="footer-bottom">
-	<h6>Center for Social Impact Strategy</h6>
-	<span>22 West Elm Road, Pleasantville, US 11222 | + 1 555 987 6543 | contactsocialimpactstrategy.com</span>
+	<div class="container">
+		<div class="six columns offset-by-three">
+			<h6>University of Pennsylvania School of Social Policy and Practice</h6>
+			<span>3815 Walnut St Philadelphia, PA 19104 | csis@sp2.upenn.edu</span>
+		</div>
+		<div class="three columns">
+			<div class="footer-attribution">
+				<h6>Site by <a href="http://meshfresh.com/" target="_blank">MESH</a></h6>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 <?php wp_footer(); ?>
