@@ -42,8 +42,8 @@
 <div class="footer-bottom">
 	<div class="container">
 		<div class="six columns offset-by-three">
-			<h6>University of Pennsylvania School of Social Policy and Practice</h6>
-			<span>3815 Walnut St Philadelphia, PA 19104 | csis@sp2.upenn.edu</span>
+			<h6>Center for Social Impact Strategy</h6>
+			<span>University of Pennsylvania School of Social Policy and Practice | 3815 Walnut St Philadelphia, PA 19104 | csis@sp2.upenn.edu</span>
 		</div>
 		<div class="three columns">
 			<div class="footer-attribution">

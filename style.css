@@ -4746,7 +4746,7 @@ section {
 
 /* line 709, sass/layout/_main.scss */
 .parent-page-research-ideas main {
-  border-top: 5px solid #bc4851;
+  border-top: 5px solid #712880;
 }
 
 /* line 719, sass/layout/_main.scss */
@@ -5391,7 +5391,7 @@ header {
 }
 /* line 184, sass/modules/_menus.scss */
 .main-navigation li:nth-child(1):hover, .main-navigation li:nth-child(1).current-menu-item {
-  border-bottom: 3px solid #bc4851;
+  border-bottom: 3px solid #712880;
 }
 /* line 189, sass/modules/_menus.scss */
 .main-navigation li:nth-child(2):hover, .main-navigation li:nth-child(2).current-menu-item {
