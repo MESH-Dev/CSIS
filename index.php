@@ -19,17 +19,19 @@
 
 								<div class="blog-post">
 									<div class="blog-post-categories">
-										<?php
-										$post_categories = wp_get_post_categories( get_the_id() );
-										$cats = array();
 
-										foreach($post_categories as $c){
-											$cat = get_category( $c );
-											$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-											echo $cat->name;
-										}
+											<?php
+											$post_categories = wp_get_post_categories( get_the_id() );
+											$cats = array();
 
-										?>
+											foreach($post_categories as $c){
+												$cat = get_category( $c );
+												$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+												echo $cat->name;
+											}
+
+											?>
+										
 									</div>
 
 									<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>

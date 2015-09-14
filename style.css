@@ -5545,7 +5545,7 @@ header {
   padding: 0 10px;
 }
 /* line 337, sass/modules/_menus.scss */
-.utilities-nav ul li.current-menu-item a {
+.utilities-nav ul li.current_page_parent a {
   color: black;
 }
 
