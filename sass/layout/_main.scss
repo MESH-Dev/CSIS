@@ -52,7 +52,32 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       border-right: 0.1em solid nth($color_vars, $i);
     }
 
-    &.submit-buttons, &.buttons-cta {
+    &.buttons-cta {
+      .right {
+        border: 0.1em solid nth($color_vars, $i);
+      }
+      .right::after {
+        border-top: 0.1em solid nth($color_vars, $i);
+        border-right: 0.1em solid nth($color_vars, $i);
+      }
+
+      &:hover {
+        background: nth($color_vars, $i);
+        color: white;
+        border: 3px solid white;
+        padding: 22px 32px 22px 22px;
+
+        .right {
+          border: 0.1em solid white;
+        }
+        .right::after {
+          border-top: 0.1em solid white;
+          border-right: 0.1em solid white;
+        }
+      }
+    }
+
+    &.submit-buttons {
       .right {
         border: 0.1em solid nth($color_vars, $i);
       }
@@ -858,7 +883,7 @@ section {
   background-color: #dcdcdc;
   padding: 60px;
   height: 100%;
-  
+
   h3{
 
     color: #393939;
