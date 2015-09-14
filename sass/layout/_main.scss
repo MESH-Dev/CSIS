@@ -161,8 +161,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
     .quote{
 
-      .cta-text{ 
- 
+      .cta-text{
+
         a{
           color: white;
           .right{
@@ -172,14 +172,14 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
               border-top: 0.1em solid white;
               border-right: 0.1em solid white;
             }
-        
+
           &:hover{@include opacity(0.7)}
 
-           
+
         }
       }
       .cta-small {
- 
+
         .cta-text {
           display: block;
         }
@@ -571,7 +571,7 @@ section {
     color: $blue-primary;
     border: 3px solid $blue-primary;
     padding: 22px 32px 22px 22px;
-    
+
     .right {
       border: 0.1em solid $blue-primary;
     }
@@ -839,9 +839,6 @@ section {
   }
 }
 
-.media {
-  height: 400px;
-}
 
 .mejs-container {
   width: 100% !important;
@@ -860,27 +857,13 @@ section {
 .text-holder{
   background-color: #dcdcdc;
   padding: 60px;
+  height: 100%;
+  
   h3{
-   
+
     color: #393939;
   }
   p{
     color: #9e9e9e;
   }
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
- 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }

@@ -121,35 +121,22 @@ jQuery(document).ready(function($){
   var height = $( window ).width() / 2;
 
 
-  $('.media').css('height', height);
-  $('.media .video-holder').css('height', height);
+  $('.media-video').css('height', height);
+  $('.media-image').css('height', height);
+  $('.media-video .video-holder').css('height', height);
 
-  $('.media .text-holder').css('height', height);
-
+  $('.media-item').matchHeight();
 
   $(window).resize(function() {
     var height = $( window ).width() / 2;
-    var yt_height = $('.media .video-container').height();
-    if(yt_height != ''){
-      $('.media .text-holder').css('height', yt_height);
-    }
 
-    $('.media').css('height', height);
-    $('.media .video-holder').css('height', height);
-    $('.media .text-holder').css('height', height);
+    $('.media-video').css('height', height);
+    $('.media-image').css('height', height);
+    $('.media-video .video-holder').css('height', height);
+
+    $('.media-item').matchHeight();
+
   });
-
-
-  var yt_height = $('.media .video-container').height();
-  if(yt_height != ''){
-    $('.media .text-holder').css('height', yt_height);
-  }
-
-
-
-
-
-
 
 
   //Profile Popup
@@ -190,7 +177,7 @@ jQuery(document).ready(function($){
               $('.profile-content').append(response);
               $('.profile-content').css('opacity',1);
               is_loading = false;
-              
+
 
             }
             else{
@@ -229,7 +216,7 @@ jQuery(document).ready(function($){
   $('.blog-post-small').matchHeight();
   $('.blog-section').matchHeight();
   $('.information-holder').matchHeight();
- 
+
 
   $('.banner').parallax("20%", -0.5);
 

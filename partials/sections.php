@@ -321,7 +321,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; <?php } ?>">
+                  <div class="six columns media-item media-image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; <?php } ?>">
                   </div>
 
                   <?php
@@ -331,7 +331,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns">
+                  <div class="six columns media-item media-video">
 
                     <div class="video-holder">
                       <?php
@@ -352,16 +352,17 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns">
+                  <div class="six columns media-item">
 
                     <div class="video-container">
+
                       <?php
 
                       $video = get_sub_field('2-column_youtube');
-                      echo $video;
 
                       ?>
-                      <iframe width="640" height="360" src="<?php echo $video;?>" frameborder="0" allowfullscreen></iframe>
+
+                      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 
                     </div>
 
@@ -372,7 +373,7 @@ if( have_rows('sections') ):
 
                 }
                 else { ?>
-                  <div class="six columns">
+                  <div class="six columns media-item">
 
                     <div class="text-holder">
                       <?php
