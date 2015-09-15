@@ -172,7 +172,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" id="<?php echo $n; ?>">
+              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-position-y: 20%;  <?php } ?>" id="<?php echo $n; ?>">
               </section>
 
 
