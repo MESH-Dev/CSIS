@@ -6017,7 +6017,7 @@ header {
   padding: 0 10px;
 }
 /* line 339, sass/modules/_menus.scss */
-.utilities-nav ul li.current_page_parent a, .utilities-nav ul li.current_page_ancestor a {
+.utilities-nav ul li.current_page_parent a, .utilities-nav ul li.current-menu-item a, .utilities-nav ul li.current-page-ancestor a {
   color: black;
 }
 
