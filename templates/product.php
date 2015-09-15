@@ -334,7 +334,6 @@ get_header(); ?>
 
               elseif ( get_sub_field('section_type') == 'form' ) :
 
-                $n++;
 
               ?>
 
