@@ -826,6 +826,10 @@ section {
   float: left;
   padding: 50px;
   width: 100%;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+  }
 }
 
 .blog-sidebar-title {
@@ -895,6 +899,7 @@ section {
 
     a {
       color: #3a3a3a;
+      word-break: break-word;
     }
   }
 
