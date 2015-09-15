@@ -5004,11 +5004,11 @@ main {
 }
 
 /* line 376, sass/layout/_main.scss */
-.parent-page-story-page .banner-inner {
+.page-template-story .banner-inner {
   height: 500px;
 }
 /* line 379, sass/layout/_main.scss */
-.parent-page-story-page .banner-inner .banner-text {
+.page-template-story .banner-inner .banner-text {
   text-align: center;
   margin-top: 260px;
 }
