@@ -80,6 +80,7 @@
 											$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
 											echo $cat->name;
 										}
+										$link = get_permalink();
 
 										?>
 									</div>
@@ -113,7 +114,11 @@
 
 					<?php $i++; ?>
 					<?php endwhile; ?>
+					<?php $args = array('next_text'  => __('Load More Posts'))?>
+					<div id="loadmore-posts"><?php echo paginate_links($args); ?></div>
+					<div id="loader" class="hidden"><img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt=""></div>
 				</div>
+				
 			</div>
 	</div>
 

@@ -5661,7 +5661,7 @@ section {
 }
 
 /* line 988, sass/layout/_main.scss */
-#byscripts_ajax_posts_loader_trigger {
+#loadmore-posts {
   clear: both;
   width: 20%;
   text-align: center;
@@ -5675,10 +5675,27 @@ section {
   margin-top: 10px;
 }
 /* line 1001, sass/layout/_main.scss */
-#byscripts_ajax_posts_loader_trigger:hover {
+#loadmore-posts:hover {
   background-color: white;
   color: #fec935;
   cursor: pointer;
+}
+
+/* line 1008, sass/layout/_main.scss */
+.page-numbers {
+  display: none;
+}
+
+/* line 1009, sass/layout/_main.scss */
+a.next.page-numbers {
+  display: block;
+  color: white;
+}
+
+/* line 1010, sass/layout/_main.scss */
+a.next.page-numbers:hover {
+  display: block;
+  color: #fec935;
 }
 
 /* line 1, sass/layout/_header.scss */

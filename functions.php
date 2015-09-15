@@ -29,6 +29,81 @@ add_action('wp_ajax_saveGeneralEmail', 'saveGeneralEmail');
 add_action('wp_ajax_nopriv_saveGeneralEmail', 'saveGeneralEmail'); 
 add_action('wp_ajax_saveProductEmail', 'saveProductEmail');  
 add_action('wp_ajax_nopriv_saveProductEmail', 'saveProductEmail'); 
+add_action( 'wp_ajax_nopriv_loadPosts', 'loadPosts' );
+add_action( 'wp_ajax_loadPosts', 'loadPosts' );
+
+function loadPosts() {
+    $query_vars = json_decode( stripslashes( $_POST['query_vars'] ), true );
+
+    $query_vars['paged'] = $_POST['page'];
+
+    $posts = new WP_Query( $query_vars );
+    $GLOBALS['wp_query'] = $posts;
+ 
+    if( ! $posts->have_posts() ) { 
+        get_template_part( 'content', 'none' );
+    }
+    else {
+        while ( $posts->have_posts() ) { 
+
+            $posts->the_post();
+            echo '
+            <div class="six columns">
+
+                <div class="blog-post blog-post-small">
+                  <div class="blog-post-categories"> ';
+                     
+                    $post_categories = wp_get_post_categories( get_the_id() );
+                    $cats = array();
+                    $link = get_permalink();
+
+                    foreach($post_categories as $c){
+                      $cat = get_category( $c );
+                      $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+                      echo $cat->name;
+                    }
+
+              echo '  
+                  </div>
+
+                  <div class="thumbnail">';
+                 
+                    // Must be inside a loop.
+
+                    if ( has_post_thumbnail() ) {
+                      the_post_thumbnail();
+                    }
+
+             
+            echo '</div>
+
+                  <h5><a href="'; echo get_permalink(); echo'">'; the_title();  echo '</a></h5>
+                  <h6><span class="postdate">'; the_time('F j, Y'); echo '</span> | <span class="postauthor">'; the_author(); echo '</span></h6>';
+
+                  the_excerpt(); 
+
+             echo '<div class="social-icons">
+                    <a href="https://twitter.com/home?status=I%20just%20read%20this%20article%3A%20' . $link  .'"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=I%20just%20read%20this%20article%3A%20'. $link  .'"><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-vimeo"></i></a>
+                  </div>
+                </div>
+
+              </div> ';
+             
+
+        }
+    }
+ 
+
+    echo '</div><div id="loadmore-posts">';
+    $args = array('next_text'  => __('Load More Posts'));
+    echo paginate_links($args); 
+    echo '</div>';
+
+    die();
+ 
+}
  
 
 function generateJSON(){
