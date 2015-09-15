@@ -126,6 +126,10 @@
 	display: block;
 	float: right;
 
+	@include mq($tablet-width, 'max-width') {
+		 float: left;
+	}
+
 	ul {
 		display: block;
 		list-style: none;
@@ -176,26 +180,37 @@
 		position: relative;
 		margin: 0 5px 5px 25px;
 
+		@include mq($tablet-width, 'max-width') {
+			 margin: 0 5px 5px 5px;
+			 float: left;
+			 width: 100%;
+		}
+
 		&:hover > a,
 		&.focus > a {
 		}
 
-		&:nth-child(1) {
+		a {
+			float: left;
+			border-bottom: 3px solid white;
+		}
+
+		&:nth-child(1) a {
 			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $purple-tertiary;
 			}
 		}
-		&:nth-child(2) {
+		&:nth-child(2) a {
 			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $blue-primary;
 			}
 		}
-		&:nth-child(3) {
+		&:nth-child(3) a {
 			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $green-primary;
 			}
 		}
-		&:nth-child(4) {
+		&:nth-child(4) a {
 			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $yellow-primary;
 			}
@@ -217,6 +232,10 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
+}
+
+.menu-toggle {
+	
 }
 
 /* Small menu. */
@@ -323,7 +342,9 @@
 		font-size: 10px;
 		font-family: $font-family--regular;
 
-
+		@include mq($tablet-width, 'max-width') {
+			 font-size: 8px;
+		}
 	}
 
 
@@ -331,10 +352,19 @@
 		float: right;
 		margin: 0 30px;
 
+		@include mq($tablet-width, 'max-width') {
+			 float: left;
+			 margin: 0 15px;
+		}
+
 		li {
 			float: left;
 			position: relative;
 			padding: 0 10px;
+
+			@include mq($tablet-width, 'max-width') {
+			 	padding: 0 5px;
+			}
 
 			&.current_page_parent a,&.current-menu-item a,&.current-page-ancestor a {
 				color: black;

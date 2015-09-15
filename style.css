@@ -5926,7 +5926,13 @@ header {
   display: block;
   float: right;
 }
-/* line 129, sass/modules/_menus.scss */
+@media screen and (max-width: 768px) {
+  /* line 124, sass/modules/_menus.scss */
+  .main-navigation {
+    float: left;
+  }
+}
+/* line 133, sass/modules/_menus.scss */
 .main-navigation ul {
   display: block;
   list-style: none;
@@ -5934,7 +5940,7 @@ header {
   padding-left: 0;
   padding-top: 25px;
 }
-/* line 136, sass/modules/_menus.scss */
+/* line 140, sass/modules/_menus.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -5943,47 +5949,60 @@ header {
   left: -999em;
   z-index: 99999;
 }
-/* line 144, sass/modules/_menus.scss */
+/* line 148, sass/modules/_menus.scss */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
-/* line 150, sass/modules/_menus.scss */
+/* line 154, sass/modules/_menus.scss */
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
-/* line 156, sass/modules/_menus.scss */
+/* line 160, sass/modules/_menus.scss */
 .main-navigation ul ul a {
   width: 200px;
 }
-/* line 169, sass/modules/_menus.scss */
+/* line 173, sass/modules/_menus.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
-/* line 174, sass/modules/_menus.scss */
+/* line 178, sass/modules/_menus.scss */
 .main-navigation li {
   float: left;
   position: relative;
   margin: 0 5px 5px 25px;
 }
-/* line 184, sass/modules/_menus.scss */
-.main-navigation li:nth-child(1):hover, .main-navigation li:nth-child(1).current-menu-item, .main-navigation li:nth-child(1).current-page-ancestor {
-  border-bottom: 3px solid #712880;
+@media screen and (max-width: 768px) {
+  /* line 178, sass/modules/_menus.scss */
+  .main-navigation li {
+    margin: 0 5px 5px 5px;
+    float: left;
+    width: 100%;
+  }
 }
-/* line 189, sass/modules/_menus.scss */
-.main-navigation li:nth-child(2):hover, .main-navigation li:nth-child(2).current-menu-item, .main-navigation li:nth-child(2).current-page-ancestor {
-  border-bottom: 3px solid #2791bd;
-}
-/* line 194, sass/modules/_menus.scss */
-.main-navigation li:nth-child(3):hover, .main-navigation li:nth-child(3).current-menu-item, .main-navigation li:nth-child(3).current-page-ancestor {
-  border-bottom: 3px solid #4fd1a1;
+/* line 193, sass/modules/_menus.scss */
+.main-navigation li a {
+  float: left;
+  border-bottom: 3px solid white;
 }
 /* line 199, sass/modules/_menus.scss */
-.main-navigation li:nth-child(4):hover, .main-navigation li:nth-child(4).current-menu-item, .main-navigation li:nth-child(4).current-page-ancestor {
+.main-navigation li:nth-child(1) a:hover, .main-navigation li:nth-child(1) a.current-menu-item, .main-navigation li:nth-child(1) a.current-page-ancestor {
+  border-bottom: 3px solid #712880;
+}
+/* line 204, sass/modules/_menus.scss */
+.main-navigation li:nth-child(2) a:hover, .main-navigation li:nth-child(2) a.current-menu-item, .main-navigation li:nth-child(2) a.current-page-ancestor {
+  border-bottom: 3px solid #2791bd;
+}
+/* line 209, sass/modules/_menus.scss */
+.main-navigation li:nth-child(3) a:hover, .main-navigation li:nth-child(3) a.current-menu-item, .main-navigation li:nth-child(3) a.current-page-ancestor {
+  border-bottom: 3px solid #4fd1a1;
+}
+/* line 214, sass/modules/_menus.scss */
+.main-navigation li:nth-child(4) a:hover, .main-navigation li:nth-child(4) a.current-menu-item, .main-navigation li:nth-child(4) a.current-page-ancestor {
   border-bottom: 3px solid #fec935;
 }
-/* line 205, sass/modules/_menus.scss */
+/* line 220, sass/modules/_menus.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
@@ -5996,27 +6015,27 @@ header {
 }
 
 /* Small menu. */
-/* line 223, sass/modules/_menus.scss */
+/* line 242, sass/modules/_menus.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
-/* line 232, sass/modules/_menus.scss */
+/* line 251, sass/modules/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 237, sass/modules/_menus.scss */
+/* line 256, sass/modules/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 242, sass/modules/_menus.scss */
+/* line 261, sass/modules/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -6025,7 +6044,7 @@ header {
   width: 50%;
 }
 
-/* line 249, sass/modules/_menus.scss */
+/* line 268, sass/modules/_menus.scss */
 .banner-sidebar {
   background-color: #3a3a3a;
   background-image: url("img/overlay.png");
@@ -6034,97 +6053,116 @@ header {
   background-position-y: 30px;
 }
 
-/* line 257, sass/modules/_menus.scss */
+/* line 276, sass/modules/_menus.scss */
 .side-menu {
   position: absolute;
   left: 50px;
   width: 200px;
   z-index: 100;
 }
-/* line 263, sass/modules/_menus.scss */
+/* line 282, sass/modules/_menus.scss */
 .side-menu .list {
   padding: 20px;
   background: #fec935;
 }
-/* line 268, sass/modules/_menus.scss */
+/* line 287, sass/modules/_menus.scss */
 .side-menu .info {
   border-bottom: 2px solid #cfcfcf;
   border-top: 2px solid #cfcfcf;
   padding: 10px;
   text-align: center;
 }
-/* line 273, sass/modules/_menus.scss */
+/* line 292, sass/modules/_menus.scss */
 .side-menu .info a {
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 10px;
 }
-/* line 281, sass/modules/_menus.scss */
+/* line 300, sass/modules/_menus.scss */
 .side-menu .apply {
   padding: 10px;
   text-align: center;
   background: #616161;
   margin-top: 10px;
 }
-/* line 287, sass/modules/_menus.scss */
+/* line 306, sass/modules/_menus.scss */
 .side-menu .apply a {
   text-transform: uppercase;
   color: #fec935;
 }
-/* line 292, sass/modules/_menus.scss */
+/* line 311, sass/modules/_menus.scss */
 .side-menu .apply:hover {
   background: #fec935;
 }
-/* line 295, sass/modules/_menus.scss */
+/* line 314, sass/modules/_menus.scss */
 .side-menu .apply:hover a {
   color: #616161;
 }
-/* line 301, sass/modules/_menus.scss */
+/* line 320, sass/modules/_menus.scss */
 .side-menu a {
   color: #616161;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 15px;
   line-height: 30px;
 }
-/* line 309, sass/modules/_menus.scss */
+/* line 328, sass/modules/_menus.scss */
 .side-menu .scrolled-item a {
   border-bottom: 3px solid #616161;
 }
 
-/* line 315, sass/modules/_menus.scss */
+/* line 334, sass/modules/_menus.scss */
 .utilities-nav {
   background: #eeeeee;
   float: left;
   width: 100%;
 }
-/* line 320, sass/modules/_menus.scss */
+/* line 339, sass/modules/_menus.scss */
 .utilities-nav a {
   color: #8f8f8f;
   text-transform: uppercase;
   font-size: 10px;
   font-family: "Avenir Next Cyr W00 Regular";
 }
-/* line 330, sass/modules/_menus.scss */
+@media screen and (max-width: 768px) {
+  /* line 339, sass/modules/_menus.scss */
+  .utilities-nav a {
+    font-size: 8px;
+  }
+}
+/* line 351, sass/modules/_menus.scss */
 .utilities-nav ul {
   float: right;
   margin: 0 30px;
 }
-/* line 334, sass/modules/_menus.scss */
+@media screen and (max-width: 768px) {
+  /* line 351, sass/modules/_menus.scss */
+  .utilities-nav ul {
+    float: left;
+    margin: 0 15px;
+  }
+}
+/* line 360, sass/modules/_menus.scss */
 .utilities-nav ul li {
   float: left;
   position: relative;
   padding: 0 10px;
 }
-/* line 339, sass/modules/_menus.scss */
+@media screen and (max-width: 768px) {
+  /* line 360, sass/modules/_menus.scss */
+  .utilities-nav ul li {
+    padding: 0 5px;
+  }
+}
+/* line 369, sass/modules/_menus.scss */
 .utilities-nav ul li.current_page_parent a, .utilities-nav ul li.current-menu-item a, .utilities-nav ul li.current-page-ancestor a {
   color: black;
 }
 
-/* line 346, sass/modules/_menus.scss */
+/* line 376, sass/modules/_menus.scss */
 .banner-navigation li:hover {
   opacity: 0.7;
 }
 
-/* line 350, sass/modules/_menus.scss */
+/* line 380, sass/modules/_menus.scss */
 .utilities-nav a:hover {
   color: black;
   opacity: 1;
