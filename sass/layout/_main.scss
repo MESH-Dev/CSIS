@@ -368,6 +368,10 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   z-index: 10;
   padding: 50px 50px 50px 50px;
 
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+  }
+
   .banner-title {
     font-family: $font-family--bold;
     font-size: em(52);
@@ -584,6 +588,10 @@ section {
 .quote-text {
   padding: 50px;
   text-align: center;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;  
+  }
 }
 
 .image {
