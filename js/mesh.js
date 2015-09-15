@@ -128,8 +128,49 @@ jQuery(document).ready(function($){
   });
 
 
-  var height = $( window ).width() / 2;
 
+  $(window).resize(function() {
+
+    if ($(window).width() > 700) {
+      if ($('.wp-video').length) {
+        $('.wp-video').each(function() {
+          if ($(this).height() > 1000) {
+            $(this).css('margin-top', '-40%');
+          } else {
+            $(this).css('margin-top', '20%');
+          }
+        });
+      }
+    } else {
+      if ($('.wp-video').length) {
+        $('.wp-video').each(function() {
+          if ($(this).height() > 1000) {
+            $(this).css('margin-top', '0');
+          } else {
+            $(this).css('margin-top', '0');
+          }
+        });
+      }
+    }
+  });
+
+
+  if ($('.wp-video').length) {
+
+    $('.wp-video').each(function() {
+
+      if ($(window).width() > 700) {
+        if ($(this).height() > 1000) {
+          $(this).css('margin-top', '-40%');
+        } else {
+          $(this).css('margin-top', '20%');
+        }
+      }
+    });
+  }
+
+
+  var height = $( window ).width() / 2;
 
   $('.media-video').css('height', height);
   $('.media-image').css('height', height);
@@ -147,7 +188,6 @@ jQuery(document).ready(function($){
     $('.media-item').matchHeight();
 
   });
-
 
 
 
@@ -363,7 +403,7 @@ $('.callout-panel h2').hover(function () {
     $test = $(this).parent().parent().parent();
     $arrow = $test.find(".cta-big");
     $arrow.css("opacity","0.7");
- 
+
 }, function () {
     $arrow.css("opacity","1");
 });

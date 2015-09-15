@@ -24,10 +24,19 @@
 											$post_categories = wp_get_post_categories( get_the_id() );
 											$cats = array();
 
+											$first = true;
+
 											foreach($post_categories as $c){
 												$cat = get_category( $c );
 												$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-												echo $cat->name;
+
+												if ($first) {
+													echo $cat->name;
+													$first = false;
+												} else {
+													echo ", " . $cat->name;
+												}
+
 											}
 
 											?>
@@ -58,8 +67,7 @@
 
 									<div class="social-icons">
 										<a href="https://twitter.com/home?status=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-twitter"></i></a>
-										<a href="https://www.facebook.com/sharer/sharer.php?u=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-vimeo"></i></a>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $link; ?>" data-layout="link"><i class="fa fa-facebook"></i></a>
 									</div>
 								</div>
 
@@ -75,10 +83,19 @@
 										$post_categories = wp_get_post_categories( get_the_id() );
 										$cats = array();
 
+										$first = true;
+
 										foreach($post_categories as $c){
 											$cat = get_category( $c );
 											$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-											echo $cat->name;
+
+											if ($first) {
+												echo $cat->name;
+												$first = false;
+											} else {
+												echo ", " . $cat->name;
+											}
+
 										}
 										$link = get_permalink();
 
@@ -103,8 +120,7 @@
 
 									<div class="social-icons">
 										<a href="https://twitter.com/home?status=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-twitter"></i></a>
-										<a href="https://www.facebook.com/sharer/sharer.php?u=I%20just%20read%20this%20article%3A%20<?php echo $link; ?>"><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-vimeo"></i></a>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $link; ?>"><i class="fa fa-facebook"></i></a>
 									</div>
 								</div>
 
@@ -118,7 +134,7 @@
 					<div id="loadmore-posts"><?php echo paginate_links($args); ?></div>
 					<div id="loader" class="hidden"><img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt=""></div>
 				</div>
-				
+
 			</div>
 	</div>
 
