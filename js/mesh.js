@@ -359,6 +359,14 @@ jQuery(document).ready(function($){
       }
   }
 
+$('.callout-panel h2').hover(function () {
+    $test = $(this).parent().parent().parent();
+    $arrow = $test.find(".cta-big");
+    $arrow.css("opacity","0.7");
+ 
+}, function () {
+    $arrow.css("opacity","1");
+});
 
 
 

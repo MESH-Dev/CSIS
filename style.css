@@ -5398,11 +5398,6 @@ section {
   border-top: 5px solid #4fd1a1;
 }
 
-/* line 750, sass/layout/_main.scss */
-.page-template-product main, .page-template-panel main {
-  border-top: 5px solid #2791bd;
-}
-
 /* line 754, sass/layout/_main.scss */
 .parent-page-online-learning main {
   border-top: 5px solid #2791bd;
