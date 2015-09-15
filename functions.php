@@ -190,6 +190,77 @@ function writeLatLong($profiles){
   file_put_contents('wp-content/themes/csis/data/user-profiles.json', json_encode($profiles));
 }
 
+function createImages($profiles){
+  $count = 0;
+
+  foreach ($profiles as $profile){
+    
+    //Get remote image location, filename and extension
+    $url = $profile['Profile Picture']; 
+    $filename = basename($url);
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+     
+
+    $fname = $profile['Name | First'];
+    $fname = preg_replace("/[^a-zA-Z0-9\s]/", "", $fname);
+    $fname = str_replace(' ', '', $fname);
+ 
+
+    $lname =  $profile['Name | Last'];
+    $lname = preg_replace("/[^a-zA-Z0-9\s]/", "", $lname);
+    $lname = str_replace(' ', '', $lname);
+
+
+    $location = 'wp-content/themes/csis/data/img/'.$fname . '-' . $lname.'.' .$ext; 
+ 
+    if($url != '' && !(file_exists($location))){
+      $imageString = file_get_contents($url);
+      $fp = fopen($location, "w");
+      fwrite($fp, $imageString);
+      fclose($fp);
+      $new_loc = get_bloginfo('template_directory') . '/data/img/'.$fname . '-' . $lname.'.' .$ext; 
+      $profiles[$count]['Profile Picture'] = $new_loc; 
+      createBWImage($location,$ext);
+
+    }
+    $count++;
+    
+  }
+  //print_r($profiles);
+  file_put_contents('wp-content/themes/csis/data/user-profiles.json', json_encode($profiles));
+}
+
+function createBWImage($filename,$ext){ 
+  if($ext == 'jpg'){
+    $im = imagecreatefromjpeg($filename);
+    if($im && imagefilter($im, IMG_FILTER_GRAYSCALE))
+    {
+        echo 'Image converted to grayscale.';
+        imagejpeg($im, $filename);
+    }
+    else
+    {
+        echo 'Conversion to grayscale failed.';
+    }
+    imagedestroy($im);
+  }
+  elseif($ext=='png'){
+    $im = imagecreatefrompng($filename);
+    if($im && imagefilter($im, IMG_FILTER_GRAYSCALE))
+    {
+        echo 'Image converted to grayscale.';
+        imagepng($im, $filename);
+    }
+    else
+    {
+        echo 'Conversion to grayscale failed.';
+    }
+    imagedestroy($im);
+  } 
+}
+
+
+
 // function to geocode address, it will return false if unable to geocode address
 function geocode($address){
 

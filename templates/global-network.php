@@ -12,6 +12,7 @@ get_header(); ?>
 
       //generateJSON();
       $profiles = getProfileArray();
+      createImages($profiles); 
       //writeLatLong($profiles);
       //renderProfileGrid($profiles);
       //$profile = getSingleProfile($profiles,0);
