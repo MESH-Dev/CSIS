@@ -262,7 +262,7 @@ if( have_rows('sections') ):
                   <div class="callout-screen hover">
 
                     <div class="listing-text">
-                      <h3><?php echo get_sub_field('2_column_title'); ?></h3>
+                      <h3><a href="<?php echo get_sub_field('2_column_link'); ?>"><?php echo get_sub_field('2_column_title'); ?></a></h3>
                       <p><?php echo get_sub_field('2-column_body_text'); ?></p>
 
                       <div class="cta-small">
@@ -417,7 +417,7 @@ if( have_rows('sections') ):
 
                 <div class="four columns <?php echo get_sub_field('color'); ?>-background hover">
                   <div class="listing-text">
-                    <h3><?php echo get_sub_field('3-column_title'); ?></h3>
+                    <h3><a href="<?php echo get_sub_field('3-column_link'); ?>"><?php echo get_sub_field('3-column_title'); ?></a></h3>
                     <p><?php echo get_sub_field('3-column_body_text'); ?></p>
 
                     <div class="cta-small">
@@ -499,7 +499,7 @@ if( have_rows('sections') ):
                 <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
               </div>
               <div class="email-response">
-                
+
               </div>
             </div>
           </div>
