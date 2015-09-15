@@ -42,7 +42,6 @@ jQuery(document).ready(function($){
 
     if ( $('.side-menu').length ) {
 
-      console.log(y);
 
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');

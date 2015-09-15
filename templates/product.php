@@ -297,8 +297,6 @@ get_header(); ?>
 
                 $apply = true;
 
-                $n++;
-
               ?>
 
               <section class="buttons <?php echo $color; ?>" id="apply">
