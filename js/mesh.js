@@ -160,6 +160,42 @@ jQuery(document).ready(function($){
           }
         })
       }
+      else if (y > $('#11').position().top && y < $('#12').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 11) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#12').position().top && y < $('#13').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 12) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#13').position().top && y < $('#14').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 13) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#14').position().top && y < $('#15').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 14) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
       else {
 
       }
