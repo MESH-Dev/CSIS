@@ -823,10 +823,11 @@ section {
       }
 
       &:hover {
-
+        @include opacity(1);
         a {
           background: $yellow-primary;
           color: #3a3a3a;
+          @include opacity(1);
         }
       }
     }

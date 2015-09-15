@@ -299,8 +299,13 @@ jQuery(document).ready(function($){
     $(this).find('blog-sidebar-title-text').toggleClass('active-sidebar-title');
   });
 
-  $('#byscripts_ajax_posts_loader_trigger').click(function() {
+  // $('#byscripts_ajax_posts_loader_trigger').click(function() {
+  //     $('.blog-section').matchHeight();
+
+  // });
+  $('.blog-section').bind("DOMSubtreeModified", function() {
       $('.blog-section').matchHeight();
+
   });
 
 });
