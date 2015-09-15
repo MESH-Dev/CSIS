@@ -353,17 +353,20 @@
 		margin: 0 30px;
 
 		@include mq($tablet-width, 'max-width') {
-			 float: left;
-			 margin: 0 5px;
+			 float: none;
+			 margin: 0 auto;
+			 text-align: center;
 		}
 
 		li {
 			float: left;
 			position: relative;
 			padding: 0 10px;
+			display: inline;
 
 			@include mq($tablet-width, 'max-width') {
 			 	padding: 0 3px;
+				float: none;
 			}
 
 			&.current_page_parent a,&.current-menu-item a,&.current-page-ancestor a {

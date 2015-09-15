@@ -6136,33 +6136,36 @@ header {
 @media screen and (max-width: 768px) {
   /* line 351, sass/modules/_menus.scss */
   .utilities-nav ul {
-    float: left;
+    float: none;
     margin: 0 5px;
+    text-align: center;
   }
 }
-/* line 360, sass/modules/_menus.scss */
+/* line 361, sass/modules/_menus.scss */
 .utilities-nav ul li {
   float: left;
   position: relative;
   padding: 0 10px;
+  display: inline;
 }
 @media screen and (max-width: 768px) {
-  /* line 360, sass/modules/_menus.scss */
+  /* line 361, sass/modules/_menus.scss */
   .utilities-nav ul li {
     padding: 0 3px;
+    float: none;
   }
 }
-/* line 369, sass/modules/_menus.scss */
+/* line 372, sass/modules/_menus.scss */
 .utilities-nav ul li.current_page_parent a, .utilities-nav ul li.current-menu-item a, .utilities-nav ul li.current-page-ancestor a {
   color: black;
 }
 
-/* line 376, sass/modules/_menus.scss */
+/* line 379, sass/modules/_menus.scss */
 .banner-navigation li:hover {
   opacity: 0.7;
 }
 
-/* line 380, sass/modules/_menus.scss */
+/* line 383, sass/modules/_menus.scss */
 .utilities-nav a:hover {
   color: black;
   opacity: 1;
