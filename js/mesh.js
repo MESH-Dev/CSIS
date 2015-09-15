@@ -25,9 +25,9 @@ jQuery(document).ready(function($){
 
   }
 
-  if( $window.width() <= 700){
+  if( $(window).width() <= 700){
     $('.banner').css("background-attachment", "scroll");
-    
+    $('.banner').css("background-position", "50% 0px");
   };
 
 
@@ -299,7 +299,10 @@ jQuery(document).ready(function($){
   $('.information-holder').matchHeight();
 
 
-  $('.banner').parallax("center", 0.1);
+  if( $(window).width() >= 700){
+    $('.banner').parallax("center", 0.1);
+  };
+
 
   $('.blog-sidebar-title').click(function() {
 
