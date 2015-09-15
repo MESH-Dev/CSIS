@@ -42,6 +42,8 @@ jQuery(document).ready(function($){
 
     if ( $('.side-menu').length ) {
 
+      console.log(y);
+
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');
         $('.side-menu').css('top', 50);
@@ -49,7 +51,6 @@ jQuery(document).ready(function($){
         $('.side-menu').css('position', 'absolute');
         $('.side-menu').css('top', $('.intro').position().top - 60);
       }
-
 
       if (y < $('#0').position().top) {
         $('.side-menu ul li').each(function(index) {
@@ -118,6 +119,42 @@ jQuery(document).ready(function($){
       else if (y > $('#6').position().top && y < $('#7').position().top) {
         $('.side-menu ul li').each(function(index) {
           if (index == 6) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#7').position().top && y < $('#8').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 7) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#8').position().top && y < $('#9').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 8) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#9').position().top && y < $('#10').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 9) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#10').position().top && y < $('#11').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 10) {
             $(this).addClass('scrolled-item');
           } else {
             $(this).removeClass('scrolled-item');
