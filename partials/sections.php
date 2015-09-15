@@ -138,7 +138,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" >
+      <section class="image-with-text" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-position-y: 20%; background-repeat: no-repeat; <?php } ?>" >
         <div class="four columns image-holder">
           <div class="image-text">
             <?php echo get_sub_field('body_text'); ?>
@@ -152,7 +152,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; <?php } ?>" >
+      <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-position-y: 20%;  background-repeat: no-repeat; <?php } ?>" >
       </section>
 
 
