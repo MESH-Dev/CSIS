@@ -135,6 +135,10 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       border-bottom: 10px solid white;
       border-left: 10px solid white;
 
+      @include mq($tablet-width, 'max-width') {
+  			 border: 0;
+  		}
+
       a {
         color: white;
       }
@@ -511,6 +515,10 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   border-left: 10px solid white;
   float: left;
    width: 100%;
+
+   @include mq($tablet-width, 'max-width') {
+      border: 0;
+   }
 }
 
 .information-bar {
