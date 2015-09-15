@@ -873,7 +873,11 @@ section {
 .blog-post-categories {
   margin-bottom: 10px;
   color: $yellow-primary;
-  font-family: $font-family--bold;
+  font-family: $font-family--heavy;
+  text-transform: uppercase;
+  line-spacing: 0.04em;
+  font-size: 10px;
+  line-height: 20px;
 }
 
 .active-category {
@@ -935,10 +939,6 @@ section {
   overflow: hidden;
   height: 400px;
   position: relative;
-}
-
-.wp-video {
-  margin-top: -40%;
 }
 
 .text-holder{

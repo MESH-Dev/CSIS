@@ -23,12 +23,12 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 </script>
 <?php
 }
-add_action('wp_ajax_getSingleProfile', 'getSingleProfile');  
+add_action('wp_ajax_getSingleProfile', 'getSingleProfile');
 add_action('wp_ajax_nopriv_getSingleProfile', 'getSingleProfile');  //_nopriv_ allows access for both signed in users, and not
-add_action('wp_ajax_saveGeneralEmail', 'saveGeneralEmail');  
-add_action('wp_ajax_nopriv_saveGeneralEmail', 'saveGeneralEmail'); 
-add_action('wp_ajax_saveProductEmail', 'saveProductEmail');  
-add_action('wp_ajax_nopriv_saveProductEmail', 'saveProductEmail'); 
+add_action('wp_ajax_saveGeneralEmail', 'saveGeneralEmail');
+add_action('wp_ajax_nopriv_saveGeneralEmail', 'saveGeneralEmail');
+add_action('wp_ajax_saveProductEmail', 'saveProductEmail');
+add_action('wp_ajax_nopriv_saveProductEmail', 'saveProductEmail');
 add_action( 'wp_ajax_nopriv_loadPosts', 'loadPosts' );
 add_action( 'wp_ajax_loadPosts', 'loadPosts' );
 
@@ -39,12 +39,12 @@ function loadPosts() {
 
     $posts = new WP_Query( $query_vars );
     $GLOBALS['wp_query'] = $posts;
- 
-    if( ! $posts->have_posts() ) { 
+
+    if( ! $posts->have_posts() ) {
         get_template_part( 'content', 'none' );
     }
     else {
-        while ( $posts->have_posts() ) { 
+        while ( $posts->have_posts() ) {
 
             $posts->the_post();
             echo '
@@ -52,7 +52,7 @@ function loadPosts() {
 
                 <div class="blog-post blog-post-small">
                   <div class="blog-post-categories"> ';
-                     
+
                     $post_categories = wp_get_post_categories( get_the_id() );
                     $cats = array();
                     $link = get_permalink();
@@ -63,24 +63,24 @@ function loadPosts() {
                       echo $cat->name;
                     }
 
-              echo '  
+              echo '
                   </div>
 
                   <div class="thumbnail">';
-                 
+
                     // Must be inside a loop.
 
                     if ( has_post_thumbnail() ) {
                       the_post_thumbnail();
                     }
 
-             
+
             echo '</div>
 
                   <h5><a href="'; echo get_permalink(); echo'">'; the_title();  echo '</a></h5>
                   <h6><span class="postdate">'; the_time('F j, Y'); echo '</span> | <span class="postauthor">'; the_author(); echo '</span></h6>';
 
-                  the_excerpt(); 
+                  the_excerpt();
 
              echo '<div class="social-icons">
                     <a href="https://twitter.com/home?status=I%20just%20read%20this%20article%3A%20' . $link  .'"><i class="fa fa-twitter"></i></a>
@@ -90,21 +90,21 @@ function loadPosts() {
                 </div>
 
               </div> ';
-             
+
 
         }
     }
- 
+
 
     echo '</div><div id="loadmore-posts">';
     $args = array('next_text'  => __('Load More Posts'));
-    echo paginate_links($args); 
+    echo paginate_links($args);
     echo '</div>';
 
     die();
- 
+
 }
- 
+
 
 function generateJSON(){
 	//header('Content-type: application/json');
@@ -114,29 +114,29 @@ function generateJSON(){
 	$keys = array();
 	$newArray = array();
 	// Function to convert CSV into associative array
-	function csvToArray($file, $delimiter) { 
-	  if (($handle = fopen($file, 'r')) !== FALSE) { 
-	    $i = 0; 
-	    while (($lineArray = fgetcsv($handle, 4000, $delimiter, '"')) !== FALSE) { 
-	      for ($j = 0; $j < count($lineArray); $j++) { 
-	        $arr[$i][$j] = $lineArray[$j]; 
-	      } 
-	      $i++; 
-	    } 
-	    fclose($handle); 
-	  } 
-	  return $arr; 
-	} 
+	function csvToArray($file, $delimiter) {
+	  if (($handle = fopen($file, 'r')) !== FALSE) {
+	    $i = 0;
+	    while (($lineArray = fgetcsv($handle, 4000, $delimiter, '"')) !== FALSE) {
+	      for ($j = 0; $j < count($lineArray); $j++) {
+	        $arr[$i][$j] = $lineArray[$j];
+	      }
+	      $i++;
+	    }
+	    fclose($handle);
+	  }
+	  return $arr;
+	}
 
 	// Do it
 	$data = csvToArray($feed, ',');
-  
+
 
 	// Set number of elements (minus 1 because we shift off the first row)
 	$count = count($data) - 1;
- 
-	//Use first row for names  
-	$labels = array_shift($data);  
+
+	//Use first row for names
+	$labels = array_shift($data);
 	foreach ($labels as $label) {
 	  $keys[] = $label;
 	}
@@ -161,7 +161,7 @@ function generateJSON(){
 	$fp = fopen('wp-content/themes/csis/data/user-profiles.json', 'w');
 	fwrite($fp, json_encode($newArray));
 	fclose($fp);
- 
+
 }
 
 function getProfileArray(){
@@ -175,16 +175,16 @@ function writeLatLong($profiles){
   $count = 0;
 
   foreach ($profiles as $profile){
-     
+
       if($profile['Lat'] == ''){
         $address = $profile['City'] . ' ' . $profile["State (USA only)"] . ' ' . $profile["Country"];
          $loc = geocode($address);
          $profiles[$count]['Lat'] = $loc[0];
          $profiles[$count]['Lng'] = $loc[1];
-         
+
       }
       $count++;
-    
+
   }
   //print_r($profiles);
   file_put_contents('wp-content/themes/csis/data/user-profiles.json', json_encode($profiles));
@@ -192,46 +192,46 @@ function writeLatLong($profiles){
 
 // function to geocode address, it will return false if unable to geocode address
 function geocode($address){
- 
+
     // url encode the address
     $address = urlencode($address);
-     
+
     // google map geocode api url
     $url = "http://maps.google.com/maps/api/geocode/json?sensor=false&address={$address}";
- 
+
     // get the json response
     $resp_json = file_get_contents($url);
-     
+
     // decode the json
     $resp = json_decode($resp_json, true);
- 
-    // response status will be 'OK', if able to geocode given address 
+
+    // response status will be 'OK', if able to geocode given address
     if($resp['status']=='OK'){
- 
+
         // get the important data
         $lati = $resp['results'][0]['geometry']['location']['lat'];
         $longi = $resp['results'][0]['geometry']['location']['lng'];
         $formatted_address = $resp['results'][0]['formatted_address'];
-         
+
         // verify if data is complete
         if($lati && $longi && $formatted_address){
-         
+
             // put the data in the array
-            $data_arr = array();            
-             
+            $data_arr = array();
+
             array_push(
-                $data_arr, 
-                    $lati, 
-                    $longi, 
+                $data_arr,
+                    $lati,
+                    $longi,
                     $formatted_address
                 );
-             
+
             return $data_arr;
-             
+
         }else{
             return false;
         }
-         
+
     }else{
         return false;
     }
@@ -243,7 +243,7 @@ function geocode($address){
 function renderProfileGrid($profiles){
 
   $count = 0;
- 
+
  	foreach ($profiles as $profile) {
       $year = array();
       //Get Filter Data
@@ -253,7 +253,7 @@ function renderProfileGrid($profiles){
       $affil = getSingleProfileFilterData($profiles, $count,'Affiliation');
       $year[0] = $profile['What year did you participate in your first CSIS program?'];
       $filters = array_merge($impact, $expertise, $geographic, $affil, $year);
-      
+
       $filter_string = '';
       foreach ($filters as $filter) {
         $filter = str_replace(" ", "-", $filter);
@@ -284,7 +284,7 @@ function renderProfileGrid($profiles){
 
   return 0;
 
- 	
+
 }
 
 function renderHomeProfileGrid(){
@@ -306,13 +306,13 @@ function renderHomeProfileGrid(){
      $output .= '</div>';
 
      echo $output;
-   
+
 
   }
 
   return 0;
 
-  
+
 }
 
 function getSingleProfile(){
@@ -322,7 +322,7 @@ function getSingleProfile(){
   $profiles = getProfileArray();
   $profile = $profiles[$id];
 
-  
+
   $output = '';
  	$output .= '<div class="three columns offset-by-two"><img src="'.$profile['Profile Picture']. '" /></div>';
   $output .= '<div class="five columns" ><div class="profile-info">';
@@ -357,14 +357,14 @@ function getSingleProfile(){
   if($profile['If you have a link to a pitch video, please copy it here:'] != ''){
     $url = $profile['If you have a link to a pitch video, please copy it here:'];
     parse_str( parse_url( $url, PHP_URL_QUERY ), $vars );
-    $video_id =  $vars['v'];  
+    $video_id =  $vars['v'];
 
     $output .=    '<p><iframe width="640" height="360" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe></p>';
   }
 
   $output .=  '<div class="footer-social ">';
   $output .=  '<ul>';
-  
+
   if($profile['Social Media Links | Facebook'] != ''){
     $output .=    '<li><a href="'.$profile['Social Media Links | Facebook']  .'" target="_blank"><i class="fa fa-facebook"></i></a></li>';
   }
@@ -378,9 +378,9 @@ function getSingleProfile(){
     $output .=    '<li><a href="'.$profile['Social Media Links | LinkedIn']  .'" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
   }
   $output .=  '</ul></div>';
-        
 
-  $output .= '</div></div>'; 
+
+  $output .= '</div></div>';
   echo $output;
 
   die();
@@ -394,11 +394,11 @@ function getSingleProfileFilterData($profiles, $id, $listname){
       $expertiseArr =  array();
       $geoArr =  array();
       $affilArr = array();
-      
+
 
       foreach ($profiles[$id] as $key => $data) {
- 
-        //get sub string util [ 
+
+        //get sub string util [
         if (strpos($key, '[') !== FALSE)
         {
           $name = explode("[", $key , 2);
@@ -411,9 +411,9 @@ function getSingleProfileFilterData($profiles, $id, $listname){
             {
               //get value between [ ]
               preg_match('~\[(.*?)\]~', $key, $value);
-              $value =  $value[0]; 
+              $value =  $value[0];
               $value = substr($value,1,-1);
- 
+
               //Push value to appropriate array
               if($first == 'Impact Areas '){
                 array_push($impactArr,$value);
@@ -437,17 +437,17 @@ function getSingleProfileFilterData($profiles, $id, $listname){
           }
         }
       }
-      if($listname == 'Impact') 
+      if($listname == 'Impact')
         return $impactArr;
-      elseif($listname == 'Affiliation') 
+      elseif($listname == 'Affiliation')
         return $affilArr;
-      elseif($listname == 'Expertise') 
+      elseif($listname == 'Expertise')
         return $expertiseArr;
-      elseif($listname == 'Geographic') 
+      elseif($listname == 'Geographic')
         return $geoArr;
       else
         return 0;
-     
+
 }
 
 
@@ -460,11 +460,11 @@ function getFilterLists($profiles, $listname){
       $expertiseArr =  array();
       $geoArr =  array();
       $affilArr = array();
- 
+
 
       foreach(array_keys($profiles[0]) as $paramName){
- 
-        //get sub string util [ 
+
+        //get sub string util [
 
         if (strpos($paramName, '[') !== FALSE)
         {
@@ -472,18 +472,18 @@ function getFilterLists($profiles, $listname){
 
           $name = explode("[", $paramName , 2);
           $first = $name[0];
- 
+
 
           if($first!='')
           {
               //get value between [ ]
               preg_match('~\[(.*?)\]~', $paramName, $value);
-              $value =  $value[0]; 
+              $value =  $value[0];
               $value = substr($value,1,-1);
 
               if(strpos($value,"Other,") !== 0)
-              { 
-   
+              {
+
                 //Push value to appropriate array
                 if($first == 'Impact Areas '){
                   array_push($impactArr,$value);
@@ -497,26 +497,26 @@ function getFilterLists($profiles, $listname){
                 elseif($first == 'Primary Affiliation with the Center '){
                   array_push($affilArr,$value);
                 }
- 
+
                 else{
 
                 }
-              }  
-   
+              }
+
           }
         }
       }
-      if($listname == 'Impact') 
+      if($listname == 'Impact')
       	return $impactArr;
-      elseif($listname == 'Affiliation') 
+      elseif($listname == 'Affiliation')
       	return $affilArr;
-      elseif($listname == 'Expertise') 
+      elseif($listname == 'Expertise')
       	return $expertiseArr;
-      elseif($listname == 'Geographic') 
+      elseif($listname == 'Geographic')
       	return $geoArr;
       else
       	return 0;
-         
+
 
 }
 
@@ -544,7 +544,7 @@ function saveProductEmail(){
   $first = $_POST['firstname'];
   $last = $_POST['lastname'];
   $product = $_POST['pagename'];
- 
+
   $to = 'joshdodd@meshfresh.com';
   $subject = 'New Product Email List Signup';
   $body = $first . ' ' . $last . ', ' . $email . ', has signed up to the '. $product.' list for more information. Please add the email address to the appropriate list.';

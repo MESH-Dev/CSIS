@@ -5528,20 +5528,24 @@ section {
 .blog-post-categories {
   margin-bottom: 10px;
   color: #fec935;
-  font-family: "Avenir Next Cyr W00 Bold";
+  font-family: "Avenir Next Cyr W00 Heavy";
+  text-transform: uppercase;
+  line-spacing: 0.04em;
+  font-size: 10px;
+  line-height: 20px;
 }
 
-/* line 879, sass/layout/_main.scss */
+/* line 883, sass/layout/_main.scss */
 .active-category {
   display: block;
 }
 
-/* line 883, sass/layout/_main.scss */
+/* line 887, sass/layout/_main.scss */
 .active-sidebar-title {
   border-bottom: 3px solid #fec935;
 }
 
-/* line 887, sass/layout/_main.scss */
+/* line 891, sass/layout/_main.scss */
 .moretag {
   color: #fec935;
   text-transform: uppercase;
@@ -5549,60 +5553,55 @@ section {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 894, sass/layout/_main.scss */
+/* line 898, sass/layout/_main.scss */
 .social-icons {
   color: #a9a9a9;
 }
-/* line 897, sass/layout/_main.scss */
+/* line 901, sass/layout/_main.scss */
 .social-icons a {
   color: #a9a9a9;
 }
-/* line 901, sass/layout/_main.scss */
+/* line 905, sass/layout/_main.scss */
 .social-icons i {
   font-size: 25px;
   margin-right: 20px;
 }
 
-/* line 907, sass/layout/_main.scss */
+/* line 911, sass/layout/_main.scss */
 .news {
   margin-bottom: 0px;
 }
 
-/* line 911, sass/layout/_main.scss */
+/* line 915, sass/layout/_main.scss */
 .image-holder {
   height: 100%;
   display: table !important;
 }
 
-/* line 916, sass/layout/_main.scss */
+/* line 920, sass/layout/_main.scss */
 .image-text {
   padding: 100px 50px;
   display: table-cell;
   vertical-align: middle;
   height: 100%;
 }
-/* line 922, sass/layout/_main.scss */
+/* line 926, sass/layout/_main.scss */
 .image-text h4 {
   color: white;
   margin-bottom: 10px;
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 930, sass/layout/_main.scss */
+/* line 934, sass/layout/_main.scss */
 .mejs-container {
   width: 100% !important;
 }
 
-/* line 934, sass/layout/_main.scss */
+/* line 938, sass/layout/_main.scss */
 .video-holder {
   overflow: hidden;
   height: 400px;
   position: relative;
-}
-
-/* line 940, sass/layout/_main.scss */
-.wp-video {
-  margin-top: -40%;
 }
 
 /* line 944, sass/layout/_main.scss */

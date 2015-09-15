@@ -130,7 +130,6 @@ jQuery(document).ready(function($){
 
   var height = $( window ).width() / 2;
 
-
   $('.media-video').css('height', height);
   $('.media-image').css('height', height);
   $('.media-video .video-holder').css('height', height);
@@ -149,6 +148,19 @@ jQuery(document).ready(function($){
   });
 
 
+  if ($('.wp-video').length) {
+
+    $('.wp-video').each(function() {
+
+          console.log($(this));
+        if ($(this).height() > $(this).width()) {
+          $(this).css('margin-top', '-40%');
+        } else {
+          $(this).css('margin-top', '20%');
+        }
+    });
+
+  }
 
 
 
@@ -363,7 +375,7 @@ $('.callout-panel h2').hover(function () {
     $test = $(this).parent().parent().parent();
     $arrow = $test.find(".cta-big");
     $arrow.css("opacity","0.7");
- 
+
 }, function () {
     $arrow.css("opacity","1");
 });
