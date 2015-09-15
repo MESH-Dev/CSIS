@@ -983,3 +983,21 @@ section {
   float: left;
   display: inline;
 }
+
+#byscripts_ajax_posts_loader_trigger{
+  clear: both;
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: $yellow-primary;
+  border: 3px solid $yellow-primary;
+  padding: 20px;
+  font-family: $font-family--bold;
+  text-transform: uppercase;
+  color: white;
+
+  &:hover{
+    background-color: white;
+    color: $yellow-primary;
+  }
+}
