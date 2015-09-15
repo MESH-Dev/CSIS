@@ -156,7 +156,7 @@ if( have_rows('sections') ):
 
       <?php
 
-        if (get_sub__field('video_type') == 'vimeo') {
+        if (get_sub_field('video_type') == 'vimeo') {
           $video = "https://player.vimeo.com/video/" . get_sub_field('video');
         } elseif (get_sub_field('video_type') == 'youtube') {
           $video = "https://www.youtube.com/embed/" . get_sub_field('video');
