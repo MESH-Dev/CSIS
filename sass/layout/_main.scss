@@ -24,6 +24,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   .#{$name} {
     color: nth($color_vars, $i);
 		background-color: white;
+    word-break: break-word;
 
     .input__label--hoshi-color-1::after, .input__label--hoshi-color-2::after, .input__label--hoshi-color-3::after {
     	border-color: nth($color_vars, $i);
