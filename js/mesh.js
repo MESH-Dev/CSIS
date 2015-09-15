@@ -144,17 +144,17 @@ jQuery(document).ready(function($){
 
   $('form#general-email').submit(function(e) {
     e.preventDefault();
- 
+
     var email = $( "input#email" ).val();
     if (email !== "" ) {
-       
+
       console.log(email);
       AddGeneralEmail(email);
     }
     else{
       alert("Please Enter a Valid Email!");
     }
- 
+
   });
 
   function AddGeneralEmail(email) {
@@ -172,13 +172,13 @@ jQuery(document).ready(function($){
         jQuery.post(ajaxurl, data, function(response) {
             // append: add the new statments to the existing data
             if(response != 0){
-            
+
               console.log(response);
 
               $('.email-response').append(response);
               $('.email-response').css('opacity',1);
               is_loading = false;
-              
+
 
             }
             else{
@@ -192,7 +192,7 @@ jQuery(document).ready(function($){
 
   $('.form-text .submit-buttons').click(function(e) {
     e.preventDefault();
- 
+
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
@@ -202,12 +202,12 @@ jQuery(document).ready(function($){
     else{
       alert("Please Enter All Fields");
     }
- 
+
   });
 
   $('form#productEmail').submit(function(e) {
     e.preventDefault();
- 
+
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
@@ -217,7 +217,7 @@ jQuery(document).ready(function($){
     else{
       alert("Please Enter All Fields");
     }
- 
+
   });
 
   function AddProductEmail(email,firstname,lastname) {
@@ -241,13 +241,13 @@ jQuery(document).ready(function($){
         jQuery.post(ajaxurl, data, function(response) {
             // append: add the new statments to the existing data
             if(response != 0){
-            
+
               console.log(response);
 
               $('.email-response').append(response);
               $('.email-response').css('opacity',1);
               is_loading = false;
-              
+
 
             }
             else{
@@ -303,9 +303,9 @@ jQuery(document).ready(function($){
   //     $('.blog-section').matchHeight();
 
   // });
-  $('.blog-section').bind("DOMSubtreeModified", function() {
-      $('.blog-section').matchHeight();
-
-  });
+  // $('.blog-section').bind("DOMSubtreeModified", function() {
+  //     $('.blog-section').matchHeight();
+  //
+  // });
 
 });
