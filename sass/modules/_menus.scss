@@ -336,7 +336,7 @@
 			position: relative;
 			padding: 0 10px;
 
-			&.current_page_parent a {
+			&.current_page_parent a,&.current_page_ancestor a {
 				color: black;
 			}
 		}
