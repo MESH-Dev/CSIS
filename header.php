@@ -99,6 +99,9 @@
 					</div>
 				</div>
 				<div class="ten columns">
+					<div class="menu-toggle">
+						Menu <i class="fa fa-chevron-down"></i>
+					</div>
 					<nav class="main-navigation">
 						<?php if(has_nav_menu('main_nav')){
 									$defaults = array(

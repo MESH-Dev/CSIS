@@ -25,6 +25,12 @@ jQuery(document).ready(function($){
 
   }
 
+  $('.menu-toggle').click(function() {
+    $('.main-navigation').slideToggle();
+    $('.fa').toggleClass('fa-chevron-up');
+    $('.fa').toggleClass('fa-chevron-down');
+  });
+
   if( $(window).width() <= 700){
     $('.banner').css("background-attachment", "scroll");
     $('.banner').css("background-position", "50% 0px");
