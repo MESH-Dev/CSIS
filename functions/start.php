@@ -40,10 +40,10 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 
 // Add Thumbnail Theme Support
 add_theme_support('post-thumbnails');
-add_image_size('background-fullscreen', 1800, 1200, true);
-add_image_size('short-banner', 1800, 800, true);
+add_image_size('background-fullscreen', 2000, 1200, true);
+add_image_size('short-banner', 2000, 800, true);
 
-add_image_size('large', 1500, '', true); // Large Thumbnail
+add_image_size('large', 2000, '', true); // Large Thumbnail
 add_image_size('medium', 250, '', true); // Medium Thumbnail
 add_image_size('small', 120, '', true); // Small Thumbnail
 add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');

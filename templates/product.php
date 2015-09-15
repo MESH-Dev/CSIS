@@ -30,7 +30,7 @@ get_header(); ?>
 
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $url; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center; <?php } ?>">
 
             <div class="banner-screen"></div>
 
@@ -131,7 +131,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="intro" id="<?php echo $n; ?>">
+              <section class="intro" id="<?php if (get_sub_field('menu_title')) { echo $n; } ?>">
                 <div class="row">
                   <div class="nine offset-by-three columns">
                     <div class="intro-text">
@@ -375,17 +375,17 @@ get_header(); ?>
                     					</label>
                     				</span>
                           </div>
-                          
-                          
+
+
                            <div class="submit-buttons <?php echo $opp; ?>">
                             Submit
                             <span class="right"></span>
                           </div>
 
-                        </form> 
+                        </form>
                         <div id="loader" class="hidden">
                           <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
-                        </div> 
+                        </div>
                         <div class="email-response"></div>
 
                       </div>
@@ -444,13 +444,16 @@ get_header(); ?>
                   $i = 0;
 
                   foreach($side_menu as $value) {
+                    if ($value != "") {
+                      ?>
+                        <li><a href="#<?php echo $i; ?>"><?php echo $value; ?></a></li>
+                      <?php
+
+                      $i++;
+                    }
                     ?>
 
-                    <li><a href="#<?php echo $i; ?>"><?php echo $value; ?></a></li>
-
                     <?php
-
-                    $i++;
                   }
 
                 ?>

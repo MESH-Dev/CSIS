@@ -19,12 +19,22 @@ jQuery(document).ready(function($){
   });
 
 
+  if ( $('.side-menu').length ) {
+
+    $('.side-menu').css('top', $('.intro').position().top - 60);
+
+  }
+
+  if( $(window).width() <= 700){
+    $('.banner').css("background-attachment", "scroll");
+    $('.banner').css("background-position", "50% 0px");
+  };
+
+
   $(document).scroll(function () {
     var y = $(this).scrollTop();
 
     if ( $('.side-menu').length ) {
-
-      $('.side-menu').css('top', $('.intro').position().top - 60);
 
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');
@@ -144,17 +154,17 @@ jQuery(document).ready(function($){
 
   $('form#general-email').submit(function(e) {
     e.preventDefault();
- 
+
     var email = $( "input#email" ).val();
     if (email !== "" ) {
-       
+
       console.log(email);
       AddGeneralEmail(email);
     }
     else{
       alert("Please Enter a Valid Email!");
     }
- 
+
   });
 
   function AddGeneralEmail(email) {
@@ -172,13 +182,13 @@ jQuery(document).ready(function($){
         jQuery.post(ajaxurl, data, function(response) {
             // append: add the new statments to the existing data
             if(response != 0){
-            
+
               console.log(response);
 
               $('.email-response').append(response);
               $('.email-response').css('opacity',1);
               is_loading = false;
-              
+
 
             }
             else{
@@ -192,7 +202,7 @@ jQuery(document).ready(function($){
 
   $('.form-text .submit-buttons').click(function(e) {
     e.preventDefault();
- 
+
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
@@ -202,12 +212,12 @@ jQuery(document).ready(function($){
     else{
       alert("Please Enter All Fields");
     }
- 
+
   });
 
   $('form#productEmail').submit(function(e) {
     e.preventDefault();
- 
+
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
@@ -217,7 +227,7 @@ jQuery(document).ready(function($){
     else{
       alert("Please Enter All Fields");
     }
- 
+
   });
 
   function AddProductEmail(email,firstname,lastname) {
@@ -241,13 +251,13 @@ jQuery(document).ready(function($){
         jQuery.post(ajaxurl, data, function(response) {
             // append: add the new statments to the existing data
             if(response != 0){
-            
+
               console.log(response);
 
               $('.email-response').append(response);
               $('.email-response').css('opacity',1);
               is_loading = false;
-              
+
 
             }
             else{
@@ -289,7 +299,10 @@ jQuery(document).ready(function($){
   $('.information-holder').matchHeight();
 
 
-  $('.banner').parallax("center", 0.1);
+  if( $(window).width() >= 700){
+    $('.banner').parallax("center", 0.1);
+  };
+
 
   $('.blog-sidebar-title').click(function() {
 
@@ -301,13 +314,14 @@ jQuery(document).ready(function($){
 
   $('.next.page-numbers').click(function(e) {
       e.preventDefault();
-     
+
       var page = $('.page-numbers.current').html();
       page = parseInt(page);
       page = page+1;
       console.log(page);
       loadPosts(page);
   });
+
 
 
   function loadPosts(page) {
@@ -348,7 +362,6 @@ jQuery(document).ready(function($){
 
 
 
- 
 
 
 });
