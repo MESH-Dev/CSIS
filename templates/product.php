@@ -339,7 +339,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="form <?php echo $color; ?>" id="<?php echo $n; $n++; ?>">
+              <section class="form <?php echo $color; ?>" id="apply">
 
 
                   <div class="row">
