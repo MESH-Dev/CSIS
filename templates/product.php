@@ -131,7 +131,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="intro" id="<?php if (get_sub_field('menu_title')) { echo $n; } ?>">
+              <section class="intro" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
                 <div class="row">
                   <div class="nine offset-by-three columns">
                     <div class="intro-text">
@@ -147,7 +147,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="body-text <?php echo $color; ?>" id="<?php echo $n; ?>">
+              <section class="body-text <?php echo $color; ?>" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
 
                 <div class="nine columns offset-by-three">
                   <div class="body-text-area">
@@ -172,7 +172,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-position-y: 20%;  <?php } ?>" id="<?php echo $n; ?>">
+              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-position-y: 20%;  <?php } ?>" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
               </section>
 
 
@@ -182,7 +182,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="video" id="<?php echo $n; ?>">
+              <section class="video" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
 
                 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/<?php echo get_sub_field('video'); ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 
@@ -194,7 +194,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="<?php echo $color; ?>" id="<?php echo $n; ?>">
+              <section class="<?php echo $color; ?>" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
 
                 <div class="quote">
                   <div class="nine columns offset-by-three">
@@ -226,7 +226,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="email-signup" id="<?php echo $n; ?>">
+              <section class="email-signup" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
                 <div class="row">
                   <div class="twelve columns">
                     <div class="intro-title"><?php echo get_sub_field('the_title'); ?></div>
@@ -241,7 +241,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="listing <?php echo $color; ?>" id="<?php echo $n; ?>">
+              <section class="listing <?php echo $color; ?>" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
 
                 <div class="nine columns offset-by-three">
 
@@ -297,6 +297,8 @@ get_header(); ?>
 
                 $apply = true;
 
+                $n++;
+
               ?>
 
               <section class="buttons <?php echo $color; ?>" id="apply">
@@ -333,6 +335,8 @@ get_header(); ?>
               <?php
 
               elseif ( get_sub_field('section_type') == 'form' ) :
+
+                $n++;
 
               ?>
 
@@ -409,8 +413,6 @@ get_header(); ?>
                 array_push($side_menu, get_sub_field('menu_title'));
               }
 
-              $n++;
-
             endwhile;
 
         else :
@@ -419,17 +421,6 @@ get_header(); ?>
 
         endif; ?>
 
-
-
-
-
-        <section class="blue-primary" id="7">
-          <div class="nine columns offset-by-three">
-            <div class="schedule-text">
-
-            </div>
-          </div>
-        </section>
 
 
         <?php
