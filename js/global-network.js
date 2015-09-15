@@ -350,8 +350,8 @@ function initialize() {
   var templateUrl = profile_json.templateUrl;
   $.getJSON(templateUrl+'/data/user-profiles.json', function(data){
     for (var i = 0; i < data.length; i++) {
-      var address = data[i]['City'] + ' ' + data[i]["State (USA only)"] + ' ' + data[i]["Country"];
-      var contentString = '<img src="'+data[i]["Profile Picture"] +'" style="width: 15%; display: inline; float: left;"><div style="display: inline; float: left;"><a href="#" class="map-link" data-id='+ i + '>'+ data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '</a><br>' + address+"</div>";
+      var address = data[i]['City'] + ', ' + data[i]["State (USA only)"] + ' ' + data[i]["Country"];
+      var contentString = '<img src="'+data[i]["Profile Picture"] +'" style="width: 100px; display: inline; float: left; padding-right: 10px;"><div style="display: inline; float: left;"><a href="#" class="map-link" data-id='+ i + '>'+ data[i]["Name | First"] + ' '+ data[i]["Name | Last"] + '</a><br>' + address+"</div>";
       var lat =   data[i]["Lat"];
       var lng =   data[i]["Lng"];
 

@@ -6147,23 +6147,30 @@ header {
   font-family: "Avenir Next Cyr W00 Heavy";
   border-right: 4px solid #616161;
 }
-/* line 27, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 16, sass/modules/_modules.scss */
+  .network-nav .network-nav-item {
+    border-right: 4px solid #fec935;
+    border-bottom: 4px solid white;
+  }
+}
+/* line 32, sass/modules/_modules.scss */
 .network-nav .network-nav-item:nth-child(3) {
   border-right: none;
 }
-/* line 29, sass/modules/_modules.scss */
+/* line 34, sass/modules/_modules.scss */
 .network-nav .network-nav-item:nth-child(3) img {
   position: relative;
   vertical-align: top;
   top: -12px;
 }
-/* line 32, sass/modules/_modules.scss */
+/* line 39, sass/modules/_modules.scss */
 .network-nav .network-nav-item:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
-/* line 39, sass/modules/_modules.scss */
+/* line 46, sass/modules/_modules.scss */
 .network-filter-status {
   display: none;
   width: 100%;
@@ -6174,32 +6181,39 @@ header {
   font-size: 0.6875em;
   letter-spacing: 0.0625em;
 }
-/* line 49, sass/modules/_modules.scss */
+/* line 56, sass/modules/_modules.scss */
 .network-filter-status .filter-title, .network-filter-status .filter-reset {
   color: #fec935;
 }
-/* line 53, sass/modules/_modules.scss */
+/* line 60, sass/modules/_modules.scss */
 .network-filter-status .filter-reset {
   text-align: right;
   text-transform: uppercase;
 }
-/* line 56, sass/modules/_modules.scss */
+/* line 63, sass/modules/_modules.scss */
 .network-filter-status .filter-reset img {
   position: relative;
   vertical-align: top;
   top: -3px;
 }
-/* line 57, sass/modules/_modules.scss */
+/* line 64, sass/modules/_modules.scss */
 .network-filter-status .filter-reset a {
   color: #fec935;
 }
-/* line 59, sass/modules/_modules.scss */
+/* line 66, sass/modules/_modules.scss */
 .network-filter-status .filter-reset a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
+@media screen and (max-width: 768px) {
+  /* line 60, sass/modules/_modules.scss */
+  .network-filter-status .filter-reset {
+    top: 43px;
+    right: 35px;
+  }
+}
 
-/* line 67, sass/modules/_modules.scss */
+/* line 78, sass/modules/_modules.scss */
 .network-filter-topics {
   display: none;
   width: 100%;
@@ -6207,18 +6221,18 @@ header {
   margin-bottom: 0px;
   border-bottom: 4px solid #616161;
 }
-/* line 74, sass/modules/_modules.scss */
+/* line 85, sass/modules/_modules.scss */
 .network-filter-topics fieldset {
   border: none;
   margin: 0;
   padding: 0;
   display: none;
 }
-/* line 81, sass/modules/_modules.scss */
+/* line 92, sass/modules/_modules.scss */
 .network-filter-topics fieldset[name=impact] {
   display: block;
 }
-/* line 86, sass/modules/_modules.scss */
+/* line 97, sass/modules/_modules.scss */
 .network-filter-topics:after {
   bottom: 100%;
   left: 16.566667%;
@@ -6234,18 +6248,24 @@ header {
   margin-left: -30px;
   top: 0px;
 }
-/* line 102, sass/modules/_modules.scss */
+/* line 113, sass/modules/_modules.scss */
 .network-filter-topics .topic-list {
   padding: 20px 20px 30px 20px;
   border-right: 4px solid #616161;
 }
-/* line 107, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 113, sass/modules/_modules.scss */
+  .network-filter-topics .topic-list {
+    border-right: none;
+  }
+}
+/* line 121, sass/modules/_modules.scss */
 .network-filter-topics .topic-list span.filter-by {
   font-size: 0.6875em;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
-/* line 113, sass/modules/_modules.scss */
+/* line 127, sass/modules/_modules.scss */
 .network-filter-topics .topic-list li {
   display: block;
   font-size: 0.9375em;
@@ -6255,29 +6275,49 @@ header {
   padding: 8px 0px 0px 0px;
   letter-spacing: 0.0625em;
 }
-/* line 122, sass/modules/_modules.scss */
+/* line 136, sass/modules/_modules.scss */
 .network-filter-topics .topic-list li:hover {
   color: #616161;
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
 }
-/* line 132, sass/modules/_modules.scss */
+/* line 146, sass/modules/_modules.scss */
 .network-filter-topics .topic-items {
   padding: 45px 20px 10px 20px;
-  -webkit-column-count: 4;
+  -webkit-column-count: 3;
   /* Chrome, Safari, Opera */
-  -moz-column-count: 4;
+  -moz-column-count: 3;
   /* Firefox */
-  column-count: 4;
+  column-count: 3;
 }
-/* line 144, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 146, sass/modules/_modules.scss */
+  .network-filter-topics .topic-items {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 420px) {
+  /* line 146, sass/modules/_modules.scss */
+  .network-filter-topics .topic-items {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+}
+/* line 169, sass/modules/_modules.scss */
 .network-filter-topics input[type=checkbox] {
   visibility: hidden;
   display: inline;
   float: left;
 }
-/* line 149, sass/modules/_modules.scss */
+/* line 174, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox {
   width: 15px;
   height: 15px;
@@ -6288,7 +6328,7 @@ header {
   display: block;
   clear: both;
 }
-/* line 160, sass/modules/_modules.scss */
+/* line 185, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox label {
   font-size: 0.9375em;
   line-height: 1.4;
@@ -6299,7 +6339,7 @@ header {
   top: -3px;
   position: relative;
 }
-/* line 173, sass/modules/_modules.scss */
+/* line 198, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox label:after {
   opacity: 0;
   content: '';
@@ -6310,23 +6350,23 @@ header {
   top: 3px;
   left: -6px;
 }
-/* line 186, sass/modules/_modules.scss */
+/* line 211, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox label:hover::after {
   filter: alpha(opacity=70);
   opacity: 0.7;
 }
-/* line 192, sass/modules/_modules.scss */
+/* line 217, sass/modules/_modules.scss */
 .network-filter-topics .topic-checkbox input[type=checkbox]:checked + label:after {
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-/* line 200, sass/modules/_modules.scss */
+/* line 225, sass/modules/_modules.scss */
 .network-search {
   display: none;
   border-top: 4px solid #616161;
 }
-/* line 205, sass/modules/_modules.scss */
+/* line 230, sass/modules/_modules.scss */
 .network-search:after {
   bottom: 100%;
   left: 50%;
@@ -6342,7 +6382,7 @@ header {
   margin-left: -30px;
   top: 0px;
 }
-/* line 224, sass/modules/_modules.scss */
+/* line 249, sass/modules/_modules.scss */
 .network-search .tempsearch {
   height: 4px;
   width: 90%;
@@ -6350,22 +6390,22 @@ header {
   margin-top: 140px;
 }
 
-/* line 232, sass/modules/_modules.scss */
+/* line 257, sass/modules/_modules.scss */
 .filter-title {
   padding: 40px;
 }
-/* line 234, sass/modules/_modules.scss */
+/* line 259, sass/modules/_modules.scss */
 .filter-title h4 {
   font-family: "Avenir Next Cyr W00 Heavy";
   color: #fec935;
 }
 
-/* line 240, sass/modules/_modules.scss */
+/* line 265, sass/modules/_modules.scss */
 .network-map {
   display: none;
   border-top: 4px solid #616161;
 }
-/* line 243, sass/modules/_modules.scss */
+/* line 268, sass/modules/_modules.scss */
 .network-map:after {
   bottom: 100%;
   left: 83.33333%;
@@ -6381,7 +6421,7 @@ header {
   margin-left: -30px;
   top: 0px;
 }
-/* line 260, sass/modules/_modules.scss */
+/* line 285, sass/modules/_modules.scss */
 .network-map #map-container {
   padding: 6px;
   border-width: 1px;
@@ -6392,22 +6432,22 @@ header {
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
   width: 100%;
 }
-/* line 270, sass/modules/_modules.scss */
+/* line 295, sass/modules/_modules.scss */
 .network-map #map {
   width: 100%;
   height: 500px;
 }
-/* line 275, sass/modules/_modules.scss */
+/* line 300, sass/modules/_modules.scss */
 .network-map .map-embed {
   padding: 50px;
 }
 
-/* line 285, sass/modules/_modules.scss */
+/* line 310, sass/modules/_modules.scss */
 .network-grid .columns {
   line-height: 0;
 }
 
-/* line 289, sass/modules/_modules.scss */
+/* line 314, sass/modules/_modules.scss */
 .fail-message {
   position: absolute;
   top: 0;
@@ -6422,37 +6462,37 @@ header {
   transition: 150ms;
 }
 
-/* line 304, sass/modules/_modules.scss */
+/* line 329, sass/modules/_modules.scss */
 .network-grid {
   min-height: 200px;
 }
-/* line 306, sass/modules/_modules.scss */
+/* line 331, sass/modules/_modules.scss */
 .network-grid .mix {
   width: 25%;
   float: left;
   display: none;
 }
-/* line 312, sass/modules/_modules.scss */
+/* line 337, sass/modules/_modules.scss */
 .network-grid .fail-message:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 319, sass/modules/_modules.scss */
+/* line 344, sass/modules/_modules.scss */
 .network-grid .fail-message span {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   font-weight: 700;
 }
-/* line 326, sass/modules/_modules.scss */
+/* line 351, sass/modules/_modules.scss */
 .network-grid.fail .fail-message {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 333, sass/modules/_modules.scss */
+/* line 358, sass/modules/_modules.scss */
 .network-grid-item {
   line-height: 0;
   width: 100%;
@@ -6469,13 +6509,13 @@ header {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   float: left;
 }
-/* line 351, sass/modules/_modules.scss */
+/* line 376, sass/modules/_modules.scss */
 .network-grid-item img {
   height: auto;
   margin: 0;
   border: 0px;
 }
-/* line 356, sass/modules/_modules.scss */
+/* line 381, sass/modules/_modules.scss */
 .network-grid-item:hover {
   background-color: #fec935;
   background-blend-mode: multiply;
@@ -6483,7 +6523,7 @@ header {
   -webkit-filter: grayscale(0);
   cursor: pointer;
 }
-/* line 365, sass/modules/_modules.scss */
+/* line 390, sass/modules/_modules.scss */
 .network-grid-item .hover-info {
   display: none;
   position: absolute;
@@ -6502,37 +6542,37 @@ header {
   -webkit-transform: translate(-50%, -50%);
   /* Safari and Chrome */
 }
-/* line 381, sass/modules/_modules.scss */
+/* line 406, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.name {
   display: block;
   line-height: 1.5;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 1.25em;
 }
-/* line 388, sass/modules/_modules.scss */
+/* line 413, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.title {
   display: block;
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 0.9375em;
   line-height: 1.5;
 }
-/* line 395, sass/modules/_modules.scss */
+/* line 420, sass/modules/_modules.scss */
 .network-grid-item .hover-info span.location {
   display: block;
   font-size: 0.75em;
   line-height: 1.5;
   text-transform: uppercase;
 }
-/* line 402, sass/modules/_modules.scss */
+/* line 427, sass/modules/_modules.scss */
 .network-grid-item:hover .hover-info {
   display: block;
 }
 
-/* line 417, sass/modules/_modules.scss */
+/* line 442, sass/modules/_modules.scss */
 .load-more {
   margin-top: 20px;
 }
-/* line 419, sass/modules/_modules.scss */
+/* line 444, sass/modules/_modules.scss */
 .load-more .load-more-btn {
   background-color: #fec935;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -6542,44 +6582,44 @@ header {
   text-align: center;
   padding: 10px 0px 10px 0px;
 }
-/* line 428, sass/modules/_modules.scss */
+/* line 453, sass/modules/_modules.scss */
 .load-more .load-more-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
-/* line 439, sass/modules/_modules.scss */
+/* line 464, sass/modules/_modules.scss */
 .search {
   display: block;
   margin: 60px 50px 50px 50px;
 }
-/* line 443, sass/modules/_modules.scss */
+/* line 468, sass/modules/_modules.scss */
 .search .input {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 450, sass/modules/_modules.scss */
+/* line 475, sass/modules/_modules.scss */
 .profile-container {
   display: none;
   position: absolute;
   background-color: white;
   width: 100%;
-  padding: 50px 0 100px 0;
+  padding: 50px 20px 100px 20px;
   z-index: 20;
   top: 200px;
 }
-/* line 458, sass/modules/_modules.scss */
+/* line 483, sass/modules/_modules.scss */
 .profile-container .profile-content {
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
 }
-/* line 465, sass/modules/_modules.scss */
+/* line 490, sass/modules/_modules.scss */
 .profile-container .profile-info {
   padding-left: 20px;
 }
-/* line 469, sass/modules/_modules.scss */
+/* line 494, sass/modules/_modules.scss */
 .profile-container h3 {
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Bold";
@@ -6589,19 +6629,19 @@ header {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-/* line 478, sass/modules/_modules.scss */
+/* line 503, sass/modules/_modules.scss */
 .profile-container span.green-primary {
   font-weight: bold;
   display: inline;
 }
-/* line 484, sass/modules/_modules.scss */
+/* line 509, sass/modules/_modules.scss */
 .profile-container span.title {
   display: block;
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 0.9375em;
   line-height: 1.5;
 }
-/* line 491, sass/modules/_modules.scss */
+/* line 516, sass/modules/_modules.scss */
 .profile-container span.location {
   display: block;
   font-size: 0.75em;
@@ -6609,11 +6649,11 @@ header {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-/* line 499, sass/modules/_modules.scss */
+/* line 524, sass/modules/_modules.scss */
 .profile-container .footer-social {
   height: 50px;
 }
-/* line 506, sass/modules/_modules.scss */
+/* line 531, sass/modules/_modules.scss */
 .profile-container .close-profile a {
   font-size: 30px;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -6622,19 +6662,25 @@ header {
   right: 4%;
   color: #616161;
 }
-/* line 513, sass/modules/_modules.scss */
+/* line 539, sass/modules/_modules.scss */
 .profile-container .close-profile a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 518, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 531, sass/modules/_modules.scss */
+  .profile-container .close-profile a {
+    top: 5px;
+  }
+}
+/* line 548, sass/modules/_modules.scss */
 .profile-container #loader {
   padding: 100px 0px 500px 0px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 525, sass/modules/_modules.scss */
+/* line 555, sass/modules/_modules.scss */
 .close-filter a {
   font-size: 20px;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -6643,15 +6689,26 @@ header {
   right: 2%;
   color: #616161;
 }
-/* line 532, sass/modules/_modules.scss */
+/* line 562, sass/modules/_modules.scss */
 .close-filter a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
 
-/* line 538, sass/modules/_modules.scss */
+/* line 568, sass/modules/_modules.scss */
 a.no-opacity:hover {
   opacity: 1;
+}
+
+/* line 570, sass/modules/_modules.scss */
+.gm-style-iw {
+  font-family: "Avenir Next Cyr W00 Regular", Helvetica, Arial, sans-serif;
+}
+
+/* line 574, sass/modules/_modules.scss */
+a.map-link {
+  color: #fec935;
+  font-family: "Avenir Next Cyr W00 Bold";
 }
 
 /* line 1, sass/modules/_input.scss */
