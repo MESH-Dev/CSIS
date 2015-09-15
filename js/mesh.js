@@ -128,6 +128,48 @@ jQuery(document).ready(function($){
   });
 
 
+
+  $(window).resize(function() {
+
+    if ($(window).width() > 700) {
+      if ($('.wp-video').length) {
+        $('.wp-video').each(function() {
+          if ($(this).height() > 1000) {
+            $(this).css('margin-top', '-40%');
+          } else {
+            $(this).css('margin-top', '20%');
+          }
+        });
+      }
+    } else {
+      if ($('.wp-video').length) {
+        $('.wp-video').each(function() {
+          if ($(this).height() > 1000) {
+            $(this).css('margin-top', '0');
+          } else {
+            $(this).css('margin-top', '0');
+          }
+        });
+      }
+    }
+  });
+
+
+  if ($('.wp-video').length) {
+
+    $('.wp-video').each(function() {
+
+      if ($(window).width() > 700) {
+        if ($(this).height() > 1000) {
+          $(this).css('margin-top', '-40%');
+        } else {
+          $(this).css('margin-top', '20%');
+        }
+      }
+    });
+  }
+
+
   var height = $( window ).width() / 2;
 
   $('.media-video').css('height', height);
@@ -147,20 +189,6 @@ jQuery(document).ready(function($){
 
   });
 
-
-  if ($('.wp-video').length) {
-
-    $('.wp-video').each(function() {
-
-          console.log($(this));
-        if ($(this).height() > $(this).width()) {
-          $(this).css('margin-top', '-40%');
-        } else {
-          $(this).css('margin-top', '20%');
-        }
-    });
-
-  }
 
 
 
