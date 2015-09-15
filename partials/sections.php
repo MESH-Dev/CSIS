@@ -112,14 +112,22 @@ if( have_rows('sections') ):
           <div class="content-text">
             <?php echo get_sub_field('body_text'); ?>
 
-            <br/>
 
-            <div class="six columns content-half">
-              <?php echo get_field('column_1_text'); ?>
-            </div>
-            <div class="six columns content-half">
-              <?php echo get_field('column_2_text'); ?>
-            </div>
+
+            <?php if (get_field('column_1_text')) { ?>
+              <br/>
+
+              <div class="six columns content-half">
+                <?php echo get_field('column_1_text'); ?>
+              </div>
+            <?php } ?>
+
+            <?php if (get_field('column_2_text')) { ?>
+              <div class="six columns content-half">
+                <?php echo get_field('column_2_text'); ?>
+              </div>
+            <?php } ?>
+
           </div>
         </div>
       </section>
@@ -321,7 +329,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns media-item media-image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; background-repeat: no-repeat; <?php } ?>">
+                  <div class="six columns media-image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; height: 100%; background-repeat: no-repeat; <?php } ?>">
                   </div>
 
                   <?php
@@ -331,7 +339,7 @@ if( have_rows('sections') ):
 
                   ?>
 
-                  <div class="six columns media-item media-video">
+                  <div class="six columns media-video">
 
                     <div class="video-holder">
                       <?php
