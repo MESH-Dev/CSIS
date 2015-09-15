@@ -5920,92 +5920,91 @@ header {
   left: 50px;
   width: 200px;
   z-index: 100;
-  top: 250px;
 }
-/* line 264, sass/modules/_menus.scss */
+/* line 263, sass/modules/_menus.scss */
 .side-menu .list {
   padding: 20px;
   background: #fec935;
 }
-/* line 269, sass/modules/_menus.scss */
+/* line 268, sass/modules/_menus.scss */
 .side-menu .info {
   border-bottom: 2px solid #cfcfcf;
   border-top: 2px solid #cfcfcf;
   padding: 10px;
   text-align: center;
 }
-/* line 274, sass/modules/_menus.scss */
+/* line 273, sass/modules/_menus.scss */
 .side-menu .info a {
   font-family: "Avenir Next Cyr W00 Italic";
   font-size: 10px;
 }
-/* line 282, sass/modules/_menus.scss */
+/* line 281, sass/modules/_menus.scss */
 .side-menu .apply {
   padding: 10px;
   text-align: center;
   background: #616161;
   margin-top: 10px;
 }
-/* line 288, sass/modules/_menus.scss */
+/* line 287, sass/modules/_menus.scss */
 .side-menu .apply a {
   text-transform: uppercase;
   color: #fec935;
 }
-/* line 293, sass/modules/_menus.scss */
+/* line 292, sass/modules/_menus.scss */
 .side-menu .apply:hover {
   background: #fec935;
 }
-/* line 296, sass/modules/_menus.scss */
+/* line 295, sass/modules/_menus.scss */
 .side-menu .apply:hover a {
   color: #616161;
 }
-/* line 302, sass/modules/_menus.scss */
+/* line 301, sass/modules/_menus.scss */
 .side-menu a {
   color: #616161;
   font-family: "Avenir Next Cyr W00 Bold";
   font-size: 15px;
   line-height: 30px;
 }
-/* line 310, sass/modules/_menus.scss */
+/* line 309, sass/modules/_menus.scss */
 .side-menu .scrolled-item a {
   border-bottom: 3px solid #616161;
 }
 
-/* line 316, sass/modules/_menus.scss */
+/* line 315, sass/modules/_menus.scss */
 .utilities-nav {
   background: #eeeeee;
   float: left;
   width: 100%;
 }
-/* line 321, sass/modules/_menus.scss */
+/* line 320, sass/modules/_menus.scss */
 .utilities-nav a {
   color: #8f8f8f;
   text-transform: uppercase;
   font-size: 10px;
   font-family: "Avenir Next Cyr W00 Regular";
 }
-/* line 331, sass/modules/_menus.scss */
+/* line 330, sass/modules/_menus.scss */
 .utilities-nav ul {
   float: right;
   margin: 0 30px;
 }
-/* line 335, sass/modules/_menus.scss */
+/* line 334, sass/modules/_menus.scss */
 .utilities-nav ul li {
   float: left;
   position: relative;
   padding: 0 10px;
 }
-/* line 340, sass/modules/_menus.scss */
+/* line 339, sass/modules/_menus.scss */
 .utilities-nav ul li.current_page_parent a {
   color: black;
 }
 
-/* line 347, sass/modules/_menus.scss */
+/* line 346, sass/modules/_menus.scss */
 .banner-navigation li:hover {
   opacity: 0.7;
 }
 
-/* line 351, sass/modules/_menus.scss */
+/* line 350, sass/modules/_menus.scss */
 .utilities-nav a:hover {
   color: black;
   opacity: 1;
