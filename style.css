@@ -114,7 +114,7 @@ body {
   margin: 0;
 }
 
-/* line 37, sass/base/_normalize.scss */
+/* line 26, sass/base/_normalize.scss */
 article,
 aside,
 details,
@@ -130,7 +130,7 @@ summary {
   display: block;
 }
 
-/* line 48, sass/base/_normalize.scss */
+/* line 45, sass/base/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -145,7 +145,7 @@ audio:not([controls]) {
   height: 0;
 }
 
-/* line 67, sass/base/_normalize.scss */
+/* line 66, sass/base/_normalize.scss */
 [hidden],
 template {
   display: none;
@@ -156,7 +156,7 @@ a {
   background: transparent;
 }
 
-/* line 83, sass/base/_normalize.scss */
+/* line 82, sass/base/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -167,7 +167,7 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 99, sass/base/_normalize.scss */
+/* line 98, sass/base/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -195,7 +195,7 @@ small {
   font-size: 80%;
 }
 
-/* line 138, sass/base/_normalize.scss */
+/* line 137, sass/base/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -241,7 +241,7 @@ pre {
   overflow: auto;
 }
 
-/* line 198, sass/base/_normalize.scss */
+/* line 195, sass/base/_normalize.scss */
 code,
 kbd,
 pre,
@@ -250,7 +250,7 @@ samp {
   font-size: 1em;
 }
 
-/* line 218, sass/base/_normalize.scss */
+/* line 214, sass/base/_normalize.scss */
 button,
 input,
 optgroup,
@@ -266,13 +266,13 @@ button {
   overflow: visible;
 }
 
-/* line 238, sass/base/_normalize.scss */
+/* line 237, sass/base/_normalize.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 252, sass/base/_normalize.scss */
+/* line 249, sass/base/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -281,13 +281,13 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 261, sass/base/_normalize.scss */
+/* line 260, sass/base/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 269, sass/base/_normalize.scss */
+/* line 268, sass/base/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -299,7 +299,7 @@ input {
   line-height: normal;
 }
 
-/* line 290, sass/base/_normalize.scss */
+/* line 284, sass/base/_normalize.scss */
 *
 input[type="checkbox"],
 input[type="radio"] {
@@ -307,7 +307,7 @@ input[type="radio"] {
   padding: 0;
 }
 
-/* line 301, sass/base/_normalize.scss */
+/* line 300, sass/base/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -321,7 +321,7 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 323, sass/base/_normalize.scss */
+/* line 322, sass/base/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -356,7 +356,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 370, sass/base/_normalize.scss */
+/* line 369, sass/base/_normalize.scss */
 td,
 th {
   padding: 0;
@@ -470,7 +470,7 @@ img {
   height: auto;
 }
 
-/* line 108, sass/base/_base.scss */
+/* line 107, sass/base/_base.scss */
 ul,
 li {
   margin: 0;
@@ -478,7 +478,7 @@ li {
   list-style-type: none;
 }
 
-/* line 117, sass/base/_base.scss */
+/* line 116, sass/base/_base.scss */
 input,
 textarea {
   display: block;
@@ -488,7 +488,7 @@ textarea {
   border: 0;
 }
 
-/* line 126, sass/base/_base.scss */
+/* line 125, sass/base/_base.scss */
 input:focus,
 textarea:focus {
   transition: 1;
@@ -518,7 +518,7 @@ footer p {
   margin: 0 auto;
   padding: 0;
 }
-/* line 9, sass/grid/_grid.scss */
+/* line 8, sass/grid/_grid.scss */
 .container .column,
 .container .columns {
   float: left;
@@ -542,7 +542,7 @@ footer p {
 }
 
 /* Overrides */
-/* line 25, sass/grid/_dependencies.scss */
+/* line 24, sass/grid/_dependencies.scss */
 .container .one.column,
 .container .one.columns {
   width: 8.33333%;
@@ -853,7 +853,7 @@ footer {
   left: -999em;
   top: 0;
 }
-/* line 43, sass/layout/_footer.scss */
+/* line 42, sass/layout/_footer.scss */
 .footer-social ul ul li:hover > ul, .footer-social ul ul li.focus > ul {
   left: 100%;
 }
@@ -861,7 +861,7 @@ footer {
 .footer-social ul ul a {
   width: 200px;
 }
-/* line 62, sass/layout/_footer.scss */
+/* line 61, sass/layout/_footer.scss */
 .footer-social ul li:hover > ul,
 .footer-social ul li.focus > ul {
   left: auto;
@@ -5203,7 +5203,7 @@ section {
 
 /* line 563, sass/layout/_main.scss */
 .image {
-  height: 300px;
+  height: 400px;
 }
 
 /* line 567, sass/layout/_main.scss */
@@ -5481,14 +5481,14 @@ section {
 }
 /* line 825, sass/layout/_main.scss */
 .blog-categories ul li:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 827, sass/layout/_main.scss */
 .blog-categories ul li:hover a {
   background: #fec935;
   color: #3a3a3a;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
@@ -5724,7 +5724,7 @@ header {
   left: -999em;
   top: 0;
 }
-/* line 31, sass/modules/_menus.scss */
+/* line 30, sass/modules/_menus.scss */
 .banner-navigation ul ul li:hover > ul, .banner-navigation ul ul li.focus > ul {
   left: 100%;
 }
@@ -5732,7 +5732,7 @@ header {
 .banner-navigation ul ul a {
   width: 200px;
 }
-/* line 50, sass/modules/_menus.scss */
+/* line 49, sass/modules/_menus.scss */
 .banner-navigation ul li:hover > ul,
 .banner-navigation ul li.focus > ul {
   left: auto;
@@ -5765,7 +5765,7 @@ header {
 }
 
 /* Small menu. */
-/* line 91, sass/modules/_menus.scss */
+/* line 90, sass/modules/_menus.scss */
 .menu-toggle,
 .banner-navigation.toggled ul {
   display: block;
@@ -5828,7 +5828,7 @@ header {
   left: -999em;
   top: 0;
 }
-/* line 151, sass/modules/_menus.scss */
+/* line 150, sass/modules/_menus.scss */
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
@@ -5836,7 +5836,7 @@ header {
 .main-navigation ul ul a {
   width: 200px;
 }
-/* line 170, sass/modules/_menus.scss */
+/* line 169, sass/modules/_menus.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
@@ -5876,7 +5876,7 @@ header {
 }
 
 /* Small menu. */
-/* line 224, sass/modules/_menus.scss */
+/* line 223, sass/modules/_menus.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -6303,7 +6303,7 @@ header {
   transition: 150ms;
 }
 
-/* line 304, sass/modules/_modules.scss */
+/* line 303, sass/modules/_modules.scss */
 .network-grid {
   min-height: 200px;
 }
@@ -6643,7 +6643,7 @@ a.no-opacity:hover {
   position: absolute;
 }
 
-/* line 98, sass/modules/_input.scss */
+/* line 97, sass/modules/_input.scss */
 .input__label--hoshi::before,
 .input__label--hoshi::after {
   content: '';
@@ -6665,14 +6665,14 @@ a.no-opacity:hover {
   transition: transform 0.3s;
 }
 
-/* line 120, sass/modules/_input.scss */
+/* line 119, sass/modules/_input.scss */
 .input__field--hoshi:focus + .input__label--hoshi::after,
 .input--filled .input__label--hoshi::after {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 126, sass/modules/_input.scss */
+/* line 125, sass/modules/_input.scss */
 .input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
 .input--filled .input__label-content--hoshi {
   -webkit-animation: anim-1 0.3s forwards;
@@ -6680,44 +6680,33 @@ a.no-opacity:hover {
 }
 
 @-webkit-keyframes anim-1 {
-  /* line 132, sass/modules/_input.scss */
   50% {
     opacity: 0;
     -webkit-transform: translate3d(1em, 0, 0);
     transform: translate3d(1em, 0, 0);
   }
-
-  /* line 137, sass/modules/_input.scss */
   51% {
     opacity: 0;
     -webkit-transform: translate3d(-1em, -40%, 0);
     transform: translate3d(-1em, -40%, 0);
   }
-
-  /* line 142, sass/modules/_input.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate3d(0, -40%, 0);
     transform: translate3d(0, -40%, 0);
   }
 }
-
 @keyframes anim-1 {
-  /* line 150, sass/modules/_input.scss */
   50% {
     opacity: 0;
     -webkit-transform: translate3d(1em, 0, 0);
     transform: translate3d(1em, 0, 0);
   }
-
-  /* line 155, sass/modules/_input.scss */
   51% {
     opacity: 0;
     -webkit-transform: translate3d(-1em, -40%, 0);
     transform: translate3d(-1em, -40%, 0);
   }
-
-  /* line 160, sass/modules/_input.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate3d(0, -40%, 0);
