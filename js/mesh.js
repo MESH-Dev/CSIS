@@ -25,6 +25,11 @@ jQuery(document).ready(function($){
 
   }
 
+  if( $window.width() <= 700){
+    $('.banner').css("background-attachment", "scroll");
+    
+  };
+
 
   $(document).scroll(function () {
     var y = $(this).scrollTop();
