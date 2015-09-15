@@ -5415,79 +5415,84 @@ section {
 }
 
 /* line 559, sass/layout/_main.scss */
+.body-text-area h5 {
+  font-family: "Avenir Next Cyr W00 Heavy";
+}
+
+/* line 563, sass/layout/_main.scss */
 .email-signup-text {
   padding: 50px;
 }
 
-/* line 563, sass/layout/_main.scss */
+/* line 567, sass/layout/_main.scss */
 .schedule-text {
   float: left;
   padding: 50px;
 }
 
-/* line 568, sass/layout/_main.scss */
+/* line 572, sass/layout/_main.scss */
 .quote-text {
   padding: 50px;
   text-align: center;
 }
 
-/* line 573, sass/layout/_main.scss */
+/* line 577, sass/layout/_main.scss */
 .image {
   height: 400px;
 }
 
-/* line 577, sass/layout/_main.scss */
+/* line 581, sass/layout/_main.scss */
 .image-with-text {
   height: 600px;
 }
 
-/* line 582, sass/layout/_main.scss */
+/* line 586, sass/layout/_main.scss */
 .icon-box {
   width: 33.3%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 587, sass/layout/_main.scss */
+/* line 591, sass/layout/_main.scss */
 .icon-box h5 {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 593, sass/layout/_main.scss */
+/* line 597, sass/layout/_main.scss */
 .listing-text h3 a {
   color: white;
 }
 
-/* line 598, sass/layout/_main.scss */
+/* line 602, sass/layout/_main.scss */
 .schedule-box {
   width: 50%;
   float: left;
   padding: 20px 120px 20px 0;
 }
-/* line 603, sass/layout/_main.scss */
+/* line 607, sass/layout/_main.scss */
 .schedule-box .strong {
   font-family: "Avenir Next Cyr W00 Bold";
 }
-/* line 606, sass/layout/_main.scss */
+/* line 610, sass/layout/_main.scss */
 .schedule-box .blue {
   color: #0ebde8;
 }
 
-/* line 611, sass/layout/_main.scss */
+/* line 615, sass/layout/_main.scss */
 .buttons h3, .form h3 {
   margin-bottom: 0;
 }
 
-/* line 615, sass/layout/_main.scss */
+/* line 619, sass/layout/_main.scss */
 .buttons p, .form p {
   margin-bottom: 15px;
 }
 
-/* line 619, sass/layout/_main.scss */
+/* line 623, sass/layout/_main.scss */
 .regular-font {
   font-family: "Avenir Next Cyr W00 Regular";
 }
 
-/* line 623, sass/layout/_main.scss */
+/* line 627, sass/layout/_main.scss */
 .buttons-cta {
   display: inline;
   padding: 25px 35px 25px 25px;
@@ -5497,7 +5502,7 @@ section {
   position: relative;
   float: left;
 }
-/* line 632, sass/layout/_main.scss */
+/* line 636, sass/layout/_main.scss */
 .buttons-cta .right {
   display: inline-block;
   width: 1.5em;
@@ -5508,7 +5513,7 @@ section {
   border: 0.1em solid #2791bd;
   line-height: 1.1em;
 }
-/* line 643, sass/layout/_main.scss */
+/* line 647, sass/layout/_main.scss */
 .buttons-cta .right:after {
   content: '';
   display: inline-block;
@@ -5522,24 +5527,24 @@ section {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
 }
-/* line 657, sass/layout/_main.scss */
+/* line 661, sass/layout/_main.scss */
 .buttons-cta:hover {
   background: white;
   color: #2791bd;
   border: 3px solid #2791bd;
   padding: 22px 32px 22px 22px;
 }
-/* line 663, sass/layout/_main.scss */
+/* line 667, sass/layout/_main.scss */
 .buttons-cta:hover .right {
   border: 0.1em solid #2791bd;
 }
-/* line 666, sass/layout/_main.scss */
+/* line 670, sass/layout/_main.scss */
 .buttons-cta:hover .right::after {
   border-top: 0.1em solid #2791bd;
   border-right: 0.1em solid #2791bd;
 }
 
-/* line 675, sass/layout/_main.scss */
+/* line 679, sass/layout/_main.scss */
 .submit-buttons {
   display: inline;
   padding: 10px 20px 10px 10px;
@@ -5550,7 +5555,7 @@ section {
   float: left;
   margin-top: 30px;
 }
-/* line 685, sass/layout/_main.scss */
+/* line 689, sass/layout/_main.scss */
 .submit-buttons .right {
   display: inline-block;
   width: 1.5em;
@@ -5560,7 +5565,7 @@ section {
   text-align: center;
   line-height: 1.1em;
 }
-/* line 695, sass/layout/_main.scss */
+/* line 699, sass/layout/_main.scss */
 .submit-buttons .right:after {
   content: '';
   display: inline-block;
@@ -5573,44 +5578,44 @@ section {
   transform: rotate(45deg);
 }
 
-/* line 709, sass/layout/_main.scss */
+/* line 713, sass/layout/_main.scss */
 .content-half {
   padding-right: 20px;
   margin-top: 20px;
 }
-/* line 713, sass/layout/_main.scss */
+/* line 717, sass/layout/_main.scss */
 .content-half h5 {
   font-family: "Avenir Next Cyr W00 Bold";
   margin-bottom: 0;
 }
 
-/* line 719, sass/layout/_main.scss */
+/* line 723, sass/layout/_main.scss */
 .content-text {
   padding: 50px;
   float: left;
 }
-/* line 723, sass/layout/_main.scss */
+/* line 727, sass/layout/_main.scss */
 .content-text p {
   color: black;
 }
-/* line 727, sass/layout/_main.scss */
+/* line 731, sass/layout/_main.scss */
 .content-text h4 {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 733, sass/layout/_main.scss */
+/* line 737, sass/layout/_main.scss */
 .side-text p {
   margin-bottom: 3px;
   font-size: 10px;
   color: #494949;
 }
 
-/* line 740, sass/layout/_main.scss */
+/* line 744, sass/layout/_main.scss */
 #content {
   float: left;
 }
 
-/* line 745, sass/layout/_main.scss */
+/* line 749, sass/layout/_main.scss */
 .thumbnail {
   float: left;
   width: 100%;
@@ -5618,32 +5623,32 @@ section {
   margin-bottom: 15px;
 }
 
-/* line 752, sass/layout/_main.scss */
+/* line 756, sass/layout/_main.scss */
 .single-post main, .blog main, .page-template-global-network main, main {
   border-top: 5px solid #fec935;
 }
 
-/* line 756, sass/layout/_main.scss */
+/* line 760, sass/layout/_main.scss */
 .parent-page-residential-experiences main {
   border-top: 5px solid #4fd1a1;
 }
 
-/* line 764, sass/layout/_main.scss */
+/* line 768, sass/layout/_main.scss */
 .parent-page-online main {
   border-top: 5px solid #2791bd;
 }
 
-/* line 768, sass/layout/_main.scss */
+/* line 772, sass/layout/_main.scss */
 .parent-page-residential main {
   border-top: 5px solid #4fd1a1;
 }
 
-/* line 772, sass/layout/_main.scss */
+/* line 776, sass/layout/_main.scss */
 .parent-page-research-ideas main {
   border-top: 5px solid #712880;
 }
 
-/* line 782, sass/layout/_main.scss */
+/* line 786, sass/layout/_main.scss */
 .blog-sidebar {
   padding: 50px 30px;
   background-color: #3a3a3a;
@@ -5652,14 +5657,14 @@ section {
   width: 100%;
 }
 
-/* line 790, sass/layout/_main.scss */
+/* line 794, sass/layout/_main.scss */
 .blog-content {
   float: left;
   padding: 50px;
   width: 100%;
 }
 
-/* line 796, sass/layout/_main.scss */
+/* line 800, sass/layout/_main.scss */
 .blog-sidebar-title {
   text-transform: uppercase;
   font-family: "Avenir Next Cyr W00 Heavy";
@@ -5672,49 +5677,49 @@ section {
   cursor: pointer;
   float: left;
 }
-/* line 808, sass/layout/_main.scss */
+/* line 812, sass/layout/_main.scss */
 .blog-sidebar-title i {
   float: right;
 }
 
-/* line 813, sass/layout/_main.scss */
+/* line 817, sass/layout/_main.scss */
 .blog-sidebar-title-text {
   float: left;
 }
 
-/* line 817, sass/layout/_main.scss */
+/* line 821, sass/layout/_main.scss */
 .blog-categories {
   display: none;
 }
-/* line 820, sass/layout/_main.scss */
+/* line 824, sass/layout/_main.scss */
 .blog-categories ul {
   margin-bottom: 40px;
   float: left;
   width: 100%;
 }
-/* line 825, sass/layout/_main.scss */
+/* line 829, sass/layout/_main.scss */
 .blog-categories ul li {
   padding: 5px;
   float: left;
   width: 100%;
 }
-/* line 830, sass/layout/_main.scss */
+/* line 834, sass/layout/_main.scss */
 .blog-categories ul li a {
   color: #fec935;
   font-size: 15px;
   padding: 5px;
 }
-/* line 836, sass/layout/_main.scss */
+/* line 840, sass/layout/_main.scss */
 .blog-categories ul li.active a {
   background: #fec935;
   color: #3a3a3a;
 }
-/* line 841, sass/layout/_main.scss */
+/* line 845, sass/layout/_main.scss */
 .blog-categories ul li:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 843, sass/layout/_main.scss */
+/* line 847, sass/layout/_main.scss */
 .blog-categories ul li:hover a {
   background: #fec935;
   color: #3a3a3a;
@@ -5722,39 +5727,39 @@ section {
   opacity: 1;
 }
 
-/* line 853, sass/layout/_main.scss */
+/* line 857, sass/layout/_main.scss */
 .blog-post {
   border-top: 5px solid #fec935;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 858, sass/layout/_main.scss */
+/* line 862, sass/layout/_main.scss */
 .blog-post h2 {
   margin-bottom: 15px;
 }
-/* line 861, sass/layout/_main.scss */
+/* line 865, sass/layout/_main.scss */
 .blog-post h2 a {
   color: #3a3a3a;
 }
-/* line 866, sass/layout/_main.scss */
+/* line 870, sass/layout/_main.scss */
 .blog-post h5 {
   font-family: "Avenir Next Cyr W00 Heavy";
 }
-/* line 869, sass/layout/_main.scss */
+/* line 873, sass/layout/_main.scss */
 .blog-post h5 a {
   color: #3a3a3a;
 }
-/* line 874, sass/layout/_main.scss */
+/* line 878, sass/layout/_main.scss */
 .blog-post h6 {
   color: #3a3a3a;
 }
 
-/* line 879, sass/layout/_main.scss */
+/* line 883, sass/layout/_main.scss */
 .blog-post-small {
   padding-right: 20px;
 }
 
-/* line 883, sass/layout/_main.scss */
+/* line 887, sass/layout/_main.scss */
 .blog-post-categories {
   margin-bottom: 10px;
   color: #fec935;
@@ -5765,17 +5770,17 @@ section {
   line-height: 20px;
 }
 
-/* line 893, sass/layout/_main.scss */
+/* line 897, sass/layout/_main.scss */
 .active-category {
   display: block;
 }
 
-/* line 897, sass/layout/_main.scss */
+/* line 901, sass/layout/_main.scss */
 .active-sidebar-title {
   border-bottom: 3px solid #fec935;
 }
 
-/* line 901, sass/layout/_main.scss */
+/* line 905, sass/layout/_main.scss */
 .moretag {
   color: #fec935;
   text-transform: uppercase;
@@ -5783,51 +5788,51 @@ section {
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 908, sass/layout/_main.scss */
+/* line 912, sass/layout/_main.scss */
 .social-icons {
   color: #a9a9a9;
 }
-/* line 911, sass/layout/_main.scss */
+/* line 915, sass/layout/_main.scss */
 .social-icons a {
   color: #a9a9a9;
 }
-/* line 915, sass/layout/_main.scss */
+/* line 919, sass/layout/_main.scss */
 .social-icons i {
   font-size: 25px;
   margin-right: 20px;
 }
 
-/* line 921, sass/layout/_main.scss */
+/* line 925, sass/layout/_main.scss */
 .news {
   margin-bottom: 0px;
 }
 
-/* line 925, sass/layout/_main.scss */
+/* line 929, sass/layout/_main.scss */
 .image-holder {
   height: 100%;
   display: table !important;
 }
 
-/* line 930, sass/layout/_main.scss */
+/* line 934, sass/layout/_main.scss */
 .image-text {
   padding: 100px 50px;
   display: table-cell;
   vertical-align: middle;
   height: 100%;
 }
-/* line 936, sass/layout/_main.scss */
+/* line 940, sass/layout/_main.scss */
 .image-text h4 {
   color: white;
   margin-bottom: 10px;
   font-family: "Avenir Next Cyr W00 Bold";
 }
 
-/* line 944, sass/layout/_main.scss */
+/* line 948, sass/layout/_main.scss */
 .mejs-container {
   width: 100% !important;
 }
 
-/* line 948, sass/layout/_main.scss */
+/* line 952, sass/layout/_main.scss */
 .video-holder {
   overflow: hidden;
   height: 400px;
@@ -5835,22 +5840,22 @@ section {
   background-color: black;
 }
 
-/* line 956, sass/layout/_main.scss */
+/* line 960, sass/layout/_main.scss */
 .text-holder {
   background-color: #dcdcdc;
   padding: 50px;
   height: 100%;
 }
-/* line 961, sass/layout/_main.scss */
+/* line 965, sass/layout/_main.scss */
 .text-holder h3 {
   color: #393939;
 }
-/* line 965, sass/layout/_main.scss */
+/* line 969, sass/layout/_main.scss */
 .text-holder p {
   color: #9e9e9e;
 }
 
-/* line 970, sass/layout/_main.scss */
+/* line 974, sass/layout/_main.scss */
 .triangle-bar {
   width: 100%;
   float: left;
@@ -5859,7 +5864,7 @@ section {
   bottom: 0;
 }
 
-/* line 978, sass/layout/_main.scss */
+/* line 982, sass/layout/_main.scss */
 .triangle-block {
   width: calc(50% - 60px);
   float: left;
@@ -5868,7 +5873,7 @@ section {
   background-color: white;
 }
 
-/* line 986, sass/layout/_main.scss */
+/* line 990, sass/layout/_main.scss */
 .triangle-left {
   width: 0;
   height: 0;
@@ -5879,7 +5884,7 @@ section {
   display: inline;
 }
 
-/* line 996, sass/layout/_main.scss */
+/* line 1000, sass/layout/_main.scss */
 .triangle-right {
   width: 0;
   height: 0;
@@ -5890,7 +5895,7 @@ section {
   display: inline;
 }
 
-/* line 1006, sass/layout/_main.scss */
+/* line 1010, sass/layout/_main.scss */
 #loadmore-posts {
   clear: both;
   width: 20%;
@@ -5904,25 +5909,25 @@ section {
   color: white;
   margin-top: 10px;
 }
-/* line 1019, sass/layout/_main.scss */
+/* line 1023, sass/layout/_main.scss */
 #loadmore-posts:hover {
   background-color: white;
   color: #fec935;
   cursor: pointer;
 }
 
-/* line 1026, sass/layout/_main.scss */
+/* line 1030, sass/layout/_main.scss */
 .page-numbers {
   display: none;
 }
 
-/* line 1027, sass/layout/_main.scss */
+/* line 1031, sass/layout/_main.scss */
 a.next.page-numbers {
   display: block;
   color: white;
 }
 
-/* line 1028, sass/layout/_main.scss */
+/* line 1032, sass/layout/_main.scss */
 a.next.page-numbers:hover {
   display: block;
   color: #fec935;
