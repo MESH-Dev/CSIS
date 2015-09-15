@@ -5502,7 +5502,7 @@ section {
 }
 
 /* line 754, sass/layout/_main.scss */
-.parent-page-online-learning main {
+.parent-page-online main {
   border-top: 5px solid #2791bd;
 }
 
@@ -6137,7 +6137,7 @@ header {
   /* line 351, sass/modules/_menus.scss */
   .utilities-nav ul {
     float: none;
-    margin: 0 5px;
+    margin: 0 auto;
     text-align: center;
   }
 }
