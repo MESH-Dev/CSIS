@@ -271,7 +271,7 @@ get_header(); ?>
 
       									?>
 
-                          <div class="icon-box">
+                          <div class="icon-box four columns">
                             <p style="text-align: center;">
                               <img src="<?php echo $thumb; ?>" />
                             </p>
