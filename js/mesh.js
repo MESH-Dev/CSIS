@@ -299,13 +299,56 @@ jQuery(document).ready(function($){
     $(this).find('blog-sidebar-title-text').toggleClass('active-sidebar-title');
   });
 
-  // $('#byscripts_ajax_posts_loader_trigger').click(function() {
-  //     $('.blog-section').matchHeight();
-
-  // });
-  $('.blog-section').bind("DOMSubtreeModified", function() {
-      $('.blog-section').matchHeight();
-
+  $('.next.page-numbers').click(function(e) {
+      e.preventDefault();
+     
+      var page = $('.page-numbers.current').html();
+      page = parseInt(page);
+      page = page+1;
+      console.log(page);
+      loadPosts(page);
   });
+
+
+  function loadPosts(page) {
+      var is_loading = false;
+      if (is_loading == false) {
+        is_loading = true;
+
+        $('#loader').show();
+
+        var data = {
+            action: 'loadPosts',
+            query_vars: ajaxpagination.query_vars,
+            page: page
+        };
+
+        jQuery.post(ajaxurl, data, function(response) {
+            // append: add the new statments to the existing data
+            if(response != 0){
+              //$('.profile-content').empty();
+              //console.log(response);
+              $('#loadmore-posts').remove();
+              $('.blog-content').append(response);
+              //$('.blog-content').css('opacity',1);
+              is_loading = false;
+              $('.blog-section').matchHeight();
+
+
+            }
+            else{
+              $('#loader').hide();
+              is_loading = false;
+
+            }
+        });
+      }
+  }
+
+
+
+
+ 
+
 
 });

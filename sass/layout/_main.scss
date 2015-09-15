@@ -985,7 +985,7 @@ section {
   display: inline;
 }
 
-#byscripts_ajax_posts_loader_trigger{
+#loadmore-posts{
   clear: both;
   width: 20%;
   text-align: center;
@@ -1004,3 +1004,7 @@ section {
     cursor: pointer;
   }
 }
+
+.page-numbers{display: none;}
+a.next.page-numbers{display: block; color:white;}
+a.next.page-numbers:hover {display: block; color:$yellow-primary;}

@@ -27,6 +27,13 @@ function loadup_scripts() {
   wp_localize_script( 'profile-data', 'profile_json', $translation_array );
 
 	wp_enqueue_script( 'parallax-js', get_template_directory_uri().'/js/jquery.parallax-1.1.3.js', array('jquery'), '1.0.0', true );
+  
+
+  global $wp_query;
+  wp_localize_script( 'theme-js', 'ajaxpagination', array(
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    'query_vars' => json_encode( $wp_query->query )
+  ));
 }
 
 add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
