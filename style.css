@@ -5670,6 +5670,7 @@ section {
 #byscripts_ajax_posts_loader_trigger:hover {
   background-color: white;
   color: #fec935;
+  cursor: pointer;
 }
 
 /* line 1, sass/layout/_header.scss */
