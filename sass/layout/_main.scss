@@ -185,6 +185,12 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       }
 
       .cta-big {
+
+        @include mq($tablet-width, 'max-width') {
+           margin: 20px 0;
+           text-align: center;
+        }
+
         .right {
           border: 0.2em solid white;
           display: inline-block;
@@ -590,7 +596,7 @@ section {
   text-align: center;
 
   @include mq($mobile-landscape-width, 'max-width') {
-     padding: 20px;  
+     padding: 20px;
   }
 }
 
