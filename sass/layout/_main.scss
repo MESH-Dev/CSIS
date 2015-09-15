@@ -238,6 +238,14 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       }
 
     }
+    .no-screen{
+      background-color: rgba(255,255,255, 0.0);
+      &.hover {
+        &:hover {
+          background-color: rgba(255,255,255, 0.0);
+        }
+      }
+    }
 
     &.submit-buttons, &.buttons-cta {
       .right {
