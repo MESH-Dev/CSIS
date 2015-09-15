@@ -181,22 +181,22 @@
 		}
 
 		&:nth-child(1) {
-			&:hover, &.current-menu-item {
+			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $purple-tertiary;
 			}
 		}
 		&:nth-child(2) {
-			&:hover, &.current-menu-item {
+			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $blue-primary;
 			}
 		}
 		&:nth-child(3) {
-			&:hover, &.current-menu-item {
+			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $green-primary;
 			}
 		}
 		&:nth-child(4) {
-			&:hover, &.current-menu-item {
+			&:hover, &.current-menu-item, &.current-page-ancestor {
 				border-bottom: 3px solid $yellow-primary;
 			}
 		}

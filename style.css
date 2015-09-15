@@ -5870,19 +5870,19 @@ header {
   margin: 0 5px 5px 25px;
 }
 /* line 184, sass/modules/_menus.scss */
-.main-navigation li:nth-child(1):hover, .main-navigation li:nth-child(1).current-menu-item {
+.main-navigation li:nth-child(1):hover, .main-navigation li:nth-child(1).current-menu-item, .main-navigation li:nth-child(1).current-page-ancestor {
   border-bottom: 3px solid #712880;
 }
 /* line 189, sass/modules/_menus.scss */
-.main-navigation li:nth-child(2):hover, .main-navigation li:nth-child(2).current-menu-item {
+.main-navigation li:nth-child(2):hover, .main-navigation li:nth-child(2).current-menu-item, .main-navigation li:nth-child(2).current-page-ancestor {
   border-bottom: 3px solid #2791bd;
 }
 /* line 194, sass/modules/_menus.scss */
-.main-navigation li:nth-child(3):hover, .main-navigation li:nth-child(3).current-menu-item {
+.main-navigation li:nth-child(3):hover, .main-navigation li:nth-child(3).current-menu-item, .main-navigation li:nth-child(3).current-page-ancestor {
   border-bottom: 3px solid #4fd1a1;
 }
 /* line 199, sass/modules/_menus.scss */
-.main-navigation li:nth-child(4):hover, .main-navigation li:nth-child(4).current-menu-item {
+.main-navigation li:nth-child(4):hover, .main-navigation li:nth-child(4).current-menu-item, .main-navigation li:nth-child(4).current-page-ancestor {
   border-bottom: 3px solid #fec935;
 }
 /* line 205, sass/modules/_menus.scss */
