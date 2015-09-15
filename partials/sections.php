@@ -362,15 +362,19 @@ if( have_rows('sections') ):
 
                   <div class="six columns media-item">
 
-                    <div class="video-container">
+                    <div class="information-video">
 
-                      <?php
+                      <div class="video-container">
 
-                      $video = get_sub_field('2-column_youtube');
+                        <?php
 
-                      ?>
+                        $video = get_sub_field('2-column_youtube');
 
-                      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                        ?>
+
+                        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+                      </div>
 
                     </div>
 
