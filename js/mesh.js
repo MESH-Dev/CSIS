@@ -343,6 +343,7 @@ jQuery(document).ready(function($){
   $('.blog-post-small').matchHeight();
   $('.blog-section').matchHeight();
   $('.information-holder').matchHeight();
+  $('.icon-box').matchHeight();
 
 
   if( $(window).width() >= 700){
