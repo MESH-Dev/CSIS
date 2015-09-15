@@ -272,9 +272,11 @@ if( have_rows('sections') ):
                   <div class="callout-screen <?php if( $image !='' && $text =='' && $texttitle =='' ){ ?> no-screen <?php }?>  hover ">
 
                     <div class="listing-text">
-                      <h3><a href="<?php echo get_sub_field('2_column_link'); ?>"><?php echo get_sub_field('2_column_title'); ?></a></h3>
+                      <h3>
+                        <?php if (get_sub_field('2_column_link')) { ?>
+                          <a href="<?php echo get_sub_field('2_column_link'); ?>"> <?php } ?><?php echo get_sub_field('2_column_title'); ?><?php if (get_sub_field('2_column_link')) { ?></a><?php } ?></h3>
                       <p><?php echo get_sub_field('2-column_body_text'); ?></p>
-                      <?php if (get_sub_field('2_column_link')) { ?>
+                      <?php if (get_sub_field('2_column_link')) { ?> 
                       <div class="cta-small">
                         <div class="cta-text">
                           <a href="<?php echo get_sub_field('2_column_link'); ?>">
@@ -432,7 +434,11 @@ if( have_rows('sections') ):
 
                 <div class="four columns <?php echo get_sub_field('color'); ?>-background hover ">
                   <div class="listing-text">
-                    <h3><a href="<?php echo get_sub_field('3-column_link'); ?>"><?php echo get_sub_field('3-column_title'); ?></a></h3>
+                    <h3>
+                       <?php if (get_sub_field('3-column_link')) { ?><a href="<?php echo get_sub_field('3-column_link'); ?>"> <?php } ?>
+                        <?php echo get_sub_field('3-column_title'); ?>
+                       <?php if (get_sub_field('3-column_link')) { ?></a> <?php } ?>
+                     </h3>
                     <p><?php echo get_sub_field('3-column_body_text'); ?></p>
                     <?php if (get_sub_field('3-column_link')) { ?>
                       <div class="cta-small">
