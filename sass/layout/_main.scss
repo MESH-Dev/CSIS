@@ -991,10 +991,11 @@ section {
   margin: 0 auto;
   background-color: $yellow-primary;
   border: 3px solid $yellow-primary;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   font-family: $font-family--bold;
   text-transform: uppercase;
   color: white;
+  margin-top: 10px;
 
   &:hover{
     background-color: white;

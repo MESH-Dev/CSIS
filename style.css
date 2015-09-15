@@ -5661,12 +5661,13 @@ section {
   margin: 0 auto;
   background-color: #fec935;
   border: 3px solid #fec935;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   font-family: "Avenir Next Cyr W00 Bold";
   text-transform: uppercase;
   color: white;
+  margin-top: 10px;
 }
-/* line 999, sass/layout/_main.scss */
+/* line 1000, sass/layout/_main.scss */
 #byscripts_ajax_posts_loader_trigger:hover {
   background-color: white;
   color: #fec935;
