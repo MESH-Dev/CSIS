@@ -235,7 +235,7 @@
 }
 
 .menu-toggle {
-	
+
 }
 
 /* Small menu. */
@@ -343,7 +343,7 @@
 		font-family: $font-family--regular;
 
 		@include mq($tablet-width, 'max-width') {
-			 font-size: 8px;
+			 font-size: 7px;
 		}
 	}
 
@@ -354,7 +354,7 @@
 
 		@include mq($tablet-width, 'max-width') {
 			 float: left;
-			 margin: 0 15px;
+			 margin: 0 5px;
 		}
 
 		li {
@@ -363,7 +363,7 @@
 			padding: 0 10px;
 
 			@include mq($tablet-width, 'max-width') {
-			 	padding: 0 5px;
+			 	padding: 0 3px;
 			}
 
 			&.current_page_parent a,&.current-menu-item a,&.current-page-ancestor a {

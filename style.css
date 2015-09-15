@@ -6125,7 +6125,7 @@ header {
 @media screen and (max-width: 768px) {
   /* line 339, sass/modules/_menus.scss */
   .utilities-nav a {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 /* line 351, sass/modules/_menus.scss */
@@ -6137,7 +6137,7 @@ header {
   /* line 351, sass/modules/_menus.scss */
   .utilities-nav ul {
     float: left;
-    margin: 0 15px;
+    margin: 0 5px;
   }
 }
 /* line 360, sass/modules/_menus.scss */
@@ -6149,7 +6149,7 @@ header {
 @media screen and (max-width: 768px) {
   /* line 360, sass/modules/_menus.scss */
   .utilities-nav ul li {
-    padding: 0 5px;
+    padding: 0 3px;
   }
 }
 /* line 369, sass/modules/_menus.scss */
