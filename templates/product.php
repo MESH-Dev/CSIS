@@ -340,7 +340,7 @@ get_header(); ?>
 
               ?>
 
-              <section class="form <?php echo $color; ?>" id="info">
+              <section class="form <?php echo $color; ?>" id="<?php if (get_sub_field('menu_title')) { echo $n; $n++; } ?>">
 
 
                   <div class="row">
