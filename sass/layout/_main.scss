@@ -185,6 +185,12 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
       }
 
       .cta-big {
+
+        @include mq($tablet-width, 'max-width') {
+           margin: 20px 0;
+           text-align: center;
+        }
+
         .right {
           border: 0.2em solid white;
           display: inline-block;
@@ -367,6 +373,10 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
   position: relative;
   z-index: 10;
   padding: 50px 50px 50px 50px;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+  }
 
   .banner-title {
     font-family: $font-family--bold;
@@ -562,6 +572,10 @@ section {
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+  }
 }
 
 .body-text-area h5 {
@@ -580,6 +594,10 @@ section {
 .quote-text {
   padding: 50px;
   text-align: center;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+  }
 }
 
 .image {
@@ -592,9 +610,14 @@ section {
 
 
 .icon-box {
-  width: 33.3%;
   float: left;
   padding: 20px 120px 20px 0;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+     text-align: center;
+  }
+
 
   h5 {
     font-family: $font-family--bold;
@@ -803,6 +826,10 @@ section {
   float: left;
   padding: 50px;
   width: 100%;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+     padding: 20px;
+  }
 }
 
 .blog-sidebar-title {
@@ -872,6 +899,7 @@ section {
 
     a {
       color: #3a3a3a;
+      word-break: break-word;
     }
   }
 
@@ -1016,6 +1044,7 @@ section {
 }
 
 #loadmore-posts{
+  display: none;
   clear: both;
   width: 20%;
   text-align: center;

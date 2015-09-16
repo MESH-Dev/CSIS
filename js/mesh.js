@@ -42,7 +42,6 @@ jQuery(document).ready(function($){
 
     if ( $('.side-menu').length ) {
 
-      console.log(y);
 
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');
@@ -155,6 +154,42 @@ jQuery(document).ready(function($){
       else if (y > $('#10').position().top && y < $('#11').position().top) {
         $('.side-menu ul li').each(function(index) {
           if (index == 10) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#11').position().top && y < $('#12').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 11) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#12').position().top && y < $('#13').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 12) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#13').position().top && y < $('#14').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 13) {
+            $(this).addClass('scrolled-item');
+          } else {
+            $(this).removeClass('scrolled-item');
+          }
+        })
+      }
+      else if (y > $('#14').position().top && y < $('#15').position().top) {
+        $('.side-menu ul li').each(function(index) {
+          if (index == 14) {
             $(this).addClass('scrolled-item');
           } else {
             $(this).removeClass('scrolled-item');
@@ -453,18 +488,36 @@ $('.callout-panel h2').hover(function () {
 });
 
 
-$('a').each(function() {
-   var a = new RegExp('/' + window.location.host + '/');
-   if(!a.test(this.href)) {
-       $(this).click(function(event) {
-           event.preventDefault();
-           event.stopPropagation();
-           window.open(this.href, '_blank');
-       });
-   }
-});
 
 
+// New tabs
+
+  /* ==========
+     Variables
+   ========== */
+   var url = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+
+  /* ==========
+      Utilities
+    ========== */
+   function beginsWith(needle, haystack){
+     return (haystack.substr(0, needle.length) == needle);
+   };
+
+
+  /* ==========
+     Anchors open in new tab/window
+   ========== */
+   $('a').each(function(){
+
+     if(typeof $(this).attr('href') != "undefined") {
+      var test = beginsWith( url, $(this).attr('href') );
+      //if it's an external link then open in a new tab
+      if( test == false && $(this).attr('href').indexOf('#') == -1){
+        $(this).attr('target','_blank');
+      }
+     }
+   });
 
 
 });
