@@ -519,5 +519,43 @@ $('.callout-panel h2').hover(function () {
      }
    });
 
+  
+ 
+   //Play videos on scroll into view.
+   $(window).scroll(function(e) {
+      var scrollAmount = $('body').scrollTop();
+      console.log(scrollAmount);
+      var videoTop = $('#mep_0').position().top;
+      console.log(videoTop);
+
+      var playing = 0;
+
+
+      if(scrollAmount >= videoTop) {
+        
+        console.log("PLAY");
+ 
+        //click play btn if not already playing.
+        if(!playing){
+          $(".wp-video-shortcode").find(".mejs-button [title='Play']")[0].click();
+          playing = 1;
+        }
+ 
+      }
+
+  });
+ 
+        
+      
+
+
+    
+    
+     
+ 
+
+
+
+
 
 });
