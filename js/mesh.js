@@ -519,40 +519,46 @@ $('.callout-panel h2').hover(function () {
      }
    });
 
-  
- 
+
+   var played = [];
+
+   $( ".video-holder" ).each(function( index ) {
+      played.push(false);
+   });
+
    //Play videos on scroll into view.
    $(window).scroll(function(e) {
-      var scrollAmount = $('body').scrollTop();
-      console.log(scrollAmount);
-      var videoTop = $('#mep_0').position().top;
-      console.log(videoTop);
 
-      var playing = 0;
+     var scrollAmount = $('body').scrollTop();
 
+      $( ".video-holder" ).each(function( index ) {
 
-      if(scrollAmount >= videoTop) {
-        
-        console.log("PLAY");
- 
-        //click play btn if not already playing.
-        if(!playing){
-          $(".wp-video-shortcode").find(".mejs-button [title='Play']")[0].click();
-          playing = 1;
+        var id = "#mep_" + index;
+        var videoTop = $(id).offset().top;
+
+        if(scrollAmount >= videoTop) {
+
+          //click play btn if not already playing.
+          if(!played[index]){
+            $(".wp-video-shortcode").find(".mejs-button [title='Play']")[0].click();
+            played[index] = true;
+          }
         }
- 
-      }
+
+      });
+
+
 
   });
- 
-        
-      
 
 
-    
-    
-     
- 
+
+
+
+
+
+
+
 
 
 
