@@ -402,7 +402,8 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
   .banner-text {
     text-align: center;
-    margin-top: 260px;
+    position: absolute;
+    bottom: 30px;
   }
 }
 
