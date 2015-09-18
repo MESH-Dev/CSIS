@@ -6191,6 +6191,20 @@ a.next.page-numbers:hover {
   color: #fec935;
 }
 
+/* line 1072, sass/layout/_main.scss */
+.scale {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* line 1080, sass/layout/_main.scss */
+.mejs-controls {
+  display: none !important;
+}
+
 /* line 1, sass/layout/_header.scss */
 header {
   padding: 10px 30px;

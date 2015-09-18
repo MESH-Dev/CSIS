@@ -205,7 +205,7 @@ jQuery(document).ready(function($){
 
   });
 
-
+  var height = $( window ).width() / 2;
 
   $(window).resize(function() {
 
@@ -216,6 +216,7 @@ jQuery(document).ready(function($){
             $(this).css('margin-top', '-40%');
           } else {
             $(this).css('margin-top', '20%');
+            $(this).find('video').addClass('scale');
           }
         });
       }
@@ -226,29 +227,40 @@ jQuery(document).ready(function($){
             $(this).css('margin-top', '0');
           } else {
             $(this).css('margin-top', '0');
+            $(this).find('video').removeClass('scale');
           }
         });
       }
     }
+
+
+
   });
+
+
 
 
   if ($('.wp-video').length) {
 
+
+
     $('.wp-video').each(function() {
+
+      console.log($('.mejs-container').height());
 
       if ($(window).width() > 767) {
         if ($(this).height() > 1000) {
           $(this).css('margin-top', '-40%');
         } else {
           $(this).css('margin-top', '20%');
+          $(this).find('video').addClass('scale');
         }
       }
     });
   }
 
 
-  var height = $( window ).width() / 2;
+
 
   $('.media-video').css('height', height);
   $('.media-image').css('height', height);

@@ -1068,3 +1068,15 @@ section {
 .page-numbers{display: none;}
 a.next.page-numbers{display: block; color:white;}
 a.next.page-numbers:hover {display: block; color:$yellow-primary;}
+
+.scale {
+  -moz-transform: scale(1.5);
+  -webkit-transform:scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.mejs-controls {
+  display: none !important;
+}
