@@ -358,6 +358,7 @@ get_header(); ?>
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="first-name">
                     						<span class="input__label-content input__label-content--hoshi">First Name</span>
                     					</label>
+
                     				</span>
                           </div>
 
@@ -379,6 +380,8 @@ get_header(); ?>
                     				</span>
                           </div>
 
+
+                          <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
 
                            <div class="submit-buttons <?php echo $opp; ?>">
                             Submit

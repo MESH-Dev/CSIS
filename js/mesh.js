@@ -209,7 +209,7 @@ jQuery(document).ready(function($){
 
   $(window).resize(function() {
 
-    if ($(window).width() > 700) {
+    if ($(window).width() > 767) {
       if ($('.wp-video').length) {
         $('.wp-video').each(function() {
           if ($(this).height() > 1000) {
@@ -237,7 +237,7 @@ jQuery(document).ready(function($){
 
     $('.wp-video').each(function() {
 
-      if ($(window).width() > 700) {
+      if ($(window).width() > 767) {
         if ($(this).height() > 1000) {
           $(this).css('margin-top', '-40%');
         } else {
@@ -274,10 +274,11 @@ jQuery(document).ready(function($){
     e.preventDefault();
 
     var email = $( "input#email" ).val();
+    var ip = $( "inpu#ip").val();
+
     if (email !== "" ) {
 
-      console.log(email);
-      AddGeneralEmail(email);
+      AddGeneralEmail(email, ip);
     }
     else{
       alert("Please Enter a Valid Email!");
@@ -285,7 +286,7 @@ jQuery(document).ready(function($){
 
   });
 
-  function AddGeneralEmail(email) {
+  function AddGeneralEmail(email, ip) {
       var is_loading = false;
       if (is_loading == false) {
         is_loading = true;
@@ -294,7 +295,8 @@ jQuery(document).ready(function($){
 
         var data = {
             action: 'saveGeneralEmail',
-            email: email
+            email: email,
+            ip: ip
         };
 
         jQuery.post(ajaxurl, data, function(response) {
@@ -324,8 +326,9 @@ jQuery(document).ready(function($){
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
+    var ip = $( "input#ip").val();
     if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname);
+      AddProductEmail(email,firstname,lastname, ip);
     }
     else{
       alert("Please Enter All Fields");
@@ -339,8 +342,9 @@ jQuery(document).ready(function($){
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
+    var ip = $( "inpu#ip").val();
     if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname);
+      AddProductEmail(email,firstname,lastname, ip);
     }
     else{
       alert("Please Enter All Fields");
@@ -348,7 +352,7 @@ jQuery(document).ready(function($){
 
   });
 
-  function AddProductEmail(email,firstname,lastname) {
+  function AddProductEmail(email,firstname,lastname, ip) {
       var is_loading = false;
       if (is_loading == false) {
         is_loading = true;
@@ -362,7 +366,8 @@ jQuery(document).ready(function($){
             email: email,
             firstname: firstname,
             lastname: lastname,
-            pagename: pagename
+            pagename: pagename,
+            ip: ip
 
         };
 
@@ -526,6 +531,8 @@ $('.callout-panel h2').hover(function () {
       played.push(false);
    });
 
+   console.log(played);
+
    //Play videos on scroll into view.
    $(window).scroll(function(e) {
 
@@ -533,14 +540,15 @@ $('.callout-panel h2').hover(function () {
 
       $( ".video-holder" ).each(function( index ) {
 
+
         var id = "#mep_" + index;
-        var videoTop = $(id).offset().top;
+        var videoTop = $(id).offset().top - 400;
 
         if(scrollAmount >= videoTop) {
 
           //click play btn if not already playing.
           if(!played[index]){
-            $(".wp-video-shortcode").find(".mejs-button [title='Play']")[0].click();
+            $(id).find(".mejs-button [title='Play']")[0].click();
             played[index] = true;
           }
         }

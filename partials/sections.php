@@ -276,7 +276,7 @@ if( have_rows('sections') ):
                         <?php if (get_sub_field('2_column_link')) { ?>
                           <a href="<?php echo get_sub_field('2_column_link'); ?>"> <?php } ?><?php echo get_sub_field('2_column_title'); ?><?php if (get_sub_field('2_column_link')) { ?></a><?php } ?></h3>
                       <p><?php echo get_sub_field('2-column_body_text'); ?></p>
-                      <?php if (get_sub_field('2_column_link')) { ?> 
+                      <?php if (get_sub_field('2_column_link')) { ?>
                       <div class="cta-small">
                         <div class="cta-text">
                           <a href="<?php echo get_sub_field('2_column_link'); ?>">
@@ -515,6 +515,7 @@ if( have_rows('sections') ):
                   <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
                     <span class="input__label-content input__label-content--hoshi">Email</span>
                   </label>
+                  <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
                 </span>
               </form>
               <div id="loader" class="hidden">

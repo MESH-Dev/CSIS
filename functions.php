@@ -594,12 +594,16 @@ function getFilterLists($profiles, $listname){
 function saveGeneralEmail(){
 
   $email = $_POST['email'];
-  $to = 'joshdodd@meshfresh.com';
+  $to = 'robbie@meshfresh.com';
   $subject = 'New Email List Signup';
   $body = $email . ' has signed up to the <strong>General Email List</strong>. Please add the email address to the appropriate list.';
+  $ip = $_POST['ip'];
+
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   wp_mail( $to, $subject, $body, $headers );
+
+  updateEmailDatabase($email, $ip);
 
   $output = "Thank you for signing up. You have been added to our mailing list!";
   echo $output;
@@ -615,13 +619,16 @@ function saveProductEmail(){
   $first = $_POST['firstname'];
   $last = $_POST['lastname'];
   $product = $_POST['pagename'];
+  $ip = $_POST['ip'];
 
-  $to = 'joshdodd@meshfresh.com';
+  $to = 'robbie@meshfresh.com';
   $subject = 'New Product Email List Signup';
   $body = $first . ' ' . $last . ', ' . $email . ', has signed up to the '. $product.' list for more information. Please add the email address to the appropriate list.';
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   wp_mail( $to, $subject, $body, $headers );
+
+  updateEmailDatabase($email, $ip, $first, $last, $product);
 
   $output = "Thank you for signing up. You have been added to our mailing list!";
   echo $output;
@@ -631,7 +638,22 @@ function saveProductEmail(){
 
 }
 
+function updateEmailDatabase( $email, $ip, $first = '', $last = '', $product = '' ) {
 
+  global $wpdb;
+
+  $wpdb->insert(
+  	'leads',
+  	array(
+  		'email' => $email,
+  		'firstname' => $first,
+      'lastname' => $last,
+      'ip' => $ip,
+      'product' => $product
+  	)
+  );
+
+}
 
 
 
