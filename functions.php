@@ -600,7 +600,7 @@ function saveGeneralEmail(){
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   wp_mail( $to, $subject, $body, $headers );
-  updateEmailDatabase()
+
   $output = "Thank you for signing up. You have been added to our mailing list!";
   echo $output;
 
@@ -631,9 +631,7 @@ function saveProductEmail(){
 
 }
 
-function updateEmailDatabase() {
 
-}
 
 
 
