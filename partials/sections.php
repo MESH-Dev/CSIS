@@ -505,7 +505,7 @@ if( have_rows('sections') ):
           <div class="row">
             <div class="eight columns">
 
-              <h2>CTA email capture.</h2>
+              <h2>Let's stay in touch.</h2>
 
             </div>
             <div class="four columns">
