@@ -45,8 +45,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
 	<link rel="icon"
-      type="image/png"
-      href="<?php echo get_template_directory_uri(); ?>/img/fav.png">
+      href="<?php echo get_template_directory_uri(); ?>/img/CSISfavicon.ico" type="image/x-icon">
 
 	<?php wp_head(); ?>
 
