@@ -594,7 +594,7 @@ function getFilterLists($profiles, $listname){
 function saveGeneralEmail(){
 
   $email = $_POST['email'];
-  $to = 'robbie@meshfresh.com';
+  $to = 'kaveh@socialimpactstrategy.org';
   $subject = 'New Email List Signup';
   $body = $email . ' has signed up to the <strong>General Email List</strong>. Please add the email address to the appropriate list.';
   $ip = $_POST['ip'];
@@ -621,7 +621,7 @@ function saveProductEmail(){
   $product = $_POST['pagename'];
   $ip = $_POST['ip'];
 
-  $to = 'robbie@meshfresh.com';
+  $to = 'kaveh@socialimpactstrategy.org';
   $subject = 'New Product Email List Signup';
   $body = $first . ' ' . $last . ', ' . $email . ', has signed up to the '. $product.' list for more information. Please add the email address to the appropriate list.';
   $headers = array('Content-Type: text/html; charset=UTF-8');
