@@ -605,7 +605,7 @@ function saveGeneralEmail(){
 
   updateEmailDatabase($email, $ip);
 
-  $output = "Thank you for signing up. You have been added to our mailing list!";
+  $output = "Thank you for your interes in the Center. You have been added to our mailing list!";
   echo $output;
 
   die();
