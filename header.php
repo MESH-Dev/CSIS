@@ -30,6 +30,7 @@
 	<!-- Mobile Specific Metas
 	================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="msvalidate.01" content="F7C7567DDD810BA1A3EAC401BEC671EA" />
 
 	<!-- CSS (* with Edge Inspect Fix)
 	================================================== -->
