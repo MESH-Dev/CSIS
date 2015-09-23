@@ -7,6 +7,10 @@
 	width: 100%;
 	padding: 30px 15px;
 
+	@include mq($desktop-width, 'max-width') {
+		padding: 45px 15px;
+	}
+
 	ul {
 		display: block;
 		list-style: none;
@@ -78,6 +82,10 @@
 		text-transform: uppercase;
 		font-size: em(15);
 		font-family: $font-family--bold;
+
+		@include mq($desktop-width, 'max-width') {
+			 font-size: em(12);
+		}
 	}
 
 	.current_page_item > a,
