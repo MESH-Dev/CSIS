@@ -131,6 +131,10 @@
 		padding-left: 0;
 		padding-top: 25px;
 
+		@include mq($tablet-landscape-width, 'max-width') {
+			 padding-top: 15px;
+		}
+
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
