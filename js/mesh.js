@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
     $('.fa').toggleClass('fa-chevron-down');
   });
 
-  if( $(window).width() <= 768){
+  if( $(window).width() <= 480){
     $('.banner').css("background-attachment", "scroll");
     $('.banner').css("background-position", "50% 0px");
   };
@@ -205,18 +205,17 @@ jQuery(document).ready(function($){
 
   });
 
-  var height = $( window ).width() / 2;
+
 
   $(window).resize(function() {
 
-    if ($(window).width() > 767) {
+    if ($(window).width() > 700) {
       if ($('.wp-video').length) {
         $('.wp-video').each(function() {
           if ($(this).height() > 1000) {
             $(this).css('margin-top', '-40%');
           } else {
             $(this).css('margin-top', '20%');
-            $(this).find('video').addClass('scale');
           }
         });
       }
@@ -227,40 +226,29 @@ jQuery(document).ready(function($){
             $(this).css('margin-top', '0');
           } else {
             $(this).css('margin-top', '0');
-            $(this).find('video').removeClass('scale');
           }
         });
       }
     }
-
-
-
   });
-
-
 
 
   if ($('.wp-video').length) {
 
-
-
     $('.wp-video').each(function() {
 
-      console.log($('.mejs-container').height());
-
-      if ($(window).width() > 767) {
+      if ($(window).width() > 700) {
         if ($(this).height() > 1000) {
           $(this).css('margin-top', '-40%');
         } else {
           $(this).css('margin-top', '20%');
-          $(this).find('video').addClass('scale');
         }
       }
     });
   }
 
 
-
+  var height = $( window ).width() / 2;
 
   $('.media-video').css('height', height);
   $('.media-image').css('height', height);
@@ -286,11 +274,10 @@ jQuery(document).ready(function($){
     e.preventDefault();
 
     var email = $( "input#email" ).val();
-    var ip = $( "inpu#ip").val();
-
     if (email !== "" ) {
 
-      AddGeneralEmail(email, ip);
+      console.log(email);
+      AddGeneralEmail(email);
     }
     else{
       alert("Please Enter a Valid Email!");
@@ -298,7 +285,7 @@ jQuery(document).ready(function($){
 
   });
 
-  function AddGeneralEmail(email, ip) {
+  function AddGeneralEmail(email) {
       var is_loading = false;
       if (is_loading == false) {
         is_loading = true;
@@ -307,8 +294,7 @@ jQuery(document).ready(function($){
 
         var data = {
             action: 'saveGeneralEmail',
-            email: email,
-            ip: ip
+            email: email
         };
 
         jQuery.post(ajaxurl, data, function(response) {
@@ -338,9 +324,8 @@ jQuery(document).ready(function($){
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
-    var ip = $( "input#ip").val();
     if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname, ip);
+      AddProductEmail(email,firstname,lastname);
     }
     else{
       alert("Please Enter All Fields");
@@ -354,9 +339,8 @@ jQuery(document).ready(function($){
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
-    var ip = $( "inpu#ip").val();
     if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname, ip);
+      AddProductEmail(email,firstname,lastname);
     }
     else{
       alert("Please Enter All Fields");
@@ -364,7 +348,7 @@ jQuery(document).ready(function($){
 
   });
 
-  function AddProductEmail(email,firstname,lastname, ip) {
+  function AddProductEmail(email,firstname,lastname) {
       var is_loading = false;
       if (is_loading == false) {
         is_loading = true;
@@ -378,8 +362,7 @@ jQuery(document).ready(function($){
             email: email,
             firstname: firstname,
             lastname: lastname,
-            pagename: pagename,
-            ip: ip
+            pagename: pagename
 
         };
 
@@ -535,53 +518,6 @@ $('.callout-panel h2').hover(function () {
       }
      }
    });
-
-
-   var played = [];
-
-   $( ".video-holder" ).each(function( index ) {
-      played.push(false);
-   });
-
-   console.log(played);
-
-   //Play videos on scroll into view.
-   $(window).scroll(function(e) {
-
-     var scrollAmount = $('body').scrollTop();
-
-      $( ".video-holder" ).each(function( index ) {
-
-
-        var id = "#mep_" + index;
-        var videoTop = $(id).offset().top - 400;
-
-        if(scrollAmount >= videoTop) {
-
-          //click play btn if not already playing.
-          if(!played[index]){
-            $(id).find(".mejs-button [title='Play']")[0].click();
-            played[index] = true;
-          }
-        }
-
-      });
-
-
-
-  });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });
