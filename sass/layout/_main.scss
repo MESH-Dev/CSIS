@@ -398,10 +398,12 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 
 .page-template-story .banner-inner {
   height: 500px;
+  position: relative;
 
   .banner-text {
     text-align: center;
-    margin-top: 260px;
+    position: absolute;
+    bottom: 20px;
   }
 }
 
@@ -617,7 +619,7 @@ section {
   }
 
   @include mq($mobile-landscape-width, 'max-width') {
-    
+
     text-align: left;
   }
 
