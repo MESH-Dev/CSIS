@@ -23,8 +23,8 @@
 	<title><?php bloginfo('name'); wp_title('|',true);?> </title>
 
 	<!-- Meta / og: tags -->
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="The Center for Social Impact Strategy (CSIS) is a new research and action center based in the School of Social Policy &amp; Practice that leverages the University of Pennsylvania’s extensive resources to help support the most innovative approaches to public problem solving. The Center’s work is guided by the overarching objective of developing a deeper understanding of the distinctive strategies adopted by changemakers as they seek to innovate and generate social impact.">
+	<meta name="author" content="The Center for Social Impact Strategy">
 
 
 	<!-- Mobile Specific Metas
