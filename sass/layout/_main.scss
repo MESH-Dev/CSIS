@@ -612,7 +612,7 @@ section {
   float: left;
   padding: 20px 120px 20px 0;
 
-  @include mq($mobile-landscape-width, 'max-width') {
+  @include mq($tablet-landscape-width, 'max-width') {
      padding: 20px;
      text-align: center;
   }
