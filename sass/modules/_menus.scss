@@ -362,7 +362,7 @@
 		float: right;
 		margin: 0 30px;
 
-		@include mq($tablet-width, 'max-width') {
+		@include mq($mobile-landscape-width, 'max-width') {
 			 float: none;
 			 margin: 0 auto;
 			 text-align: center;
@@ -374,7 +374,7 @@
 			padding: 0 10px;
 			display: inline;
 
-			@include mq($tablet-width, 'max-width') {
+			@include mq($mobile-landscape-width, 'max-width') {
 			 	padding: 0 3px;
 				float: none;
 			}
