@@ -614,7 +614,11 @@ section {
 
   @include mq($tablet-landscape-width, 'max-width') {
      padding: 20px;
-     text-align: center;
+  }
+
+  @include mq($mobile-landscape-width, 'max-width') {
+    
+    text-align: left;
   }
 
 
