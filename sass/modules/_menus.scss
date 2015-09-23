@@ -7,10 +7,6 @@
 	width: 100%;
 	padding: 30px 15px;
 
-	@include mq($desktop-width, 'max-width') {
-		padding: 55px 15px;
-	}
-
 	ul {
 		display: block;
 		list-style: none;
@@ -82,10 +78,6 @@
 		text-transform: uppercase;
 		font-size: em(15);
 		font-family: $font-family--bold;
-
-		@include mq($desktop-width, 'max-width') {
-			 font-size: em(12);
-		}
 	}
 
 	.current_page_item > a,
@@ -127,7 +119,7 @@
 	display: block;
 	float: right;
 
-	@include mq($tablet-width, 'max-width') {
+	@include mq($tablet-landscape-width, 'max-width') {
 		 float: left;
 		 display: none;
 	}
@@ -339,10 +331,6 @@
 		border-bottom: 3px solid #616161;
 	}
 
-	@include mq('860px', 'max-width') {
-		 display: none;
-	}
-
 }
 
 .utilities-nav {
@@ -366,7 +354,7 @@
 		float: right;
 		margin: 0 30px;
 
-		@include mq($mobile-landscape-width, 'max-width') {
+		@include mq($tablet-width, 'max-width') {
 			 float: none;
 			 margin: 0 auto;
 			 text-align: center;
