@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
     $('.fa').toggleClass('fa-chevron-down');
   });
 
-  if( $(window).width() <= 480){
+  if( $(window).width() <= 768){
     $('.banner').css("background-attachment", "scroll");
     $('.banner').css("background-position", "50% 0px");
   };
