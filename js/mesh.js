@@ -33,7 +33,6 @@ jQuery(document).ready(function($){
 
   if( $(window).width() <= 768){
     $('.banner').css("background-attachment", "scroll");
-    $('.banner').css("background-position", "50% 0px");
   };
 
 
@@ -418,7 +417,7 @@ jQuery(document).ready(function($){
   $('.icon-box').matchHeight();
 
 
-  if( $(window).width() >= 700){
+  if( $(window).width() >= 900){
     $('.banner').parallax("center", 0.1);
   };
 
