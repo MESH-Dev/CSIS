@@ -377,7 +377,7 @@ get_header(); ?>
                         <form action="<?php echo $action; ?>" method="post" id="productEmail">
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="text" id="first-name" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="text" id="firstname" name="firstname" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="first-name">
                     						<span class="input__label-content input__label-content--hoshi">First Name</span>
                     					</label>
@@ -387,7 +387,7 @@ get_header(); ?>
 
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="text" id="last-name" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="text" id="lastname" name="lastname" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="last-name">
                     						<span class="input__label-content input__label-content--hoshi">Last Name</span>
                     					</label>
@@ -396,7 +396,7 @@ get_header(); ?>
 
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="email" id="email" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="email" id="email" name="email" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
                     						<span class="input__label-content input__label-content--hoshi">Email</span>
                     					</label>
