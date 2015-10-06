@@ -336,6 +336,29 @@ get_header(); ?>
 
               elseif ( get_sub_field('section_type') == 'form' ) :
 
+                $action = '';
+
+                if (get_sub_field('form_type') == 'psih') {
+                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzp';
+                }
+                elseif (get_sub_field('form_type') == 'pil') {
+                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzt';
+                }
+                elseif (get_sub_field('form_type') == 'executive-program') {
+                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzw';
+                }
+                elseif (get_sub_field('form_type') == 'gsih') {
+                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzy';
+                }
+                elseif (get_sub_field('form_type') == 'post-doc-fellowship') {
+                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381j11';
+                }
+                elseif (get_sub_field('form_type') == 'general-mailing-list') {
+                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381j13';
+                }
+                else {
+                  $action = '';
+                }
 
               ?>
 
@@ -351,7 +374,7 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
-                        <form action="" id="productEmail">
+                        <form action="<?php echo $action; ?>" method="post" id="productEmail">
                           <div class="input-box">
                             <span class="input input--hoshi">
                     					<input class="input__field input__field--hoshi" type="text" id="first-name" spellcheck="false" />
