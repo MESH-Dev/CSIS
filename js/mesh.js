@@ -333,24 +333,22 @@ jQuery(document).ready(function($){
 
   });
 
-  $('form#productEmail').submit(function(e) {
-    e.preventDefault();
+  // $('form#productEmail').submit(function(e) {
+  //   e.preventDefault();
+  //
+  //   var email = $( "input#email" ).val();
+  //   var firstname = $( "input#first-name" ).val();
+  //   var lastname = $( "input#last-name" ).val();
+  //   if (email !== "" && firstname!=="" && lastname!=="" ) {
+  //     AddProductEmail(email,firstname,lastname);
+  //   }
+  //   else{
+  //     alert("Please Enter All Fields");
+  //   }
+  //
+  // });
 
-    var email = $( "input#email" ).val();
-    var firstname = $( "input#first-name" ).val();
-    var lastname = $( "input#last-name" ).val();
-    var action = $( "input#action" ).val();
-
-    if (email !== "" && firstname!=="" && lastname!=="" && action!=="" ) {
-      AddProductEmail(email,firstname,lastname,action);
-    }
-    else{
-      alert("Please Enter All Fields");
-    }
-
-  });
-
-  function AddProductEmail(email,firstname,lastname,action) {
+  function AddProductEmail(email,firstname,lastname) {
       var is_loading = false;
       if (is_loading == false) {
         is_loading = true;
@@ -360,10 +358,11 @@ jQuery(document).ready(function($){
 
 
         var data = {
-            action: action,
+            action: 'saveProductEmail',
             email: email,
             firstname: firstname,
-            lastname: lastname
+            lastname: lastname,
+            pagename: pagename
 
         };
 
