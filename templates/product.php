@@ -375,7 +375,7 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
-                        <form action="<?php echo $action; ?>" id="productEmail">
+                        <form action="" id="productEmail">
                           <div class="input-box">
                             <span class="input input--hoshi">
                     					<input class="input__field input__field--hoshi" type="text" id="first-name" spellcheck="false" />
