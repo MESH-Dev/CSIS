@@ -49,9 +49,9 @@ get_header(); ?>
 
         <?php
 
-          if (get_field('video_type') == 'vimeo') {
+          if (get_sub_field('video_type') == 'vimeo') {
             $video = "https://player.vimeo.com/video/" . get_field('banner_video');
-          } elseif (get_field('video_type') == 'youtube') {
+          } elseif (get_sub_field('video_type') == 'youtube') {
             $video = "https://www.youtube.com/embed/" . get_field('banner_video');
           } else {
             $video == '';
@@ -336,6 +336,7 @@ get_header(); ?>
 
               elseif ( get_sub_field('section_type') == 'form' ) :
 
+
                 $action = '';
 
                 if (get_sub_field('form_type') == 'psih') {
@@ -374,10 +375,10 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
-                        <form action="" id="productEmail">
+                        <form action="<?php echo $action; ?>" id="productEmail">
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="text" id="firstname" name="firstname" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="text" id="first-name" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="first-name">
                     						<span class="input__label-content input__label-content--hoshi">First Name</span>
                     					</label>
@@ -387,7 +388,7 @@ get_header(); ?>
 
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="text" id="lastname" name="lastname" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="text" id="last-name" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="last-name">
                     						<span class="input__label-content input__label-content--hoshi">Last Name</span>
                     					</label>
@@ -396,7 +397,7 @@ get_header(); ?>
 
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="email" id="email" name="email" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="email" id="email" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
                     						<span class="input__label-content input__label-content--hoshi">Email</span>
                     					</label>
@@ -405,8 +406,6 @@ get_header(); ?>
 
 
                           <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
-
-                          <input type="hidden" id="action" value="<?php echo $action; ?>" />
 
                            <div class="submit-buttons <?php echo $opp; ?>">
                             Submit
