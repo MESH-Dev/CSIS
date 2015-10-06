@@ -374,7 +374,7 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
-                        <form action="<?php echo $action; ?>" method="post" id="productEmail">
+                        <form action="" id="productEmail">
                           <div class="input-box">
                             <span class="input input--hoshi">
                     					<input class="input__field input__field--hoshi" type="text" id="firstname" name="firstname" spellcheck="false" />
@@ -405,6 +405,8 @@ get_header(); ?>
 
 
                           <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
+
+                          <input type="hidden" id="action" value="<?php echo $action; ?>" />
 
                            <div class="submit-buttons <?php echo $opp; ?>">
                             Submit

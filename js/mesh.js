@@ -339,8 +339,10 @@ jQuery(document).ready(function($){
     var email = $( "input#email" ).val();
     var firstname = $( "input#first-name" ).val();
     var lastname = $( "input#last-name" ).val();
-    if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname);
+    var action = $( "input#action" ).val();
+
+    if (email !== "" && firstname!=="" && lastname!=="" && action!=="" ) {
+      AddProductEmail(email,firstname,lastname,action);
     }
     else{
       alert("Please Enter All Fields");
@@ -348,7 +350,7 @@ jQuery(document).ready(function($){
 
   });
 
-  function AddProductEmail(email,firstname,lastname) {
+  function AddProductEmail(email,firstname,lastname,action) {
       var is_loading = false;
       if (is_loading == false) {
         is_loading = true;
@@ -358,11 +360,10 @@ jQuery(document).ready(function($){
 
 
         var data = {
-            action: 'saveProductEmail',
+            action: action,
             email: email,
             firstname: firstname,
-            lastname: lastname,
-            pagename: pagename
+            lastname: lastname
 
         };
 
