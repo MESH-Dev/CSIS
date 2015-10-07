@@ -3,14 +3,17 @@
 */
 get_header(); ?>
 
-<? if(($_POST['firstname'] != '')&&($_POST['email'] != '')&&($_POST['lastname'] != '')){
+<?
+echo $_POST['firstname'];
+
+ if(($_POST['firstname'] != '')&&($_POST['email'] != '')&&($_POST['lastname'] != '')){
       $submitted = true;
       echo "<script type='text/javascript'>
         jQuery(document).ready(function($){
 
               $('#product-email').append('Thank You! Your email has been added to our list.');
               $('.form form').hide();
-              
+
 
         }
          </script>";
