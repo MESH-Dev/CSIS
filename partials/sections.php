@@ -497,6 +497,12 @@ if( have_rows('sections') ):
 
       elseif ( get_sub_field('section_type') == 'email-signup' ) :
 
+        if (get_sub_field('pardot_url')) {
+          $action = get_sub_field('pardot_url');
+        } else {
+          $action = '';
+        }
+
       ?>
 
       <section class="email-signup yellow-primary-background" >
@@ -509,9 +515,9 @@ if( have_rows('sections') ):
 
             </div>
             <div class="four columns">
-              <form id="general-email" >
+              <form id="general-email" action="<?php echo $action; ?>" method="post">
                 <span class="input input--hoshi">
-                  <input class="input__field input__field--hoshi" type="email" id="email" spellcheck="false" />
+                  <input class="input__field input__field--hoshi" type="email" id="email" name="email" spellcheck="false" />
                   <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
                     <span class="input__label-content input__label-content--hoshi">Email</span>
                   </label>

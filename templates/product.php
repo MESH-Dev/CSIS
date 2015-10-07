@@ -336,28 +336,9 @@ get_header(); ?>
 
               elseif ( get_sub_field('section_type') == 'form' ) :
 
-
-                $action = '';
-
-                if (get_sub_field('form_type') == 'psih') {
-                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzp';
-                }
-                elseif (get_sub_field('form_type') == 'pil') {
-                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzt';
-                }
-                elseif (get_sub_field('form_type') == 'executive-program') {
-                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzw';
-                }
-                elseif (get_sub_field('form_type') == 'gsih') {
-                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381hzy';
-                }
-                elseif (get_sub_field('form_type') == 'post-doc-fellowship') {
-                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381j11';
-                }
-                elseif (get_sub_field('form_type') == 'general-mailing-list') {
-                  $action = 'https://go.pardot.com/l/93581/2015-10-06/381j13';
-                }
-                else {
+                if (get_sub_field('pardot_url')) {
+                  $action = get_sub_field('pardot_url');
+                } else {
                   $action = '';
                 }
 
@@ -375,10 +356,10 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
-                        <form action="" id="productEmail">
+                        <form action="<?php echo $action; ?>" method="post">
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="text" id="first-name" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="text" id="firstname" name="firstname" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="first-name">
                     						<span class="input__label-content input__label-content--hoshi">First Name</span>
                     					</label>
@@ -388,7 +369,7 @@ get_header(); ?>
 
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="text" id="last-name" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="text" id="lastname" name="lastname" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="last-name">
                     						<span class="input__label-content input__label-content--hoshi">Last Name</span>
                     					</label>
@@ -397,7 +378,7 @@ get_header(); ?>
 
                           <div class="input-box">
                             <span class="input input--hoshi">
-                    					<input class="input__field input__field--hoshi" type="email" id="email" spellcheck="false" />
+                    					<input class="input__field input__field--hoshi" type="email" id="email" name="email" spellcheck="false" />
                     					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
                     						<span class="input__label-content input__label-content--hoshi">Email</span>
                     					</label>
@@ -407,10 +388,7 @@ get_header(); ?>
 
                           <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
 
-                           <div class="submit-buttons <?php echo $opp; ?>">
-                            Submit
-                            <span class="right"></span>
-                          </div>
+                         <input type="submit" class="submit-buttons <?php echo $opp; ?>" value="Submit"></input>
 
                         </form>
                         <div id="loader" class="hidden">
