@@ -386,14 +386,7 @@ jQuery(document).ready(function($){
         });
       }
   }
-
-   function ProductEmailSubmitted(){
-
-    $('#product-email').show();
-    $('.form form').hide();
-
-   }
-
+ 
 
 
 

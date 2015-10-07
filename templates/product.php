@@ -5,9 +5,15 @@ get_header(); ?>
 
 <? if(($_POST['firstname'] != '')&&($_POST['email'] != '')&&($_POST['lastname'] != '')){
       $submitted = true;
-      echo '<script type="text/javascript">
-        ProductEmailSubmitted();
-         </script>';
+      echo "<script type='text/javascript'>
+        jQuery(document).ready(function($){
+
+              $('#product-email').append('Thank You! Your email has been added to our list.');
+              $('.form form').hide();
+              
+
+        }
+         </script>";
 
 
 }
@@ -454,7 +460,7 @@ get_header(); ?>
                         <div id="loader" class="hidden">
                           <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
                         </div>
-                        <div id="product-email" class="email-response">Thank You! Your email has been added to our list.</div>
+                        <div id="product-email" class="email-response"></div>
 
                       </div>
 
