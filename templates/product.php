@@ -331,9 +331,51 @@ get_header(); ?>
                 </div>
 
               </section>
+            <?php
 
-              <?php
+      elseif ( get_sub_field('section_type') == 'email-signup' ) :
 
+        if (get_sub_field('pardot_url')) {
+          $action = get_sub_field('pardot_url');
+        } else {
+          $action = '';
+        }
+
+      ?>
+
+      <section class="email-signup yellow-primary-background" >
+
+        <div class="email-signup-text">
+          <div class="row">
+            <div class="eight columns">
+
+              <h2>Let's stay in touch.</h2>
+
+            </div>
+            <div class="four columns">
+              <form id="general-email" action="http://www2.socialimpactstrategy.org/l/121292/2015-10-07/5l6dbw" method="post">
+                <span class="input input--hoshi">
+                  <input class="input__field input__field--hoshi" type="email" id="email" name="email" spellcheck="false" />
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
+                    <span class="input__label-content input__label-content--hoshi">Email</span>
+                  </label>
+                  <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
+                </span>
+              </form>
+              <div id="loader" class="hidden">
+                <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
+              </div>
+              <div class="email-response">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <?php
+ 
               elseif ( get_sub_field('section_type') == 'form' ) :
 
                 if (get_sub_field('pardot_url')) {
