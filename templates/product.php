@@ -3,6 +3,19 @@
 */
 get_header(); ?>
 
+<? if(($_POST['firstname'] != '')&&($_POST['email'] != '')&&($_POST['lastname'] != '')){
+      $submitted = true;
+      echo '<script type="text/javascript">
+        ProductEmailSubmitted();
+         </script>';
+
+
+}
+    
+
+
+?>
+
 
 <main id="main" class="site-main" role="main">
 
@@ -398,6 +411,8 @@ get_header(); ?>
                         <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
 
                         <br/>
+
+                        <?php if(!$submitted){?>
                         <form action="<?php echo $action; ?>" method="post">
                           <div class="input-box">
                             <span class="input input--hoshi">
@@ -433,10 +448,13 @@ get_header(); ?>
                          <input type="submit" class="submit-buttons <?php echo $opp; ?>" value="Submit"></input>
 
                         </form>
+                        <?php }?>
+
+
                         <div id="loader" class="hidden">
                           <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
                         </div>
-                        <div class="email-response"></div>
+                        <div id="product-email" class="email-response">Thank You! Your email has been added to our list.</div>
 
                       </div>
 
