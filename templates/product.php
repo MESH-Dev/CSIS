@@ -4,7 +4,7 @@
 get_header(); ?>
 
 <?
-echo ".." .$_POST['firstname'];
+echo $_POST['firstname'];
 
  if(($_POST['firstname'] != '')&&($_POST['email'] != '')&&($_POST['lastname'] != '')){
       $submitted = true;
