@@ -270,20 +270,20 @@ jQuery(document).ready(function($){
 
 
 
-  $('form#general-email').submit(function(e) {
-    e.preventDefault();
-
-    var email = $( "input#email" ).val();
-    if (email !== "" ) {
-
-      console.log(email);
-      AddGeneralEmail(email);
-    }
-    else{
-      alert("Please Enter a Valid Email!");
-    }
-
-  });
+  // $('form#general-email').submit(function(e) {
+  //   e.preventDefault();
+  //
+  //   var email = $( "input#email" ).val();
+  //   if (email !== "" ) {
+  //
+  //     console.log(email);
+  //     AddGeneralEmail(email);
+  //   }
+  //   else{
+  //     alert("Please Enter a Valid Email!");
+  //   }
+  //
+  // });
 
   function AddGeneralEmail(email) {
       var is_loading = false;
@@ -318,35 +318,35 @@ jQuery(document).ready(function($){
       }
   }
 
-  $('.form-text .submit-buttons').click(function(e) {
-    e.preventDefault();
-
-    var email = $( "input#email" ).val();
-    var firstname = $( "input#first-name" ).val();
-    var lastname = $( "input#last-name" ).val();
-    if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname);
-    }
-    else{
-      alert("Please Enter All Fields");
-    }
-
-  });
-
-  $('form#productEmail').submit(function(e) {
-    e.preventDefault();
-
-    var email = $( "input#email" ).val();
-    var firstname = $( "input#first-name" ).val();
-    var lastname = $( "input#last-name" ).val();
-    if (email !== "" && firstname!=="" && lastname!=="" ) {
-      AddProductEmail(email,firstname,lastname);
-    }
-    else{
-      alert("Please Enter All Fields");
-    }
-
-  });
+  // $('.form-text .submit-buttons').click(function(e) {
+  //   e.preventDefault();
+  //
+  //   var email = $( "input#email" ).val();
+  //   var firstname = $( "input#first-name" ).val();
+  //   var lastname = $( "input#last-name" ).val();
+  //   if (email !== "" && firstname!=="" && lastname!=="" ) {
+  //     AddProductEmail(email,firstname,lastname);
+  //   }
+  //   else{
+  //     alert("Please Enter All Fields");
+  //   }
+  //
+  // });
+  //
+  // $('form#productEmail').submit(function(e) {
+  //   e.preventDefault();
+  //
+  //   var email = $( "input#email" ).val();
+  //   var firstname = $( "input#first-name" ).val();
+  //   var lastname = $( "input#last-name" ).val();
+  //   if (email !== "" && firstname!=="" && lastname!=="" ) {
+  //     AddProductEmail(email,firstname,lastname);
+  //   }
+  //   else{
+  //     alert("Please Enter All Fields");
+  //   }
+  //
+  // });
 
   function AddProductEmail(email,firstname,lastname) {
       var is_loading = false;
