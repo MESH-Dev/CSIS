@@ -573,6 +573,7 @@ section {
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
+  width: 100%;
 
   @include mq($mobile-landscape-width, 'max-width') {
      padding: 20px;
