@@ -339,9 +339,10 @@
 		border-bottom: 3px solid #616161;
 	}
 
-	@include mq($tablet-width, 'max-width') {
+	@include mq($mobile-landscape-width, 'max-width') {
 		 display: none;
 	}
+
 }
 
 .utilities-nav {
