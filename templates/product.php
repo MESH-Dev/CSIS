@@ -467,7 +467,7 @@ echo $_POST['firstname'];
                         </form>
                         <?php }?> -->
 
-                        <?php echo $action; ?>
+                        <?php the_sub_field('pardot_url'); ?>
 
 
                         <div id="loader" class="hidden">
