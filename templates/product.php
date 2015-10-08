@@ -429,7 +429,7 @@ echo $_POST['firstname'];
 
                         <br/>
 
-                        <?php if(!$submitted){?>
+                        <!-- <?php if(!$submitted){?>
                         <form action="<?php echo $action; ?>" method="post">
                           <div class="input-box">
                             <span class="input input--hoshi">
@@ -465,7 +465,9 @@ echo $_POST['firstname'];
                          <input type="submit" class="submit-buttons <?php echo $opp; ?>" value="Submit"></input>
 
                         </form>
-                        <?php }?>
+                        <?php }?> -->
+
+                        <?php echo $action; ?>
 
 
                         <div id="loader" class="hidden">
