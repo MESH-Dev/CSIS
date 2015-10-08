@@ -181,7 +181,7 @@
 		@include mq($tablet-landscape-width, 'max-width') {
 			 margin: 0 5px 5px 5px;
 			 float: left;
-
+			 width: 100%;
 		}
 
 		&:hover > a,
@@ -194,6 +194,8 @@
 
 			@include mq($tablet-landscape-width, 'max-width') {
 				 font-size: 12px;
+				 width: 100%;
+				 text-align: center;
 			}
 		}
 
