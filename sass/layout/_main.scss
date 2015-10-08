@@ -1084,3 +1084,7 @@ section {
 .page-numbers{display: none;}
 a.next.page-numbers{display: block; color:white;}
 a.next.page-numbers:hover {display: block; color:$yellow-primary;}
+
+.frm_style_formidable-style.with_frm_style select.auto_width {
+  width: 100% !important;
+}
