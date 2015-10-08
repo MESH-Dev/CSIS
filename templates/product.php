@@ -20,7 +20,7 @@ echo $_POST['firstname'];
 
 
 }
-    
+
 
 
 ?>
@@ -72,9 +72,9 @@ echo $_POST['firstname'];
         <?php
 
           if (get_sub_field('video_type') == 'vimeo') {
-            $video = "https://player.vimeo.com/video/" . get_field('banner_video');
+            $video = "https://player.vimeo.com/video/" . get_field('video');
           } elseif (get_sub_field('video_type') == 'youtube') {
-            $video = "https://www.youtube.com/embed/" . get_field('banner_video');
+            $video = "https://www.youtube.com/embed/" . get_field('video');
           } else {
             $video == '';
           }
@@ -397,7 +397,7 @@ echo $_POST['firstname'];
       </section>
 
       <?php
- 
+
               elseif ( get_sub_field('section_type') == 'form' ) :
 
                 if (get_sub_field('pardot_url')) {
