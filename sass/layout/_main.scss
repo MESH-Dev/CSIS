@@ -409,7 +409,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 }
 
 .banner-inner {
-  height: 300px;
+  
 
   @include mq($desktop-width, 'min-width') {
     height: 400px;
