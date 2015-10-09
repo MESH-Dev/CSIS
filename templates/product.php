@@ -71,13 +71,14 @@ echo $_POST['firstname'];
 
         <?php
 
-          if (get_sub_field('video_type') == 'vimeo') {
+          if (get_field('video_type') == 'vimeo') {
             $video = "https://player.vimeo.com/video/" . get_field('banner_video');
-          } elseif (get_sub_field('video_type') == 'youtube') {
+          } elseif (get_field('video_type') == 'youtube') {
             $video = "https://www.youtube.com/embed/" . get_field('banner_video');
           } else {
             $video = '';
           }
+
 
         ?>
 
