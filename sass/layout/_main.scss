@@ -409,7 +409,7 @@ $color_vars: $yellow-primary, $yellow-secondary, $yellow-tertiary, $purple-prima
 }
 
 .banner-inner {
-  
+
 
   @include mq($desktop-width, 'min-width') {
     height: 400px;
@@ -1087,4 +1087,8 @@ a.next.page-numbers:hover {display: block; color:$yellow-primary;}
 
 .frm_style_formidable-style.with_frm_style select.auto_width {
   width: 100% !important;
+}
+
+iframe {
+  height: auto;
 }
