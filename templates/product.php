@@ -467,9 +467,7 @@ echo $_POST['firstname'];
                         </form>
                         <?php }?> -->
 
-                        <div class="red-tertiary-form">
-                          <?php the_sub_field('pardot_url'); ?>
-                        </div>
+                        <?php the_sub_field('pardot_url'); ?>
 
 
                         <div id="loader" class="hidden">
