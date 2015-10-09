@@ -505,7 +505,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="email-signup yellow-primary-background" >
+      <section class="email-signup yellow-primary-background" style="height: 275px;">
 
         <div class="email-signup-text">
           <div class="row">
@@ -526,7 +526,7 @@ if( have_rows('sections') ):
               </form> -->
 
               <iframe style="border: 0;" src="http://www2.socialimpactstrategy.org/l/121292/2015-10-08/5lq17k" width="100%" height="500" frameborder="0"></iframe>
-              
+
               <div id="loader" class="hidden">
                 <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">
               </div>
