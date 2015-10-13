@@ -525,7 +525,7 @@ echo $_POST['firstname'];
 
                   foreach($side_menu as $value) { ?>
 
-                      <?php if(len($value) > 0) { ?>
+                      <?php if(empty($value)) { ?>
 
                         <li><a href="#<?php echo $i; ?>"><?php echo $value; ?></a></li>
 
