@@ -498,9 +498,9 @@ echo $_POST['firstname'];
 
               endif;
 
-              if ( get_sub_field('section_type') != 'buttons' and get_sub_field('section_type') != 'form' ) {
-                array_push($side_menu, get_sub_field('menu_title'));
-              }
+
+              array_push($side_menu, get_sub_field('menu_title'));
+
 
             endwhile;
 
