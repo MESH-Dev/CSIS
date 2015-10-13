@@ -37,16 +37,14 @@ jQuery(document).ready(function($){
   };
 
 
-  var i = 0;
+  
   var sections = [];
 
   $('.side-menu ul li').each(function(index) {
 
-    if (i > 0) {
+
       var x = $(this).find('a').attr('href');
       sections.push($(x).position().top);
-    }
-    i++;
 
 
   });
