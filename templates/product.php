@@ -418,6 +418,8 @@ echo $_POST['firstname'];
                   $action = '';
                 }
 
+                $n++;
+
               ?>
 
               <section class="form <?php echo $color; ?>" id="apply">
