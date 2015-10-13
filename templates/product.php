@@ -332,7 +332,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="buttons <?php echo $color; $n++; ?>" id="apply">
+              <section class="buttons <?php echo $color; ?>" id="apply">
 
                 <div class="<?php echo $columns; ?> columns">
 
@@ -420,7 +420,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="form <?php echo $color; $n++; ?>" id="apply">
+              <section class="form <?php echo $color; ?>" id="apply">
 
 
                   <div class="row">
