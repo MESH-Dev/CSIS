@@ -39,7 +39,9 @@ jQuery(document).ready(function($){
   var sections = [];
 
   $('section').each(function(index) {
-    sections.push($(this).position().top);
+    if ((index != 0) && ($(this).attr('id') != 'apply') &&  ($(this).attr('id') != 'buttons')) {
+      sections.push($(this).position().top);
+    }
   });
 
 
