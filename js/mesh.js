@@ -20,9 +20,7 @@ jQuery(document).ready(function($){
 
 
   if ( $('.side-menu').length ) {
-
     $('.side-menu').css('top', $('.intro').position().top - 60);
-
   }
 
   $('.menu-toggle').click(function() {
@@ -37,24 +35,14 @@ jQuery(document).ready(function($){
   };
 
 
-  
-  var sections = [];
-
-  $('.side-menu ul li').each(function(index) {
 
 
-      var x = $(this).find('a').attr('href');
-      sections.push($(x).position().top);
-
-
-  });
 
 
   $(document).scroll(function () {
     var y = $(this).scrollTop();
 
     if ( $('.side-menu').length ) {
-
 
       if (y > 300) {
         $('.side-menu').css('position', 'fixed');
@@ -76,7 +64,16 @@ jQuery(document).ready(function($){
 
   });
 
+  var sections = [];
 
+  $('.side-menu ul li').each(function(index) {
+
+
+      var x = $(this).find('a').attr('href');
+      sections.push($(x).position().top);
+
+
+  });
 
   $(window).resize(function() {
 
