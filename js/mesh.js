@@ -34,7 +34,18 @@ jQuery(document).ready(function($){
     $('.banner').css("background-position", "50% 0px");
   };
 
+  var side = [];
 
+  $('.side-menu ul li').each(function(index) {
+
+    $(this).find('a').attr('href');
+
+    var $tabValue = $(this).find('a').attr('href');
+    var $withoutHash = $tabValue.substring(1);
+
+    side.push($withoutHash);
+
+  });
 
   var sections = [];
 
@@ -43,8 +54,6 @@ jQuery(document).ready(function($){
       sections.push($(this).position().top);
     }
   });
-
-
 
   $(document).scroll(function () {
     var y = $(this).scrollTop();
