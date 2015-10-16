@@ -36,6 +36,11 @@ jQuery(document).ready(function($){
 
 
 
+  var sections = [];
+
+  $('section').each(function(index) {
+    sections.push($(this).position().top);
+  });
 
 
 
@@ -64,16 +69,11 @@ jQuery(document).ready(function($){
 
   });
 
-  var sections = [];
-
-  $('.side-menu ul li').each(function(index) {
 
 
-      var x = $(this).find('a').attr('href');
-      sections.push($(x).position().top);
 
 
-  });
+
 
   $(window).resize(function() {
 
