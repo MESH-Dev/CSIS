@@ -1,0 +1,1 @@
+[27-Sep-2015 20:53:21 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/cosmofujiyama/public_html/wp-content/themes/csis/index.php on line 1

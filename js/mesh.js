@@ -1,8 +1,5 @@
 jQuery(document).ready(function($){
-
-  //Are we loaded?
-  console.log('New theme loaded!');
-
+ 
   //Let's do something awesome!
 
   $('a[href^="#"]').on('click', function(event) {
