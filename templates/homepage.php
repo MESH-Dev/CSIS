@@ -154,7 +154,7 @@ get_header(); ?>
               if (get_field('video_type') == 'vimeo') {
                 $video = "https://player.vimeo.com/video/" . get_field('homepage_video');
               } elseif (get_field('video_type') == 'youtube') {
-                $video = "https://www.youtube.com/embed/" . get_field('homepage_video');
+                $video = "https://www.youtube.com/embed/" . get_field('homepage_video') . "?rel=0";
               } else {
                 $video == '';
               }
