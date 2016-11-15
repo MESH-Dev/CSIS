@@ -2,6 +2,8 @@
   //-------GLOBAL NETWORK JS-----------//
 var $ =jQuery.noConflict();
 
+
+//Control Nav Dropdown/Active Section
 $('.network-nav-item').click(function(event) {
 
   var item = $(this).attr('id');
@@ -23,6 +25,9 @@ $('.network-nav-item').click(function(event) {
 
 });
 
+
+
+//Clost all filter sections
 $('.close-filter').click(function(e) {
   e.preventDefault();
    $('.network-filter').hide(); //Hide all dropdowns
@@ -30,27 +35,29 @@ $('.close-filter').click(function(e) {
 });
 
 
-  //Live Search Global Network
- $("input#network-search").keyup(function(){
-      // Retrieve the input field text and reset the count to zero
-      var filter = $(this).val();
+//Live Search Global Network
+$("input#network-search").keyup(function(){
+    // Retrieve the input field text and reset the count to zero
+    var filter = $(this).val();
 
-      // Loop through grid items
-      $(".network-grid .network-grid-item").each(function(){
+    // Loop through grid items
+    $(".network-grid .network-grid-item").each(function(){
 
-          // If the list item does not contain the text phrase fade it out
-          if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-              $(this).fadeOut();
+        // If the list item does not contain the text phrase fade it out
+        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).fadeOut();
 
-          // Show the list item if the phrase matches and increase the count by 1
-          } else {
-              $(this).fadeIn();
+        // Show the list item if the phrase matches and increase the count by 1
+        } else {
+            $(this).fadeIn();
 
-          }
-      });
+        }
+    });
 
-  });
+});
 
+
+//Show Appropriate topic List on title click
 $('.topic-list li').click(function(event) {
     var section = $(this).attr('data-id');
     $('form#Filters fieldset').hide();
@@ -59,25 +66,25 @@ $('.topic-list li').click(function(event) {
 });
 
 
-  //Profile Popup
-  $('.close-profile a').click(function(e) {
-    e.preventDefault();
-    $('.profile-container').fadeOut('slow');
-  });
+//Profile Popup
+$('.close-profile a').click(function(e) {
+  e.preventDefault();
+  $('.profile-container').fadeOut('slow');
+});
 
-  $('.network-grid-item').click(function(e) {
-    var itemOffset = $(this).offset().top;
-    $('.profile-container').css('top',itemOffset+'px');
-    var profile_id = $(this).parent().attr('data-id');
-    $('.profile-container').fadeIn('slow');
-    $('.profile-content').css('opacity',0);
-    loadProfile(profile_id);
-  });
-
-
+$('.network-grid-item').click(function(e) {
+  var itemOffset = $(this).offset().top;
+  $('.profile-container').css('top',itemOffset+'px');
+  var profile_id = $(this).parent().attr('data-id');
+  $('.profile-container').fadeIn('slow');
+  $('.profile-content').css('opacity',0);
+  loadProfile(profile_id);
+});
 
 
 
+
+//AJAX in profile data from json file
   function loadProfile(profile_id) {
       var is_loading = false;
       if (is_loading == false) {
@@ -121,7 +128,7 @@ $('.topic-list li').click(function(event) {
 
 
 
-
+//Update active filters and display
 function GetActiveString(){
   var active = [];
   $('.checkbox input:checked').each(function() {
@@ -138,6 +145,8 @@ function GetActiveString(){
 
 }
 
+
+//========= PLUGIN ADD ON FOR MIXITUP =====================
 // To keep our code clean and modular, all custom functionality will be contained inside a single object literal called "checkboxFilter".
 var checkboxFilter = {
 
@@ -268,6 +277,11 @@ var checkboxFilter = {
 	  }
   }
 };
+//=======END FILTER BY CHECKBOX PLUGIN
+
+
+
+
 
 jQuery(document).ready(function($){
 
@@ -291,11 +305,12 @@ jQuery(document).ready(function($){
 
   });
 
+
+
   //URL FILTERS
    var filter = getParameterByName('filter');
-
-   
  
+  //check if url filter is present - initialize mixitup and prefilter 
   if(filter !==''){
     $("input[value='" + filter + "']").prop('checked', true);
     $('#network-grid').mixItUp('filter', filter, GetActiveString);
@@ -321,6 +336,8 @@ jQuery(document).ready(function($){
 
 });
 
+
+//funciton to easily retrieve URL Params
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -329,6 +346,7 @@ function getParameterByName(name) {
 }
 
 
+//Google Map Initilize
 function initialize() {
 
   var center = new google.maps.LatLng(40.00, -75.2);

@@ -3,6 +3,7 @@
 include('functions/start.php');
 
 include('functions/clean.php');
+error_reporting(0);
 
 //Custon wp-admin logo
 function my_custom_login_logo() {
