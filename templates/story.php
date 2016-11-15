@@ -21,7 +21,7 @@ get_header(); ?>
 
         // thumbnail
         //$size = 'large';
-        $size = 'background-fullscreen'
+        $size = 'background-fullscreen';
         $thumb = $image['sizes'][ $size ];
         $width = $image['sizes'][ $size . '-width' ];
         $height = $image['sizes'][ $size . '-height' ];
