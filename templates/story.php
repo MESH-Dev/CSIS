@@ -20,14 +20,15 @@ get_header(); ?>
         $caption = $image['caption'];
 
         // thumbnail
-        $size = 'large';
+        //$size = 'large';
+        $size = 'background-fullscreen'
         $thumb = $image['sizes'][ $size ];
         $width = $image['sizes'][ $size . '-width' ];
         $height = $image['sizes'][ $size . '-height' ];
 
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $url; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center; <?php } ?>">
 
             <div class="banner-screen"></div>
 
