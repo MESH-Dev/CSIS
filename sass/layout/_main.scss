@@ -571,6 +571,12 @@ section {
   margin-bottom: 10px;
 }
 
+section.buttons{
+  .button-wrapper{
+    margin-top:1em;
+  }
+}
+
 .intro-text, .callout-text, .listing-text, .body-text-area, .icons-text, .buttons-text, .form-text {
   padding: 50px;
   float: left;
@@ -840,6 +846,13 @@ section {
   @include mq($mobile-landscape-width, 'max-width') {
      padding: 20px;
   }
+}
+
+.blog-list{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 .blog-sidebar-title {

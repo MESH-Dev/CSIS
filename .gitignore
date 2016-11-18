@@ -14,3 +14,5 @@ wp-config.php
 node_modules/
 .sass-cache/
 *.DS_Store
+/data
+data

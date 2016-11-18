@@ -45,14 +45,17 @@ echo $_POST['firstname'];
         $caption = $image['caption'];
 
         // thumbnail
-        $size = 'large';
+        //$size = 'large';
+        $size = 'background-fullscreen';
         $thumb = $image['sizes'][ $size ];
         $width = $image['sizes'][ $size . '-width' ];
         $height = $image['sizes'][ $size . '-height' ];
 
+
+
         ?>
 
-        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $url; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center; <?php } ?>">
+        <section class="banner banner-inner" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-attachment:fixed; background-position-x: center; background-position-y: center; <?php } ?>">
 
             <div class="banner-screen"></div>
 
@@ -84,7 +87,16 @@ echo $_POST['firstname'];
 
         <section class="banner">
 
-          <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+          <style>
+          .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+          .embed-container iframe, 
+          .embed-container object, 
+          .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+          </style>
+
+          <div class='embed-container'>
+            <iframe src='<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
 
         </section>
 
@@ -113,6 +125,9 @@ echo $_POST['firstname'];
          	// loop through the rows of data
             while ( have_rows('sections') ) : the_row();
 
+              $menu_item = get_sub_field('menu_title');
+              $menu_title = rtrim(strtolower($menu_item));
+
               $color = get_field('color');
 
               if ($n % 2 != 0) {
@@ -140,7 +155,8 @@ echo $_POST['firstname'];
                 $caption = $image['caption'];
 
                 // thumbnail
-                $size = 'large';
+                //$size = 'large';
+                $size = 'background-fullscreen';
                 $thumb = $image['sizes'][ $size ];
                 $width = $image['sizes'][ $size . '-width' ];
                 $height = $image['sizes'][ $size . '-height' ];
@@ -154,7 +170,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="intro" id="<?php echo $n; $n++; ?>">
+              <section class="intro" id="<?php echo $menu_title;  $n; $n++; ?>" data-menu="<?php echo $menu_title; ?>">
                 <div class="row">
                   <div class="nine offset-by-three columns">
                     <div class="intro-text">
@@ -170,7 +186,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="body-text <?php echo $color; ?>" id="<?php echo $n; $n++; ?>">
+              <section class="body-text <?php echo $color; ?>" id="<?php echo $menu_title; $n; $n++; ?>" data-menu="<?php echo $menu_title; ?>">
 
                 <div class="nine columns offset-by-three">
                   <div class="body-text-area">
@@ -195,7 +211,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-position-y: 20%;  <?php } ?>" id="<?php echo $n; $n++; ?>">
+              <section class="image" style="<?php if ($image) { ?> background-image: url(<?php echo $thumb; ?>); background-size: cover; background-repeat: no-repeat; background-position-y: 20%;  <?php } ?>" id="<?php echo $n; $n++; ?>" data-menu="<?php echo $menu_title; ?>">
               </section>
 
 
@@ -213,7 +229,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="video" id="<?php echo $n; $n++; ?>">
+              <section class="video" id="<?php echo $menu_title; $n; $n++; ?>" data-menu="<?php echo $menu_title; ?>">
 
                 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='<?php echo $video; ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 
@@ -225,7 +241,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="<?php echo $color; ?>" id="<?php echo $n; $n++; ?>">
+              <section class="<?php echo $color; ?>" id="<?php echo $menu_title; $n; $n++; ?>" data-menu="<?php echo $menu_title; ?>">
 
                 <div class="quote">
                   <div class="nine columns offset-by-three">
@@ -257,7 +273,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="email-signup" id="<?php echo $n; $n++; ?>">
+              <section class="email-signup" id="<?php echo $menu_title; $n; $n++;?>" data-menu="<?php echo $menu_title; ?>">
                 <div class="row">
                   <div class="twelve columns">
                     <div class="intro-title"><?php echo get_sub_field('the_title'); ?></div>
@@ -272,7 +288,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="listing <?php echo $color; ?>" id="<?php echo $n; $n++; ?>">
+              <section class="listing <?php echo $color; ?>" id="<?php echo $menu_title; $n; $n++;?>" data-menu="<?php echo $menu_title; ?>">
 
                 <div class="nine columns offset-by-three">
 
@@ -332,14 +348,22 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="buttons <?php echo $color; ?>" id="apply">
+              <section class="buttons <?php echo $color; ?>" id="apply" data-menu="<?php echo $menu_title; ?>">
 
                 <div class="<?php echo $columns; ?> columns">
 
                   <div class="buttons-text">
+                    <?php if (get_sub_field('section_title')){ ?>
                     <h3 class="<?php echo $color; ?>"><?php echo get_sub_field('section_title'); ?></h3>
+                    <?php } ?>
+                    <?php if (get_sub_field('body_text')){ ?>
                     <h3 class="regular-font"><?php echo get_sub_field('body_text'); ?></h3>
+                    <?php } ?>
 
+                    <?php if (get_sub_field('link_1') != '' || get_sub_field('link_2') != ''){ ?>
+                    <div class="button-wrapper">
+                    <?php } ?>
+                    <?php if (get_sub_field('link_1')) { ?>
                     <a href="<?php echo get_sub_field('link_1') ?>">
                       <div class="buttons-cta <?php echo $opp; ?>">
                         <?php echo get_sub_field('link_text_1') ?>
@@ -347,7 +371,8 @@ echo $_POST['firstname'];
                       </div>
 
                     </a>
-
+                    <?php } ?>
+                    <?php if (get_sub_field('link_2')){ ?>
                     <a href="<?php echo get_sub_field('link_2') ?>">
                       <div class="buttons-cta <?php echo $opp; ?>">
 
@@ -356,7 +381,10 @@ echo $_POST['firstname'];
 
                       </div>
                     </a>
-
+                    <?php } ?>
+                    <?php if (get_sub_field('link_1') != '' || get_sub_field('link_2') != ''){ ?>
+                    </div>
+                    <?php } ?>
                   </div>
 
                 </div>
@@ -374,7 +402,7 @@ echo $_POST['firstname'];
 
       ?>
 
-      <section class="email-signup yellow-primary-background" >
+      <section class="email-signup yellow-primary-background" id="<?php echo $menu_title; ?>"data-menu="<?php echo $menu_title; ?>">
 
         <div class="email-signup-text">
           <div class="row">
@@ -422,7 +450,7 @@ echo $_POST['firstname'];
 
               ?>
 
-              <section class="form <?php echo $color; ?>" id="apply">
+              <section class="form <?php echo $color; ?>" id="apply" data-menu="<?php echo $menu_title; ?>">
 
 
                   <div class="row">
@@ -527,7 +555,7 @@ echo $_POST['firstname'];
 
                       <?php if(strlen($value) > 0) { ?>
 
-                        <li><a href="#<?php echo $i; ?>"><?php echo $value; ?></a></li>
+                        <li><a href="#<?php echo strtolower($value); //$i// ?>"><?php echo $value; ?></a></li>
 
                       <?php } ?>
 

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="content">
+<main id="content shaun_blog">
 
 	<div class="container">
 			<div class="three columns blog-section">
@@ -9,7 +9,7 @@
 
 			</div>
 			<div class="nine columns blog-section">
-				<div class="blog-content">
+				<div class="blog-content blog-list">
 					<?php $i = 0; ?>
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -73,7 +73,7 @@
 
 							</div>
 
-						<?php } else { ?>
+						<?php } else {?>
 
 							<div class="six columns">
 

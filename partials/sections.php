@@ -505,7 +505,7 @@ if( have_rows('sections') ):
 
       ?>
 
-      <section class="email-signup yellow-primary-background" style="height: 275px;">
+      <section class="email-signup yellow-primary-background" ><!-- style="height: 275px;" -->
 
         <div class="email-signup-text">
           <div class="row">
@@ -515,17 +515,9 @@ if( have_rows('sections') ):
 
             </div>
             <div class="four columns">
-              <!-- <form id="general-email" action="http://www2.socialimpactstrategy.org/l/121292/2015-10-07/5l6dbw" method="post">
-                <span class="input input--hoshi">
-                  <input class="input__field input__field--hoshi" type="email" id="email" name="email" spellcheck="false" />
-                  <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="email">
-                    <span class="input__label-content input__label-content--hoshi">Email</span>
-                  </label>
-                  <input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" />
-                </span>
-              </form> -->
+              
 
-              <iframe style="border: 0;" src="http://www2.socialimpactstrategy.org/l/121292/2015-10-08/5lq17k" width="100%" height="500" frameborder="0"></iframe>
+              <iframe style="border: 0;" src="http://www2.socialimpactstrategy.org/l/121292/2015-10-08/5lq17k" width="100%" height="auto" frameborder="0"></iframe>
 
               <div id="loader" class="hidden">
                 <img src="<?php echo get_bloginfo("template_url" ); ?>/img/ajax-loader.gif" alt="">

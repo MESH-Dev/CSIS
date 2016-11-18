@@ -87,7 +87,13 @@
 }
 
 /* Small menu. */
-
+@media only screen and (min-width:767px) and (max-width:925px){
+	.banner-navigation{
+		a{
+			font-size:em(12);
+		}
+	}
+}
 
 
 
@@ -178,7 +184,7 @@
 		position: relative;
 		margin: 0 5px 5px 25px;
 
-		@include mq($tablet-landscape-width, 'max-width') {
+		@include mq($custom, 'max-width') {
 			 margin: 0 5px 5px 5px;
 			 float: left;
 			 width: 100%;
@@ -192,7 +198,7 @@
 			float: left;
 			border-bottom: 3px solid white;
 
-			@include mq($tablet-landscape-width, 'max-width') {
+			@include mq($custom, 'max-width') {
 				 font-size: 12px;
 				 width: 100%;
 				 text-align: center;

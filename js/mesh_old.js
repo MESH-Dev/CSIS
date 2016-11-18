@@ -31,151 +31,51 @@ jQuery(document).ready(function($){
     $('.banner').css("background-position", "50% 0px");
   };
 
-  //Don't think this is doing anything
-  //var side = [];
+  var side = [];
 
-  // $('.side-menu ul li').each(function(index) {
+  $('.side-menu ul li').each(function(index) {
 
-  //   $(this).find('a').attr('href');
+    $(this).find('a').attr('href');
 
-  //   var $tabValue = $(this).find('a').attr('href');
+    var $tabValue = $(this).find('a').attr('href');
+    var $withoutHash = $tabValue.substring(1);
 
-  //   //console.log("Tab value " + $tabValue);
-  //   var $withoutHash = $tabValue.substring(1);
-  //   //console.log("Without Hash " + $withoutHash);
-  //   side.push($withoutHash);
+    side.push($withoutHash);
 
-  //   var _push = side.push($withoutHash);
-  //   //console.log("Side array = " + _push);
+  });
 
-  // });
+  var sections = [];
 
-  // var sections = [];
-  // var data_section = [];
-  // var _in_menu = $('section').attr('data-menu');
+  $('section').each(function(index) {
+    if ((index != 0) && ($(this).attr('id') != 'apply') &&  ($(this).attr('id') != 'buttons')) {
+      sections.push($(this).position().top);
+    }
+  });
 
-  // console.log(_in_menu);
+  $(document).scroll(function () {
+    var y = $(this).scrollTop();
 
-  // //function section_array(){
-  // $('section').each(function(index) {
-  //   if ((index != 0) && ($(this).attr('id') != 'apply') &&  ($(this).attr('id') != 'buttons')) { //&& ($(this).attr('data-menu') != '')
-  //     var st = sections.push($(this).position().top);
-  //     console.log("Sections push " + st);
+    if ( $('.side-menu').length ) {
 
-  //     var _top = $(this).offset().top;
-  //     var ds = $(this).attr('data-section', _top);
-
-  //     data_section.push($(this).data('section'));
-  //     console.log("Data sections are " + data_section);
-  //     return ds;
-  //     return _top;
-  //     //for(i=0; i<sections.length; i++){
-  //     //  $('.side-menu ul li').each(function(){
-  //     //   //i++;
-  //     //   //$(this).eq(i).attr('data-section', data_section[i]);
-  //     //   $(this).attr('data-section', _top);
-  //     //   $(this).addClass('data-section');
-  //     // })
-  //    //}
-  //     //var _top = sections.push($(this).position().top);
-  //     //console.log("Top positions " + _top);
-  //   }
-  // });
-//}
-
-//Only run the onScroll function if .side-menu exists
-if($('.side-menu').length > 0){
-
-  $(document).scroll(onScroll);
-
-}
-
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('.page-template-product .side-menu .list a').each(function () {
-        
-        console.log('Scrolling!');
-        //var refElement = "";
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        //console.log(refElement);
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.side-menu .list ul li').removeClass("scrolled-item");
-            currLink.parent('li').addClass("scrolled-item");
-        }
-        else{
-            currLink.parent('li').removeClass("scrolled-item");
-        
-        }
-    });
-
-    //Sroll the side menu after the window has scrolled past 300px
-      if ($('.side-menu').length != 0 && scrollPos > 300) {
+      if (y > 300) {
         $('.side-menu').css('position', 'fixed');
         $('.side-menu').css('top', 50);
-      // Stop scrolling if the window has returned to top
       } else {
         $('.side-menu').css('position', 'absolute');
         $('.side-menu').css('top', $('.intro').position().top - 60);
       }
-}
+
+      for (i = 0; i < sections.length; i++) {
+        if (y > sections[i] && y < sections[i + 1]) {
+          $('.side-menu ul li').removeClass('scrolled-item');
+          $('.side-menu ul li').eq(i).addClass('scrolled-item');
+        }
+      }
 
 
+    }
 
-// section_array();
-
-//   for(i=0; i<sections.length; i++){
-//    $('.side-menu ul li').each(function(){
-//         //var _top = $(this).offset().top;
-//         section_array();
-//         $(this).eq(i).attr('data-section', _top);
-//   })
-//   }
-
-  // $(document).scroll(function () {
-  //   var y = $(this).scrollTop();
-  //   console.log("This scrolltop: " + y);
-  //   if ( $('.side-menu').length ) {
-
-  //     //Sroll the side menu after the window has scrolled past 300px
-  //     if (y > 300) {
-  //       $('.side-menu').css('position', 'fixed');
-  //       $('.side-menu').css('top', 50);
-  //     // Stop scrolling if the window has returned to top
-  //     } else {
-  //       $('.side-menu').css('position', 'absolute');
-  //       $('.side-menu').css('top', $('.intro').position().top - 60);
-  //     }
-
-  //     //$('section').attr('data-top', $(this).offset().top);
-
-  //     //i=0;
-  //     //Sections[i] : The top position of the first section
-  //     //Sections[i + 1] : The top position of the immediately following section
-  //     // console.log("Sections[i] = " + sections[i]);
-  //     // console.log('Sections[i + 1]' + sections[i + 1]); 
-
-  //     for (i = 0; i < sections.length; i++) {
-
-  //       console.log("Sections[i] = " + sections[i]);
-  //       console.log('Sections[i + 1]' + sections[i + 1]); 
-  //       console.log(sections);
-  //       //console.log(sections.val);
-  //       //console.log($('.side-menu li a').text())
-
-  //       if (y > sections[i] && y < sections[i + 1] ) {//&& y < sections[i + 1]
-          
-  //         $('.side-menu ul li').removeClass('scrolled-item');
-  //         $('.side-menu ul li').eq(i).addClass('scrolled-item');
-  //       }else if(y <= 300){
-  //         $('.side-menu ul li').removeClass('scrolled-item');
-  //       }
-  //     }
-
-
-  //   }
-
-  // });
+  });
 
 
 
@@ -223,43 +123,47 @@ function onScroll(event){
     });
   }
 
-//Resizes the media continers listed on load and on resize
 function media_resize() {
   var height_r = $(window).width();
-  var height = $( window ).width() / 2;
-  //console.log(height_r);
 
-  if(height_r > 767){ //if window is 767px wide or greater use half the window width
-  $('.media-video').css('height', height); //height_r
-  $('.media-video .video-holder').css('height', height); //height_r
-  $('.media-image').css('height', height); //height_r
+  $('.media-video').css('height', height_r);
+  $('.media-video .video-holder').css('height', height_r);
+  $('.media-image').css('height', height_r);
   $('.media-video .video-holder .su-responsive-media-yes').css('height', height);
-  }else{  //If window is less than 767px, resize to the window height
-    $('.media-video').css('height', height_r);
-    $('.media-video .video-holder').css('height', height_r);
-    $('.media-image').css('height', height_r);
-    $('.media-video .video-holder .su-responsive-media-yes').css('height', height_r);
-  }
-} //end media resize
+}
 
+  var height = $( window ).width() / 2;
+
+  $('.media-video').css('height', height);
+  $('.media-image').css('height', height);
+  $('.media-video .video-holder').css('height', height);
+  $('.media-video .video-holder .su-responsive-media-yes').css('height', height);
 
   $('.media-item').matchHeight();
-  
-  media_resize();
 
-  //Sniff for window size
   $(window).resize(function() {
     var height = $( window ).width() / 2;
 
+    $('.media-video').css('height', height);
+    $('.media-image').css('height', height);
+    $('.media-video .video-holder').css('height', height);
+    $('.media-video .video-holder .su-responsive-media-yes').css('height', height);
+
     $('.media-item').matchHeight();
 
-    if ($(window).width() > 300 ){
-      //console.log("Window is "+$(window).width())
-      media_resize();       
-    }
-  });
+    if ($(window).width() < 767){
 
- 
+      media_resize();
+
+        // var height_r = $(window).width();
+
+        // $('.media-video').css('height', height_r);
+        // $('.media-video .video-holder').css('height', height_r);
+        // $('.media-image').css('height', height_r);
+      }
+
+
+  });
 
   //$(window).load(media_resize);
 
@@ -413,9 +317,8 @@ function media_resize() {
 
   $('.callout').matchHeight();
   $('.listing-text').matchHeight();
-  //$('.blog-post-small').matchHeight();
+  $('.blog-post-small').matchHeight();
   $('.blog-section').matchHeight();
-  $('.blog-sidebar').matchHeight();
   $('.information-holder').matchHeight();
   $('.icon-box').matchHeight();
 

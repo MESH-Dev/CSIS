@@ -31,6 +31,6 @@ $tablet-width: 768px ; // the tablet width media query
 $mobile-portrait-width: 300px ; // the mobile portrait media query
 $mobile-landscape-width: 480px ; // the mobile landscape media query
 $mobile-fluid-width: 100%; // this value is not used with breakpoints, it is used in generating a fluid grid for mobile devices
-
+$custom: 925px;
 // ------ CHANGE MAY CAUSE UNDESIRED RESULTS
 $base-font-size: $base__font-size ; // the font size in the html element so we can use ems and rems in a friendly way
