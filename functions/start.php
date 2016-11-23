@@ -95,24 +95,24 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 //add_filter("get_archives_link", "get_archives_link_mod");
 
-function get_archives_link_mod ( $link_html ) {
-    preg_match ("/value='(.+?)'/", $link_html, $url);
-    $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
-    //var_dump($requested);
-    if ($requested == $url[1]) {
-        $link_html = str_replace("<li", "<li class='active'", $link_html);
-    }
-    return $link_html;
-}
+// function get_archives_link_mod ( $link_html ) {
+//     preg_match ("/value='(.+?)'/", $link_html, $url);
+//     $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
+//     //var_dump($requested);
+//     if ($requested == $url[1]) {
+//         $link_html = str_replace("<li", "<li class='active'", $link_html);
+//     }
+//     return $link_html;
+// }
 
-function get_authors_link_mod ( $link_html ) {
-    preg_match ("/value='(.+?)'/", $link_html, $url);
-    $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
-    if ($requested == $url[1]) {
-        $link_html = str_replace("<li", "<li class='active'", $link_html);
-    }
-    return $link_html;
-}
+// function get_authors_link_mod ( $link_html ) {
+//     preg_match ("/value='(.+?)'/", $link_html, $url);
+//     $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
+//     if ($requested == $url[1]) {
+//         $link_html = str_replace("<li", "<li class='active'", $link_html);
+//     }
+//     return $link_html;
+// }
 
 // jon.posterous.com
 // adds current class to archives link
@@ -133,5 +133,7 @@ function customauthor_link( $x )
   
   return $matches[4] == $_SERVER['REQUEST_URI'] ? preg_replace('@<li@', '<li class="active"', $x) : $x;
 }
+
+
 
 ?>

@@ -24,7 +24,7 @@
           echo '<li class="' . $iscat . '"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a></li>';
       } wp_reset_postdata();
 
-      var_dump(wp_list_authors());
+      //var_dump(wp_list_authors());
       ?>
     </ul>
   </div>

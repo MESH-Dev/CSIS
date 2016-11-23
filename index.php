@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="content shaun_blog">
+<main id="content">
 
 	<div class="container">
 			<div class="three columns blog-section">

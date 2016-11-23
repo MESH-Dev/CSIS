@@ -24,6 +24,7 @@
 			ul {
 				left: -999em;
 				top: 0;
+
 			}
 
 			li {
@@ -35,6 +36,7 @@
 
 			a {
 				width: 200px;
+
 			}
 
 			:hover > a,
@@ -144,17 +146,26 @@
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
+			background-color:white;
 			position: absolute;
-			top: 1.5em;
+			top: 100%;
 			left: -999em;
 			z-index: 99999;
+			padding:15px;
+
+			@include mq($custom, 'max-width') {
+			 display:none;
+			}
 
 			ul {
 				left: -999em;
 				top: 0;
+
 			}
 
 			li {
+				margin-left:0;
+
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -163,6 +174,7 @@
 
 			a {
 				width: 200px;
+				text-transform:capitalize;
 			}
 
 			:hover > a,
@@ -205,52 +217,118 @@
 			}
 		}
 
-		&:nth-child(1){
-			&.current-menu-item, 
-			&.current-page-ancestor{
-				a{
-
-				}
-			}
-		}
 
 		&:nth-child(1) {
 
-			&.current-menu-item a, 
-			&.current-page-ancestor a,
-			&:hover a,
-			&:focus a,
-			&:active a{
+			&.current-menu-item > a, 
+			&.current_page_ancestor > a,
+			&:hover > a,
+			&:focus > a,
+			&:active > a{
 				border-bottom: 3px solid $purple-tertiary;
+			}
+
+			ul{
+				li{
+					a{
+						border-bottom: 3px solid white;
+						&:hover,
+						&:focus,
+						&:active{
+							border-bottom: 3px solid $purple-tertiary;
+						}
+					}
+
+					&.current-menu-item > a {
+						border-bottom: 3px solid $purple-tertiary;
+					}		
+				}
+				
 			}
 		}
 		&:nth-child(2) {
 
-			&.current-menu-item a, 
-			&.current-page-ancestor a,
-			&:hover a,
-			&:focus a,
-			&:active a{
+			&.current-menu-item > a, 
+			&.current_page_ancestor > a,
+			&:hover > a,
+			&:focus > a,
+			&:active > a{
 				border-bottom: 3px solid $blue-primary;
+			}
+
+			ul{
+				li{
+					a{
+						border-bottom: 3px solid white;
+						&:hover,
+						&:focus,
+						&:active{
+							border-bottom: 3px solid $blue-primary;
+						}
+					}
+
+					&.current-menu-item > a {
+						border-bottom: 3px solid $blue-primary;
+					}		
+				}
+				
 			}
 		}
 		&:nth-child(3) {
-			&.current-menu-item a, 
-			&.current-page-ancestor a,
-			&:hover a,
-			&:focus a,
-			&:active a{
+			&.current-menu-item > a, 
+			&.current_page_ancestor > a,
+			&:hover > a,
+			&:focus > a,
+			&:active > a{
 
 				border-bottom: 3px solid $green-primary;
 			}
+
+			ul{
+				li{
+					a{
+						border-bottom: 3px solid white;
+						&:hover,
+						&:focus,
+						&:active{
+							border-bottom: 3px solid $green-primary;
+						}
+					}
+
+					&.current-menu-item > a {
+						border-bottom: 3px solid $green-primary;
+					}	
+				}
+
+				
+			}
 		}
 		&:nth-child(4) {
-			&.current-menu-item a, 
-			&.current-page-ancestor a,
+			&.current-menu-item > a, 
+			&.current_page_ancestor > a,
 			&:hover a,
 			&:focus a,
 			&:active a{
 				border-bottom: 3px solid $yellow-primary;
+			}
+
+			ul{
+				li{
+					a{
+						border-bottom: 3px solid white;
+
+						&:hover,
+						&:focus,
+						&:active{
+							border-bottom: 3px solid $yellow-primary;
+						}
+					}
+
+					&.current-menu-item > a {
+						border-bottom: 3px solid $yellow-primary;
+					}
+				}
+				
 			}
 		}
 
