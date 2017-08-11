@@ -13,11 +13,17 @@
 
 			<div class="four columns">
 				<div class="email-capture">
+					<?php $subscription = get_field('email_capture_code', 'options'); 
+						if($subscripton == ''){
+					?>
 					<p>Be in the know on programs, news and events.</p>
 					<div class="form">
 						<input type="text" placeholder="Your email here">
 						<div class="bg" aria-hidden="true"></div>
 					</div>
+					<?php }else{ 
+					echo $subscription;
+					 } ?>
 				</div>
 			</div>
 			<div class="three columns offset-by-five">
