@@ -3,13 +3,13 @@
 <main id="content">
 
 	<div class="container">
-			<div class="three columns">
+			<div class="three columns blog-section">
 
 				<?php include_once(locate_template('partials/sidebar.php')); ?>
 
 			</div>
 			<div class="nine columns">
-				<div class="blog-content">
+				<div class="blog-content blog-list">
 					<?php $i = 0; ?>
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 

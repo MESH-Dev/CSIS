@@ -1,6 +1,6 @@
 </div><!-- #page -->
 
-<footer>
+<footer class="seventeen-tth">
 
 	<a href="http://www.upenn.edu/" target="_blank">
 		<div class="shield">
@@ -12,11 +12,18 @@
 		<div class="row">
 
 			<div class="four columns">
+				<div class="email-capture">
+					<p>Be in the know on programs, news and events.</p>
+					<div class="form">
+						<input type="text" placeholder="Your email here">
+						<div class="bg" aria-hidden="true"></div>
+					</div>
+				</div>
+			</div>
+			<div class="three columns offset-by-five">
 				<div class="footer-logo">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/penn.png" />
 				</div>
-			</div>
-			<div class="four columns offset-by-four">
 				<div class="footer-social">
 					<ul>
 						<li>

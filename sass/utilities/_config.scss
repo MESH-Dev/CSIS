@@ -40,6 +40,15 @@ $red-primary                  : #bc4851;
 $red-secondary                : #ed555d;
 $red-tertiary                 : #f37f66;
 
+$new-red: #ee555c;
+$new-blue: #248fb7;
+$new-yellow: #f2b031;
+$new-purple: #8a559f;
+
+$product-sidebar-bg: rgba(48,55,163,.75);
+$product-sidebar-blue: #304299;
+$section-gray: #f5f4f4;
+
 .yellow-primary               { color: #fec935;}
 .yellow-secondary             { color: #ef9f25;}
 .yellow-tertiary              { color: #efe431;}
@@ -55,6 +64,17 @@ $red-tertiary                 : #f37f66;
 .red-primary                  { color: #bc4851;}
 .red-secondary                { color: #ed555d;}
 .red-tertiary                 { color: #f37f66;}
+.gray {color:$section-gray;}
+.gray-background{background-color:$section-gray;}
+
+.new-red{ color:$new-red;}
+.new-red-background { background-color:$new-red;}
+.new-blue{ color:$new-blue;}
+.new-blue-background { background-color:$new-blue;}
+.new-yellow{ color:$new-yellow;}
+.new-yellow-background { background-color:$new-yellow;}
+.new-purple{ color:$new-purple;}
+.new-purple-background { background-color:$new-purple;}
 
 
 // Main color palette
