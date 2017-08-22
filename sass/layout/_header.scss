@@ -4,7 +4,17 @@ header {
   width: 100%;
 }
 
+.logo-container{
+	max-width:250px;
+	width:25%;
+	display:inline-block;
+}
+
 .logo {
   float: left;
   width: 100%;
+  img{
+  	min-width:200px;
+  }
+  //max-width:250px;
 }

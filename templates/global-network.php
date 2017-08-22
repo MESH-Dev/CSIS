@@ -10,14 +10,15 @@ get_header(); ?>
 
       <?php
 
-      //generateJSON();
+ 
       $profiles = getProfileArray();
-      createImages($profiles); 
-      writeLatLong($profiles);
-      //renderProfileGrid($profiles);
-      //$profile = getSingleProfile($profiles,0);
-      //echo $profile['Name | Last'];
-      //$filterarray = getFilterLists($profiles, 'Impact | Affiliation | Expertise | Geographic | Year');
+
+      // UNCOMMENT THESE ANYTIME A NEW JSON FILE IS UPLOADED TO /data DIRECTORY
+      // OPEN PAGE ONCE, THEN COMMENT BACK TO PREVENT REWRITE ERRORS
+      // createImages($profiles); 
+      // writeLatLong($profiles);
+
+
  
 
       if (get_field('banner') == 'image') {

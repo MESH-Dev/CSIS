@@ -7,11 +7,19 @@ function loadup_scripts() {
 	//wp_enqueue_script( 'map-data', get_template_directory_uri().'/data/data.json' );
 	wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
 
+  wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css', true );
+
 	if ( is_page( 102 ) ) {
 		wp_enqueue_script( 'maps-js', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0.0', true );
 		wp_enqueue_script( 'markers-js', get_template_directory_uri().'/js/markerclusterer.js','',false, true );
     wp_enqueue_script( 'network-js', get_template_directory_uri().'/js/global-network.js', array('jquery'), '1.0.0', true );
   }
+  
+
+  //if(is_page_template('templates/product-new.php')){
+    wp_enqueue_script( 'slick-slider', get_template_directory_uri().'/js/slick.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_style( 'slick-style', get_template_directory_uri().'/css/slick.css', true );
+  //}
 
 
 	wp_enqueue_script( 'classie-js', get_template_directory_uri().'/js/classie.js', array('jquery'), '1.0.0', true );
@@ -92,5 +100,46 @@ function new_excerpt_more($more) {
 	return '<br/><a class="moretag" href="'. get_permalink($post->ID) . '"> Read more <i class="fa fa-angle-double-right"></i></a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+//add_filter("get_archives_link", "get_archives_link_mod");
+
+function get_archives_link_mod ( $link_html ) {
+    preg_match ("/value='(.+?)'/", $link_html, $url);
+    $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
+    //var_dump($requested);
+    if ($requested == $url[1]) {
+        $link_html = str_replace("<li", "<li class='active'", $link_html);
+    }
+    return $link_html;
+}
+
+function get_authors_link_mod ( $link_html ) {
+    preg_match ("/value='(.+?)'/", $link_html, $url);
+    $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
+    if ($requested == $url[1]) {
+        $link_html = str_replace("<li", "<li class='active'", $link_html);
+    }
+    return $link_html;
+}
+
+// jon.posterous.com
+// adds current class to archives link
+add_filter( "get_archives_link", "customarchives_link");
+
+function customarchives_link( $x )
+{
+  $url = preg_match('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.-]*(\?\S+)?)?)?)@i', $x, $matches);
+  
+  return $matches[4] == $_SERVER['REQUEST_URI'] ? preg_replace('@<li@', '<li class="active"', $x) : $x;
+}
+
+add_filter( "author_link", "customauthor_link");
+
+function customauthor_link( $x )
+{
+  $url = preg_match('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.-]*(\?\S+)?)?)?)@i', $x, $matches);
+  
+  return $matches[4] == $_SERVER['REQUEST_URI'] ? preg_replace('@<li@', '<li class="active"', $x) : $x;
+}
 
 ?>

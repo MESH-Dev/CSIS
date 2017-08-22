@@ -69,7 +69,7 @@
 
 	<div id="page" class='hfeed site <?php if( is_page_template('templates/homepage-fullscreen.php') && is_front_page() ) { echo "content-fullscreen"; } ?>'>
 
-		<div class="utilities-nav">
+		<!-- <div class="utilities-nav">
 			<?php if(has_nav_menu('utilities_nav')){
 						$defaults = array(
 							'theme_location'  => 'utilities_nav',
@@ -92,11 +92,23 @@
 					}else{
 						echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
 					} ?>
-		</div>
+		</div> -->
 
+		<?php
+			$visible = get_field('visible', 'options');
+			//var_dump($visible);
+			$alert = get_field('header_message_text', 'options');
+		if ($visible == 'true'){?>
+		<div class="alert-message has-gradient">
+			<div class="container neues">
+				<div class="content">
+					<?php echo $alert; ?>
+				</div>
+			</div>
+		</div>
+		<?php } ?>
 		<header>
 			<div class="container">
-
 				<div class="two columns">
 					<div class="logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(''); ?>/img/csis-logo.jpg" /></a>
@@ -106,7 +118,7 @@
 					<div class="menu-toggle">
 						Menu <i class="fa fa-chevron-down"></i>
 					</div>
-					<nav class="main-navigation current">
+					<nav class="main-navigation new">
 						<?php if(has_nav_menu('main_nav')){
 									$defaults = array(
 										'theme_location'  => 'main_nav',

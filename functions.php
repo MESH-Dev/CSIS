@@ -1,7 +1,7 @@
 <?php
 
 include('functions/start.php');
-
+include('functions/shortcode.php');
 include('functions/clean.php');
 error_reporting(0);
 
@@ -656,6 +656,31 @@ function updateEmailDatabase( $email, $ip, $first = '', $last = '', $product = '
 
 }
 
+
+//Add ACF Options page to site
+if( function_exists('acf_add_options_page') ) {
+  
+  acf_add_options_page(array(
+    'page_title'  => 'ACF Options Page',
+    'menu_title'  => 'ACF Options',
+    'menu_slug'   => 'theme-general-settings',
+    'capability'  => 'edit_posts',
+    'redirect'    => false
+  ));
+  
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Header Notifications',
+    'menu_title'  => 'Header Message',
+    'parent_slug' => 'theme-general-settings',
+  ));
+  
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Email Capture',
+    'menu_title'  => 'Email Capture Settings',
+    'parent_slug' => 'theme-general-settings',
+  ));
+  
+}
 
 
 
