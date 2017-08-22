@@ -528,7 +528,7 @@ $('.open-menu').click(function(){
 $q_click = 0;
 $('.question').click(function(){
   $(this).find('i').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
-  $(this).next('.answer').slideToggle('fast');
+  $(this).next('.answer').slideToggle('200');
 })
 // Modal window functionality
 
@@ -604,7 +604,8 @@ $('.lightbox.no_form').live('click',function(e){
 
 $('.lightbox.has_form .iframe-close').live('click', function(){
   $('.lightbox.has_form').detach();
-  console.log('clicked');
+  $('html').css({overflow:'initial'});
+ 
 });
 
 //Slick carousel

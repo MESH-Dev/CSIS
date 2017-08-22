@@ -9,16 +9,24 @@
 		max-width:1200px;
 		@media only screen and (max-width:1465px){
 			&.product{
-				margin:0 auto 0 130px;
+				margin:0 auto 0 140px;
 				max-width:calc(90% - 125px);
 			}
 		}
 		@media only screen and (max-width:1201px){
 			width:95%;
+			&.product{
+				margin:0 auto 0 140px;
+				width:95%
+			}
 		}
 		@media only screen and (max-width:480px){
 			margin:0 auto;
 			max-width:95%;
+			&.product{
+				margin:0 auto;
+				max-width:95%;
+			}
 		}
 	}
 	.column,

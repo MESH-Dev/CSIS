@@ -123,7 +123,6 @@ piCId = '86140';
         }
 </script>
 
-<script>var $dir = '<?php echo get_template_directory_uri(); ?>';  </script>
 
 </body>
 </html>

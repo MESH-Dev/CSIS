@@ -378,6 +378,7 @@ echo $_POST['firstname'];
                         ?>
 
                         <div class="columns six button-wrap" style="padding:5px;">
+                          <a href="<?php echo $button_link; ?>">
                           <div class="big-button <?php if($button_color){ echo $bg_col.'-background'; }?>" style="padding:0 20px;">
                             <div class="big-button-content">
                               <div class="row">
@@ -385,11 +386,12 @@ echo $_POST['firstname'];
                                   <img src="<?php echo $b_icon_url; ?>">
                                 </div>
                                 <div class="b-label">
-                                  <h3><a href="<?php echo $button_link; ?>"><?php echo $button_text; ?></a></h3>
+                                  <h3><?php echo $button_text; ?></h3>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          </a>
                         </div>
 
                 <? endwhile; endif; ?>
@@ -443,13 +445,16 @@ echo $_POST['firstname'];
                     </div><div class="columns six">
                   <?php }?>
                   <div class="faq-block <?php echo $f_cnt; ?>">
-                    <h2 class="question"><?php echo $question; ?> <span><i class="fa fa-fw fa-chevron-down"></i></span></h2>
+                    <div class="question row">
+                      <h2><?php echo $question; ?></h2>
+                      <span><i class="fa fa-fw fa-chevron-down"></i></span>
+                    </div>
                     <div class="answer"><?php echo $answer; ?></div>
                   </div>
                 <?php 
                     //If we've rendered all of our counted rows, end the column
                     if ($faq_count-$f_cnt == 0){ ?>
-                  </div>
+                  </div><!--This is only needed if the column is complete-->
                   <?php } ?>
               <?php endwhile; ?>
                 </div>
